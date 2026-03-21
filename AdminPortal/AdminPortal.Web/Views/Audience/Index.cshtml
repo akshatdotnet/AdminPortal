@@ -1,0 +1,138 @@
+@model AudienceViewModel
+@{
+    ViewData["Title"] = "Audience";
+}
+
+<!-- How it works + Action buttons -->
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <a href="#" class="how-it-works-link"><i class="bi bi-question-circle me-1"></i> How it works</a>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-person-plus me-1"></i> Add customer</button>
+        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+            <i class="bi bi-upload me-1"></i> Import customers
+        </button>
+    </div>
+</div>
+
+<!-- Type Tabs -->
+<div class="tab-filter-bar mb-3">
+    <a href="@Url.Action("Index")" class="tab-pill @(Model.SelectedType == null ? "active" : "")">
+        All <span class="tab-count">@Model.AllCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { type = "New" })" class="tab-pill @(Model.SelectedType?.ToString() == "New" ? "active" : "")">
+        New <span class="tab-count">@Model.NewCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { type = "Returning" })" class="tab-pill @(Model.SelectedType?.ToString() == "Returning" ? "active" : "")">
+        Returning <span class="tab-count">@Model.ReturningCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { type = "Imported" })" class="tab-pill @(Model.SelectedType?.ToString() == "Imported" ? "active" : "")">
+        Imported <span class="tab-count">@(Model.ImportedCount > 0 ? Model.ImportedCount.ToString() : "")</span>
+    </a>
+</div>
+
+<!-- Search + Export -->
+<div class="d-flex align-items-center justify-content-between mb-3 gap-3">
+    <form method="get" class="flex-grow-1" style="max-width:380px">
+        <div class="search-input-wrap">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" name="search" value="@Model.SearchQuery" class="form-control search-input" placeholder="Name, mobile, or a city..." />
+        </div>
+    </form>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-download me-1"></i> Export</button>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm dropdown-toggle">
+                <i class="bi bi-calendar3 me-1"></i> Lifetime
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Last 7 days</a></li>
+                <li><a class="dropdown-item" href="#">Last 30 days</a></li>
+                <li><a class="dropdown-item" href="#">Lifetime</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Table -->
+<div class="card-panel p-0">
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th style="width:36px"><input type="checkbox" class="form-check-input" /></th>
+                <th>Customer Name</th>
+                <th>Mobile Number</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Total Orders</th>
+                <th>Total Sales <i class="bi bi-caret-down-fill" style="font-size:10px"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.Customers.Items)
+            {
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td>
+                        <a href="#" class="text-primary fw-500 text-decoration-none">@customer.Name</a>
+                    </td>
+                    <td class="text-muted">@customer.MobileNumber</td>
+                    <td class="text-muted">@customer.Email</td>
+                    <td class="text-muted">@customer.City</td>
+                    <td class="text-center">@customer.TotalOrders</td>
+                    <td class="fw-600">@customer.TotalSales</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (!Model.Customers.Items.Any())
+    {
+        <div class="empty-state py-5">
+            <i class="bi bi-people empty-icon"></i>
+            <h3>No customers yet</h3>
+            <p class="text-muted">Your customers will appear here once they place an order.</p>
+        </div>
+    }
+</div>
+
+<!-- Add Customer Modal -->
+<div class="modal fade" id="addCustomerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="Name" class="form-control" required />
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="text" name="MobileNumber" class="form-control" placeholder="+91-XXXXXXXXXX" />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="Email" class="form-control" required />
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">City</label>
+                            <input type="text" name="City" class="form-control" />
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">State</label>
+                            <input type="text" name="State" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Customer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+@model OrdersViewModel
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<!-- Status Tabs -->
+<div class="tab-filter-bar mb-4">
+    <a href="@Url.Action("Index")" class="tab-pill @(Model.SelectedStatus == null ? "active" : "")">
+        All <span class="tab-count">@Model.Orders.TotalCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { status = "Pending" })" class="tab-pill @(Model.SelectedStatus?.ToString() == "Pending" ? "active" : "")">
+        Pending <span class="tab-count">@Model.PendingCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { status = "Processing" })" class="tab-pill @(Model.SelectedStatus?.ToString() == "Processing" ? "active" : "")">
+        Processing <span class="tab-count">@Model.ProcessingCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { status = "Delivered" })" class="tab-pill @(Model.SelectedStatus?.ToString() == "Delivered" ? "active" : "")">
+        Delivered <span class="tab-count">@Model.DeliveredCount</span>
+    </a>
+    <a href="@Url.Action("Index", new { status = "Cancelled" })" class="tab-pill @(Model.SelectedStatus?.ToString() == "Cancelled" ? "active" : "")">
+        Cancelled <span class="tab-count">@Model.CancelledCount</span>
+    </a>
+</div>
+
+<div class="card-panel">
+    <div class="table-responsive">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" class="form-check-input" /></th>
+                    <th>Order</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Items</th>
+                    <th>Amount</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.Orders.Items)
+                {
+                    <tr>
+                        <td><input type="checkbox" class="form-check-input" /></td>
+                        <td class="fw-600 text-primary">@order.OrderNumber</td>
+                        <td>
+                            <div class="customer-cell">
+                                <div class="avatar-sm">@order.CustomerName.FirstOrDefault()</div>
+                                <div>
+                                    <div class="fw-500">@order.CustomerName</div>
+                                    <div class="text-xs text-muted">@order.CustomerEmail</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-muted text-sm">@order.OrderDate.ToString("dd MMM yyyy")<br/><span class="text-xs">@order.OrderDate.ToString("hh:mm tt")</span></td>
+                        <td class="text-muted">@order.Items.Count item(s)</td>
+                        <td class="fw-700">&#8377;@order.TotalAmount.ToString("N0")</td>
+                        <td><span class="payment-badge">@order.PaymentMethod</span></td>
+                        <td><span class="status-badge status-@order.Status.ToLower()">@order.Status</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn-dots" data-bs-toggle="dropdown"><i class="bi bi-three-dots-vertical"></i></button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    @foreach (var s in new[] { "Processing","Shipped","Delivered","Cancelled" })
+                                    {
+                                        if (order.Status != s)
+                                        {
+                                            <li>
+                                                <form asp-action="UpdateStatus" method="post">
+                                                    <input type="hidden" name="id" value="@order.Id"/>
+                                                    <input type="hidden" name="status" value="@s"/>
+                                                    <button type="submit" class="dropdown-item">Mark as @s</button>
+                                                </form>
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (Model.Orders.TotalPages > 1)
+    {
+        <nav class="pagination-bar mt-4">
+            <span class="pagination-info">Showing @(((Model.Orders.Page-1)*Model.Orders.PageSize)+1)–@(Math.Min(Model.Orders.Page*Model.Orders.PageSize, Model.Orders.TotalCount)) of @Model.Orders.TotalCount</span>
+            <div class="pagination-btns">
+                @if (Model.Orders.HasPrevious)
+                {
+                    <a href="@Url.Action("Index", new { page = Model.Orders.Page-1, status = Model.SelectedStatus })" class="pagination-btn"><i class="bi bi-chevron-left"></i></a>
+                }
+                @for (int i = 1; i <= Model.Orders.TotalPages; i++)
+                {
+                    <a href="@Url.Action("Index", new { page = i, status = Model.SelectedStatus })" class="pagination-btn @(i == Model.Orders.Page ? "active" : "")">@i</a>
+                }
+                @if (Model.Orders.HasNext)
+                {
+                    <a href="@Url.Action("Index", new { page = Model.Orders.Page+1, status = Model.SelectedStatus })" class="pagination-btn"><i class="bi bi-chevron-right"></i></a>
+                }
+            </div>
+        </nav>
+    }
+</div>

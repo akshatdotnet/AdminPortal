@@ -1,0 +1,31 @@
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.deps.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Domain.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Domain.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.AssemblyInfo.cs
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPor.997AD7B4.Up2Date
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\refint\AdminPortal.Application.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\ref\AdminPortal.Application.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.deps.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Domain.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.csproj.AssemblyReference.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.AssemblyInfoInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.AssemblyInfo.cs
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.csproj.CoreCompileInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.sourcelink.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPor.997AD7B4.Up2Date
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\refint\AdminPortal.Application.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\ref\AdminPortal.Application.dll

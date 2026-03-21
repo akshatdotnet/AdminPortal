@@ -1,0 +1,237 @@
+@model SettingsViewModel
+@{
+    ViewData["Title"] = "Store Settings";
+    ViewBag.StoreIsOpen = Model.Store.IsOpen;
+}
+
+<div class="settings-layout">
+    <!-- Settings Sidebar Nav -->
+    <nav class="settings-nav">
+        <a href="@Url.Action("Index", new { tab = "store-details" })"
+           class="settings-nav-link @(Model.ActiveTab == "store-details" ? "active" : "")">
+            <i class="bi bi-shop"></i> Store details
+        </a>
+        <a href="@Url.Action("Index", new { tab = "domains" })"
+           class="settings-nav-link @(Model.ActiveTab == "domains" ? "active" : "")">
+            <i class="bi bi-globe2"></i> Domains
+        </a>
+        <a href="@Url.Action("Index", new { tab = "staff-accounts" })"
+           class="settings-nav-link @(Model.ActiveTab == "staff-accounts" ? "active" : "")">
+            <i class="bi bi-people"></i> Staffs accounts
+        </a>
+        <a href="@Url.Action("Index", new { tab = "notifications" })"
+           class="settings-nav-link @(Model.ActiveTab == "notifications" ? "active" : "")">
+            <i class="bi bi-bell"></i> Notifications
+        </a>
+        <a href="@Url.Action("Index", new { tab = "payments" })"
+           class="settings-nav-link @(Model.ActiveTab == "payments" ? "active" : "")">
+            <i class="bi bi-credit-card"></i> Payments
+        </a>
+        <a href="@Url.Action("Index", new { tab = "checkout" })"
+           class="settings-nav-link @(Model.ActiveTab == "checkout" ? "active" : "")">
+            <i class="bi bi-cart3"></i> Checkout
+        </a>
+        <a href="@Url.Action("Index", new { tab = "warehouse" })"
+           class="settings-nav-link @(Model.ActiveTab == "warehouse" ? "active" : "")">
+            <i class="bi bi-building"></i> Warehouse
+        </a>
+        <a href="@Url.Action("Index", new { tab = "delivery" })"
+           class="settings-nav-link @(Model.ActiveTab == "delivery" ? "active" : "")">
+            <i class="bi bi-truck"></i> Delivery
+        </a>
+        <a href="@Url.Action("Index", new { tab = "returns" })"
+           class="settings-nav-link @(Model.ActiveTab == "returns" ? "active" : "")">
+            <i class="bi bi-arrow-return-left"></i> Returns
+        </a>
+        <a href="@Url.Action("Index", new { tab = "tax" })"
+           class="settings-nav-link @(Model.ActiveTab == "tax" ? "active" : "")">
+            <i class="bi bi-receipt-cutoff"></i> Tax
+        </a>
+    </nav>
+
+    <!-- Settings Content -->
+    <div class="settings-content">
+
+        @if (Model.ActiveTab == "store-details")
+        {
+            <div class="settings-section">
+                <div class="d-flex align-items-start justify-content-between mb-4">
+                    <div>
+                        <h2 class="settings-title">Store details</h2>
+                        <p class="text-muted mb-0">Update and customise your store's information.</p>
+                    </div>
+                    <div class="store-status-toggle">
+                        <span class="me-2 fw-500">Store status</span>
+                        <button class="toggle-btn @(Model.Store.IsOpen ? "on" : "off")"
+                                id="storeStatusBtn"
+                                data-store-id="@Model.Store.Id"
+                                data-toggle-url="@Url.Action("ToggleStatus")">
+                            @(Model.Store.IsOpen ? "Open" : "Closed")
+                        </button>
+                    </div>
+                </div>
+
+                <form asp-action="UpdateStore" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="IsOpen" value="@Model.Store.IsOpen" />
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Store Link</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">mydukaan.io/</span>
+                                <input type="text" class="form-control" value="@Model.Store.StoreLink" readonly />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Store Name <span class="text-danger">*</span></label>
+                            <input type="text" name="StoreName" class="form-control" value="@Model.Store.StoreName" required />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Mobile Number</label>
+                            <div class="input-with-flag">
+                                <span class="input-flag">&#127470;&#127475; +91</span>
+                                <input type="text" name="MobileNumber" class="form-control" value="@Model.Store.MobileNumber" />
+                                <button type="button" class="verify-btn">VERIFY</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="EmailAddress" class="form-control" value="@Model.Store.EmailAddress" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Country <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" value="@Model.Store.Country (@Model.Store.Currency)" readonly />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Store Address</label>
+                            <textarea name="StoreAddress" class="form-control" rows="2">@Model.Store.StoreAddress</textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 d-flex gap-3">
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+
+                    <hr class="my-4" />
+                    <div class="danger-zone">
+                        <button type="button" class="btn btn-link text-danger p-0 fw-500">Delete my store</button>
+                    </div>
+                </form>
+            </div>
+        }
+
+        @if (Model.ActiveTab == "staff-accounts")
+        {
+            <div class="settings-section">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div>
+                        <h2 class="settings-title">Staff Accounts</h2>
+                        <p class="text-muted mb-0">Manage who can access your store admin.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#inviteModal">
+                        <i class="bi bi-person-plus me-1"></i> Invite Staff
+                    </button>
+                </div>
+
+                <div class="staff-list">
+                    @foreach (var staff in Model.Staff)
+                    {
+                        <div class="staff-item">
+                            <div class="staff-avatar">@staff.Initials</div>
+                            <div class="flex-grow-1">
+                                <div class="fw-500">@staff.Name</div>
+                                <div class="text-sm text-muted">@staff.Email</div>
+                                @if (staff.LastLoginAt.HasValue)
+                                {
+                                    <div class="text-xs text-muted">Last login: @staff.LastLoginAt.Value.ToString("dd MMM yyyy, hh:mm tt")</div>
+                                }
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="role-badge role-@staff.Role.ToLower()">@staff.Role</span>
+                                <span class="status-dot @(staff.IsActive ? "active" : "inactive")">
+                                    @(staff.IsActive ? "Active" : "Inactive")
+                                </span>
+                                @if (staff.Role != "Owner")
+                                {
+                                    <form asp-action="RemoveStaff" method="post"
+                                          onsubmit="return confirm('Remove this staff member?')">
+                                        <input type="hidden" name="id" value="@staff.Id" />
+                                        <button type="submit" class="btn-icon-danger" title="Remove">
+                                            <i class="bi bi-person-dash"></i>
+                                        </button>
+                                    </form>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Invite Modal -->
+            <div class="modal fade" id="inviteModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Invite Staff Member</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form asp-action="InviteStaff" method="post">
+                            @Html.AntiForgeryToken()
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" name="Email" class="form-control" placeholder="colleague@company.com" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Role</label>
+                                    <select name="Role" class="form-select">
+                                        <option value="Manager">Manager</option>
+                                        <option value="Staff">Staff</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Send Invite</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.ActiveTab != "store-details" && Model.ActiveTab != "staff-accounts")
+        {
+            <div class="settings-section">
+                <div class="empty-state py-5">
+                    <i class="bi bi-wrench-adjustable empty-icon"></i>
+                    <h3>@System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Model.ActiveTab.Replace("-", " "))</h3>
+                    <p class="text-muted">This section is ready to be configured.<br/>Connect your real API to populate these settings.</p>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+@section Scripts {
+<script>
+document.getElementById("storeStatusBtn")?.addEventListener("click", async function() {
+    const btn = this;
+    const storeId = btn.dataset.storeId;
+    const url = btn.dataset.toggleUrl;
+    const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded", "RequestVerificationToken": document.querySelector("[name=__RequestVerificationToken]")?.value || "" },
+        body: new URLSearchParams({ id: storeId })
+    });
+    const data = await res.json();
+    if (data.success) {
+        btn.textContent = data.isOpen ? "Open" : "Closed";
+        btn.className = "toggle-btn " + (data.isOpen ? "on" : "off");
+    }
+});
+</script>
+}

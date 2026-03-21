@@ -1,0 +1,156 @@
+@model ProductListViewModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<!-- Header -->
+<div class="d-flex align-items-center justify-content-between mb-4">
+    <div class="d-flex gap-3">
+        <div class="kpi-mini">
+            <span class="text-muted">Total</span>
+            <span class="fw-700">@Model.Products.TotalCount</span>
+        </div>
+        <div class="kpi-mini">
+            <span class="text-muted">Active</span>
+            <span class="fw-700 text-success">@Model.TotalActive</span>
+        </div>
+        <div class="kpi-mini">
+            <span class="text-muted">Out of stock</span>
+            <span class="fw-700 text-danger">@Model.TotalOutOfStock</span>
+        </div>
+    </div>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-plus-lg me-1"></i> Add Product
+    </a>
+</div>
+
+<!-- Filters -->
+<div class="card-panel mb-4">
+    <form method="get" class="filter-bar">
+        <div class="search-input-wrap">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" name="search" value="@Model.SearchQuery"
+                   class="form-control search-input" placeholder="Search products..." />
+        </div>
+        <select name="category" class="form-select filter-select" onchange="this.form.submit()">
+            <option value="">All categories</option>
+            @foreach (var cat in Model.Categories)
+            {
+                <option value="@cat" selected="@(Model.SelectedCategory == cat)">@cat</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-outline-secondary btn-sm">Filter</button>
+        @if (!string.IsNullOrEmpty(Model.SearchQuery) || !string.IsNullOrEmpty(Model.SelectedCategory))
+        {
+            <a href="@Url.Action("Index")" class="btn btn-ghost btn-sm">Clear</a>
+        }
+    </form>
+</div>
+
+<!-- Products Grid -->
+@if (!Model.Products.Items.Any())
+{
+    <div class="empty-state">
+        <i class="bi bi-box-seam empty-icon"></i>
+        <h3>No products found</h3>
+        <p class="text-muted">Try adjusting your filters or add your first product.</p>
+        <a asp-action="Create" class="btn btn-primary mt-2">Add Product</a>
+    </div>
+}
+else
+{
+    <div class="products-grid">
+        @foreach (var product in Model.Products.Items)
+        {
+            <div class="product-card @(!product.IsActive ? "inactive" : "") @(product.Stock == 0 ? "out-of-stock" : "")">
+                <div class="product-image">
+                    @if (product.DiscountPercentage.HasValue)
+                    {
+                        <div class="discount-badge">@product.DiscountPercentage% OFF</div>
+                    }
+                    @if (product.Stock == 0)
+                    {
+                        <div class="oos-overlay"><span>Out of Stock</span></div>
+                    }
+                    <img src="https://picsum.photos/seed/@product.Id/300/200" alt="@product.Name" />
+                </div>
+                <div class="product-info">
+                    <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                        <h3 class="product-title">@product.Name</h3>
+                        <div class="dropdown">
+                            <button class="btn-dots" data-bs-toggle="dropdown"><i class="bi bi-three-dots-vertical"></i></button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <form asp-action="ToggleStatus" method="post" class="d-inline">
+                                        <input type="hidden" name="id" value="@product.Id" />
+                                        <input type="hidden" name="isActive" value="@(!product.IsActive)" />
+                                        <button type="submit" class="dropdown-item">
+                                            <i class="bi bi-@(product.IsActive ? "eye-slash" : "eye") me-2"></i>
+                                            @(product.IsActive ? "Deactivate" : "Activate")
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form asp-action="Delete" method="post"
+                                          onsubmit="return confirm('Delete this product?')">
+                                        <input type="hidden" name="id" value="@product.Id" />
+                                        <button type="submit" class="dropdown-item text-danger">
+                                            <i class="bi bi-trash me-2"></i> Delete
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-category">@product.Category</div>
+                    <div class="product-price-row">
+                        @if (product.DiscountedPrice.HasValue)
+                        {
+                            <span class="price-current">&#8377;@product.DiscountedPrice.Value.ToString("N0")</span>
+                            <span class="price-original">&#8377;@product.Price.ToString("N0")</span>
+                        }
+                        else
+                        {
+                            <span class="price-current">&#8377;@product.Price.ToString("N0")</span>
+                        }
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2">
+                        <span class="stock-badge @(product.Stock == 0 ? "stock-zero" : product.Stock < 10 ? "stock-low" : "stock-ok")">
+                            @(product.Stock == 0 ? "Out of stock" : $"{product.Stock} in stock")
+                        </span>
+                        <span class="status-dot @(product.IsActive ? "active" : "inactive")">
+                            @(product.IsActive ? "Active" : "Inactive")
+                        </span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Pagination -->
+    @if (Model.Products.TotalPages > 1)
+    {
+        <nav class="pagination-bar mt-4">
+            <span class="pagination-info">
+                Showing @(((Model.Products.Page - 1) * Model.Products.PageSize) + 1)–@(Math.Min(Model.Products.Page * Model.Products.PageSize, Model.Products.TotalCount)) of @Model.Products.TotalCount
+            </span>
+            <div class="pagination-btns">
+                @if (Model.Products.HasPrevious)
+                {
+                    <a href="@Url.Action("Index", new { page = Model.Products.Page - 1, search = Model.SearchQuery, category = Model.SelectedCategory })"
+                       class="pagination-btn"><i class="bi bi-chevron-left"></i></a>
+                }
+                @for (int i = 1; i <= Model.Products.TotalPages; i++)
+                {
+                    <a href="@Url.Action("Index", new { page = i, search = Model.SearchQuery, category = Model.SelectedCategory })"
+                       class="pagination-btn @(i == Model.Products.Page ? "active" : "")">@i</a>
+                }
+                @if (Model.Products.HasNext)
+                {
+                    <a href="@Url.Action("Index", new { page = Model.Products.Page + 1, search = Model.SearchQuery, category = Model.SelectedCategory })"
+                       class="pagination-btn"><i class="bi bi-chevron-right"></i></a>
+                }
+            </div>
+        </nav>
+    }
+}

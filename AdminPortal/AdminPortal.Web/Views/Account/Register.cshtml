@@ -1,0 +1,462 @@
+﻿@model AdminPortal.Application.DTOs.RegisterDto
+@{
+    Layout = null;
+    ViewData["Title"] = "Create Account";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Create Account — Shopzo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/auth.css" asp-append-version="true" />
+    <style>
+        /* ── Password Strength Bar ──────────────────────────────── */
+        .strength-bar-wrap {
+            display: flex;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        .strength-seg {
+            flex: 1;
+            height: 4px;
+            border-radius: 2px;
+            background: #e2e8f0;
+            transition: background .3s ease;
+        }
+        .strength-seg.weak   { background: #ef4444; }
+        .strength-seg.fair   { background: #f97316; }
+        .strength-seg.good   { background: #eab308; }
+        .strength-seg.strong { background: #22c55e; }
+
+        .strength-label {
+            font-size: .72rem;
+            font-weight: 500;
+            margin-top: 4px;
+            color: #94a3b8;
+            transition: color .3s;
+        }
+        .strength-label.weak   { color: #ef4444; }
+        .strength-label.fair   { color: #f97316; }
+        .strength-label.good   { color: #eab308; }
+        .strength-label.strong { color: #22c55e; }
+
+        /* ── Phone prefix ──────────────────────────────────────── */
+        .phone-wrap {
+            display: flex;
+            gap: 8px;
+        }
+        .phone-prefix {
+            width: 90px;
+            flex-shrink: 0;
+        }
+
+        /* ── Password rules list ───────────────────────────────── */
+        .pwd-rules {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0 0;
+            font-size: .74rem;
+            color: #94a3b8;
+        }
+        .pwd-rules li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 3px;
+            transition: color .25s;
+        }
+        .pwd-rules li.ok  { color: #22c55e; }
+        .pwd-rules li.ok .rule-icon::before  { content: "\F26B"; } /* bi-check-circle-fill */
+        .pwd-rules li .rule-icon { font-family: "bootstrap-icons"; font-style: normal; }
+        .pwd-rules li .rule-icon::before { content: "\F287"; } /* bi-circle */
+
+        /* ── Step indicator ────────────────────────────────────── */
+        .step-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+        .step-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            transition: background .3s, width .3s;
+        }
+        .step-dot.active {
+            width: 22px;
+            border-radius: 4px;
+            background: #2563eb;
+        }
+
+        /* ── Terms checkbox ────────────────────────────────────── */
+        .terms-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .82rem;
+            color: #64748b;
+        }
+        .terms-row a { color: #2563eb; text-decoration: none; font-weight: 500; }
+        .terms-row a:hover { text-decoration: underline; }
+        .terms-row input { margin-top: 2px; flex-shrink: 0; }
+
+        /* ── Name row ──────────────────────────────────────────── */
+        .name-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        @@media (max-width: 400px) {
+            .name-row { grid-template-columns: 1fr; }
+            .phone-prefix { width: 76px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-bg">
+        <div class="auth-card">
+
+            <!-- Brand -->
+            <div class="auth-brand">
+                <div class="auth-logo"><i class="bi bi-bag-check-fill"></i></div>
+                <span class="auth-brand-name">shopzo</span>
+            </div>
+
+            <!-- Step dots -->
+            <div class="step-dots">
+                <div class="step-dot active" id="dot1"></div>
+                <div class="step-dot" id="dot2"></div>
+            </div>
+
+            <h1 class="auth-title">Create account</h1>
+
+            <!-- Server-side alerts -->
+            @* @if (!ViewData.ModelState.IsValid) *@
+            @if (ViewContext.HttpContext.Request.Method == "POST" && !ViewData.ModelState.IsValid)
+
+            {
+                <div class="auth-alert auth-alert-error">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    @Html.ValidationSummary(excludePropertyErrors: true, message: "", htmlAttributes: new { @class = "mb-0" })
+                </div>
+            }
+
+            @if (TempData["RegisterSuccess"] != null)
+            {
+                <div class="auth-alert auth-alert-success">
+                    <i class="bi bi-check-circle-fill me-2"></i>@TempData["RegisterSuccess"]
+                </div>
+            }
+
+            <!-- ── FORM ─────────────────────────────────────────── -->
+            <form asp-action="Register" asp-controller="Account" method="post" id="registerForm" novalidate>
+                @Html.AntiForgeryToken()
+
+                <!-- Step 1 -->
+                <div id="step1">
+
+                    <!-- Full Name row -->
+                    <div class="name-row">
+                        <div class="auth-field">
+                            <label asp-for="FirstName" class="auth-label">First name</label>
+                            <input asp-for="FirstName" class="auth-input" placeholder="John"
+                                   autocomplete="given-name" id="firstNameInput" />
+                            <span asp-validation-for="FirstName" class="auth-validation"></span>
+                        </div>
+                        <div class="auth-field">
+                            <label asp-for="LastName" class="auth-label">Last name</label>
+                            <input asp-for="LastName" class="auth-input" placeholder="Doe"
+                                   autocomplete="family-name" id="lastNameInput" />
+                            <span asp-validation-for="LastName" class="auth-validation"></span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="auth-field">
+                        <label asp-for="Email" class="auth-label">Email address</label>
+                        <input asp-for="Email" class="auth-input" type="email"
+                               placeholder="john@example.com"
+                               autocomplete="email" id="emailInput" />
+                        <span asp-validation-for="Email" class="auth-validation"></span>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="auth-field">
+                        <label class="auth-label">Mobile number</label>
+                        <div class="phone-wrap">
+                            <select asp-for="CountryCode" class="auth-input phone-prefix" id="countryCode">
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+61">🇦🇺 +61</option>
+                                <option value="+971">🇦🇪 +971</option>
+                                <option value="+65">🇸🇬 +65</option>
+                            </select>
+                            <div style="flex:1; position:relative;">
+                                <input asp-for="MobileNumber" class="auth-input" type="tel"
+                                       placeholder="9876543210"
+                                       autocomplete="tel-national" id="mobileInput" />
+                                <span asp-validation-for="MobileNumber" class="auth-validation"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="auth-btn" onclick="goToStep2()">
+                        Continue <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="step2" style="display:none;">
+
+                    <!-- Back link -->
+                    <button type="button" class="btn btn-link p-0 mb-3"
+                            style="font-size:.82rem;color:#2563eb;text-decoration:none;"
+                            onclick="goToStep1()">
+                        <i class="bi bi-arrow-left me-1"></i>Back
+                    </button>
+
+                    <!-- Password -->
+                    <div class="auth-field">
+                        <label asp-for="Password" class="auth-label">Password</label>
+                        <div class="auth-input-group">
+                            <input asp-for="Password" class="auth-input" type="password"
+                                   placeholder="Create a strong password"
+                                   autocomplete="new-password"
+                                   id="passwordInput" oninput="updateStrength(this.value)" />
+                            <button type="button" class="auth-eye" onclick="togglePwd('passwordInput','eyeIcon1')" tabindex="-1">
+                                <i class="bi bi-eye" id="eyeIcon1"></i>
+                            </button>
+                        </div>
+
+                        <!-- Strength bar -->
+                        <div class="strength-bar-wrap">
+                            <div class="strength-seg" id="seg1"></div>
+                            <div class="strength-seg" id="seg2"></div>
+                            <div class="strength-seg" id="seg3"></div>
+                            <div class="strength-seg" id="seg4"></div>
+                        </div>
+                        <span class="strength-label" id="strengthLabel"></span>
+
+                        <!-- Rules checklist -->
+                        <ul class="pwd-rules" id="pwdRules">
+                            <li id="rule-len"><span class="rule-icon"></span>At least 8 characters</li>
+                            <li id="rule-upper"><span class="rule-icon"></span>One uppercase letter</li>
+                            <li id="rule-num"><span class="rule-icon"></span>One number</li>
+                            <li id="rule-special"><span class="rule-icon"></span>One special character</li>
+                        </ul>
+
+                        <span asp-validation-for="Password" class="auth-validation"></span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="auth-field">
+                        <label asp-for="ConfirmPassword" class="auth-label">Confirm password</label>
+                        <div class="auth-input-group">
+                            <input asp-for="ConfirmPassword" class="auth-input" type="password"
+                                   placeholder="Re-enter your password"
+                                   autocomplete="new-password"
+                                   id="confirmInput" oninput="checkMatch()" />
+                            <button type="button" class="auth-eye" onclick="togglePwd('confirmInput','eyeIcon2')" tabindex="-1">
+                                <i class="bi bi-eye" id="eyeIcon2"></i>
+                            </button>
+                        </div>
+                        <span id="matchMsg" class="auth-validation"></span>
+                        <span asp-validation-for="ConfirmPassword" class="auth-validation"></span>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="auth-field">
+                        <label class="terms-row">
+                            <input type="checkbox" id="termsCheck" class="form-check-input mt-0" />
+                            <span>
+                                I agree to the <a href="#">Terms of Service</a> and
+                                <a href="#">Privacy Policy</a>
+                            </span>
+                        </label>
+                        <span class="auth-validation" id="termsError"></span>
+                    </div>
+
+                    <button type="submit" class="auth-btn" id="submitBtn">
+                        Create account
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Divider -->
+            <div class="auth-divider"><span>or sign up with</span></div>
+
+            <!-- Google -->
+            <button class="auth-google-btn" type="button">
+                <svg width="18" height="18" viewBox="0 0 48 48" class="me-2">
+                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                </svg>
+                Google
+            </button>
+
+            <p class="auth-footer-text">
+                Already have an account?
+                <a asp-action="Login" asp-controller="Account" class="auth-link">Log in</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ── Step navigation ──────────────────────────────────────────────
+        function goToStep2() {
+            const firstName = document.getElementById('firstNameInput').value.trim();
+            const lastName  = document.getElementById('lastNameInput').value.trim();
+            const email     = document.getElementById('emailInput').value.trim();
+            const mobile    = document.getElementById('mobileInput').value.trim();
+
+            let valid = true;
+
+            if (!firstName) { showFieldError('firstNameInput', 'First name is required.'); valid = false; }
+            else clearFieldError('firstNameInput');
+
+            if (!lastName) { showFieldError('lastNameInput', 'Last name is required.'); valid = false; }
+            else clearFieldError('lastNameInput');
+
+            const emailRx = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+            if (!email) { showFieldError('emailInput', 'Email is required.'); valid = false; }
+            else if (!emailRx.test(email)) { showFieldError('emailInput', 'Enter a valid email address.'); valid = false; }
+            else clearFieldError('emailInput');
+
+            const mobileRx = /^\d{7,15}$/;
+            if (!mobile) { showFieldError('mobileInput', 'Mobile number is required.'); valid = false; }
+            else if (!mobileRx.test(mobile)) { showFieldError('mobileInput', 'Enter a valid mobile number (digits only).'); valid = false; }
+            else clearFieldError('mobileInput');
+
+            if (!valid) return;
+
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+            document.getElementById('dot1').classList.remove('active');
+            document.getElementById('dot2').classList.add('active');
+        }
+
+        function goToStep1() {
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step1').style.display = 'block';
+            document.getElementById('dot2').classList.remove('active');
+            document.getElementById('dot1').classList.add('active');
+        }
+
+        // ── Field error helpers ──────────────────────────────────────────
+        function showFieldError(id, msg) {
+            const el = document.getElementById(id);
+            el.classList.add('is-invalid');
+            let span = el.parentElement.querySelector('.auth-validation')
+                    || el.closest('.auth-field').querySelector('.auth-validation');
+            if (span) { span.textContent = msg; span.style.display = 'block'; }
+        }
+        function clearFieldError(id) {
+            const el = document.getElementById(id);
+            el.classList.remove('is-invalid');
+            let span = el.parentElement.querySelector('.auth-validation')
+                    || el.closest('.auth-field').querySelector('.auth-validation');
+            if (span) { span.textContent = ''; }
+        }
+
+        // ── Password strength ────────────────────────────────────────────
+        function updateStrength(val) {
+            const rules = [
+                { id: 'rule-len',     test: v => v.length >= 8 },
+                { id: 'rule-upper',   test: v => /[A-Z]/.test(v) },
+                { id: 'rule-num',     test: v => /[0-9]/.test(v) },
+                { id: 'rule-special', test: v => /[^A-Za-z0-9]/.test(v) },
+            ];
+
+            let score = 0;
+            rules.forEach(r => {
+                const passed = r.test(val);
+                if (passed) score++;
+                const li = document.getElementById(r.id);
+                li.classList.toggle('ok', passed);
+            });
+
+            const labels  = ['', 'Weak', 'Fair', 'Good', 'Strong'];
+            const classes = ['', 'weak', 'fair', 'good', 'strong'];
+            const segs    = ['seg1','seg2','seg3','seg4'];
+
+            segs.forEach((s, i) => {
+                const el = document.getElementById(s);
+                el.className = 'strength-seg';
+                if (val.length > 0 && i < score) el.classList.add(classes[score]);
+            });
+
+            const lbl = document.getElementById('strengthLabel');
+            lbl.className = 'strength-label' + (val.length > 0 ? ' ' + classes[score] : '');
+            lbl.textContent = val.length > 0 ? labels[score] : '';
+        }
+
+        // ── Confirm password match ───────────────────────────────────────
+        function checkMatch() {
+            const pwd     = document.getElementById('passwordInput').value;
+            const confirm = document.getElementById('confirmInput').value;
+            const msg     = document.getElementById('matchMsg');
+            if (!confirm) { msg.textContent = ''; return; }
+            if (pwd === confirm) {
+                msg.textContent = '✓ Passwords match';
+                msg.style.color = '#22c55e';
+            } else {
+                msg.textContent = 'Passwords do not match.';
+                msg.style.color = '#ef4444';
+            }
+        }
+
+        // ── Toggle password visibility ───────────────────────────────────
+        function togglePwd(inputId, iconId) {
+            const inp = document.getElementById(inputId);
+            const ico = document.getElementById(iconId);
+            if (inp.type === 'password') {
+                inp.type = 'text';
+                ico.className = 'bi bi-eye-slash';
+            } else {
+                inp.type = 'password';
+                ico.className = 'bi bi-eye';
+            }
+        }
+
+        // ── Final submit validation ──────────────────────────────────────
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            let valid = true;
+
+            const pwd     = document.getElementById('passwordInput').value;
+            const confirm = document.getElementById('confirmInput').value;
+            const terms   = document.getElementById('termsCheck').checked;
+            const termsErr = document.getElementById('termsError');
+
+            if (pwd.length < 8 || !/[A-Z]/.test(pwd) || !/[0-9]/.test(pwd) || !/[^A-Za-z0-9]/.test(pwd)) {
+                showFieldError('passwordInput', 'Password does not meet all requirements.');
+                valid = false;
+            }
+
+            if (pwd !== confirm) {
+                showFieldError('confirmInput', 'Passwords do not match.');
+                valid = false;
+            }
+
+            if (!terms) {
+                termsErr.textContent = 'You must accept the Terms of Service.';
+                termsErr.style.display = 'block';
+                valid = false;
+            } else {
+                termsErr.textContent = '';
+            }
+
+            if (!valid) e.preventDefault();
+        });
+    </script>
+</body>
+</html>

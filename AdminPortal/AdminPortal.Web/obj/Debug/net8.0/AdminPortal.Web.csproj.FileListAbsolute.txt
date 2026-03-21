@@ -1,0 +1,76 @@
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.AssemblyInfo.cs
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.RazorAssemblyInfo.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.RazorAssemblyInfo.cs
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.staticwebassets.runtime.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.staticwebassets.endpoints.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.exe
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.deps.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.runtimeconfig.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Application.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Domain.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Infrastructure.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Domain.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Application.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Infrastructure.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\scopedcss\bundle\AdminPortal.Web.styles.css
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.AdminPortal.Web.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.AdminPortal.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.build.AdminPortal.Web.props
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AdminPortal.Web.props
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AdminPortal.Web.props
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPor.D8C939CB.Up2Date
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\refint\AdminPortal.Web.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.genruntimeconfig.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\ref\AdminPortal.Web.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.staticwebassets.runtime.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.staticwebassets.endpoints.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.exe
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.deps.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.runtimeconfig.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Web.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Application.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Infrastructure.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Domain.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Application.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\bin\Debug\net8.0\AdminPortal.Infrastructure.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.csproj.AssemblyReference.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.AssemblyInfoInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.AssemblyInfo.cs
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.csproj.CoreCompileInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.RazorAssemblyInfo.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.RazorAssemblyInfo.cs
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.sourcelink.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\scopedcss\bundle\AdminPortal.Web.styles.css
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.build.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.development.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.AdminPortal.Web.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.AdminPortal.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.build.AdminPortal.Web.props
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AdminPortal.Web.props
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AdminPortal.Web.props
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPor.D8C939CB.Up2Date
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\refint\AdminPortal.Web.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\AdminPortal.Web.genruntimeconfig.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Web\obj\Debug\net8.0\ref\AdminPortal.Web.dll

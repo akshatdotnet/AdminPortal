@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0000003-0000-0000-0000-000000000003}|AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.infrastructure\\mockdata\\mockdatastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0000003-0000-0000-0000-000000000003}|AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj|solutionrelative:adminportal.infrastructure\\mockdata\\mockdatastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0000003-0000-0000-0000-000000000003}|AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.infrastructure\\mockdata\\mockuserstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0000003-0000-0000-0000-000000000003}|AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj|solutionrelative:adminportal.infrastructure\\mockdata\\mockuserstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.web\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|solutionrelative:adminportal.web\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.web\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|solutionrelative:adminportal.web\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|solutionrelative:adminportal.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2232044-429A-4021-89EF-773787857537}|AdminPortal.Api\\AdminPortal.Api.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.api\\adminapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2232044-429A-4021-89EF-773787857537}|AdminPortal.Api\\AdminPortal.Api.csproj|solutionrelative:adminportal.api\\adminapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2232044-429A-4021-89EF-773787857537}|AdminPortal.Api\\AdminPortal.Api.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F2232044-429A-4021-89EF-773787857537}|AdminPortal.Api\\AdminPortal.Api.csproj|solutionrelative:adminportal.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\dotnetassignment_task\\adminportal\\adminportal.web\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0000004-0000-0000-0000-000000000004}|AdminPortal.Web\\AdminPortal.Web.csproj|solutionrelative:adminportal.web\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MockDataStore.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\MockData\\MockDataStore.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Infrastructure\\MockData\\MockDataStore.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\MockData\\MockDataStore.cs",
+              "RelativeToolTip": "AdminPortal.Infrastructure\\MockData\\MockDataStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T15:00:53.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MockUserStore.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\MockData\\MockUserStore.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Infrastructure\\MockData\\MockUserStore.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\MockData\\MockUserStore.cs",
+              "RelativeToolTip": "AdminPortal.Infrastructure\\MockData\\MockUserStore.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T15:00:44.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingsViewModel.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\ViewModels\\SettingsViewModel.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Web\\ViewModels\\SettingsViewModel.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\ViewModels\\SettingsViewModel.cs",
+              "RelativeToolTip": "AdminPortal.Web\\ViewModels\\SettingsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T15:00:34.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SettingsController.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\Controllers\\SettingsController.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Web\\Controllers\\SettingsController.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\Controllers\\SettingsController.cs",
+              "RelativeToolTip": "AdminPortal.Web\\Controllers\\SettingsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAACkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T15:00:19.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "AdminPortal.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAOkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T15:00:03.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminApiClient.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Api\\AdminApiClient.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Api\\AdminApiClient.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Api\\AdminApiClient.cs",
+              "RelativeToolTip": "AdminPortal.Api\\AdminApiClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T14:58:44.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "AdminPortal.Api\\appsettings.json",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Api\\appsettings.json",
+              "RelativeToolTip": "AdminPortal.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T14:58:35.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "AdminPortal.Web\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "AdminPortal.Web\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T05:35:54.999Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

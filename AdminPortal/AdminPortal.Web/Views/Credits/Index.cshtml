@@ -1,0 +1,102 @@
+@model CreditsViewModel
+@{
+    ViewData["Title"] = "Credits";
+}
+
+@if (Model.Summary.IsBalanceLow)
+{
+    <div class="alert-info-banner mb-4">
+        <i class="bi bi-exclamation-circle text-warning me-2"></i>
+        <div class="flex-grow-1">
+            <div class="fw-600">Wallet Balance Low</div>
+            <div class="text-sm text-muted">To ensure seamless payouts and order updates, please maintain at least 2500 credits in your Dukaan Wallet.</div>
+        </div>
+        <a href="#" class="btn btn-outline-secondary btn-sm ms-3">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Learn more
+        </a>
+    </div>
+}
+
+<!-- Balance Card -->
+<div class="card-panel mb-4 d-flex align-items-center justify-content-between">
+    <div>
+        <div class="text-muted text-sm mb-1">Dukaan Credits</div>
+        <div style="font-size: 36px; font-weight: 700; line-height: 1;">@Model.Summary.CurrentBalance.ToString("F2")</div>
+    </div>
+    <button class="btn btn-primary">
+        <i class="bi bi-plus-lg me-1"></i> Add credits
+    </button>
+</div>
+
+<!-- Filters -->
+<div class="d-flex align-items-center justify-content-between mb-3 gap-3">
+    <div class="d-flex gap-2">
+        @foreach (var f in new[] { "All", "Debit", "Credit" })
+        {
+            <a href="@Url.Action("Index", new { filter = f, dateRange = Model.SelectedDateRange })"
+               class="btn btn-sm @(Model.SelectedFilter == f ? "btn-primary" : "btn-outline-secondary")">@f</a>
+        }
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle">
+            <i class="bi bi-calendar3 me-1"></i>
+            @(Model.SelectedDateRange == "7d" ? "Last 7 days" : Model.SelectedDateRange == "90d" ? "Last 90 days" : "Last 30 days")
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+            @foreach (var (val, label) in new[] { ("7d","Last 7 days"), ("30d","Last 30 days"), ("90d","Last 90 days") })
+            {
+                <li><a class="dropdown-item @(Model.SelectedDateRange == val ? "active" : "")"
+                       href="@Url.Action("Index", new { filter = Model.SelectedFilter, dateRange = val })">@label</a></li>
+            }
+        </ul>
+    </div>
+</div>
+
+<!-- Transactions Table -->
+<div class="card-panel p-0">
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Reference ID</th>
+                <th>Details</th>
+                <th>Credits</th>
+                <th>Type</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tx in Model.Summary.Transactions)
+            {
+                <tr>
+                    <td>
+                        <div class="fw-500">@tx.ReferenceId</div>
+                        <div class="text-xs text-muted">@tx.CreatedAt.ToString("dd/MM/yy, hh:mm tt")</div>
+                    </td>
+                    <td>
+                        <div>@tx.Details</div>
+                        @if (!string.IsNullOrEmpty(tx.OrderId))
+                        {
+                            <a href="#" class="text-primary text-sm text-decoration-none">Order ID: @tx.OrderId</a>
+                        }
+                    </td>
+                    <td class="fw-600">@tx.Credits.ToString("F2")</td>
+                    <td>
+                        <span class="d-flex align-items-center gap-1">
+                            <span class="dot @(tx.IsDebit ? "dot-red" : "dot-green")"></span>
+                            @tx.Type
+                        </span>
+                    </td>
+                    <td class="fw-600">@tx.Balance.ToString("F2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (!Model.Summary.Transactions.Any())
+    {
+        <div class="empty-state py-5">
+            <i class="bi bi-wallet2 empty-icon"></i>
+            <h3>No transactions</h3>
+            <p class="text-muted">No credit transactions found for the selected period.</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,23 @@
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\bin\Debug\net8.0\AdminPortal.Domain.deps.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\bin\Debug\net8.0\AdminPortal.Domain.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\bin\Debug\net8.0\AdminPortal.Domain.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.AssemblyInfo.cs
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\refint\AdminPortal.Domain.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\ref\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\bin\Debug\net8.0\AdminPortal.Domain.deps.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\bin\Debug\net8.0\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\bin\Debug\net8.0\AdminPortal.Domain.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.AssemblyInfoInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.AssemblyInfo.cs
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.csproj.CoreCompileInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.sourcelink.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\refint\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\AdminPortal.Domain.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Domain\obj\Debug\net8.0\ref\AdminPortal.Domain.dll

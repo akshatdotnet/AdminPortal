@@ -1,0 +1,35 @@
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Infrastructure.deps.json
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Infrastructure.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Infrastructure.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Application.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Domain.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Domain.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Application.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.AssemblyInfo.cs
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPor.2E30483E.Up2Date
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\refint\AdminPortal.Infrastructure.dll
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.pdb
+C:\Users\aksha\Downloads\AdminPortal\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\ref\AdminPortal.Infrastructure.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Infrastructure.deps.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Infrastructure.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Infrastructure.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Application.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Domain.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Domain.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\bin\Debug\net8.0\AdminPortal.Application.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.csproj.AssemblyReference.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.AssemblyInfoInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.AssemblyInfo.cs
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.sourcelink.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPor.2E30483E.Up2Date
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\refint\AdminPortal.Infrastructure.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\AdminPortal.Infrastructure.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Infrastructure\obj\Debug\net8.0\ref\AdminPortal.Infrastructure.dll

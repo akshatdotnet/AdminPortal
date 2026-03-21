@@ -1,0 +1,95 @@
+@model PayoutsViewModel
+@{
+    ViewData["Title"] = "Payouts";
+}
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="kpi-card payout-balance">
+            <div class="kpi-label">Available Balance</div>
+            <div class="kpi-value text-success">@Model.Summary.AvailableBalance</div>
+            <button class="btn btn-success btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#payoutModal">
+                <i class="bi bi-bank me-1"></i> Request Payout
+            </button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="kpi-card">
+            <div class="kpi-icon kpi-revenue"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="kpi-value">@Model.Summary.TotalEarned</div>
+            <div class="kpi-label">Total Earned</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="kpi-card">
+            <div class="kpi-icon kpi-orders"><i class="bi bi-hourglass-split"></i></div>
+            <div class="kpi-value">@Model.Summary.PendingAmount</div>
+            <div class="kpi-label">Pending Payouts</div>
+        </div>
+    </div>
+</div>
+
+<div class="card-panel">
+    <div class="panel-header">
+        <h2 class="panel-title">Payout History</h2>
+    </div>
+    <div class="table-responsive">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Transaction Ref</th>
+                    <th>Amount</th>
+                    <th>Bank Account</th>
+                    <th>Requested</th>
+                    <th>Processed</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var payout in Model.Summary.RecentPayouts)
+                {
+                    <tr>
+                        <td class="fw-500 font-mono">@payout.TransactionRef</td>
+                        <td class="fw-700">@payout.Amount</td>
+                        <td>@payout.BankAccount</td>
+                        <td class="text-muted">@payout.RequestedAt.ToString("dd MMM yyyy")</td>
+                        <td class="text-muted">@(payout.ProcessedAt?.ToString("dd MMM yyyy") ?? "—")</td>
+                        <td>
+                            <span class="status-badge status-@payout.StatusClass">@payout.Status</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Request Payout Modal -->
+<div class="modal fade" id="payoutModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Request Payout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form asp-action="RequestPayout" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <p class="text-muted">Available balance: <strong class="text-success">@Model.Summary.AvailableBalance</strong></p>
+                    <div class="mb-3">
+                        <label class="form-label">Payout Amount (&#8377;)</label>
+                        <input type="number" name="amount" class="form-control" min="100" step="100" required placeholder="Enter amount" />
+                    </div>
+                    <div class="info-box">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Payouts are processed within 2-3 business days to your registered bank account.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success">Request Payout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

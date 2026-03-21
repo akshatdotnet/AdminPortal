@@ -1,0 +1,188 @@
+@model DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+    ViewBag.StoreIsOpen = Model.StoreIsOpen;
+    ViewBag.StoreDomain = Model.StoreName;
+}
+
+<!-- Period Filter -->
+<div class="d-flex align-items-center justify-content-between mb-4">
+    <div class="period-pills">
+        @foreach (var p in new[] { ("today","Today"), ("7d","Last 7 days"), ("30d","Last 30 days"), ("90d","Last 90 days") })
+        {
+            <a href="@Url.Action("Index", new { period = p.Item1 })"
+               class="period-pill @(Model.SelectedPeriod == p.Item1 ? "active" : "")">@p.Item2</a>
+        }
+    </div>
+    <a asp-controller="Products" asp-action="Create" class="btn btn-primary btn-sm">
+        <i class="bi bi-plus-lg me-1"></i> Add Product
+    </a>
+</div>
+
+<!-- KPI Cards -->
+<div class="row g-3 mb-4">
+    <div class="col-6 col-xl-3">
+        <div class="kpi-card">
+            <div class="kpi-icon kpi-revenue"><i class="bi bi-currency-rupee"></i></div>
+            <div class="kpi-value">@Model.Analytics.TotalRevenue</div>
+            <div class="kpi-label">Total Revenue</div>
+            <div class="kpi-change @(Model.Analytics.RevenueUp ? "up" : "down")">
+                <i class="bi bi-arrow-@(Model.Analytics.RevenueUp ? "up" : "down")-short"></i>
+                @Model.Analytics.RevenueChange%
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="kpi-card">
+            <div class="kpi-icon kpi-orders"><i class="bi bi-bag-check"></i></div>
+            <div class="kpi-value">@Model.Analytics.TotalOrders</div>
+            <div class="kpi-label">Total Orders</div>
+            <div class="kpi-change @(Model.Analytics.OrdersUp ? "up" : "down")">
+                <i class="bi bi-arrow-@(Model.Analytics.OrdersUp ? "up" : "down")-short"></i>
+                @Model.Analytics.OrdersChange vs last period
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="kpi-card">
+            <div class="kpi-icon kpi-visitors"><i class="bi bi-eye"></i></div>
+            <div class="kpi-value">@Model.Analytics.TotalVisitors.ToString("N0")</div>
+            <div class="kpi-label">Total Visitors</div>
+            <div class="kpi-change @(Model.Analytics.VisitorsUp ? "up" : "down")">
+                <i class="bi bi-arrow-@(Model.Analytics.VisitorsUp ? "up" : "down")-short"></i>
+                @Model.Analytics.VisitorsChange.ToString("N0") vs last period
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="kpi-card">
+            <div class="kpi-icon kpi-conversion"><i class="bi bi-lightning-charge"></i></div>
+            <div class="kpi-value">@Model.Analytics.ConversionRate</div>
+            <div class="kpi-label">Conversion Rate</div>
+            <div class="kpi-change @(Model.Analytics.ConversionUp ? "up" : "down")">
+                <i class="bi bi-arrow-@(Model.Analytics.ConversionUp ? "up" : "down")-short"></i>
+                @Model.Analytics.ConversionChange%
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+    <!-- Revenue Chart -->
+    <div class="col-12 col-xl-8">
+        <div class="card-panel">
+            <div class="panel-header">
+                <h2 class="panel-title">Revenue Overview</h2>
+            </div>
+            <div class="chart-container">
+                <canvas id="revenueChart"
+                    data-labels="@string.Join(",", Model.Analytics.RevenueChart.Select(d => d.Label))"
+                    data-values="@string.Join(",", Model.Analytics.RevenueChart.Select(d => d.Amount))">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <!-- Top Products -->
+    <div class="col-12 col-xl-4">
+        <div class="card-panel h-100">
+            <div class="panel-header">
+                <h2 class="panel-title">Top Products</h2>
+            </div>
+            <div class="top-products-list">
+                @foreach (var (product, i) in Model.Analytics.TopProducts.Select((p, i) => (p, i + 1)))
+                {
+                    <div class="top-product-item">
+                        <div class="rank-badge">@i</div>
+                        <div class="flex-grow-1 min-w-0">
+                            <div class="product-name text-truncate">@product.Name</div>
+                            <div class="text-xs text-muted">@product.UnitsSold units</div>
+                        </div>
+                        <div class="product-revenue">@product.Revenue</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Orders -->
+<div class="card-panel">
+    <div class="panel-header">
+        <h2 class="panel-title">Recent Orders</h2>
+        <a href="#" class="text-link">View all</a>
+    </div>
+    <div class="table-responsive">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.RecentOrders)
+                {
+                    <tr>
+                        <td class="fw-500 text-primary">@order.OrderNumber</td>
+                        <td>
+                            <div class="customer-cell">
+                                <div class="avatar-sm">@order.CustomerName.FirstOrDefault()</div>
+                                @order.CustomerName
+                            </div>
+                        </td>
+                        <td class="fw-600">&#8377;@order.TotalAmount.ToString("N0")</td>
+                        <td>
+                            <span class="payment-badge">@order.PaymentMethod</span>
+                        </td>
+                        <td>
+                            <span class="status-badge status-@order.Status.ToString().ToLower()">@order.Status</span>
+                        </td>
+                        <td class="text-muted">@order.OrderDate.ToString("dd MMM, hh:mm tt")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+(function() {
+    const canvas = document.getElementById('revenueChart');
+    if (!canvas) return;
+    const labels = canvas.dataset.labels.split(',');
+    const values = canvas.dataset.values.split(',').map(Number);
+    new Chart(canvas, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Revenue (₹)',
+                data: values,
+                borderColor: '#1a6ef5',
+                backgroundColor: 'rgba(26,110,245,0.08)',
+                borderWidth: 2.5,
+                pointRadius: 3,
+                pointHoverRadius: 6,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#94a3b8' } },
+                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 11 }, color: '#94a3b8',
+                    callback: v => v >= 1000 ? '₹' + (v/1000).toFixed(0) + 'K' : '₹' + v } }
+            }
+        }
+    });
+})();
+</script>
+}
