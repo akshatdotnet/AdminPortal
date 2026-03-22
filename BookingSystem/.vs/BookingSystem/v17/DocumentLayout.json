@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.core\\features\\bookings\\handlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|solutionrelative:src\\bookingsystem.core\\features\\bookings\\handlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.infrastructure\\services\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|solutionrelative:src\\bookingsystem.infrastructure\\services\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.core\\events\\domainevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|solutionrelative:src\\bookingsystem.core\\events\\domainevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000001}|src\\BookingSystem.API\\BookingSystem.API.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.api\\bookingsystem.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000001}|src\\BookingSystem.API\\BookingSystem.API.csproj|solutionrelative:src\\bookingsystem.api\\bookingsystem.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.core\\validators\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|solutionrelative:src\\bookingsystem.core\\validators\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.core\\interfaces\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|solutionrelative:src\\bookingsystem.core\\interfaces\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.core\\features\\bookings\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000002}|src\\BookingSystem.Core\\BookingSystem.Core.csproj|solutionrelative:src\\bookingsystem.core\\features\\bookings\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.infrastructure\\data\\repositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|solutionrelative:src\\bookingsystem.infrastructure\\data\\repositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|solutionrelative:src\\bookingsystem.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.infrastructure\\infrastructureserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000003}|src\\BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|solutionrelative:src\\bookingsystem.infrastructure\\infrastructureserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000004}|src\\BookingSystem.Worker\\BookingSystem.Worker.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000004}|src\\BookingSystem.Worker\\BookingSystem.Worker.csproj|solutionrelative:src\\bookingsystem.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000004}|src\\BookingSystem.Worker\\BookingSystem.Worker.csproj|c:\\users\\aksha\\downloads\\bookingsystem_v12\\bookingsystem\\src\\bookingsystem.worker\\workers\\workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-0001-0001-0001-000000000004}|src\\BookingSystem.Worker\\BookingSystem.Worker.csproj|solutionrelative:src\\bookingsystem.worker\\workers\\workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Handlers.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Features\\Bookings\\Handlers.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Core\\Features\\Bookings\\Handlers.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Features\\Bookings\\Handlers.cs",
+              "RelativeToolTip": "src\\BookingSystem.Core\\Features\\Bookings\\Handlers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:25:51.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DomainEvents.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Events\\DomainEvents.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Core\\Events\\DomainEvents.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Events\\DomainEvents.cs",
+              "RelativeToolTip": "src\\BookingSystem.Core\\Events\\DomainEvents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:24:56.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingSystem.API",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.API\\BookingSystem.API.csproj",
+              "RelativeDocumentMoniker": "src\\BookingSystem.API\\BookingSystem.API.csproj",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.API\\BookingSystem.API.csproj",
+              "RelativeToolTip": "src\\BookingSystem.API\\BookingSystem.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-22T07:24:32.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Validators.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Validators\\Validators.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Core\\Validators\\Validators.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Validators\\Validators.cs",
+              "RelativeToolTip": "src\\BookingSystem.Core\\Validators\\Validators.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:24:22.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Interfaces.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Interfaces\\Interfaces.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Core\\Interfaces\\Interfaces.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Interfaces\\Interfaces.cs",
+              "RelativeToolTip": "src\\BookingSystem.Core\\Interfaces\\Interfaces.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:23:56.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Commands.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Features\\Bookings\\Commands.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Core\\Features\\Bookings\\Commands.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Core\\Features\\Bookings\\Commands.cs",
+              "RelativeToolTip": "src\\BookingSystem.Core\\Features\\Bookings\\Commands.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:23:46.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\Services\\Services.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Infrastructure\\Services\\Services.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\Services\\Services.cs",
+              "RelativeToolTip": "src\\BookingSystem.Infrastructure\\Services\\Services.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAYwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:21:13.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Repositories.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\Data\\Repositories.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Infrastructure\\Data\\Repositories.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\Data\\Repositories.cs",
+              "RelativeToolTip": "src\\BookingSystem.Infrastructure\\Data\\Repositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:21:09.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "src\\BookingSystem.Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:21:06.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InfrastructureServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\InfrastructureServiceExtensions.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Infrastructure\\InfrastructureServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Infrastructure\\InfrastructureServiceExtensions.cs",
+              "RelativeToolTip": "src\\BookingSystem.Infrastructure\\InfrastructureServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:20:55.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Workers.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Worker\\Workers\\Workers.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Worker\\Workers\\Workers.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Worker\\Workers\\Workers.cs",
+              "RelativeToolTip": "src\\BookingSystem.Worker\\Workers\\Workers.cs",
+              "ViewState": "AgIAABYBAAAAAAAAAAAkwDcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:19:21.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Worker\\Program.cs",
+              "RelativeDocumentMoniker": "src\\BookingSystem.Worker\\Program.cs",
+              "ToolTip": "C:\\Users\\aksha\\Downloads\\BookingSystem_v12\\BookingSystem\\src\\BookingSystem.Worker\\Program.cs",
+              "RelativeToolTip": "src\\BookingSystem.Worker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:18:57.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

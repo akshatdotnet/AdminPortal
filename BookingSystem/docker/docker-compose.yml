@@ -1,0 +1,55 @@
+version: '3.9'
+
+# ─── LOCAL DEVELOPMENT STACK ──────────────────────────────────────────────────
+# Run: docker compose up -d
+# This gives you Redis + RabbitMQ locally.
+# The API uses SQLite by default so it works WITHOUT docker too.
+
+services:
+
+  # ─── API ──────────────────────────────────────────────────────────────────
+  booking-api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.API
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - redis
+      - rabbitmq
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+  # ─── REDIS (distributed cache) ────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+
+  # ─── RABBITMQ (message bus) ───────────────────────────────────────────────
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"    # AMQP
+      - "15672:15672"  # Management UI → http://localhost:15672 (guest/guest)
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    restart: unless-stopped
+
+  # ─── REDIS COMMANDER (Redis GUI) ──────────────────────────────────────────
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    restart: unless-stopped

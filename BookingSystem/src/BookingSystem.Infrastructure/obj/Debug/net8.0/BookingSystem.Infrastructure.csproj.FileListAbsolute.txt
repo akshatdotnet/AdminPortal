@@ -1,0 +1,15 @@
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\bin\Debug\net8.0\BookingSystem.Infrastructure.deps.json
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\bin\Debug\net8.0\BookingSystem.Infrastructure.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\bin\Debug\net8.0\BookingSystem.Infrastructure.pdb
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\bin\Debug\net8.0\BookingSystem.Core.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\bin\Debug\net8.0\BookingSystem.Core.pdb
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingS.84CF42C0.Up2Date
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\refint\BookingSystem.Infrastructure.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\BookingSystem.Infrastructure.pdb
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Infrastructure\obj\Debug\net8.0\ref\BookingSystem.Infrastructure.dll

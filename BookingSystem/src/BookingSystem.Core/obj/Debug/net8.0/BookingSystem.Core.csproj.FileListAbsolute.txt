@@ -1,0 +1,12 @@
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\bin\Debug\net8.0\BookingSystem.Core.deps.json
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\bin\Debug\net8.0\BookingSystem.Core.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\bin\Debug\net8.0\BookingSystem.Core.pdb
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.AssemblyInfo.cs
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\refint\BookingSystem.Core.dll
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\BookingSystem.Core.pdb
+C:\Users\aksha\Downloads\BookingSystem_v12\BookingSystem\src\BookingSystem.Core\obj\Debug\net8.0\ref\BookingSystem.Core.dll

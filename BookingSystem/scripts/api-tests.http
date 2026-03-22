@@ -1,0 +1,106 @@
+### ═══════════════════════════════════════════════════════════════
+### BookingSystem API - Test Requests
+### Use VS Code REST Client extension (humao.rest-client)
+### OR copy the curl equivalents below
+### ═══════════════════════════════════════════════════════════════
+
+@base = http://localhost:5000
+
+### ── STEP 0: Health Check ─────────────────────────────────────
+GET {{base}}/health
+
+### ── STEP 1: List Venues (seeded) ────────────────────────────
+GET {{base}}/api/venues
+
+### ── STEP 2: List Customers (seeded) ─────────────────────────
+GET {{base}}/api/venues/customers
+
+### ── STEP 3: Check Available Slots ───────────────────────────
+# Replace date with any future date
+GET {{base}}/api/bookings/slots?venueId=00000000-0000-0000-0000-000000000011&date=2025-12-25
+
+### ── STEP 4: Create a Booking ────────────────────────────────
+# This automatically creates a pending Order too
+POST {{base}}/api/bookings
+Content-Type: application/json
+
+{
+  "customerId": "00000000-0000-0000-0000-000000000001",
+  "venueId":    "00000000-0000-0000-0000-000000000011",
+  "slotDate":   "2025-12-25T11:00:00Z",
+  "guestCount": 50
+}
+
+### ── STEP 5: Get the Booking ─────────────────────────────────
+# Replace {bookingId} with the ID returned in Step 4
+GET {{base}}/api/bookings/{{bookingId}}
+
+### ── STEP 6: Pay the Order ────────────────────────────────────
+# Replace {orderId} with the order ID from Step 4 response
+# Use "fail_card" as cardToken to test payment failure
+POST {{base}}/api/orders/{{orderId}}/pay
+Content-Type: application/json
+
+{
+  "cardToken": "valid_token_123"
+}
+
+### ── STEP 7: Confirm is auto after payment ────────────────────
+GET {{base}}/api/bookings/{{bookingId}}
+
+### ── STEP 8: Get Customer's Bookings ─────────────────────────
+GET {{base}}/api/bookings/customer/00000000-0000-0000-0000-000000000001
+
+### ── STEP 9: Cancel a Booking ────────────────────────────────
+POST {{base}}/api/bookings/{{bookingId}}/cancel
+Content-Type: application/json
+
+{
+  "reason": "Customer requested cancellation"
+}
+
+### ── STEP 10: Test Payment Failure ───────────────────────────
+# First create another booking
+POST {{base}}/api/bookings
+Content-Type: application/json
+
+{
+  "customerId": "00000000-0000-0000-0000-000000000002",
+  "venueId":    "00000000-0000-0000-0000-000000000012",
+  "slotDate":   "2025-12-26T14:00:00Z",
+  "guestCount": 20
+}
+
+### Then pay with a failing token
+POST {{base}}/api/orders/{{orderId2}}/pay
+Content-Type: application/json
+
+{
+  "cardToken": "fail_card_test"
+}
+
+### ── STEP 11: See all published Domain Events ─────────────────
+GET {{base}}/api/events
+
+### ── STEP 12: Run full demo in ONE call ──────────────────────
+# Creates booking → order → pays → confirms automatically
+POST {{base}}/api/demo/full-flow
+
+
+### ═══════════════════════════════════════════════════════════════
+### EQUIVALENT CURL COMMANDS
+### ═══════════════════════════════════════════════════════════════
+
+# Health check
+# curl http://localhost:5000/health
+
+# List venues
+# curl http://localhost:5000/api/venues
+
+# Create booking
+# curl -X POST http://localhost:5000/api/bookings \
+#   -H "Content-Type: application/json" \
+#   -d '{"customerId":"00000000-0000-0000-0000-000000000001","venueId":"00000000-0000-0000-0000-000000000011","slotDate":"2025-12-25T11:00:00Z","guestCount":50}'
+
+# Full demo
+# curl -X POST http://localhost:5000/api/demo/full-flow
