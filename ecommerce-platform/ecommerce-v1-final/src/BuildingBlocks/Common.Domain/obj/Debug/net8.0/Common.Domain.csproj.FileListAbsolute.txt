@@ -1,0 +1,12 @@
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\bin\Debug\net8.0\Common.Domain.deps.json
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\bin\Debug\net8.0\Common.Domain.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\bin\Debug\net8.0\Common.Domain.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.AssemblyInfo.cs
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\refint\Common.Domain.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\Common.Domain.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Domain\obj\Debug\net8.0\ref\Common.Domain.dll

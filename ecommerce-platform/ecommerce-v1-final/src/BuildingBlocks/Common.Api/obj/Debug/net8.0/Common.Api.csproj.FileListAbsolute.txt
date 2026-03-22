@@ -1,0 +1,17 @@
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Api.deps.json
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Api.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Api.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Application.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Domain.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Application.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\bin\Debug\net8.0\Common.Domain.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.AssemblyInfo.cs
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.csproj.Up2Date
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\refint\Common.Api.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\Common.Api.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Api\obj\Debug\net8.0\ref\Common.Api.dll

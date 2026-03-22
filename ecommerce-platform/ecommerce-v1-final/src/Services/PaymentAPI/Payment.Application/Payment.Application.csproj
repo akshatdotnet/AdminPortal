@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>$(NoWarn);NU1903;NU1902;NU1603</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Payment.Domain/Payment.Domain.csproj" />
+    <ProjectReference Include="../../../BuildingBlocks/Common.Application/Common.Application.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Infrastructure.deps.json
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Infrastructure.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Infrastructure.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Application.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Domain.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Domain.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\bin\Debug\net8.0\Common.Application.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.AssemblyInfo.cs
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.I.562AF620.Up2Date
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\refint\Common.Infrastructure.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Infrastructure\obj\Debug\net8.0\ref\Common.Infrastructure.dll

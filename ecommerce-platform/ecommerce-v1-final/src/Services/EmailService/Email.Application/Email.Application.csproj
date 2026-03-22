@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>$(NoWarn);NU1903;NU1902;NU1603</NoWarn></PropertyGroup>
+  <ItemGroup><PackageReference Include="MediatR" Version="12.4.1" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../../BuildingBlocks/Common.Domain/Common.Domain.csproj" />
+    <ProjectReference Include="../../../BuildingBlocks/Common.Application/Common.Application.csproj" />
+    <ProjectReference Include="../../../Services/Identity/Identity.Domain/Identity.Domain.csproj" />
+    <ProjectReference Include="../../../Services/OrderAPI/Order.Domain/Order.Domain.csproj" />
+  </ItemGroup>
+</Project>

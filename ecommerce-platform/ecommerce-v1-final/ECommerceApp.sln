@@ -1,0 +1,99 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AAAAAAAA-0000-0000-0000-000000000001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "src\BuildingBlocks", "{AAAAAAAA-0000-0000-0000-000000000002}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "src\Services", "{AAAAAAAA-0000-0000-0000-000000000003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain", "src\BuildingBlocks\Common.Domain\Common.Domain.csproj", "{BB000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "src\BuildingBlocks\Common.Application\Common.Application.csproj", "{BB000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "src\BuildingBlocks\Common.Infrastructure\Common.Infrastructure.csproj", "{BB000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Api", "src\BuildingBlocks\Common.Api\Common.Api.csproj", "{BB000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\Services\Identity\Identity.Domain\Identity.Domain.csproj", "{ID000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "src\Services\Identity\Identity.Application\Identity.Application.csproj", "{ID000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "src\Services\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{ID000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Api", "src\Services\Identity\Identity.Api\Identity.Api.csproj", "{ID000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Domain", "src\Services\ProductAPI\Product.Domain\Product.Domain.csproj", "{PD000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Application", "src\Services\ProductAPI\Product.Application\Product.Application.csproj", "{PD000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Infrastructure", "src\Services\ProductAPI\Product.Infrastructure\Product.Infrastructure.csproj", "{PD000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Api", "src\Services\ProductAPI\Product.Api\Product.Api.csproj", "{PD000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Domain", "src\Services\OrderAPI\Order.Domain\Order.Domain.csproj", "{OD000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Application", "src\Services\OrderAPI\Order.Application\Order.Application.csproj", "{OD000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Infrastructure", "src\Services\OrderAPI\Order.Infrastructure\Order.Infrastructure.csproj", "{OD000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Api", "src\Services\OrderAPI\Order.Api\Order.Api.csproj", "{OD000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Domain", "src\Services\ShoppingCartAPI\Cart.Domain\Cart.Domain.csproj", "{CT000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Application", "src\Services\ShoppingCartAPI\Cart.Application\Cart.Application.csproj", "{CT000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Infrastructure", "src\Services\ShoppingCartAPI\Cart.Infrastructure\Cart.Infrastructure.csproj", "{CT000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cart.Api", "src\Services\ShoppingCartAPI\Cart.Api\Cart.Api.csproj", "{CT000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coupon.Domain", "src\Services\CouponAPI\Coupon.Domain\Coupon.Domain.csproj", "{CN000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coupon.Application", "src\Services\CouponAPI\Coupon.Application\Coupon.Application.csproj", "{CN000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coupon.Infrastructure", "src\Services\CouponAPI\Coupon.Infrastructure\Coupon.Infrastructure.csproj", "{CN000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coupon.Api", "src\Services\CouponAPI\Coupon.Api\Coupon.Api.csproj", "{CN000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Domain", "src\Services\PaymentAPI\Payment.Domain\Payment.Domain.csproj", "{PM000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Application", "src\Services\PaymentAPI\Payment.Application\Payment.Application.csproj", "{PM000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Infrastructure", "src\Services\PaymentAPI\Payment.Infrastructure\Payment.Infrastructure.csproj", "{PM000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Api", "src\Services\PaymentAPI\Payment.Api\Payment.Api.csproj", "{PM000004-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Email.Application", "src\Services\EmailService\Email.Application\Email.Application.csproj", "{EM000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Email.Infrastructure", "src\Services\EmailService\Email.Infrastructure\Email.Infrastructure.csproj", "{EM000002-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Email.Api", "src\Services\EmailService\Email.Api\Email.Api.csproj", "{EM000003-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Tests", "tests\Identity.Tests\Identity.Tests.csproj", "{TT000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Tests", "tests\Order.Tests\Order.Tests.csproj", "{TT000002-0000-0000-0000-000000000001}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB000001-0000-0000-0000-000000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB000001-0000-0000-0000-000000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB000001-0000-0000-0000-000000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB000001-0000-0000-0000-000000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB000001-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000002}
+		{BB000002-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000002}
+		{BB000003-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000002}
+		{BB000004-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000002}
+		{ID000001-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000003}
+		{ID000002-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000003}
+		{ID000003-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000003}
+		{ID000004-0000-0000-0000-000000000001} = {AAAAAAAA-0000-0000-0000-000000000003}
+	EndGlobalSection
+EndGlobal

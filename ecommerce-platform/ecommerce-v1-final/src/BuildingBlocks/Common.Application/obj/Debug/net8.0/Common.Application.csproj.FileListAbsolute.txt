@@ -1,0 +1,15 @@
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\bin\Debug\net8.0\Common.Application.deps.json
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\bin\Debug\net8.0\Common.Application.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\bin\Debug\net8.0\Common.Application.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\bin\Debug\net8.0\Common.Domain.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\bin\Debug\net8.0\Common.Domain.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.AssemblyInfo.cs
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.A.58782CAF.Up2Date
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\refint\Common.Application.dll
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\Common.Application.pdb
+C:\Users\aksha\Downloads\shophub-v10-final\shop\src\BuildingBlocks\Common.Application\obj\Debug\net8.0\ref\Common.Application.dll
