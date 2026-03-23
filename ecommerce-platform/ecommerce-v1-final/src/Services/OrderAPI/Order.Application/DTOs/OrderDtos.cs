@@ -28,3 +28,18 @@ public sealed record StatusHistoryDto(string Status, string Note, DateTime Times
 public sealed record OrderSummaryDto(
     Guid Id, string OrderNumber, string Status,
     int ItemCount, decimal Total, DateTime CreatedAt);
+
+public sealed class PagedResult<T>
+{
+    public IEnumerable<T> Items       { get; init; } = Enumerable.Empty<T>();
+    public int TotalCount  { get; init; }
+    public int PageNumber  { get; init; }
+    public int PageSize    { get; init; }
+    public int TotalPages  => (int)Math.Ceiling((double)TotalCount / PageSize);
+    public bool HasPreviousPage => PageNumber > 1;
+    public bool HasNextPage     => PageNumber < TotalPages;
+
+    public static PagedResult<T> Create(
+        IEnumerable<T> items, int total, int page, int size) =>
+        new() { Items = items, TotalCount = total, PageNumber = page, PageSize = size };
+}

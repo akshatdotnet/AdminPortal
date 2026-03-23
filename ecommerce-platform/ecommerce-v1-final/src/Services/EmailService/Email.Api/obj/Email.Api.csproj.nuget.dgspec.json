@@ -1,0 +1,676 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Api\\Email.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj",
+        "projectName": "Common.Api",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj",
+        "projectName": "Common.Application",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj",
+        "projectName": "Common.Domain",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Api\\Email.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Api\\Email.Api.csproj",
+        "projectName": "Email.Api",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Api\\Email.Api.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj"
+              },
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Infrastructure\\Email.Infrastructure.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Infrastructure\\Email.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Asp.Versioning.Mvc": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Asp.Versioning.Mvc.ApiExplorer": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Application\\Email.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Application\\Email.Application.csproj",
+        "projectName": "Email.Application",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Application\\Email.Application.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Application\\Common.Application.csproj"
+              },
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj"
+              },
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Domain\\Identity.Domain.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Domain\\Identity.Domain.csproj"
+              },
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\OrderAPI\\Order.Domain\\Order.Domain.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\OrderAPI\\Order.Domain\\Order.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Infrastructure\\Email.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Infrastructure\\Email.Infrastructure.csproj",
+        "projectName": "Email.Infrastructure",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Infrastructure\\Email.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Application\\Email.Application.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\EmailService\\Email.Application\\Email.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Domain\\Identity.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Domain\\Identity.Domain.csproj",
+        "projectName": "Identity.Domain",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Domain\\Identity.Domain.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\OrderAPI\\Order.Domain\\Order.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\OrderAPI\\Order.Domain\\Order.Domain.csproj",
+        "projectName": "Order.Domain",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\OrderAPI\\Order.Domain\\Order.Domain.csproj",
+        "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\OrderAPI\\Order.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj": {
+                "projectPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1902",
+            "NU1903"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

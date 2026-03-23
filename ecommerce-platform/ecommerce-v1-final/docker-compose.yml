@@ -1,22 +1,22 @@
-version: "3.9"
-
 services:
+
   postgres:
     image: postgres:16-alpine
     container_name: shophub-postgres
     environment:
-      POSTGRES_USER: ecommerce
+      POSTGRES_USER:     ecommerce
       POSTGRES_PASSWORD: ecommerce_secret
+      POSTGRES_DB:       postgres
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./docker/init-db.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ecommerce"]
-      interval: 5s
+      interval: 3s
       timeout: 5s
-      retries: 10
+      retries: 20
+      start_period: 8s
 
   redis:
     image: redis:7-alpine

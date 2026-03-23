@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4PsS53Pmfn0=",
+  "dgSpecHash": "Yz9dhT5P9c8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aksha\\Downloads\\shophub-v10-final\\shop\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj",
+  "projectFilePath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Domain\\Common.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aksha\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\aksha\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

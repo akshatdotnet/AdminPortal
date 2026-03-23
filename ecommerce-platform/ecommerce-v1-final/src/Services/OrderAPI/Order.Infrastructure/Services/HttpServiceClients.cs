@@ -6,7 +6,8 @@ namespace Order.Infrastructure.Services;
 
 public sealed class HttpProductServiceClient(HttpClient http) : IProductServiceClient
 {
-    public async Task<Result> ReserveStockAsync(Guid productId, int qty, CancellationToken ct = default)
+    public async Task<Result> ReserveStockAsync(
+        Guid productId, int qty, CancellationToken ct = default)
     {
         var response = await http.PatchAsJsonAsync(
             $"/api/v1/products/{productId}/stock",
@@ -17,12 +18,14 @@ public sealed class HttpProductServiceClient(HttpClient http) : IProductServiceC
                 $"Could not reserve {qty} units of product {productId}."));
     }
 
-    public async Task<Result> ReleaseStockAsync(Guid productId, int qty, CancellationToken ct = default)
+    public async Task<Result> ReleaseStockAsync(
+        Guid productId, int qty, CancellationToken ct = default)
     {
         var response = await http.PatchAsJsonAsync(
             $"/api/v1/products/{productId}/stock",
             new { Delta = qty, Reason = "Order cancellation" }, ct);
-        return response.IsSuccessStatusCode ? Result.Success()
+        return response.IsSuccessStatusCode
+            ? Result.Success()
             : Result.Failure(Error.BusinessRule("Stock", "Could not release stock."));
     }
 }
@@ -32,14 +35,19 @@ public sealed class HttpCouponServiceClient(HttpClient http) : ICouponServiceCli
     public async Task<Result<decimal>> ValidateAsync(
         string code, decimal amount, CancellationToken ct = default)
     {
-        var response = await http.PostAsJsonAsync("/api/v1/coupons/validate",
+        var response = await http.PostAsJsonAsync(
+            "/api/v1/coupons/validate",
             new { Code = code, OrderAmount = amount }, ct);
+
         if (!response.IsSuccessStatusCode)
-            return Result.Failure<decimal>(Error.BusinessRule("Coupon", "Invalid coupon."));
+            return Result.Failure<decimal>(
+                Error.BusinessRule("Coupon", "Invalid or expired coupon."));
+
         var result = await response.Content.ReadFromJsonAsync<CouponResponse>(ct);
         return result is null
             ? Result.Failure<decimal>(Error.BusinessRule("Coupon", "Parse failed."))
             : Result.Success(result.DiscountAmount);
     }
+
     private sealed record CouponResponse(string Code, decimal DiscountAmount);
 }

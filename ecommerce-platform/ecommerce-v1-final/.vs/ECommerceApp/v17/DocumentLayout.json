@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB103F41-0FB3-45AB-B812-7E5954130506}|src\\Services\\Identity\\Identity.Application\\Identity.Application.csproj|d:\\client_project\\adminportal\\ecommerce-platform\\ecommerce-v1-final\\src\\services\\identity\\identity.application\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB103F41-0FB3-45AB-B812-7E5954130506}|src\\Services\\Identity\\Identity.Application\\Identity.Application.csproj|solutionrelative:src\\services\\identity\\identity.application\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterCommand.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Application\\Commands\\RegisterCommand.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\Identity.Application\\Commands\\RegisterCommand.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Application\\Commands\\RegisterCommand.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\Identity.Application\\Commands\\RegisterCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T15:39:09.658Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

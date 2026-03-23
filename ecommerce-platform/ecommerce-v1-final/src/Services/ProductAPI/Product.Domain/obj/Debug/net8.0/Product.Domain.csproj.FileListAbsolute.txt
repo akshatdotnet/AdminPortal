@@ -1,0 +1,16 @@
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\bin\Debug\net8.0\Product.Domain.deps.json
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\bin\Debug\net8.0\Product.Domain.dll
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\bin\Debug\net8.0\Product.Domain.pdb
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\bin\Debug\net8.0\Common.Domain.dll
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\bin\Debug\net8.0\Common.Domain.pdb
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.csproj.AssemblyReference.cache
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.AssemblyInfoInputs.cache
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.AssemblyInfo.cs
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.csproj.CoreCompileInputs.cache
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.sourcelink.json
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product..66AFAF57.Up2Date
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.dll
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\refint\Product.Domain.dll
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\Product.Domain.pdb
+D:\Client_Project\AdminPortal\ecommerce-platform\ecommerce-v1-final\src\Services\ProductAPI\Product.Domain\obj\Debug\net8.0\ref\Product.Domain.dll

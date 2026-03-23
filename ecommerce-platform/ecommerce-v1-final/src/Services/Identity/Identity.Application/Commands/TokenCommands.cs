@@ -5,6 +5,7 @@ using MediatR;
 
 namespace Identity.Application.Commands;
 
+// ── Refresh Token ─────────────────────────────────────────────
 public sealed record RefreshTokenCommand(string AccessToken, string RefreshToken)
     : IRequest<Result<AuthResponseDto>>;
 
@@ -14,11 +15,13 @@ public sealed class RefreshTokenCommandHandler(
     IUnitOfWorkIdentity unitOfWork)
     : IRequestHandler<RefreshTokenCommand, Result<AuthResponseDto>>
 {
-    public async Task<Result<AuthResponseDto>> Handle(RefreshTokenCommand cmd, CancellationToken ct)
+    public async Task<Result<AuthResponseDto>> Handle(
+        RefreshTokenCommand cmd, CancellationToken ct)
     {
         var userId = tokenService.GetUserIdFromExpiredToken(cmd.AccessToken);
         if (userId is null)
-            return Result.Failure<AuthResponseDto>(Error.Unauthorized("Invalid access token."));
+            return Result.Failure<AuthResponseDto>(
+                Error.Unauthorized("Invalid access token."));
 
         var user = await userRepository.GetByIdAsync(userId.Value, ct);
         if (user is null
@@ -30,11 +33,11 @@ public sealed class RefreshTokenCommandHandler(
         var tokens = tokenService.GenerateTokens(user);
         user.SetRefreshToken(tokens.RefreshToken, DateTime.UtcNow.AddDays(30));
         await unitOfWork.SaveChangesAsync(ct);
-
         return Result.Success(tokens);
     }
 }
 
+// ── Revoke Token ──────────────────────────────────────────────
 public sealed record RevokeTokenCommand(Guid UserId) : IRequest;
 
 public sealed class RevokeTokenCommandHandler(

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BtBEIQGnFLA=",
+  "dgSpecHash": "CxXPMfR3Ioo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aksha\\Downloads\\shophub-v10-final\\shop\\src\\Services\\Identity\\Identity.Api\\Identity.Api.csproj",
+  "projectFilePath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Api\\Identity.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aksha\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\aksha\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

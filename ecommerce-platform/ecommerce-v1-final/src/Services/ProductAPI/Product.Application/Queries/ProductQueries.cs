@@ -1,30 +1,42 @@
-using Common.Domain.Interfaces;
 using Common.Domain.Primitives;
 using MediatR;
 using Product.Application.DTOs;
 using Product.Application.Interfaces;
+using ProductEntity   = Product.Domain.Entities.Product;
+using CategoryEntity  = Product.Domain.Entities.Category;
+using ProductImageEntity = Product.Domain.Entities.ProductImage;
 
 namespace Product.Application.Queries;
 
-public sealed record GetProductByIdQuery(Guid ProductId) : IRequest<Result<ProductDto>>;
+// ── Get single product ────────────────────────────────────────
+public sealed record GetProductByIdQuery(Guid ProductId)
+    : IRequest<Result<ProductDto>>;
 
 public sealed class GetProductByIdQueryHandler(IProductReadRepository repo)
     : IRequestHandler<GetProductByIdQuery, Result<ProductDto>>
 {
-    public async Task<Result<ProductDto>> Handle(GetProductByIdQuery q, CancellationToken ct)
+    public async Task<Result<ProductDto>> Handle(
+        GetProductByIdQuery q, CancellationToken ct)
     {
         var p = await repo.GetByIdAsync(q.ProductId, ct);
         return p is null
-            ? Result.Failure<ProductDto>(Error.NotFound("Product", q.ProductId))
+            ? Result.Failure<ProductDto>(Error.NotFound("ProductEntity", q.ProductId))
             : Result.Success(p);
     }
 }
 
+// ── Get paged product list ────────────────────────────────────
 public sealed record GetProductsQuery(
-    int PageNumber = 1, int PageSize = 20,
-    string? Search = null, Guid? CategoryId = null,
-    decimal? MinPrice = null, decimal? MaxPrice = null,
-    bool InStockOnly = false)
+    int     PageNumber  = 1,
+    int     PageSize    = 20,
+    string? Search      = null,
+    Guid?   CategoryId  = null,
+    decimal? MinPrice   = null,
+    decimal? MaxPrice   = null,
+    bool    InStockOnly = false,
+    string? Status      = null,
+    string? SortBy      = null,
+    bool    SortDesc    = false)
     : IRequest<Result<PagedResult<ProductSummaryDto>>>;
 
 public sealed class GetProductsQueryHandler(IProductReadRepository repo)
@@ -34,13 +46,18 @@ public sealed class GetProductsQueryHandler(IProductReadRepository repo)
         GetProductsQuery q, CancellationToken ct)
     {
         var result = await repo.GetPagedAsync(
-            q.PageNumber, q.PageSize, q.Search, q.CategoryId,
-            q.MinPrice, q.MaxPrice, q.InStockOnly, ct);
+            q.PageNumber, q.PageSize,
+            q.Search, q.CategoryId,
+            q.MinPrice, q.MaxPrice,
+            q.InStockOnly, q.Status,
+            q.SortBy, q.SortDesc, ct);
         return Result.Success(result);
     }
 }
 
-public sealed record GetCategoriesQuery : IRequest<Result<IEnumerable<CategoryDto>>>;
+// ── Get all categories ────────────────────────────────────────
+public sealed record GetCategoriesQuery
+    : IRequest<Result<IEnumerable<CategoryDto>>>;
 
 public sealed class GetCategoriesQueryHandler(IProductReadRepository repo)
     : IRequestHandler<GetCategoriesQuery, Result<IEnumerable<CategoryDto>>>

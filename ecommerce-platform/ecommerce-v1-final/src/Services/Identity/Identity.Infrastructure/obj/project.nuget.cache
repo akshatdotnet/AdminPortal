@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SXPmXXuVzuY=",
+  "dgSpecHash": "mEPAjbuU+lA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aksha\\Downloads\\shophub-v10-final\\shop\\src\\Services\\Identity\\Identity.Infrastructure\\Identity.Infrastructure.csproj",
+  "projectFilePath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\Services\\Identity\\Identity.Infrastructure\\Identity.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aksha\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\aksha\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "80dNvGMyNe6+uPEZMTMZLE8s1ivugJ7G2mMs+E/YhcQ=",
+  "Source": "Coupon.Api",
+  "BasePath": "_content/Coupon.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

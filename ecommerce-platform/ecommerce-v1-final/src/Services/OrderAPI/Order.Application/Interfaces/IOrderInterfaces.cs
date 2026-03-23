@@ -1,15 +1,16 @@
 using Common.Domain.Primitives;
 using Order.Application.DTOs;
-using Order.Domain.Entities;
+
+using OrderEntity = Order.Domain.Entities.Order;
 
 namespace Order.Application.Interfaces;
 
 public interface IOrderRepository
 {
-    Task<Order?> GetByIdAsync(Guid id, CancellationToken ct = default);
-    Task<IEnumerable<Order>> GetByCustomerIdAsync(Guid customerId, CancellationToken ct = default);
-    void Add(Order order);
-    void Update(Order order);
+    Task<OrderEntity?>              GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<IEnumerable<OrderEntity>>  GetByCustomerIdAsync(Guid customerId, CancellationToken ct = default);
+    void Add(OrderEntity order);
+    void Update(OrderEntity order);
 }
 
 public interface IUnitOfWorkOrder
@@ -25,5 +26,6 @@ public interface IProductServiceClient
 
 public interface ICouponServiceClient
 {
-    Task<Result<decimal>> ValidateAsync(string code, decimal amount, CancellationToken ct = default);
+    Task<Result<decimal>> ValidateAsync(
+        string code, decimal amount, CancellationToken ct = default);
 }

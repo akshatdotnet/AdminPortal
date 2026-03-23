@@ -5,6 +5,8 @@ using Order.Application.DTOs;
 using Order.Application.Interfaces;
 using Order.Domain.Entities;
 
+using OrderEntity = Order.Domain.Entities.Order;
+
 namespace Order.Application.Commands;
 
 public sealed record PlaceOrderCommand(
@@ -48,33 +50,33 @@ public sealed class PlaceOrderCommandHandler(
     public async Task<Result<PlaceOrderResponse>> Handle(
         PlaceOrderCommand cmd, CancellationToken ct)
     {
-        // 1. Reserve stock
+        // 1. Reserve stock for each item
         foreach (var item in cmd.Items)
         {
             var sr = await productClient.ReserveStockAsync(item.ProductId, item.Quantity, ct);
             if (!sr.IsSuccess) return Result.Failure<PlaceOrderResponse>(sr.Error);
         }
 
-        // 2. Build order aggregate
+        // 2. Build the order aggregate
         var address = new ShippingAddress
         {
-            FullName   = cmd.ShippingFullName,   Street    = cmd.ShippingStreet,
-            City       = cmd.ShippingCity,        State     = cmd.ShippingState,
-            PostalCode = cmd.ShippingPostalCode,  Country   = cmd.ShippingCountry,
+            FullName   = cmd.ShippingFullName,  Street    = cmd.ShippingStreet,
+            City       = cmd.ShippingCity,       State     = cmd.ShippingState,
+            PostalCode = cmd.ShippingPostalCode, Country   = cmd.ShippingCountry,
             Phone      = cmd.ShippingPhone
         };
-        var order = Order.Create(cmd.CustomerId, address, cmd.Notes);
+        var order = OrderEntity.Create(cmd.CustomerId, address, cmd.Notes);
         foreach (var item in cmd.Items)
             order.AddItem(item.ProductId, item.ProductName, item.Sku, item.UnitPrice, item.Quantity);
 
-        // 3. Apply coupon
+        // 3. Apply coupon if provided
         if (!string.IsNullOrEmpty(cmd.CouponCode))
         {
             var cr = await couponClient.ValidateAsync(cmd.CouponCode, order.Subtotal, ct);
             if (cr.IsSuccess) order.ApplyCoupon(cmd.CouponCode, cr.Value);
         }
 
-        // 4. Shipping + Tax
+        // 4. Set shipping ($9.99 flat) and tax (8%)
         order.SetShipping(9.99m);
         order.SetTax(Math.Round(order.Subtotal * 0.08m, 2));
 

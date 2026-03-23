@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CzuV0W4WLOI=",
+  "dgSpecHash": "OBIAtD1ktGg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aksha\\Downloads\\shophub-v10-final\\shop\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj",
+  "projectFilePath": "D:\\Client_Project\\AdminPortal\\ecommerce-platform\\ecommerce-v1-final\\src\\BuildingBlocks\\Common.Api\\Common.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aksha\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\aksha\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",

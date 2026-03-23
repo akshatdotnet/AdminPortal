@@ -1,26 +1,42 @@
 @echo off
-title ShopHub - Starting All Services
+title ShopHub - Start All Services
 color 0A
-
-echo ================================================
-echo   ShopHub E-Commerce Platform
-echo   Starting all microservices...
-echo ================================================
-echo.
-
 cd /d %~dp0
 
-echo [1/2] Starting PostgreSQL + Redis via Docker...
-docker compose up -d postgres redis
-echo Waiting 10 seconds for databases to initialize...
-timeout /t 10 /nobreak > nul
-echo Databases ready.
+echo ================================================
+echo   ShopHub - Starting Infrastructure
+echo ================================================
+echo.
+echo [1/3] Stopping any existing containers...
+docker compose down 2>nul
 echo.
 
-echo [2/2] Starting microservices (each in own window)...
+echo [2/3] Starting PostgreSQL and Redis...
+docker compose up -d postgres redis
+echo Waiting for PostgreSQL to become healthy (up to 60s)...
+timeout /t 5 /nobreak > nul
+
+:wait_loop
+docker inspect shophub-postgres --format "{{.State.Health.Status}}" 2>nul | findstr "healthy" > nul
+if errorlevel 1 (
+    echo   still waiting...
+    timeout /t 3 /nobreak > nul
+    goto wait_loop
+)
+echo PostgreSQL is healthy.
+echo.
+
+echo [3/3] Creating service databases...
+docker compose up postgres-init
+echo.
+
+echo ================================================
+echo   Starting microservices (each in own window)
+echo ================================================
+echo.
 
 start "Identity  :5001" cmd /k "cd src\Services\Identity\Identity.Api && dotnet run"
-timeout /t 4 /nobreak > nul
+timeout /t 5 /nobreak > nul
 
 start "Product   :5002" cmd /k "cd src\Services\ProductAPI\Product.Api && dotnet run"
 timeout /t 4 /nobreak > nul
@@ -39,11 +55,9 @@ timeout /t 4 /nobreak > nul
 
 echo.
 echo ================================================
-echo   ALL SERVICES LAUNCHED
+echo   ALL SERVICES LAUNCHING
 echo ================================================
-echo.
-echo   Wait ~30 seconds for services to finish startup.
-echo   Then open these Swagger UIs:
+echo   Wait ~30s for all services to finish startup.
 echo.
 echo   Identity  -^> http://localhost:5001/swagger
 echo   Product   -^> http://localhost:5002/swagger
@@ -52,7 +66,7 @@ echo   Cart      -^> http://localhost:5004/swagger
 echo   Coupon    -^> http://localhost:5005/swagger
 echo   Payment   -^> http://localhost:5006/swagger
 echo.
-echo   DEMO ENDPOINT (tests Identity in one click):
+echo   DEMO endpoint (runs full Identity flow):
 echo   POST http://localhost:5001/api/v1/demo/complete-flow
 echo.
 pause

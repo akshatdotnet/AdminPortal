@@ -3,6 +3,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Product.Domain.Entities;
+using ProductEntity   = Product.Domain.Entities.Product;
+using CategoryEntity  = Product.Domain.Entities.Category;
+using ProductImageEntity = Product.Domain.Entities.ProductImage;
 
 namespace Product.Infrastructure.Persistence;
 
