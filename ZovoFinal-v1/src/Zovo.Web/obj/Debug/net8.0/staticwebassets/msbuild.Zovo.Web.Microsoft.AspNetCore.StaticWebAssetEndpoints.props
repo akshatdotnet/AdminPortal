@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Zovo.Web/css/zovo.atx28mqnt0.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\zovo.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"atx28mqnt0"},{"Name":"integrity","Value":"sha256-Umi6h2qVUznxtSLm866Opa2xZeLpgPiuRTUS25o2vds="},{"Name":"label","Value":"_content/Zovo.Web/css/zovo.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19054"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Umi6h2qVUznxtSLm866Opa2xZeLpgPiuRTUS25o2vds=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Mar 2026 09:10:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Zovo.Web/css/zovo.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\zovo.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Umi6h2qVUznxtSLm866Opa2xZeLpgPiuRTUS25o2vds="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"19054"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Umi6h2qVUznxtSLm866Opa2xZeLpgPiuRTUS25o2vds=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Mar 2026 09:10:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Zovo.Web/js/zovo.e2382sn0gj.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zovo.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e2382sn0gj"},{"Name":"integrity","Value":"sha256-hmPZM69BbRUioy1wawvaFoxqTd1dxYMNh1cVVgczYOo="},{"Name":"label","Value":"_content/Zovo.Web/js/zovo.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6189"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hmPZM69BbRUioy1wawvaFoxqTd1dxYMNh1cVVgczYOo=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Mar 2026 09:10:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Zovo.Web/js/zovo.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zovo.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmPZM69BbRUioy1wawvaFoxqTd1dxYMNh1cVVgczYOo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6189"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hmPZM69BbRUioy1wawvaFoxqTd1dxYMNh1cVVgczYOo=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Mar 2026 09:10:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

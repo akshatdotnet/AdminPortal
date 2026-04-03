@@ -1,0 +1,184 @@
+﻿@model PMS.Application.DTOs.Task.ProjectTaskDto
+@using TaskStatus = PMS.Domain.Enums.TaskStatus
+@using TaskPriority = PMS.Domain.Enums.TaskPriority
+@{
+    ViewData["Title"] = Model.Title;
+    var statusClass = Model.Status switch
+    {
+        TaskStatus.Pending => "badge bg-warning text-dark fs-6",
+        TaskStatus.InProgress => "badge bg-info fs-6",
+        TaskStatus.Completed => "badge bg-success fs-6",
+        TaskStatus.OnHold => "badge bg-secondary fs-6",
+        TaskStatus.Cancelled => "badge bg-danger fs-6",
+        _ => "badge bg-light text-dark fs-6"
+    };
+    var priorityClass = Model.Priority switch
+    {
+        TaskPriority.Critical => "badge bg-danger",
+        TaskPriority.High => "badge bg-warning text-dark",
+        TaskPriority.Medium => "badge bg-info",
+        TaskPriority.Low => "badge bg-secondary",
+        _ => "badge bg-light text-dark"
+    };
+}
+
+<div class="container-fluid px-4">
+
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Home" asp-action="Index">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a asp-controller="Task" asp-action="Index">Tasks</a>
+            </li>
+            <li class="breadcrumb-item active">@Model.Title</li>
+        </ol>
+    </nav>
+
+    @* {{!-- Task Header --}} *@
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start">
+                <div class="flex-grow-1">
+                    <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
+                        <h2 class="fw-bold mb-0">@Model.Title</h2>
+                        <span class="@statusClass">@Model.StatusDisplay</span>
+                        <span class="@priorityClass">
+                            @Model.PriorityDisplay Priority
+                        </span>
+                        @if (Model.HasActiveTimer)
+                        {
+                            <span class="badge bg-danger">
+                                <i class="bi bi-record-circle me-1"></i>Timer Running
+                            </span>
+                        }
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <p class="text-muted">@Model.Description</p>
+                    }
+                    <div class="d-flex gap-4 text-muted small mt-3 flex-wrap">
+                        <span>
+                            <i class="bi bi-folder2 me-1"></i>
+                            <a asp-controller="Project"
+                               asp-action="Detail"
+                               asp-route-id="@Model.ProjectId"
+                               class="text-decoration-none">@Model.ProjectName</a>
+                        </span>
+                        <span>
+                            <i class="bi bi-person me-1"></i>
+                            @(Model.AssignedUserName ?? "Unassigned")
+                        </span>
+                        @if (Model.DueDate.HasValue)
+                        {
+                            <span class="@(Model.DueDate.Value.Date < DateTime.Today && Model.Status != TaskStatus.Completed ? "text-danger fw-semibold" : "")">
+                                <i class="bi bi-calendar-event me-1"></i>
+                                Due: @Model.DueDate.Value.ToString("MMM dd, yyyy")
+                            </span>
+                        }
+                        <span>
+                            <i class="bi bi-clock me-1"></i>
+                            Total: <strong>@Model.TotalHoursLogged.ToString("F2")h</strong>
+                        </span>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 ms-3">
+                    <button class="btn btn-outline-primary btn-edit-task"
+                            data-id="@Model.Id"
+                            data-bs-toggle="modal"
+                            data-bs-target="#taskModal">
+                        <i class="bi bi-pencil me-1"></i>Edit
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-1"></i>Back
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* {{!-- Time Tracking Section --}} *@
+    <div class="card shadow-sm border-0" id="timelog">
+        <div class="card-header bg-white d-flex
+                    justify-content-between align-items-center py-3">
+            <h5 class="mb-0 fw-semibold">
+                <i class="bi bi-clock-history me-2 text-warning"></i>
+                Time Tracking
+            </h5>
+            <div class="d-flex gap-2">
+                @if (Model.HasActiveTimer)
+                {
+                    <button class="btn btn-sm btn-danger"
+                            id="btnStopTimer"
+                            data-task-id="@Model.Id">
+                        <i class="bi bi-stop-circle me-1"></i>Stop Timer
+                    </button>
+                }
+                else
+                {
+                    <button class="btn btn-sm btn-success"
+                            id="btnStartTimer"
+                            data-task-id="@Model.Id">
+                        <i class="bi bi-play-circle me-1"></i>Start Timer
+                    </button>
+                }
+            </div>
+        </div>
+        <div class="card-body" id="timeLogContainer">
+            <div class="text-center py-3 text-muted">
+                <div class="spinner-border spinner-border-sm me-2"></div>
+                Loading time logs...
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@* {{!-- Task edit modal --}} *@
+<div class="modal fade" id="taskModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-pencil-square me-2"></i>Edit Task
+                </h5>
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="taskModalBody">
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index:9999">
+    <div id="toastNotification"
+         class="toast align-items-center border-0"
+         role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body fw-semibold" id="toastMessage"></div>
+            <button type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+@* {{!-- Anti-forgery token for timelog.js AJAX calls --}} *@
+@Html.AntiForgeryToken()
+
+@section Scripts {
+    <script src="~/js/task.js"></script>
+    <script src="~/js/timelog.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Load time logs on page load
+            TimeLogModule.loadSummary(@Model.Id);
+        });
+    </script>
+}

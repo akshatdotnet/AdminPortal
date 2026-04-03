@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Client_Project\\Temp\\PMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\temp\\pms\\src\\pms.web\\controllers\\timelogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\controllers\\timelogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\temp\\pms\\src\\pms.web\\views\\task\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\views\\task\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|NewFolder1{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|D:\\Client_Project\\Temp\\PMS\\docs\\IntialSetup.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|NewFolder1{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|solutionrelative:docs\\IntialSetup.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\temp\\pms\\src\\pms.web\\wwwroot\\js\\timelog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\wwwroot\\js\\timelog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\temp\\pms\\src\\pms.web\\views\\timelog\\_timelogrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\views\\timelog\\_timelogrow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\temp\\pms\\src\\pms.web\\views\\timelog\\_timelogsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\views\\timelog\\_timelogsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\temp\\pms\\src\\pms.web\\views\\timelog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\views\\timelog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "RelativeToolTip": "src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwCEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-01T14:06:23.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "timelog.js",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\wwwroot\\js\\timelog.js",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\wwwroot\\js\\timelog.js",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\wwwroot\\js\\timelog.js",
+              "RelativeToolTip": "src\\PMS.Web\\wwwroot\\js\\timelog.js",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAowCkBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-01T14:03:34.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_TimeLogRow.cshtml",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\TimeLog\\_TimeLogRow.cshtml",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Views\\TimeLog\\_TimeLogRow.cshtml",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\TimeLog\\_TimeLogRow.cshtml",
+              "RelativeToolTip": "src\\PMS.Web\\Views\\TimeLog\\_TimeLogRow.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowEIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-01T14:03:02.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_TimeLogSummary.cshtml",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\TimeLog\\_TimeLogSummary.cshtml",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Views\\TimeLog\\_TimeLogSummary.cshtml",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\TimeLog\\_TimeLogSummary.cshtml",
+              "RelativeToolTip": "src\\PMS.Web\\Views\\TimeLog\\_TimeLogSummary.cshtml",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAowOIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-01T14:02:45.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IntialSetup.txt",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\docs\\IntialSetup.txt",
+              "RelativeDocumentMoniker": "docs\\IntialSetup.txt",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\docs\\IntialSetup.txt",
+              "RelativeToolTip": "docs\\IntialSetup.txt",
+              "ViewState": "AgIAAJoBAAAAAAAAAAAAwKkBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-01T14:01:26.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimeLogController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Controllers\\TimeLogController.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Controllers\\TimeLogController.cs",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Controllers\\TimeLogController.cs*",
+              "RelativeToolTip": "src\\PMS.Web\\Controllers\\TimeLogController.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAKAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T14:02:02.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\TimeLog\\Index.cshtml",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Views\\TimeLog\\Index.cshtml",
+              "ToolTip": "D:\\Client_Project\\Temp\\PMS\\src\\PMS.Web\\Views\\TimeLog\\Index.cshtml",
+              "RelativeToolTip": "src\\PMS.Web\\Views\\TimeLog\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-01T14:02:15.55Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+@model OrderDetailDto
+@{ ViewData["Title"] = Model.OrderNumber; ViewData["Nav"] = "Orders"; }
+
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+  <a asp-action="Index" class="btn btn-secondary btn-sm">← Orders</a>
+  <span class="badge bd-@Model.Status.ToLower()" style="font-size:13px;padding:5px 14px">@Model.Status</span>
+  <span class="badge bd-@Model.PaymentStatus.ToLower()" style="font-size:13px;padding:5px 14px">@Model.PaymentStatus</span>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 300px;gap:20px">
+  <div>
+    <!-- Order Items -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header"><span class="card-title">Items</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Product</th><th>SKU</th><th>Qty</th><th>Unit Price</th><th>Discount</th><th>Line Total</th></tr></thead>
+          <tbody>
+          @foreach (var item in Model.Items) {
+            <tr>
+              <td style="font-weight:500">@item.ProductName</td>
+              <td><span class="item-sub">@(item.SKU ?? "—")</span></td>
+              <td style="font-weight:600">@item.Quantity</td>
+              <td><span class="price">₹@item.UnitPrice.ToString("N0")</span></td>
+              <td>@(item.Discount > 0 ? $"₹{item.Discount:N0}" : "—")</td>
+              <td><span class="price">₹@item.LineTotal.ToString("N0")</span></td>
+            </tr>
+          }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Status Update -->
+    <div class="card" style="padding:20px">
+      <div class="section-title">Update Status</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        @foreach (var s in new[]{"Confirmed","Processing","Shipped","Delivered"}) {
+          <button class="btn btn-secondary btn-sm" onclick="updateOrderStatus(@Model.Id,'@s')">→ @s</button>
+        }
+        <button class="btn btn-danger btn-sm" onclick="updateOrderStatus(@Model.Id,'Cancelled')">✕ Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div>
+    <div class="card" style="padding:20px;margin-bottom:16px">
+      <div class="section-title">Order Summary</div>
+      <div class="detail-row"><span class="dl">Order #</span><span class="dv" style="font-family:var(--fm)">@Model.OrderNumber</span></div>
+      <div class="detail-row"><span class="dl">Customer</span><span class="dv">@Model.CustomerName</span></div>
+      <div class="detail-row"><span class="dl">Email</span><span class="dv" style="font-size:12.5px">@Model.CustomerEmail</span></div>
+      @if (!string.IsNullOrEmpty(Model.CustomerPhone)) {
+        <div class="detail-row"><span class="dl">Phone</span><span class="dv">@Model.CustomerPhone</span></div>
+      }
+      <div class="detail-row"><span class="dl">Date</span><span class="dv">@Model.CreatedAt.ToString("dd MMM yyyy HH:mm")</span></div>
+      @if (Model.ShippedAt.HasValue) {
+        <div class="detail-row"><span class="dl">Shipped</span><span class="dv">@Model.ShippedAt.Value.ToString("dd MMM yyyy")</span></div>
+      }
+      @if (Model.DeliveredAt.HasValue) {
+        <div class="detail-row"><span class="dl">Delivered</span><span class="dv">@Model.DeliveredAt.Value.ToString("dd MMM yyyy")</span></div>
+      }
+    </div>
+
+    <div class="card" style="padding:20px">
+      <div class="section-title">Payment</div>
+      <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:13.5px"><span style="color:var(--c-t2)">Subtotal</span><span>₹@Model.SubTotal.ToString("N0")</span></div>
+      <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:13.5px"><span style="color:var(--c-t2)">Shipping</span><span>@(Model.ShippingCost==0?"Free":$"₹{Model.ShippingCost:N0}")</span></div>
+      <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:13.5px"><span style="color:var(--c-t2)">GST (18%)</span><span>₹@Model.TaxAmount.ToString("N0")</span></div>
+      @if (Model.Discount > 0) {
+        <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:13.5px;color:var(--c-ok)"><span>Discount</span><span>−₹@Model.Discount.ToString("N0")</span></div>
+      }
+      <div style="display:flex;justify-content:space-between;padding:10px 0 4px;font-size:15px;font-weight:700;border-top:1px solid var(--c-border);margin-top:6px"><span>Total</span><span class="price">₹@Model.TotalAmount.ToString("N0")</span></div>
+    </div>
+  </div>
+</div>
+@Html.AntiForgeryToken()

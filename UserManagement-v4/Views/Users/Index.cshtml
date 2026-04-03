@@ -1,0 +1,170 @@
+@using X.PagedList
+@using UserManagement.ViewModels
+@model IPagedList<UserListViewModel>
+@{
+    ViewData["Title"] = "Users";
+    var filter = (ViewBag.Filter as SearchFilterViewModel) ?? new SearchFilterViewModel();
+    string s  = filter.SearchTerm  ?? "";
+    string st = filter.StatusFilter ?? "";
+    string sc = filter.SortColumn  ?? "fullname";
+    string so = filter.SortOrder   ?? "asc";
+
+    string SortUrl(string col)
+    {
+        var ord = (sc == col && so == "asc") ? "desc" : "asc";
+        return $"?sortColumn={col}&sortOrder={ord}&searchTerm={s}&statusFilter={st}&page=1&pageSize={filter.PageSize}";
+    }
+    string SortIcon(string col) =>
+        sc == col ? (so == "asc" ? "bi-sort-up" : "bi-sort-down") : "bi-arrow-down-up";
+}
+
+<div class="page-header">
+    <div>
+        <h1><i class="bi bi-people-fill me-2 text-accent"></i>Users</h1>
+        <div class="sub">Manage system users, roles and access</div>
+    </div>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-person-plus me-1"></i>Add User
+    </a>
+</div>
+
+<!-- Search / Filter -->
+<form method="get" asp-action="Index" class="search-bar">
+    <input type="text" name="searchTerm" class="form-control" style="max-width:280px"
+           placeholder="Search name, email, username…" value="@s" />
+    <select name="statusFilter" class="form-select" style="max-width:140px">
+        <option value=""         selected="@(st == ""         ? "selected" : null)">All Status</option>
+        <option value="active"   selected="@(st == "active"   ? "selected" : null)">Active</option>
+        <option value="inactive" selected="@(st == "inactive" ? "selected" : null)">Inactive</option>
+    </select>
+    <input type="hidden" name="sortColumn" value="@sc" />
+    <input type="hidden" name="sortOrder"  value="@so" />
+    <button type="submit" class="btn btn-primary">
+        <i class="bi bi-search me-1"></i>Search
+    </button>
+    @if (!string.IsNullOrEmpty(s) || !string.IsNullOrEmpty(st))
+    {
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-x me-1"></i>Clear
+        </a>
+    }
+    <div class="ms-auto d-flex align-items-center gap-2">
+        <span class="text-muted" style="font-size:12px">Per page:</span>
+        <select name="pageSize" class="form-select" style="width:75px"
+                onchange="this.form.submit()">
+            @foreach (var n in new[] { 10, 25, 50 })
+            {
+                <option value="@n" selected="@(filter.PageSize == n ? "selected" : null)">@n</option>
+            }
+        </select>
+    </div>
+</form>
+
+<!-- Table -->
+<div class="table-wrapper">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><a href="@SortUrl("fullname")"><i class="bi @SortIcon("fullname") me-1"></i>Name</a></th>
+                <th><a href="@SortUrl("email")"><i class="bi @SortIcon("email") me-1"></i>Email</a></th>
+                <th><a href="@SortUrl("username")"><i class="bi @SortIcon("username") me-1"></i>Username</a></th>
+                <th>Roles</th>
+                <th>Status</th>
+                <th><a href="@SortUrl("createdat")"><i class="bi @SortIcon("createdat") me-1"></i>Created</a></th>
+                <th>Last Login</th>
+                <th style="width:120px">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="8" class="text-center py-5 text-muted">
+                        <i class="bi bi-people d-block mb-2" style="font-size:32px"></i>
+                        No users found.
+                    </td>
+                </tr>
+            }
+            @foreach (var u in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-sm">@u.FullName[0]</div>
+                            <span style="font-weight:500">@u.FullName</span>
+                        </div>
+                    </td>
+                    <td>@u.Email</td>
+                    <td><code style="color:var(--cyan);font-size:12px">@u.Username</code></td>
+                    <td>
+                        @foreach (var r in u.Roles)
+                        {
+                            <span class="badge-role-tag">@r</span>
+                        }
+                    </td>
+                    <td>
+                        <span class="@(u.IsActive ? "badge-active" : "badge-inactive")">
+                            @(u.IsActive ? "Active" : "Inactive")
+                        </span>
+                    </td>
+                    <td style="font-size:12px;color:var(--text-muted)">
+                        @u.CreatedAt.ToString("MMM dd, yyyy")
+                    </td>
+                    <td style="font-size:12px;color:var(--text-muted)">
+                        @(u.LastLoginAt.HasValue ? u.LastLoginAt.Value.ToString("MMM dd, yyyy") : "—")
+                    </td>
+                    <td>
+                        <div class="d-flex gap-1">
+                            <a asp-action="Detail" asp-route-id="@u.Id"
+                               class="btn-icon view" title="View Details">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                            <a asp-action="Edit" asp-route-id="@u.Id"
+                               class="btn-icon edit" title="Edit">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <form asp-action="Delete" method="post"
+                                  class="confirm-delete d-inline"
+                                  data-name="@u.FullName">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@u.Id" />
+                                <button type="submit" class="btn-icon delete" title="Delete">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Pagination -->
+<div class="d-flex align-items-center justify-content-between mt-3 flex-wrap gap-2">
+    <div style="font-size:12px;color:var(--text-muted)">
+        Showing @Model.FirstItemOnPage–@Model.LastItemOnPage of @Model.TotalItemCount users
+    </div>
+    @{
+        string PagerUrl(int p) => $"?page={p}&pageSize={filter.PageSize}&searchTerm={s}&statusFilter={st}&sortColumn={sc}&sortOrder={so}";
+        int totalPages = Model.PageCount;
+        int curPage   = Model.PageNumber;
+        int startPage = Math.Max(1, curPage - 2);
+        int endPage   = Math.Min(totalPages, startPage + 4);
+        if (endPage - startPage < 4) startPage = Math.Max(1, endPage - 4);
+    }
+    <ul class="pagination pagination-sm mb-0">
+        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+            <a class="page-link" href="@(Model.HasPreviousPage ? PagerUrl(curPage - 1) : "#")">‹</a>
+        </li>
+        @for (int p = startPage; p <= endPage; p++)
+        {
+            <li class="page-item @(p == curPage ? "active" : "")">
+                <a class="page-link" href="@PagerUrl(p)">@p</a>
+            </li>
+        }
+        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+            <a class="page-link" href="@(Model.HasNextPage ? PagerUrl(curPage + 1) : "#")">›</a>
+        </li>
+    </ul>
+</div>

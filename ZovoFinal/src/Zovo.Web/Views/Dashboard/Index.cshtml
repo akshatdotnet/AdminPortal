@@ -1,0 +1,91 @@
+@model DashboardSummary
+@{ ViewData["Title"] = "Dashboard"; ViewData["Nav"] = "Dashboard"; }
+
+<div class="stats-grid">
+  <div class="stat-card teal">
+    <div class="stat-icon si-teal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+    </div>
+    <div class="stat-label">Products</div>
+    <div class="stat-value">@Model.TotalProducts</div>
+    <div class="stat-meta">@Model.ActiveProducts active · @Model.OutOfStockCount out of stock</div>
+  </div>
+  <div class="stat-card green">
+    <div class="stat-icon si-green">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+    </div>
+    <div class="stat-label">Orders</div>
+    <div class="stat-value">@Model.TotalOrders</div>
+    <div class="stat-meta">@Model.PendingOrders pending · @Model.TodayOrders today</div>
+  </div>
+  <div class="stat-card amber">
+    <div class="stat-icon si-amber">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+    </div>
+    <div class="stat-label">Total Revenue</div>
+    <div class="stat-value">₹@Model.TotalRevenue.ToString("N0")</div>
+    <div class="stat-meta">₹@Model.MonthRevenue.ToString("N0") this month</div>
+  </div>
+  <div class="stat-card purple">
+    <div class="stat-icon si-purple">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+    </div>
+    <div class="stat-label">Customers</div>
+    <div class="stat-value">@Model.TotalCustomers</div>
+    <div class="stat-meta">@Model.ActiveCustomers active</div>
+  </div>
+</div>
+
+<div class="dash-grid">
+  <!-- Recent Orders -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Recent Orders</span>
+      <a asp-controller="Orders" asp-action="Index" class="btn btn-ghost btn-sm">View all →</a>
+    </div>
+    @if (!Model.RecentOrders.Any()) {
+      <div class="empty-state" style="padding:30px"><p>No orders yet.</p></div>
+    } else {
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Order</th><th>Customer</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+          <tbody>
+          @foreach (var o in Model.RecentOrders) {
+            <tr>
+              <td><span style="font-family:var(--fm);font-size:12px;font-weight:600">@o.OrderNumber</span></td>
+              <td style="font-weight:500">@o.CustomerName</td>
+              <td><span class="price">₹@o.TotalAmount.ToString("N0")</span></td>
+              <td><span class="badge bd-@o.Status.ToLower()">@o.Status</span></td>
+              <td style="color:var(--c-t3);font-size:12px">@o.CreatedAt.ToString("dd MMM")</td>
+            </tr>
+          }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+
+  <!-- Low Stock -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">⚠ Low Stock</span>
+      <a asp-controller="Products" asp-action="Index" asp-route-status="low" class="btn btn-ghost btn-sm">View all</a>
+    </div>
+    @if (!Model.LowStockItems.Any()) {
+      <div style="padding:20px;text-align:center;color:var(--c-t3);font-size:13px">All products well stocked ✓</div>
+    } else {
+      @foreach (var p in Model.LowStockItems) {
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--c-border)">
+          <div>
+            <div style="font-weight:600;font-size:13px">@p.Name</div>
+            <div style="font-size:11px;color:var(--c-t3)">@p.Category</div>
+          </div>
+          <div style="text-align:right">
+            <div class="@(p.Stock == 0 ? "sk-out" : "sk-low")">@(p.Stock == 0 ? "Out of stock" : $"{p.Stock} left")</div>
+            <div style="font-size:10.5px;color:var(--c-t3)">min @p.Threshold</div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>

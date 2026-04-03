@@ -1,0 +1,185 @@
+﻿@model PMS.Application.DTOs.Project.ProjectDto
+@{
+    ViewData["Title"] = Model.Name;
+    var progressClass = Model.CompletionPercentage >= 100 ? "bg-success"
+                      : Model.CompletionPercentage >= 50 ? "bg-info"
+                      : "bg-warning";
+    var statusClass = Model.Status switch
+    {
+        PMS.Domain.Enums.ProjectStatus.Active => "badge bg-success fs-6",
+        PMS.Domain.Enums.ProjectStatus.OnHold => "badge bg-warning text-dark fs-6",
+        PMS.Domain.Enums.ProjectStatus.Completed => "badge bg-primary fs-6",
+        PMS.Domain.Enums.ProjectStatus.Cancelled => "badge bg-danger fs-6",
+        _ => "badge bg-secondary fs-6"
+    };
+}
+
+<div class="container-fluid px-4">
+
+    @* {{!-- Breadcrumb --}} *@
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Home" asp-action="Index">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a asp-controller="Project" asp-action="Index">Projects</a>
+            </li>
+            <li class="breadcrumb-item active">@Model.Name</li>
+        </ol>
+    </nav>
+
+    @* {{!-- Project Header --}} *@
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <h2 class="fw-bold mb-0">@Model.Name</h2>
+                        <span class="@statusClass">@Model.StatusDisplay</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <p class="text-muted mb-0">@Model.Description</p>
+                    }
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-edit-project"
+                            data-id="@Model.Id"
+                            data-bs-toggle="modal"
+                            data-bs-target="#projectModal">
+                        <i class="bi bi-pencil me-1"></i>Edit
+                    </button>
+                    <a asp-controller="Project" asp-action="Index"
+                       class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-1"></i>Back
+                    </a>
+                </div>
+            </div>
+
+            @* {{!-- Progress --}} *@
+            <div class="mt-4">
+                <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">Overall Progress</span>
+                    <span class="text-muted small">@Model.CompletionPercentage%</span>
+                </div>
+                <div class="progress" style="height:10px; border-radius:6px">
+                    <div class="progress-bar @progressClass"
+                         style="width:@Model.CompletionPercentage%"
+                         role="progressbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* {{!-- Stat Cards --}} *@
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-6 fw-bold text-primary">@Model.TotalTasks</div>
+                    <div class="text-muted small mt-1">Total Tasks</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-6 fw-bold text-success">@Model.CompletedTasks</div>
+                    <div class="text-muted small mt-1">Completed</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-6 fw-bold text-info">
+                        @Model.StartDate.ToString("MMM dd")
+                    </div>
+                    <div class="text-muted small mt-1">Start Date</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-6 fw-bold text-warning">
+                        @(Model.EndDate.HasValue
+                            ? Model.EndDate.Value.ToString("MMM dd")
+                            : "Open")
+                    </div>
+                    <div class="text-muted small mt-1">End Date</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* {{!-- Tasks Section --}} *@
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white border-bottom d-flex
+                    justify-content-between align-items-center py-3">
+            <h5 class="mb-0 fw-semibold">
+                <i class="bi bi-list-task me-2 text-primary"></i>Tasks
+            </h5>
+            <a asp-controller="Task"
+               asp-action="Index"
+               asp-route-projectId="@Model.Id"
+               class="btn btn-sm btn-primary">
+                <i class="bi bi-plus-circle me-1"></i>Add Task
+            </a>
+        </div>
+        <div class="card-body" id="projectTasksContainer">
+            <div class="text-center py-4 text-muted">
+                <i class="bi bi-hourglass-split"></i>
+                Loading tasks...
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@* {{!-- Reuse project modal for inline editing --}} *@
+<div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-pencil-square me-2"></i>Edit Project
+                </h5>
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="projectModalBody">
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index:9999">
+    <div id="toastNotification"
+         class="toast align-items-center border-0"
+         role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body fw-semibold" id="toastMessage"></div>
+            <button type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/project.js"></script>
+    <script>
+        // Load tasks for this project via Task module
+        $(document).ready(function () {
+            $.get('/Task/GetByProject/@Model.Id', function (html) {
+                $('#projectTasksContainer').html(html);
+            });
+        });
+    </script>
+}

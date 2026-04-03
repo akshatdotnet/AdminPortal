@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "src\\STHEnterprise.Api\\STHEnterprise.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

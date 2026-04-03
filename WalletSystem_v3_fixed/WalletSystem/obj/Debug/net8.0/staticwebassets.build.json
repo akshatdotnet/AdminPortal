@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "HgslwHdGrcXzkzxVhvUtDQhDG69wLWv06+QZiK+juSY=",
+  "Source": "WalletSystem",
+  "BasePath": "_content/WalletSystem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WalletSystem\\wwwroot",
+      "Source": "WalletSystem",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\",
+      "BasePath": "_content/WalletSystem",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\css\\site.css",
+      "SourceId": "WalletSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\",
+      "BasePath": "_content/WalletSystem",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ld0jpgdsu2",
+      "Integrity": "V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod+jcDDQU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\js\\site.js",
+      "SourceId": "WalletSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\",
+      "BasePath": "_content/WalletSystem",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ftux4tc5yi",
+      "Integrity": "QzIZH4CZBBIlE+Xu/BgzHisFtXuGi2HbfSuuFFgBSTI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36374"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod+jcDDQU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 29 Mar 2026 07:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod+jcDDQU="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ld0jpgdsu2.css",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36374"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod+jcDDQU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 29 Mar 2026 07:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ld0jpgdsu2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod+jcDDQU="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.ftux4tc5yi.js",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "438"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QzIZH4CZBBIlE+Xu/BgzHisFtXuGi2HbfSuuFFgBSTI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 29 Mar 2026 07:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ftux4tc5yi"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QzIZH4CZBBIlE+Xu/BgzHisFtXuGi2HbfSuuFFgBSTI="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "438"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QzIZH4CZBBIlE+Xu/BgzHisFtXuGi2HbfSuuFFgBSTI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 29 Mar 2026 07:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QzIZH4CZBBIlE+Xu/BgzHisFtXuGi2HbfSuuFFgBSTI="
+        }
+      ]
+    }
+  ]
+}

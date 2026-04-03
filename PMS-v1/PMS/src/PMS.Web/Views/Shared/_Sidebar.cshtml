@@ -1,0 +1,115 @@
+﻿@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    bool isHome = controller == "Home";
+    bool isProject = controller == "Project";
+    bool isTask = controller == "Task";
+
+    string ActiveClass(bool match) => match ? "active" : "";
+}
+
+<nav class="pms-sidebar" id="pmsSidebar">
+
+    <!-- Brand -->
+    <div class="pms-sidebar-brand">
+        <div class="brand-icon">
+            <i class="bi bi-kanban-fill"></i>
+        </div>
+        <div class="brand-text">
+            <span class="brand-name">PMS</span>
+            <span class="brand-tagline">Project Management</span>
+        </div>
+    </div>
+
+    <!-- Collapse toggle (mobile) -->
+    <button class="pms-sidebar-toggle d-lg-none"
+            id="sidebarToggle"
+            aria-label="Toggle sidebar">
+        <i class="bi bi-x-lg"></i>
+    </button>
+
+    <!-- Nav -->
+    <div class="pms-sidebar-nav">
+
+        <div class="nav-section-label">Main Menu</div>
+
+        <a class="pms-nav-item @ActiveClass(isHome)"
+           asp-controller="Home" asp-action="Index">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a class="pms-nav-item @ActiveClass(isProject)"
+           asp-controller="Project" asp-action="Index">
+            <i class="bi bi-folder2-open"></i>
+            <span>Projects</span>
+            @if (isProject)
+            {
+                <span class="nav-indicator"></span>
+            }
+        </a>
+
+        <a class="pms-nav-item @ActiveClass(isTask)"
+           asp-controller="Task" asp-action="Index">
+            <i class="bi bi-list-task"></i>
+            <span>Tasks</span>
+        </a>
+
+        <div class="nav-section-label mt-3">Quick Actions</div>
+
+        <a class="pms-nav-item"
+           href="#"
+           data-bs-toggle="modal"
+           data-bs-target="#quickAddModal">
+            <i class="bi bi-plus-square"></i>
+            <span>New Project</span>
+        </a>
+
+        <a class="pms-nav-item"
+           href="#"
+           id="sidebarAddTask">
+            <i class="bi bi-plus-circle"></i>
+            <span>New Task</span>
+        </a>
+
+        @* <a class="pms-nav-item"
+                id="btnAddTask"
+                data-bs-toggle="modal"
+                data-bs-target="#taskModal">
+            <i class="bi bi-plus-circle"></i> New Task
+        </a> *@
+
+    </div>
+
+    <!-- Sidebar Footer -->
+    <div class="pms-sidebar-footer">
+        <a href="/health" target="_blank" class="pms-nav-item text-muted small">
+            <i class="bi bi-heart-pulse"></i>
+            <span>Health Check</span>
+        </a>
+    </div>
+
+</nav>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="pms-sidebar-overlay d-lg-none" id="sidebarOverlay"></div>
+
+<!-- Quick Add Project Modal (available from any page) -->
+<div class="modal fade" id="quickAddModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-folder-plus me-2"></i>Quick — New Project
+                </h5>
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="quickAddModalBody">
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

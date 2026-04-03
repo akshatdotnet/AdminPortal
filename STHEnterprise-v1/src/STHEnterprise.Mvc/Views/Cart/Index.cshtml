@@ -1,0 +1,232 @@
+﻿@model CartVM
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "_ClientLayout";
+}
+
+<div class="container my-4">
+
+    <!-- STEP 1 -->
+    @* <partial name="_CheckoutStepper" /> *@
+
+
+    <h4 class="mb-3">Shopping Cart (@Model.Items.Count item)</h4>
+
+    @foreach (var item in Model.Items)
+    {
+        <div class="row align-items-center border-bottom py-3">
+            <div class="col-3 col-md-2">
+                <img src="@item.ImageUrl" class="img-fluid rounded" />
+            </div>
+
+            <div class="col-5 col-md-4">
+                <strong>@item.Name</strong><br />
+                ₹@item.Price
+            </div>
+
+            <div class="col-2">
+                <input type="number"
+                       class="form-control"
+                       value="@item.Quantity"
+                       min="1"
+                       onchange="updateQty(@item.ProductId, this.value)" />
+            </div>
+
+            <div class="col-2 text-end fw-bold">
+                ₹@item.Total
+            </div>
+        </div>
+    }
+
+    <div class="row mt-4">
+        <div class="col-md-6 offset-md-6">
+            <div class="border p-3 rounded">
+                <div class="d-flex justify-content-between">
+                    <span>Subtotal</span>
+                    <span>₹@Model.SubTotal</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>GST (18%)</span>
+                    <span>₹@Model.Tax</span>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Grand Total</span>
+                    <span>₹@Model.GrandTotal</span>
+                </div>
+
+                <a href="/checkout/index"
+                   class="btn btn-primary w-100 mt-3">
+                    Continue
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function updateQty(id, qty) {
+            $.post('/cart/update', { productId: id, qty: qty })
+             .done(() => location.reload());
+        }
+    </script>
+}
+
+
+@* @model CartVM
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "_ClientLayout";
+}
+
+<div class="container my-4">
+
+    <h3>Shopping Cart (@(Model?.Items?.Count ?? 0) item)</h3>
+
+    @if (Model == null || Model.Items == null || !Model.Items.Any())
+    {
+        <div class="alert alert-info">Your cart is empty.</div>
+    }
+    else
+    {
+        foreach (var item in Model.Items)
+        {
+            <div class="d-flex align-items-center border-bottom py-3">
+                <img src="@item.ImageUrl" width="80" class="rounded me-3" />
+                <div class="flex-grow-1">
+                    <strong>@item.Name</strong><br />
+                    ₹@item.Price
+                </div>
+
+                <input type="number"
+                       value="@item.Quantity"
+                       class="form-control w-25 me-3"
+                       onchange="updateQty(@item.ProductId, this.value)" />
+
+                <strong>₹@item.Total</strong>
+            </div>
+        }
+
+        <hr />
+
+        <div class="text-end">
+            <p>Subtotal: ₹@Model.SubTotal</p>
+            <p>GST (18%): ₹@Model.Tax</p>
+            <h5>Grand Total: ₹@Model.GrandTotal</h5>
+
+            <a href="/checkout/address" class="btn btn-primary">
+                Continue
+            </a>
+        </div>
+    }
+
+</div>
+
+ *@
+@* @model CartVM
+@{
+    ViewData["Title"] = "Cart";
+   Layout = "_ClientLayout";
+}
+
+<div class="container my-4">
+
+    <h3>Shopping Cart (@Model.Items.Count item)</h3>
+
+    @if (!Model.Items.Any())
+    {
+        <div class="alert alert-info">Your cart is empty.</div>
+    }
+    else
+    {
+        foreach (var item in Model.Items)
+        {
+            <div class="d-flex align-items-center border-bottom py-3">
+                <img src="@item.ImageUrl" width="80" class="rounded me-3" />
+                <div class="flex-grow-1">
+                    <strong>@item.Name</strong><br />
+                    ₹@item.Price
+                </div>
+
+                <input type="number" value="@item.Quantity"
+                       class="form-control w-25 me-3"
+                       onchange="updateQty(@item.ProductId, this.value)" />
+
+                <strong>₹@item.Total</strong>
+            </div>
+        }
+
+        <hr />
+
+        <div class="text-end">
+            <p>Subtotal: ₹@Model.SubTotal</p>
+            <p>GST (18%): ₹@Model.Tax</p>
+            <h5>Grand Total: ₹@Model.GrandTotal</h5>
+
+            <a href="/checkout/address" class="btn btn-primary">
+                Continue
+            </a>
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <script>
+        function updateQty(id, qty) {
+            $.post('/cart/update', { productId: id, qty: qty })
+                .done(() => location.reload());
+        }
+    </script>
+}
+ *@
+@* @model CartViewModel
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "_ClientLayout";
+}
+
+<div class="row">
+    <div class="col-lg-8">
+        <h4>Shopping Cart (@Model.Items.Count item)</h4>
+
+        @foreach (var item in Model.Items)
+        {
+            <div class="card mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>@item.Name</h6>
+                        <small>₹@item.Price × @item.Qty</small>
+                    </div>
+
+                    <div>
+                        <strong>₹@item.Price</strong>
+                        <form asp-action="Remove" method="post" class="d-inline">
+                            <input type="hidden" name="productId" value="@item.ProductId" />
+                            <button class="btn btn-sm btn-danger ms-2">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Summary</h5>
+                <p>Subtotal: ₹@Model.SubTotal</p>
+
+                <a class="btn btn-primary w-100" href="/Checkout/Address">
+                    Continue Checkout
+                </a>
+
+                <form asp-action="Clear" method="post">
+                    <button class="btn btn-outline-danger w-100 mt-2">Clear Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ *@

@@ -1,0 +1,44 @@
+﻿@page "/orders"
+@layout STHEnterprise.Blazor.Layout.AdminLayout
+@inject STHEnterprise.Blazor.Services.OrderService OrderService
+
+
+<h3>Orders</h3>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var o in orders)
+        {
+            <tr>
+                <td>@o.Id</td>
+                <td>@o.Customer</td>
+                <td>@o.Total</td>
+                <td>@o.Status</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+@code {
+
+    List<STHEnterprise.Blazor.Models.Order> orders;
+
+    protected override void OnInitialized()
+    {
+        orders = OrderService.GetOrders();
+    }
+
+}

@@ -1,0 +1,183 @@
+@model WalletSystem.ViewModels.ProfileVM
+@{ ViewData["Title"] = "My Profile"; }
+
+<!-- Profile Hero -->
+<div class="profile-hero">
+    <div class="profile-avatar-section">
+        @if (!string.IsNullOrEmpty(Model.AvatarUrl))
+        {
+            <img src="@Model.AvatarUrl" alt="@Model.FullName" class="profile-avatar-img" />
+        }
+        else
+        {
+            <div class="profile-avatar-initials">@Model.Initials</div>
+        }
+        <div class="profile-avatar-badge @(Model.Status.ToLower())"></div>
+    </div>
+
+    <div class="profile-hero-info">
+        <div class="profile-name-row">
+            <h2>@Model.FullName</h2>
+            @if (Model.Role == "Admin")
+            {
+                <span class="role-badge admin-badge">◈ Admin</span>
+            }
+            else
+            {
+                <span class="role-badge user-badge">◎ User</span>
+            }
+        </div>
+        <p class="profile-username mono">@@@Model.Username · @Model.Email</p>
+        <div class="profile-meta-pills">
+            <span class="status-pill status-@Model.Status.ToLower()">@Model.Status</span>
+            @if (Model.IsEmailVerified)
+            {
+                <span class="verified-pill">✓ Email Verified</span>
+            }
+            else
+            {
+                <span class="unverified-pill">✗ Email Unverified</span>
+            }
+            @if (!string.IsNullOrEmpty(Model.City) || !string.IsNullOrEmpty(Model.Country))
+            {
+                <span class="location-pill">📍 @Model.City@(!string.IsNullOrEmpty(Model.City) && !string.IsNullOrEmpty(Model.Country) ? ", " : "")@Model.Country</span>
+            }
+        </div>
+        @if (!string.IsNullOrEmpty(Model.Bio))
+        {
+            <p class="profile-bio">@Model.Bio</p>
+        }
+    </div>
+
+    <div class="profile-hero-actions">
+        <a href="/Profile/Edit" class="btn-primary">✏ Edit Profile</a>
+        <a href="/Profile/ChangePassword" class="btn-ghost">🔒 Change Password</a>
+        <a href="/Profile/Security" class="btn-ghost">🛡 Security</a>
+    </div>
+</div>
+
+<!-- Stats Row -->
+<div class="profile-stats-row">
+    <div class="profile-stat">
+        <div class="pstat-value">@(Model.WalletBalance.HasValue ? Model.WalletBalance.Value.ToString("C") : "–")</div>
+        <div class="pstat-label">Wallet Balance</div>
+    </div>
+    <div class="profile-stat">
+        <div class="pstat-value">@Model.TransactionCount</div>
+        <div class="pstat-label">Transactions</div>
+    </div>
+    <div class="profile-stat">
+        <div class="pstat-value">@Model.CreatedAt.ToString("MMM yyyy")</div>
+        <div class="pstat-label">Member Since</div>
+    </div>
+    <div class="profile-stat">
+        <div class="pstat-value">@(Model.LastLoginAt.HasValue ? Model.LastLoginAt.Value.ToString("MMM d") : "–")</div>
+        <div class="pstat-label">Last Login</div>
+    </div>
+</div>
+
+<!-- Details Grid -->
+<div class="profile-detail-grid">
+
+    <!-- Personal Information -->
+    <div class="card">
+        <div class="card-title">Personal Information</div>
+        <div class="info-list">
+            <div class="info-row"><span>Full Name</span><strong>@Model.FullName</strong></div>
+            <div class="info-row"><span>Username</span><strong class="mono">@@@Model.Username</strong></div>
+            <div class="info-row"><span>Email</span><strong>@Model.Email</strong></div>
+            <div class="info-row"><span>Phone</span><strong class="mono">@Model.PhoneNumber</strong></div>
+            @if (Model.DateOfBirth.HasValue)
+            {
+                <div class="info-row">
+                    <span>Date of Birth</span>
+                    <strong>@Model.DateOfBirth.Value.ToString("MMMM d, yyyy") (@(DateTime.Today.Year - Model.DateOfBirth.Value.Year) yrs)</strong>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.Address))
+            {
+                <div class="info-row"><span>Address</span><strong>@Model.Address</strong></div>
+            }
+            @if (!string.IsNullOrEmpty(Model.City) || !string.IsNullOrEmpty(Model.Country))
+            {
+                <div class="info-row">
+                    <span>Location</span>
+                    <strong>@Model.City@(!string.IsNullOrEmpty(Model.City) && !string.IsNullOrEmpty(Model.Country) ? ", " : "")@Model.Country</strong>
+                </div>
+            }
+            <div class="info-row"><span>Member Since</span><strong>@Model.CreatedAt.ToString("MMMM d, yyyy")</strong></div>
+        </div>
+        <div style="padding: 0 20px 16px">
+            <a href="/Profile/Edit" class="btn-ghost btn-sm">Edit Info</a>
+        </div>
+    </div>
+
+    <!-- Wallet Summary -->
+    <div class="card">
+        <div class="card-title">Wallet</div>
+        @if (Model.WalletBalance.HasValue)
+        {
+            <div class="wallet-balance-display">
+                <div class="balance-amount">@Model.WalletBalance.Value.ToString("C")</div>
+                <div class="balance-label">@Model.WalletCurrency · Available Balance</div>
+            </div>
+            <div class="info-list">
+                <div class="info-row"><span>Transactions</span><strong>@Model.TransactionCount total</strong></div>
+            </div>
+            <div class="wallet-quick-actions">
+                <a href="/Wallets" class="btn-primary btn-sm">Manage Wallet</a>
+                <a href="/Transactions" class="btn-ghost btn-sm">History</a>
+            </div>
+        }
+        else
+        {
+            <div class="empty-state-sm">No wallet linked to your account.</div>
+        }
+    </div>
+
+    <!-- Account Security -->
+    <div class="card">
+        <div class="card-title">Account Security</div>
+        <div class="info-list">
+            <div class="info-row">
+                <span>Email Verification</span>
+                @if (Model.IsEmailVerified) { <span class="verified-pill">✓ Verified</span> }
+                else { <span class="unverified-pill">✗ Not Verified</span> }
+            </div>
+            <div class="info-row">
+                <span>Account Role</span>
+                <strong>@Model.Role</strong>
+            </div>
+            <div class="info-row">
+                <span>Last Login</span>
+                <strong>@(Model.LastLoginAt.HasValue ? Model.LastLoginAt.Value.ToString("MMM d, yyyy HH:mm") + " UTC" : "–")</strong>
+            </div>
+            @if (!string.IsNullOrEmpty(Model.LastLoginIp))
+            {
+                <div class="info-row">
+                    <span>Last Login IP</span>
+                    <strong class="mono">@Model.LastLoginIp</strong>
+                </div>
+            }
+        </div>
+        <div style="padding: 0 20px 16px; display:flex; gap:8px; flex-wrap:wrap">
+            <a href="/Profile/ChangePassword" class="btn-ghost btn-sm">Change Password</a>
+            <a href="/Profile/Security" class="btn-ghost btn-sm">Security Log</a>
+        </div>
+    </div>
+
+    <!-- Danger Zone -->
+    <div class="card danger-card">
+        <div class="card-title">Account Actions</div>
+        <div class="info-list">
+            <div class="info-row">
+                <span>Sign out all sessions</span>
+                <form method="post" asp-controller="Auth" asp-action="Logout">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn-xs btn-danger">Sign Out</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

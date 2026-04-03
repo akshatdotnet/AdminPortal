@@ -1,0 +1,37 @@
+﻿@model AccountVM
+@{
+    Layout = "_ClientLayout";
+}
+
+<div class="container my-4">
+    <h4>Account <span class="float-end">@Model.Phone</span></h4>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a class="list-group-item active">My orders</a>
+                <a class="list-group-item">My addresses</a>
+                <a href="/account/logout" class="list-group-item text-danger">Sign out</a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+                @foreach (var o in Model.Orders)
+                {
+                    <div class="col-md-6 mb-3">
+                        <div class="card p-3">
+                            <strong>@o.Store</strong>
+                            <small>Order @o.OrderNo</small>
+                            <div class="d-flex justify-content-between mt-2">
+                                <span>₹@o.Amount</span>
+                                <span class="badge bg-secondary">@o.Status</span>
+                            </div>
+                            <small class="text-muted">@o.Date.ToString("dd MMM yyyy, hh:mm tt")</small>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

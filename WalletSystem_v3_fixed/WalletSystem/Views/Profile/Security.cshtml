@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "Security";
+    var user = ViewBag.User as WalletSystem.Models.User;
+}
+
+<div class="section-header">
+    <h2>Account Security</h2>
+    <a href="/Profile" class="btn-ghost btn-sm">← Back to Profile</a>
+</div>
+
+<div class="detail-grid">
+
+    <div class="card">
+        <div class="card-title">Login Activity</div>
+        <div class="info-list">
+            <div class="info-row">
+                <span>Last Successful Login</span>
+                <strong>@(user!.LastLoginAt.HasValue ? user.LastLoginAt.Value.ToString("MMM d, yyyy HH:mm") + " UTC" : "Never")</strong>
+            </div>
+            <div class="info-row">
+                <span>Last Login IP</span>
+                <strong class="mono">@(user.LastLoginIp ?? "–")</strong>
+            </div>
+            <div class="info-row">
+                <span>Failed Login Attempts</span>
+                <strong class="@(user.FailedLoginAttempts > 0 ? "negative" : "")">@user.FailedLoginAttempts</strong>
+            </div>
+            <div class="info-row">
+                <span>Account Locked</span>
+                @if (user.IsLocked)
+                {
+                    <span class="status-pill status-suspended">
+                        Locked until @user.LockedUntil!.Value.ToString("HH:mm") UTC
+                    </span>
+                }
+                else
+                {
+                    <span class="status-pill status-active">Not Locked</span>
+                }
+            </div>
+            <div class="info-row">
+                <span>Lockout Policy</span>
+                <strong>5 failures → 15 min lockout</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Account Status</div>
+        <div class="info-list">
+            <div class="info-row">
+                <span>Status</span>
+                <span class="status-pill status-@user.Status.ToString().ToLower()">@user.Status</span>
+            </div>
+            <div class="info-row">
+                <span>Role</span>
+                <strong>@user.Role</strong>
+            </div>
+            <div class="info-row">
+                <span>Email Verified</span>
+                @if (user.IsEmailVerified)
+                { <span class="verified-pill">✓ Verified</span> }
+                else
+                { <span class="unverified-pill">✗ Not Verified</span> }
+            </div>
+            <div class="info-row">
+                <span>Account Created</span>
+                <strong>@user.CreatedAt.ToString("MMMM d, yyyy")</strong>
+            </div>
+            <div class="info-row">
+                <span>Last Updated</span>
+                <strong>@(user.UpdatedAt.HasValue ? user.UpdatedAt.Value.ToString("MMM d, yyyy") : "–")</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Password & Access</div>
+        <div class="info-list">
+            <div class="info-row">
+                <span>Password</span>
+                <span class="mono text-muted">••••••••••••</span>
+            </div>
+            <div class="info-row">
+                <span>Session Duration</span>
+                <strong>8 hours (sliding)</strong>
+            </div>
+            <div class="info-row">
+                <span>Remember Me</span>
+                <strong>30-day persistent cookie</strong>
+            </div>
+        </div>
+        <div style="padding:0 20px 20px">
+            <a href="/Profile/ChangePassword" class="btn-primary btn-sm">Change Password</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Security Tips</div>
+        <div class="info-list">
+            <div class="info-row" style="align-items:flex-start">
+                <span>💡</span>
+                <span>Use a unique password not used on other sites.</span>
+            </div>
+            <div class="info-row" style="align-items:flex-start">
+                <span>💡</span>
+                <span>Include uppercase, numbers, and special characters.</span>
+            </div>
+            <div class="info-row" style="align-items:flex-start">
+                <span>💡</span>
+                <span>Never share your password or reset tokens.</span>
+            </div>
+            <div class="info-row" style="align-items:flex-start">
+                <span>💡</span>
+                <span>Sign out from shared or public computers.</span>
+            </div>
+        </div>
+    </div>
+
+</div>

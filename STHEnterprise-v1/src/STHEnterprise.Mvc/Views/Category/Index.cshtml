@@ -1,0 +1,67 @@
+@model List<CategoryVM>
+@{
+    ViewData["Title"] = "All Categories";
+    Layout = "_ClientLayout";
+}
+
+@section Styles {
+    <style>
+        .category-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.15);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.65), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+        }
+
+        .category-title {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    </style>
+}
+
+<div class="container">
+
+    <h2 class="fw-bold mb-4">All categories</h2>
+
+    <div class="row g-4">
+
+        @foreach (var cat in Model)
+        {
+            <div class="col-12 col-sm-6 col-lg-4">
+                <a href="/categories/@cat.Slug" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="@cat.ImageUrl" alt="@cat.Name" />
+                        <div class="category-overlay">
+                            <div class="category-title">@cat.Name</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+
+</div>

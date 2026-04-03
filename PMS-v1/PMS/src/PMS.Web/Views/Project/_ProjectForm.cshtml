@@ -1,0 +1,139 @@
+﻿@using PMS.Domain.Enums
+@{
+    bool isEdit = ViewData.Model is PMS.Application.DTOs.Project.UpdateProjectDto;
+    string formId = isEdit ? "editProjectForm" : "createProjectForm";
+    string actionUrl = isEdit ? "/Project/Update" : "/Project/Create";
+}
+
+<form id="@formId" novalidate>
+    @Html.AntiForgeryToken()
+
+    @if (isEdit)
+    {
+        var m = (PMS.Application.DTOs.Project.UpdateProjectDto)Model;
+        <input type="hidden" name="Id" value="@m.Id" />
+    }
+
+    <div class="row g-3 p-1">
+
+        @* {{!-- Name --}} *@
+        <div class="col-12">
+            <label class="form-label fw-semibold">
+                Project Name <span class="text-danger">*</span>
+            </label>
+            @if (isEdit)
+            {
+                var m = (PMS.Application.DTOs.Project.UpdateProjectDto)Model;
+                <input type="text" name="Name" value="@m.Name"
+                       class="form-control" placeholder="Enter project name"
+                       maxlength="150" required />
+            }
+            else
+            {
+                <input type="text" name="Name"
+                       class="form-control" placeholder="Enter project name"
+                       maxlength="150" required />
+            }
+            <div class="invalid-feedback" data-valmsg="Name"></div>
+        </div>
+
+        @* {{!-- Description --}} *@
+        <div class="col-12">
+            <label class="form-label fw-semibold">Description</label>
+            @if (isEdit)
+            {
+                var m = (PMS.Application.DTOs.Project.UpdateProjectDto)Model;
+                <textarea name="Description" class="form-control"
+                          rows="3" maxlength="1000"
+                          placeholder="Brief project description...">@m.Description</textarea>
+            }
+            else
+            {
+                <textarea name="Description" class="form-control"
+                          rows="3" maxlength="1000"
+                          placeholder="Brief project description..."></textarea>
+            }
+            <div class="invalid-feedback" data-valmsg="Description"></div>
+        </div>
+
+        @* {{!-- Start Date --}} *@
+        <div class="col-md-6">
+            <label class="form-label fw-semibold">
+                Start Date <span class="text-danger">*</span>
+            </label>
+            @if (isEdit)
+            {
+                var m = (PMS.Application.DTOs.Project.UpdateProjectDto)Model;
+                <input type="date" name="StartDate"
+                       value="@m.StartDate.ToString("yyyy-MM-dd")"
+                       class="form-control" required />
+            }
+            else
+            {
+                var m = (PMS.Application.DTOs.Project.CreateProjectDto)Model;
+                <input type="date" name="StartDate"
+                       value="@m.StartDate.ToString("yyyy-MM-dd")"
+                       class="form-control" required />
+            }
+            <div class="invalid-feedback" data-valmsg="StartDate"></div>
+        </div>
+
+        @* {{!-- End Date --}} *@
+        <div class="col-md-6">
+            <label class="form-label fw-semibold">End Date</label>
+            @if (isEdit)
+            {
+                var m = (PMS.Application.DTOs.Project.UpdateProjectDto)Model;
+                <input type="date" name="EndDate"
+                       value="@(m.EndDate.HasValue ? m.EndDate.Value.ToString("yyyy-MM-dd") : "")"
+                       class="form-control" />
+            }
+            else
+            {
+                <input type="date" name="EndDate" class="form-control" />
+            }
+            <div class="invalid-feedback" data-valmsg="EndDate"></div>
+        </div>
+
+        @* {{!-- Status --}} *@
+        <div class="col-md-6">
+            <label class="form-label fw-semibold">Status</label>
+            <select name="Status" class="form-select">
+                @foreach (ProjectStatus status in Enum.GetValues(typeof(ProjectStatus)))
+                {
+                    bool selected = isEdit
+                    ? ((PMS.Application.DTOs.Project.UpdateProjectDto)Model).Status == status
+                    : status == ProjectStatus.NotStarted;
+
+                    <option value="@((int)status)" selected="@selected">
+                        @status.ToString()
+                    </option>
+                }
+            </select>
+            <div class="invalid-feedback" data-valmsg="Status"></div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer px-0 pb-0 mt-3">
+        <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+            <i class="bi bi-x-circle me-1"></i>Cancel
+        </button>
+        <button type="submit"
+                class="btn btn-primary"
+                id="btnSubmitProject">
+            <span class="spinner-border spinner-border-sm d-none me-1"
+                  id="submitSpinner"></span>
+            <i class="bi bi-check-circle me-1" id="submitIcon"></i>
+            @(isEdit ? "Update Project" : "Create Project")
+        </button>
+    </div>
+</form>
+
+<script>
+    // Tell project.js which form was loaded and what URL to post to
+    window._projectFormAction = '@actionUrl';
+    window._projectFormId     = '@formId';
+</script>

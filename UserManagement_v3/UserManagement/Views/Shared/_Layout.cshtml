@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] – UserHub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <!-- Apply saved theme BEFORE first paint to avoid flash -->
+    <script>
+        (function () {
+            var t = localStorage.getItem('uh-theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+@{
+    var currentUser = Context.Session.GetObjectFromJson<SessionUserViewModel>("CurrentUser");
+    var controller  = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    bool isSuperAdmin = currentUser?.Roles?.Contains("SuperAdmin") ?? false;
+}
+
+@if (currentUser != null)
+{
+    <div class="app-wrapper">
+
+        <!-- ── Sidebar ──────────────────────────────────────────────────────── -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <i class="bi bi-hexagon-fill brand-icon"></i>
+                    <span class="brand-name">UserHub</span>
+                </div>
+                <button class="sidebar-toggle d-lg-none" id="sidebarClose">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">@currentUser.FullName[0]</div>
+                <div class="user-info">
+                    <div class="user-name">@currentUser.FullName</div>
+                    <div class="user-roles">@string.Join(", ", currentUser.Roles)</div>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item @(controller == "Home" ? "active" : "")">
+                    <a asp-controller="Home" asp-action="Index" class="nav-link">
+                        <i class="bi bi-speedometer2"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                @{
+                    bool canSeeUsers   = isSuperAdmin || (currentUser.Permissions?.Any(p => p.ModuleName == "User Management"   && p.CanView) ?? false);
+                    bool canSeeRoles   = isSuperAdmin || (currentUser.Permissions?.Any(p => p.ModuleName == "Role Management"   && p.CanView) ?? false);
+                    bool canSeeModules = isSuperAdmin || (currentUser.Permissions?.Any(p => p.ModuleName == "Module Management" && p.CanView) ?? false);
+                }
+
+                @if (canSeeUsers || canSeeRoles || canSeeModules)
+                {
+                    <li class="nav-section">ADMINISTRATION</li>
+                }
+
+                @if (canSeeUsers)
+                {
+                    <li class="nav-item @(controller == "Users" ? "active" : "")">
+                        <a asp-controller="Users" asp-action="Index" class="nav-link">
+                            <i class="bi bi-people-fill"></i><span>Users</span>
+                        </a>
+                    </li>
+                }
+                @if (canSeeRoles)
+                {
+                    <li class="nav-item @(controller == "Roles" ? "active" : "")">
+                        <a asp-controller="Roles" asp-action="Index" class="nav-link">
+                            <i class="bi bi-shield-check"></i><span>Roles</span>
+                        </a>
+                    </li>
+                }
+                @if (canSeeModules)
+                {
+                    <li class="nav-item @(controller == "Modules" ? "active" : "")">
+                        <a asp-controller="Modules" asp-action="Index" class="nav-link">
+                            <i class="bi bi-grid-3x3-gap"></i><span>Modules</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+
+            <div class="sidebar-footer">
+                <form asp-controller="Account" asp-action="Logout" method="post">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="logout-btn">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <span>Logout</span>
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- ── Main ─────────────────────────────────────────────────────────── -->
+        <div class="main-content">
+            <header class="topbar">
+                <button class="sidebar-toggle d-lg-none" id="sidebarOpen">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="topbar-title">@(ViewData["Title"] ?? "Dashboard")</div>
+
+                <!-- ── Theme Switcher ──────────────────────────────────────── -->
+                <div class="theme-switcher" title="Switch theme">
+                    <button class="theme-btn" data-theme="dark"  title="Dark">
+                        <i class="bi bi-moon-stars-fill"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="light" title="Light">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="sepia" title="Sepia">
+                        <i class="bi bi-book-fill"></i>
+                    </button>
+                </div>
+
+                <span class="badge-role">@string.Join(" | ", currentUser.Roles)</span>
+            </header>
+
+            <div class="page-content">
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i>@TempData["Success"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>@TempData["Error"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="overlay"></div>
+}
+else
+{
+    @RenderBody()
+}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

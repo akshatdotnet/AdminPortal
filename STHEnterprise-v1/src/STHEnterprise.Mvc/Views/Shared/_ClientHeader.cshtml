@@ -1,0 +1,76 @@
+﻿<!-- TOP INFO BAR -->
+@* <div class="bg-primary text-white py-2">
+    <div class="container d-flex gap-3 small">
+        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-white text-decoration-none">Refund policy</a>
+        <a href="#" class="text-white text-decoration-none">Terms & conditions</a>
+    </div>
+</div> *@
+
+@if (ViewBag.ShowPolicyBar == true)
+{
+    <div class="bg-primary text-white py-2">
+        <div class="container d-flex gap-3 small">
+            <a class="text-white text-decoration-none">Privacy Policy</a>
+            <a class="text-white text-decoration-none">Refund policy</a>
+            <a class="text-white text-decoration-none">Terms & conditions</a>
+        </div>
+    </div>
+}
+
+
+<!-- MAIN HEADER -->
+<header class="bg-white border-bottom">
+    <div class="container py-3">
+        <div class="row align-items-center">
+
+            <!-- LOGO -->
+            <div class="col-md-3 d-flex align-items-center gap-2">
+                <img src="https://i.imgur.com/2DhmtJ4.png"
+                     width="42" height="42" class="rounded" />
+                <strong>Suraj Tea House</strong>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="col-md-5 my-2 my-md-0">
+                <input class="form-control" placeholder="Search for products..." />
+            </div>
+
+            <!-- NAV -->
+            <div class="col-md-4 text-end">
+                @* <a href="/categories" class="me-3 text-dark text-decoration-none">
+                    <i class="bi bi-grid"></i> Categories
+                </a>
+
+                <a href="/cart" class="me-3 text-dark text-decoration-none position-relative">
+                    <i class="bi bi-cart"></i> Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">
+                        1
+                    </span>
+                </a>
+
+                <a href="/account/login" class="text-dark text-decoration-none">
+                    <i class="bi bi-person"></i> Account
+                </a> *@
+                <nav class="navbar bg-white border-bottom">
+                    <div class="container">
+                        <strong>Suraj Tea House</strong>
+
+                        <div class="d-flex gap-3">
+                            <a href="/categories">Categories</a>
+                            <a href="/cart">Cart</a>
+
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Account
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                @await Html.PartialAsync("_LoginModal")
+
+            </div>
+
+        </div>
+    </div>
+</header>

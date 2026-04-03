@@ -1,0 +1,227 @@
+﻿@model PMS.Application.DTOs.TimeLog.TimeLogSummaryDto
+
+<div id="timeLogSummaryWrapper">
+
+    @* {{!-- Timer Controls + Total --}} *@
+    <div class="d-flex justify-content-between align-items-center mb-4
+                flex-wrap gap-3">
+
+        @* {{!-- Live Timer Display --}} *@
+        <div class="d-flex align-items-center gap-3">
+            @if (Model.HasActiveTimer)
+            {
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-danger px-3 py-2 fs-6">
+                        <i class="bi bi-record-circle me-2"></i>
+                        <span id="liveTimerDisplay"
+                              data-start-time="@Model.Logs
+                              .FirstOrDefault(l=>
+                            l.IsRunning)
+                            ?.StartTime.ToString("o")">
+                            00:00:00
+                        </span>
+                    </span>
+                    <span class="text-muted small">Timer is running</span>
+                </div>
+            }
+            else
+            {
+                <div class="d-flex align-items-center gap-2 text-muted">
+                    <i class="bi bi-clock display-6"></i>
+                    <span>No active timer</span>
+                </div>
+            }
+        </div>
+
+        @* {{!-- Total Hours + Actions --}} *@
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end">
+                <div class="fw-bold fs-5 text-primary" id="totalHoursDisplay">
+                    @Model.TotalHoursLogged.ToString("F2")h
+                </div>
+                <div class="text-muted small">Total Logged</div>
+            </div>
+
+            @if (Model.HasActiveTimer)
+            {
+                <button class="btn btn-danger"
+                        id="btnStopTimer"
+                        data-task-id="@Model.TaskId">
+                    <i class="bi bi-stop-circle me-1"></i>Stop Timer
+                </button>
+            }
+            else
+            {
+                <div class="d-flex gap-2">
+                    <input type="text"
+                           id="timerNotes"
+                           class="form-control form-control-sm"
+                           placeholder="Notes (optional)"
+                           style="width:180px" />
+                    <button class="btn btn-success"
+                            id="btnStartTimer"
+                            data-task-id="@Model.TaskId">
+                        <i class="bi bi-play-circle me-1"></i>Start Timer
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+
+    @* {{!-- Stats Row --}} *@
+    <div class="row g-3 mb-4">
+        <div class="col-md-3 col-6">
+            <div class="card border-0 bg-light text-center py-3">
+                <div class="fw-bold fs-4 text-primary">
+                    @Model.Logs.Count()
+                </div>
+                <div class="text-muted small">Total Sessions</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card border-0 bg-light text-center py-3">
+                <div class="fw-bold fs-4 text-success">
+                    @Model.TotalHoursLogged.ToString("F2")h
+                </div>
+                <div class="text-muted small">Hours Logged</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card border-0 bg-light text-center py-3">
+                <div class="fw-bold fs-4 text-info">
+                    @(Model.Logs.Any(l => !l.IsRunning)
+                        ? Model.Logs.Where(l => !l.IsRunning)
+                        .Average(l => l.TotalHours ?? 0)
+                        .ToString("F2") + "h"
+                        : "—")
+                </div>
+                <div class="text-muted small">Avg Session</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card border-0 bg-light text-center py-3">
+                <div class="fw-bold fs-4 @(Model.HasActiveTimer ? "text-danger" : "text-muted")">
+                    @(Model.HasActiveTimer ? "Active" : "Idle")
+                </div>
+                <div class="text-muted small">Timer Status</div>
+            </div>
+        </div>
+    </div>
+
+    @* {{!-- Log History --}} *@
+    <h6 class="fw-semibold mb-3 text-muted text-uppercase"
+        style="font-size:0.75rem; letter-spacing:0.05em">
+        <i class="bi bi-list-ul me-2"></i>Session History
+    </h6>
+
+    @if (!Model.Logs.Any())
+    {
+        <div class="text-center py-4 text-muted border rounded">
+            <i class="bi bi-clock-history display-5 mb-3 d-block"></i>
+            No time logs yet. Start the timer to begin tracking.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-sm table-hover align-middle mb-0"
+                   id="timeLogTable">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-3" style="width:5%">#</th>
+                        <th style="width:22%">Start Time</th>
+                        <th style="width:22%">End Time</th>
+                        <th style="width:18%">Duration</th>
+                        <th>Notes</th>
+                        <th style="width:8%" class="text-end pe-3">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="timeLogTableBody">
+                    @{
+                        int rowNum = Model.Logs.Count();
+                    }
+                    @foreach (var log in Model.Logs)
+                    {
+                        <tr data-log-id="@log.Id"
+                            class="@(log.IsRunning ? "table-danger" : "")">
+                            <td class="ps-3 text-muted small">@rowNum</td>
+                            <td class="small">
+                                <div class="fw-semibold">
+                                    @log.StartTime.ToLocalTime().ToString("MMM dd, yyyy")
+                                </div>
+                                <div class="text-muted">
+                                    @log.StartTime.ToLocalTime().ToString("hh:mm:ss tt")
+                                </div>
+                            </td>
+                            <td class="small">
+                                @if (log.IsRunning)
+                                {
+                                    <span class="badge bg-danger">
+                                        <i class="bi bi-record-circle me-1"></i>Running
+                                    </span>
+                                }
+                                else
+                                {
+                                    <div class="fw-semibold">
+                                        @log.EndTime!.Value.ToLocalTime().ToString("MMM dd, yyyy")
+                                    </div>
+                                    <div class="text-muted">
+                                        @log.EndTime.Value.ToLocalTime().ToString("hh:mm:ss tt")
+                                    </div>
+                                }
+                            </td>
+                            <td>
+                                @if (log.IsRunning)
+                                {
+                                    <span class="text-danger fw-semibold live-duration"
+                                          data-start="@log.StartTime.ToString("o")">
+                                        Calculating...
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-light text-dark border fw-semibold">
+                                        <i class="bi bi-clock me-1"></i>
+                                        @log.FormattedDuration
+                                    </span>
+                                    @if (log.TotalHours.HasValue)
+                                    {
+                                        <div class="text-muted small mt-1">
+                                            @log.TotalHours.Value.ToString("F4")h
+                                        </div>
+                                    }
+                                }
+                            </td>
+                            <td class="small text-muted">
+                                @(string.IsNullOrEmpty(log.Notes) ? "—" : log.Notes)
+                            </td>
+                            <td class="text-end pe-3">
+                                @if (!log.IsRunning)
+                                {
+                                    <button class="btn btn-sm btn-outline-danger
+                                                   btn-delete-log"
+                                            data-log-id="@log.Id"
+                                            data-task-id="@Model.TaskId"
+                                            title="Delete this log">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                }
+                                else
+                                {
+                                    <span class="text-muted small">—</span>
+                                }
+                            </td>
+                        </tr>
+                        rowNum--;
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+</div>
+
+@* {{!-- Hidden metadata for JS --}} *@
+<input type="hidden" id="summaryTaskId" value="@Model.TaskId" />
+<input type="hidden" id="summaryHasActive" value="@Model.HasActiveTimer.ToString().ToLower()" />
+<input type="hidden" id="summaryActiveLogId" value="@Model.ActiveLogId" />

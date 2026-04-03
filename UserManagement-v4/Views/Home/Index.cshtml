@@ -1,0 +1,100 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    dynamic stats = Model!;
+}
+
+<div class="page-header">
+    <div>
+        <h1>Dashboard</h1>
+        <div class="sub">Welcome back! Here's an overview of the system.</div>
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon purple"><i class="bi bi-people-fill"></i></div>
+            <div>
+                <div class="stat-value">@stats.TotalUsers</div>
+                <div class="stat-label">Total Users</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon green"><i class="bi bi-person-check-fill"></i></div>
+            <div>
+                <div class="stat-value">@stats.ActiveUsers</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon amber"><i class="bi bi-shield-check"></i></div>
+            <div>
+                <div class="stat-value">@stats.TotalRoles</div>
+                <div class="stat-label">Roles</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="stat-card">
+            <div class="stat-icon cyan"><i class="bi bi-grid-3x3-gap"></i></div>
+            <div>
+                <div class="stat-value">@stats.TotalModules</div>
+                <div class="stat-label">Modules</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="bi bi-lightning-charge-fill text-accent me-2"></i>Quick Actions
+            </div>
+            <div class="card-body d-flex flex-column gap-2">
+                <a asp-controller="Users" asp-action="Create" class="btn btn-primary">
+                    <i class="bi bi-person-plus me-2"></i>Add New User
+                </a>
+                <a asp-controller="Roles" asp-action="Create" class="btn btn-outline-secondary">
+                    <i class="bi bi-shield-plus me-2"></i>Create Role
+                </a>
+                <a asp-controller="Modules" asp-action="Create" class="btn btn-outline-secondary">
+                    <i class="bi bi-plus-square me-2"></i>Add Module
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-info-circle me-2"></i>System Info
+            </div>
+            <div class="card-body">
+                <div class="info-row">
+                    <span class="info-label">Framework</span>
+                    <span>ASP.NET Core 8 MVC</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Database</span>
+                    <span>SQL Server + EF Core 8</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Authentication</span>
+                    <span>Session-based + BCrypt</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Permission Model</span>
+                    <span>Role → Module (View / Create / Edit / Delete)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Server Time (UTC)</span>
+                    <span>@DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

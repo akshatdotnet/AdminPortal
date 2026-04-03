@@ -1,0 +1,47 @@
+@model StoreViewModel
+@{
+    Layout = "_ClientLayout";
+    var active = Model.Categories.FirstOrDefault(c => c.Active);
+}
+
+<a asp-action="Index" class="text-decoration-none mb-3 d-inline-block">
+    ← @active?.Name (@Model.Products.Count items)
+</a>
+
+@if (!Model.Products.Any())
+{
+    <div class="text-center my-5">
+        <img src="https://cdn-icons-png.flaticon.com/512/4076/4076504.png" width="120" />
+        <h5 class="mt-3">No products found.</h5>
+    </div>
+}
+else
+{
+    <div class="row g-4">
+        @foreach (var p in Model.Products)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-3 h-100">
+                    <img src="@p.Image" class="mb-2 rounded" width="100" />
+                    <h6>@p.Name</h6>
+
+                    <div>
+                        <strong>₹@p.Price</strong>
+                        @if (p.OriginalPrice > p.Price)
+                        {
+                            <del class="text-muted">₹@p.OriginalPrice</del>
+                            <span class="badge bg-warning">@p.DiscountPercent% OFF</span>
+                        }
+                    </div>
+
+                    <button class="btn btn-outline-primary mt-auto add-to-cart"
+                            data-id="@p.Id"
+                            data-price="@p.Price"
+                            data-name="@p.Name">
+                        ADD +
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+}

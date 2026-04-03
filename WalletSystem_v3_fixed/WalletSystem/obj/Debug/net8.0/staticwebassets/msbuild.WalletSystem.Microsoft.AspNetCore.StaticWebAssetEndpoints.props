@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/WalletSystem/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod\u002BjcDDQU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"36374"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod\u002BjcDDQU=\u0022"},{"Name":"Last-Modified","Value":"Sun, 29 Mar 2026 07:12:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WalletSystem/css/site.ld0jpgdsu2.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ld0jpgdsu2"},{"Name":"integrity","Value":"sha256-V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod\u002BjcDDQU="},{"Name":"label","Value":"_content/WalletSystem/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"36374"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022V64evq7KbaaH0Zc8jRb8AY/4MtYA7iTnHiod\u002BjcDDQU=\u0022"},{"Name":"Last-Modified","Value":"Sun, 29 Mar 2026 07:12:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WalletSystem/js/site.ftux4tc5yi.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ftux4tc5yi"},{"Name":"integrity","Value":"sha256-QzIZH4CZBBIlE\u002BXu/BgzHisFtXuGi2HbfSuuFFgBSTI="},{"Name":"label","Value":"_content/WalletSystem/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"438"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022QzIZH4CZBBIlE\u002BXu/BgzHisFtXuGi2HbfSuuFFgBSTI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 29 Mar 2026 07:12:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WalletSystem/js/site.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QzIZH4CZBBIlE\u002BXu/BgzHisFtXuGi2HbfSuuFFgBSTI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"438"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022QzIZH4CZBBIlE\u002BXu/BgzHisFtXuGi2HbfSuuFFgBSTI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 29 Mar 2026 07:12:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

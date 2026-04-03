@@ -1,0 +1,1100 @@
+﻿
+
+
+
+
+
+===============================================================================================
+Enterprise Full-Stack Developers / Architects
+🏗️ Course Structure
+Duration: 12–16 Weeks (120+ Hours)
+Mode: Instructor-Led | Hands-on | Real-Time Project
+Level: Intermediate to Advanced
+Target Audience:
+.NET Developers
+Full-Stack Developers
+Software Engineers
+Tech Leads / Architects
+
+📘 Syllabus
+🔹 Module 1 – Enterprise Foundation & Architecture
+Modern Software Engineering Practices
+SOLID, DRY, KISS, YAGNI
+Clean Architecture / Onion Architecture
+DDD – Entities, Value Objects, Aggregates
+Microservices vs Modular Monolith
+API-First Design Strategy
+
+🔹 Module 2 – .NET 8 & ASP.NET Core Web API
+.NET 8 LTS Overview
+RESTful API Design (Best Practices)
+Minimal APIs vs Controllers
+Dependency Injection & IoC
+Middleware Pipeline
+Global Exception Handling
+Logging with Serilog
+API Versioning
+Swagger / OpenAPI
+
+Module 3 – Data Access Layer
+EF Core 8 – Best Practices
+Repository & Unit of Work Patterns
+Migrations & Seeding Strategy
+Dapper for High-Performance Queries
+Transactions & Concurrency Handling
+SQL Server Design (Indexing, Normalization)
+
+🔹 Module 4 – Security & Identity
+JWT Authentication & Authorization
+Role-Based & Policy-Based Security
+OAuth2 / OpenID Connect
+Azure AD Integration
+Refresh Tokens & Token Rotation
+Secure API Design (OWASP Top 10)
+
+🔹 Module 5 – Angular (Enterprise UI)
+Angular Architecture
+Lazy Loading Modules
+Reactive Forms with Validation
+State Management (NgRx / Signals)
+API Integration
+Auth Guard & Interceptors
+Dynamic Menu & Permission-Based UI
+Performance Optimization
+
+🔹 Module 6 – React (Modern UI)
+React with TypeScript
+Component Architecture
+Hooks & Context API
+State Management (Redux Toolkit)
+Form Handling & Validation
+API Integration with Axios
+Protected Routes & Role-Based UI
+Production Build & Optimization
+
+🔹 Module 7 – Azure Cloud & DevOps
+Azure Fundamentals for Developers
+App Service / Azure Container Apps
+Azure SQL / Cosmos DB
+Azure Blob Storage
+Azure Key Vault
+Docker & Containerization
+CI/CD using Azure DevOps / GitHub Actions
+Environment Configuration (Dev/Test/Prod)
+
+🔹 Module 8 – Performance, Monitoring & Scalability
+Caching (In-Memory & Redis)
+Asynchronous Programming
+Background Jobs (Hangfire / Azure Functions)
+Health Checks
+Application Insights
+Centralized Logging
+Rate Limiting & Throttling
+
+🚀 Real-Time Industry Project
+Project Title:
+Enterprise HR & Task Management System (Cloud-Native SaaS)
+Features:
+Multi-Tenant Architecture
+User Registration & Login (JWT + Azure AD)
+Role-Based Access Control (Admin, Manager, Employee)
+Employee Management
+Task & Workflow Management
+Approval System
+File Upload to Azure Blob
+Audit Logs
+Dashboard (Angular & React versions)
+API Layer with Clean Architecture
+CI/CD Pipeline
+Hosted on Azure
+Architecture:
+ASP.NET Core Web API (.NET 8)
+Clean Architecture (Domain, Application, Infrastructure, API)
+Angular Frontend (Admin Portal)
+React Frontend (User Portal)
+Azure App Service
+Azure SQL Database
+Azure Key Vault
+Dockerized Services
+
+===============================================================================================
+
+
+
+
+=====================================================================
+🚀 PROFESSIONAL FULL-STACK ENTERPRISE DEVELOPMENT PROGRAM
+.NET Core + Angular + React on Azure Cloud
+Designed & Delivered by a Trainer with 15+ Years of Industry Experience
+=====================================================================
+
+“Stop building demo apps. Start building enterprise systems.”
+
+In today’s competitive IT market, companies don’t hire developers who only
+know syntax—they hire professionals who can design, build, secure, deploy,
+and scale enterprise-grade, cloud-ready systems.
+
+This program transforms you into a Production-Ready Full-Stack Engineer
+with real-world architectural thinking. You won’t just build “demo apps”—
+you’ll design and deliver a complete SaaS product using modern enterprise
+standards followed by top IT companies.
+
+You will master:
+- .NET 8 & ASP.NET Core Web API with Clean Architecture
+- Angular & React for modern enterprise UI
+- SOLID, DDD, CQRS & API-First Design
+- JWT, OAuth2, Azure AD Security
+- Azure Cloud Deployment & DevOps (CI/CD)
+- Performance, Monitoring & Scalability
+
+Driven by a Real-Time Industry Project:
+Enterprise HR & Task Management SaaS
+- Multi-Tenant Architecture
+- Role-Based Access Control
+- Employee & Task Management
+- Approvals & Workflow
+- Angular Admin Portal
+- React User Portal
+- Azure Cloud Hosting
+- CI/CD Pipeline
+
+This course is delivered by a Trainer with 15+ Years of Corporate Experience:
+- Enterprise coding standards
+- Real production scenarios
+- Interview-oriented preparation
+- System design mindset
+- Corporate culture alignment
+
+WHO SHOULD JOIN
+- .NET Developers
+- Full-Stack Developers
+- Software Engineers
+- Tech Leads / Architects
+- Freshers aiming for enterprise roles
+
+WHAT MAKES THIS PROGRAM DIFFERENT
+- Not YouTube-style coding – Enterprise-grade training
+- Real architecture – not just CRUD apps
+- End-to-end SaaS project
+- Daily hands-on practice & code reviews
+- Resume & interview readiness
+- Mentorship from an industry veteran
+
+=====================================================================
+📘 SYLLABUS (HIGH LEVEL)
+=====================================================================
+
+1. Enterprise Foundation & Architecture
+   - SOLID, Clean Architecture, DDD
+   - Monolith vs Microservices
+   - API-First Design
+
+2. .NET 8 & ASP.NET Core Web API
+   - REST Best Practices
+   - Middleware, Logging, Exception Handling
+   - API Versioning & Swagger
+
+3. Data Access Layer
+   - EF Core 8 Best Practices
+   - Repository & Unit of Work
+   - Dapper for Performance
+
+4. Security & Identity
+   - JWT, OAuth2, Azure AD
+   - Role & Policy-Based Authorization
+   - OWASP Top 10
+
+5. Angular (Enterprise UI)
+   - Modular Architecture
+   - Lazy Loading
+   - Auth Guards & Interceptors
+   - Dynamic Menu
+
+6. React (Modern UI)
+   - React + TypeScript
+   - Hooks, Redux Toolkit
+   - Protected Routes
+
+7. Azure Cloud & DevOps
+   - App Service / Container Apps
+   - Azure SQL, Blob Storage
+   - Docker, CI/CD
+
+8. Performance & Monitoring
+   - Redis Caching
+   - Background Jobs
+   - Application Insights
+
+=====================================================================
+🎯 WEEK-WISE LEARNING ROADMAP (12 WEEKS)
+=====================================================================
+
+Week 1: Enterprise Foundations & Architecture  
+Week 2: .NET 8 Web API Core  
+Week 3: Clean Architecture Implementation  
+Week 4: Data Access & EF Core  
+Week 5: Security & Identity  
+Week 6: Angular Fundamentals  
+Week 7: Angular Advanced  
+Week 8: React Fundamentals  
+Week 9: React Advanced  
+Week 10: Azure Cloud  
+Week 11: DevOps & CI/CD  
+Week 12: Performance & Final Go-Live  
+
+Outcome: Full Enterprise SaaS Live on Azure
+
+=====================================================================
+🧪 DAILY PRACTICE MODEL
+=====================================================================
+
+Every Day:
+Concept → Live Coding → Assignment → Review
+
+Examples:
+- Implement SOLID refactoring
+- Build APIs with proper status codes
+- Create Clean Architecture layers
+- Add JWT Authentication
+- Build Angular & React UI modules
+- Deploy to Azure
+- Create CI/CD pipeline
+- Add Redis & Monitoring
+
+=====================================================================
+🧩 REAL-TIME PROJECT SOURCE STRUCTURE
+=====================================================================
+
+Backend (.NET 8 – Clean Architecture)
+- Domain (Entities, Value Objects)
+- Application (Use Cases, DTOs)
+- Infrastructure (EF Core, Azure, Repos)
+- API (Controllers, Middleware)
+- Tests (Domain, App, API)
+
+Frontend – Angular (Admin Portal)
+- Core (Guards, Interceptors)
+- Modules (Auth, Employees, Tasks)
+- Shared Components
+
+Frontend – React (User Portal)
+- Features (Auth, Dashboard, Tasks)
+- Redux Store
+- Routes & Hooks
+
+=====================================================================
+📊 TRAINER DEMO SLIDE FLOW
+=====================================================================
+
+1. Title – Program Overview
+2. Why Enterprise Skills Matter
+3. Who Should Join
+4. What You Will Become
+5. Technology Stack
+6. Enterprise Architecture
+7. Real-Time Project
+8. Live Demo Flow
+9. Learning Roadmap
+10. Teaching Methodology
+11. What Makes Us Different
+12. Career Outcomes
+13. Architecture Diagram
+14. Success Story Template
+15. Call to Action
+
+=====================================================================
+FINAL MESSAGE
+=====================================================================
+
+By the end of this program, you will not just be a developer—you will think
+and work like a Senior Full-Stack Engineer / Cloud-Ready Professional.
+
+“Stop building demo apps. Start building enterprise systems.”
+=====================================================================
+
+
+Senior .NET Core + Azure Interview Questions (One View – Categorized)
+
+1️⃣ .NET Core Fundamentals
+Explain the ASP.NET Core request pipeline and middleware execution order.
+What is Dependency Injection in .NET Core and what are service lifetimes (Transient, Scoped, Singleton)?
+What is the difference between ASP.NET MVC and ASP.NET Core MVC?
+What are the advantages of .NET Core over .NET Framework?
+Explain the concept of middleware and how to create custom middleware.
+What is the difference between IActionResult and ActionResult<T>?
+Explain configuration management in .NET Core (appsettings.json, environment variables, secrets).
+What is Kestrel server and how does it work with IIS?
+How does model binding work in ASP.NET Core?
+How do you implement global exception handling in .NET Core?
+
+2️⃣ C# Advanced Concepts
+What is the difference between async/await and multithreading?
+What is the difference between IEnumerable, ICollection, IList, and IQueryable?
+Explain garbage collection in .NET and its generations.
+What is the difference between Task and Thread?
+What are delegates, events, and Func/Action in C#?
+What is reflection in C# and when should it be used?
+What is the difference between struct and class?
+What is the difference between abstract class and interface?
+What are extension methods in C#?
+What is the difference between dynamic and var?
+
+3️⃣ LINQ and Collections
+What is LINQ and how does it improve data querying?
+What is the difference between deferred execution and immediate execution in LINQ?
+How do you group data using LINQ?
+How do you remove duplicates from a collection?
+How do you perform sorting using LINQ?
+What is the difference between Select and SelectMany?
+What is the difference between First(), FirstOrDefault(), Single(), and SingleOrDefault()?
+How do you implement pagination using LINQ?
+How do you perform joins using LINQ?
+What is the performance impact of LINQ queries?
+
+4️⃣ ASP.NET Core Web API
+How do you design RESTful APIs using ASP.NET Core?
+What are HTTP methods and their purposes (GET, POST, PUT, PATCH, DELETE)?
+How do you implement API versioning?
+How do you secure APIs using JWT authentication?
+What is the difference between authentication and authorization?
+How do you implement role-based and policy-based authorization?
+How do you implement pagination, filtering, sorting in APIs?
+What are API filters in ASP.NET Core?
+How do you implement rate limiting in APIs?
+How do you document APIs using Swagger?
+
+5️⃣ Microservices Architecture
+What are microservices and how do they differ from monolithic architecture?
+What are the benefits and challenges of microservices?
+How do microservices communicate with each other?
+What is API Gateway and why is it used?
+What is service discovery?
+What is the circuit breaker pattern?
+What is eventual consistency in distributed systems?
+What is saga pattern in microservices?
+How do you manage configuration in microservices?
+How do you handle logging and monitoring in microservices?
+
+6️⃣ Design Patterns & Architecture
+What is the Repository pattern?
+What is the Unit of Work pattern?
+What is Dependency Injection pattern?
+What is the Factory pattern?
+What is the Strategy pattern?
+What is the Singleton pattern?
+What is CQRS (Command Query Responsibility Segregation)?
+What is the Mediator pattern?
+What is Domain Driven Design (DDD)?
+What is Clean Architecture?
+
+7️⃣ Database & SQL
+What is the difference between SQL Server and NoSQL databases?
+What are indexes and how do they improve performance?
+What is normalization and denormalization?
+What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN?
+What are stored procedures and when should they be used?
+What are transactions and ACID properties?
+What is the difference between clustered and non-clustered index?
+How do you optimize slow SQL queries?
+What is Entity Framework Core?
+What is lazy loading vs eager loading?
+
+8️⃣ Azure Cloud (Core Concepts)
+What are the different services available in Microsoft Azure?
+What is Azure App Service?
+What is Azure Virtual Machine?
+What is Azure Blob Storage?
+What is Azure Key Vault?
+What is Azure Service Bus?
+What is Azure Functions?
+What is Azure Kubernetes Service (AKS)?
+What is Azure Virtual Network (VNet)?
+What is Azure API Management?
+
+9️⃣ Azure Development & Deployment
+How do you deploy a .NET Core application to Azure App Service?
+What is CI/CD in Azure DevOps?
+What are deployment slots in Azure App Service?
+How do you configure environment variables in Azure?
+How do you implement auto-scaling in Azure?
+How do you monitor applications using Application Insights?
+How do you store secrets securely in Azure?
+What is Managed Identity in Azure?
+What is Infrastructure as Code (IaC)?
+How do you implement blue-green deployment?
+
+🔟 Performance Optimization
+How do you optimize API performance?
+What is caching and how do you implement it?
+What is distributed caching?
+How do you reduce database query latency?
+What is connection pooling?
+How do you avoid N+1 query problems?
+What is asynchronous programming and how does it improve scalability?
+What is load balancing?
+What is CDN and when should it be used?
+How do you monitor performance in production systems?
+
+1️⃣1️⃣ Security Best Practices
+How do you secure ASP.NET Core applications?
+What is OAuth 2.0?
+What is OpenID Connect?
+What is Cross-Site Scripting (XSS)?
+What is Cross-Site Request Forgery (CSRF)?
+How do you secure API endpoints?
+What is HTTPS and SSL/TLS?
+How do you secure cloud applications?
+What is identity federation?
+How do you handle secrets securely?
+
+1️⃣2️⃣ Scenario-Based Questions
+An API is slow in production. How will you troubleshoot it?
+Azure costs suddenly increased. What steps will you take to investigate?
+Production application is crashing intermittently. How will you debug it?
+Database performance degraded after deployment. What will you check?
+Users report high latency in API responses. How do you identify the root cause?
+Microservice communication is failing. How will you diagnose it?
+Security audit failed for your application. What actions will you take?
+Azure deployment failed during CI/CD pipeline. How will you troubleshoot it?
+Cloud service is unavailable in one region. How will you ensure high availability?
+How do you design a scalable system for millions of users?
+
+✅ Best Practices Interview Strategy
+When answering any question:
+Explain the concept clearly.
+Provide a real-world example from your project.
+Mention performance or security best practices.
+Explain trade-offs and alternative approaches.
+Relate the answer to scalable cloud architecture.
+
+==================================================================================
+Complete Practical Interview Questions
+Role: Senior Software Engineer / Technical Lead
+Technology: .NET Core + Azure
+
+Top C# Practical Interview Questions commonly asked in live coding / screen-sharing rounds to evaluate technical programming skills for 
+Senior .NET Developers (8–12+ years) in companies like Capgemini, Tata Consultancy Services, Infosys, and Accenture.
+
+Skills Tested in These Questions
+| Skill              | What Interviewer Evaluates |
+| ------------------ | -------------------------- |
+| Logic building     | Problem solving ability    |
+| OOP concepts       | Code design                |
+| LINQ               | Data manipulation          |
+| Async programming  | Performance optimization   |
+| Collections        | Data structures knowledge  |
+| Exception handling | Production-ready coding    |
+| Design patterns    | Software architecture      |
+
+Top C# Practical Interview Questions (Frequently Asked)
+1️⃣ Basic Logic & Programming
+Write a program to reverse a string without using built-in functions.
+Write a program to check whether a string is a palindrome.
+Write a program to find duplicate characters in a string.
+Write a program to count frequency of each character in a string.
+Write a program to find the second largest number in an array.
+Write a program to remove duplicate elements from an array.
+Write a program to swap two numbers without using a third variable.
+Write a program to find factorial using recursion.
+Write a program to check if a number is prime.
+Write a program to generate Fibonacci series.
+
+2️⃣ Collections & LINQ Coding Questions
+Using LINQ, find duplicate elements in a list.
+Using LINQ, group employees by department.
+Write a LINQ query to find the top 3 highest salaries.
+Write a LINQ query to remove duplicates from a list.
+Write a LINQ query to sort a list of objects by multiple properties.
+Write a program to convert a list to a dictionary.
+Write a program to find the most frequent element in a list.
+Write a program to merge two lists and remove duplicates.
+
+3️⃣ Object-Oriented Programming (OOP)
+Write a program demonstrating Inheritance, Polymorphism, Encapsulation, and Abstraction.
+Implement Method Overloading and Method Overriding with example.
+Create a Base Class and Derived Class and override a virtual method.
+Implement an Interface-based design for Payment Processing.
+Write a program demonstrating Dependency Injection.
+Implement a Factory Design Pattern in C#.
+
+4️⃣ Async / Multithreading Questions
+Write a program using async / await to call multiple APIs concurrently.
+Implement Parallel processing using Task.WhenAll.
+Demonstrate the difference between:
+Task
+Thread
+Async/Await
+with a coding example.
+Write a program to execute multiple tasks in parallel.
+Implement a producer-consumer pattern using ConcurrentQueue.
+
+5️⃣ Data Structures & Algorithm Based Questions
+Implement a Stack using Array.
+Implement a Queue using Linked List.
+Write a program to detect a cycle in a linked list.
+Write a program to find missing number in an array.
+Implement Binary Search algorithm.
+Implement Quick Sort or Merge Sort.
+
+6️⃣ Real-World Coding Problems
+Create a Logger class using Singleton pattern.
+Design a Thread-safe cache system.
+Write a program to calculate total sales grouped by product.
+Create a generic repository class.
+Implement retry logic for API calls.
+
+7️⃣ Performance Optimization Questions
+Optimize a program that loops through large datasets.
+Implement caching using Dictionary.
+Demonstrate the difference between:
+IEnumerable
+ICollection
+IList
+IQueryable
+Write a program demonstrating lazy loading vs eager loading.
+Write a memory-efficient data processing program.
+
+8️⃣ Exception Handling Practical Questions
+Implement global exception handling in C#.
+Write a custom Exception class.
+Demonstrate try-catch-finally usage with real scenarios.
+Implement retry logic with exception handling.
+Log errors using a custom logging class.
+
+
+
+1️⃣ .NET Core – Real Coding Round Questions
+Implement a REST API in ASP.NET Core that performs CRUD operations for a Product entity using in-memory data.
+Write a Middleware in ASP.NET Core that logs request and response details.
+Create a Custom Exception Handling Middleware that returns standardized error responses.
+Implement Dependency Injection manually for a service in ASP.NET Core.
+Write a Repository Pattern implementation using Entity Framework Core.
+Create a Pagination API with filtering, searching, and sorting.
+Implement JWT Authentication in ASP.NET Core Web API.
+Build an API endpoint that uploads a file and stores it on the server.
+Implement API versioning in ASP.NET Core.
+Create a Background Service using IHostedService.
+
+2️⃣ Advanced .NET Core Coding Problems (Senior Level)
+Design and implement a Caching mechanism using IMemoryCache.
+Implement Distributed caching using Redis in ASP.NET Core.
+Create a Rate Limiting Middleware for API requests.
+Implement Retry logic using Polly for external API calls.
+Build a Generic Repository Pattern with Unit of Work.
+Design a high-performance logging framework using Serilog.
+Implement global request validation using Action Filters.
+Design a multi-tenant architecture in ASP.NET Core.
+Implement asynchronous processing using Channels or Queues.
+Design a scalable background job processing system.
+
+3️⃣ Microservices & System Design Coding Questions
+Design a Microservice architecture for an eCommerce system.
+Implement API Gateway pattern using ASP.NET Core.
+Build inter-service communication using REST or gRPC.
+Implement Service-to-Service authentication using OAuth/JWT.
+Implement Circuit Breaker Pattern using Polly.
+Design event-driven architecture using message queues.
+Implement Saga pattern for distributed transactions.
+Design a centralized logging system for microservices.
+Implement health checks for microservices.
+Design a scalable notification system (Email/SMS/Push).
+
+4️⃣ Azure Practical Coding / Scenario Questions
+Implement a .NET Core API that uploads files to Azure Blob Storage.
+Create a background job using Azure Functions.
+Store application configuration using Azure App Configuration / Key Vault.
+Implement Azure Service Bus messaging in .NET Core.
+Write a service that processes messages from Azure Queue Storage.
+Deploy an ASP.NET Core application to Azure App Service.
+Implement Azure Managed Identity authentication.
+Store and retrieve data using Azure Cosmos DB.
+Implement distributed caching using Azure Redis Cache.
+Create a serverless API using Azure Functions + HTTP Trigger.
+
+5️⃣ Database & Performance Coding Questions
+Write a query to fetch duplicate records from a table.
+Optimize a slow SQL query in an ASP.NET Core application.
+Implement database transactions in Entity Framework Core.
+Design a database schema for a User Management system.
+Implement bulk insert operations using EF Core.
+Write a query to get top N records per group.
+Implement soft delete functionality in EF Core.
+Create a database indexing strategy for large datasets.
+Implement row versioning for concurrency control.
+Design a high-performance reporting query.
+
+6️⃣ Angular / Frontend Practical Questions (Full Stack)
+Create an Angular component that consumes a .NET Core API.
+Implement Reactive Forms with validation.
+Build a dynamic data table with pagination and sorting.
+Implement JWT authentication in Angular.
+Create a file upload component that calls a .NET Core API.
+Implement lazy loading modules in Angular.
+Create state management using RxJS or NgRx.
+Implement HTTP interceptors for token handling.
+Build a dashboard with real-time updates.
+Implement role-based authorization in Angular UI.
+
+7️⃣ DevOps / Azure Deployment Practical Questions
+Create a CI/CD pipeline for .NET Core application in Azure DevOps.
+Containerize an ASP.NET Core application using Docker.
+Deploy containers using Kubernetes (AKS).
+Implement blue-green deployment strategy.
+Configure Application Insights monitoring.
+Implement logging and alerting in Azure Monitor.
+Deploy microservices using Docker Compose.
+Configure Auto Scaling for Azure App Service.
+Secure application secrets using Azure Key Vault.
+Implement Infrastructure as Code using Terraform.
+
+8️⃣ Architecture & Leadership Scenario Questions
+How would you design a scalable system handling 1M users?
+How do you improve performance of a slow microservice?
+How do you design a highly available cloud system?
+How would you migrate a monolithic application to microservices?
+How do you handle distributed transactions across microservices?
+How do you secure APIs in cloud architecture?
+How do you design a high-performance caching strategy?
+How do you handle versioning in microservices?
+How do you monitor production systems in Azure?
+How do you handle failures in distributed systems?
+
+⭐ Total Questions Covered
+| Category               | Questions |
+| ---------------------- | --------- |
+| .NET Core Coding       | 10        |
+| Advanced .NET Core     | 10        |
+| Microservices Design   | 10        |
+| Azure Practical        | 10        |
+| Database & Performance | 10        |
+| Angular Frontend       | 10        |
+| DevOps / Deployment    | 10        |
+| Architecture Scenarios | 10        |
+
+===============================================================================
+
+
+# C# Practical Interview Questions with Solutions (One View)
+
+## 1. Reverse a String Without Using Built-in Function
+
+```csharp
+string input = "Pradeep";
+char[] arr = input.ToCharArray();
+
+int start = 0;
+int end = arr.Length - 1;
+
+while (start < end)
+{
+    char temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+
+    start++;
+    end--;
+}
+
+Console.WriteLine(new string(arr));
+```
+
+---
+
+## 2. Check Palindrome String
+
+```csharp
+string input = "madam";
+string reversed = new string(input.Reverse().ToArray());
+
+if (input == reversed)
+    Console.WriteLine("Palindrome");
+else
+    Console.WriteLine("Not Palindrome");
+```
+
+---
+
+## 3. Find Duplicate Characters in String
+
+```csharp
+string input = "programming";
+
+var duplicates = input.GroupBy(x => x)
+                      .Where(g => g.Count() > 1)
+                      .Select(g => g.Key);
+
+foreach (var d in duplicates)
+    Console.WriteLine(d);
+```
+
+---
+
+## 4. Count Character Frequency
+
+```csharp
+string input = "hello";
+
+var result = input.GroupBy(c => c)
+                  .Select(g => new { Character = g.Key, Count = g.Count() });
+
+foreach (var item in result)
+    Console.WriteLine(item.Character + " : " + item.Count);
+```
+
+---
+
+## 5. Find Second Largest Number in Array
+
+```csharp
+int[] numbers = { 10, 20, 5, 8, 30, 25 };
+
+int secondLargest = numbers.Distinct()
+                           .OrderByDescending(x => x)
+                           .Skip(1)
+                           .First();
+
+Console.WriteLine(secondLargest);
+```
+
+---
+
+## 6. Remove Duplicates from List
+
+```csharp
+List<int> numbers = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
+
+var result = numbers.Distinct().ToList();
+
+result.ForEach(Console.WriteLine);
+```
+
+---
+
+## 7. Swap Two Numbers Without Third Variable
+
+```csharp
+int a = 10;
+int b = 20;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+Console.WriteLine($"a = {a}, b = {b}");
+```
+
+---
+
+## 8. Fibonacci Series
+
+```csharp
+int n = 10;
+
+int a = 0, b = 1;
+
+for (int i = 0; i < n; i++)
+{
+    Console.Write(a + " ");
+
+    int temp = a + b;
+    a = b;
+    b = temp;
+}
+```
+
+---
+
+## 9. Check Prime Number
+
+```csharp
+int number = 29;
+bool isPrime = true;
+
+for (int i = 2; i <= number / 2; i++)
+{
+    if (number % i == 0)
+    {
+        isPrime = false;
+        break;
+    }
+}
+
+Console.WriteLine(isPrime ? "Prime" : "Not Prime");
+```
+
+---
+
+## 10. Factorial Using Recursion
+
+```csharp
+int Factorial(int n)
+{
+    if (n <= 1)
+        return 1;
+
+    return n * Factorial(n - 1);
+}
+
+Console.WriteLine(Factorial(5));
+```
+
+---
+
+## 11. Find Missing Number in Array
+
+```csharp
+int[] arr = { 1, 2, 3, 5 };
+
+int n = 5;
+
+int expectedSum = n * (n + 1) / 2;
+int actualSum = arr.Sum();
+
+Console.WriteLine(expectedSum - actualSum);
+```
+
+---
+
+## 12. Find Most Frequent Element
+
+```csharp
+int[] numbers = { 1, 2, 2, 3, 3, 3, 4 };
+
+var result = numbers.GroupBy(x => x)
+                    .OrderByDescending(g => g.Count())
+                    .First();
+
+Console.WriteLine(result.Key);
+```
+
+---
+
+## 13. Merge Two Lists Without Duplicates
+
+```csharp
+List<int> list1 = new List<int> { 1, 2, 3 };
+List<int> list2 = new List<int> { 3, 4, 5 };
+
+var result = list1.Union(list2).ToList();
+
+result.ForEach(Console.WriteLine);
+```
+
+---
+
+## 14. Sort Object List Using LINQ
+
+```csharp
+class Employee
+{
+    public string Name { get; set; }
+    public int Salary { get; set; }
+}
+
+var employees = new List<Employee>()
+{
+    new Employee { Name = "A", Salary = 5000 },
+    new Employee { Name = "B", Salary = 7000 },
+    new Employee { Name = "C", Salary = 6000 }
+};
+
+var sorted = employees.OrderByDescending(e => e.Salary);
+
+foreach (var emp in sorted)
+    Console.WriteLine(emp.Name);
+```
+
+---
+
+## 15. Group Employees by Department
+
+```csharp
+var grouped = employees.GroupBy(e => e.Department);
+
+foreach (var group in grouped)
+{
+    Console.WriteLine(group.Key);
+
+    foreach (var emp in group)
+        Console.WriteLine(emp.Name);
+}
+```
+
+---
+
+## 16. Implement Singleton Pattern
+
+```csharp
+public class Logger
+{
+    private static Logger instance;
+
+    private Logger() { }
+
+    public static Logger Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = new Logger();
+
+            return instance;
+        }
+    }
+}
+```
+
+---
+
+## 17. Parallel API Calls Using Task.WhenAll
+
+```csharp
+async Task CallApis()
+{
+    Task<string> api1 = client.GetStringAsync("url1");
+    Task<string> api2 = client.GetStringAsync("url2");
+
+    var results = await Task.WhenAll(api1, api2);
+
+    Console.WriteLine(results[0]);
+    Console.WriteLine(results[1]);
+}
+```
+
+---
+
+## 18. Convert List to Dictionary
+
+```csharp
+var dict = employees.ToDictionary(e => e.Name, e => e.Salary);
+```
+
+---
+
+## 19. Implement Stack
+
+```csharp
+Stack<int> stack = new Stack<int>();
+
+stack.Push(10);
+stack.Push(20);
+
+Console.WriteLine(stack.Pop());
+```
+
+---
+
+## 20. Binary Search
+
+```csharp
+int BinarySearch(int[] arr, int target)
+{
+    int left = 0;
+    int right = arr.Length - 1;
+
+    while (left <= right)
+    {
+        int mid = (left + right) / 2;
+
+        if (arr[mid] == target)
+            return mid;
+
+        if (arr[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+
+    return -1;
+}
+```
+
+---
+
+## 21. Generic Repository Interface
+
+```csharp
+public interface IRepository<T>
+{
+    void Add(T entity);
+    void Delete(T entity);
+    IEnumerable<T> GetAll();
+}
+```
+
+---
+
+## 22. Retry Logic for API Call
+
+```csharp
+int retry = 3;
+
+while (retry > 0)
+{
+    try
+    {
+        CallApi();
+        break;
+    }
+    catch
+    {
+        retry--;
+    }
+}
+```
+
+---
+
+## 23. Async Method Example
+
+```csharp
+public async Task<string> GetDataAsync()
+{
+    await Task.Delay(2000);
+    return "Data Loaded";
+}
+```
+
+---
+
+## 24. Custom Exception
+
+```csharp
+public class CustomException : Exception
+{
+    public CustomException(string message) : base(message)
+    {
+    }
+}
+```
+
+---
+
+## 25. Find Top 3 Salaries Using LINQ
+
+```csharp
+var top3 = employees
+           .OrderByDescending(e => e.Salary)
+           .Take(3);
+
+foreach (var emp in top3)
+    Console.WriteLine(emp.Name);
+}
+```
+====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

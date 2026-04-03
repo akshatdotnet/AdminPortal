@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] – WalletOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="auth-body">
+
+<div class="auth-shell">
+    <!-- Left panel — branding -->
+    <div class="auth-panel-left">
+        <div class="auth-brand">
+            <div class="auth-brand-icon">◈</div>
+            <span class="auth-brand-name">WalletOS</span>
+        </div>
+        <div class="auth-tagline">
+            <h1>Your digital wallet,<br/><span class="accent-text">always secure.</span></h1>
+            <p>Manage balances, transfers, and transaction history — all in one place.</p>
+        </div>
+        <div class="auth-features">
+            <div class="auth-feature"><span class="feature-dot green"></span> Instant deposits &amp; withdrawals</div>
+            <div class="auth-feature"><span class="feature-dot blue"></span> Peer-to-peer transfers</div>
+            <div class="auth-feature"><span class="feature-dot gold"></span> Full transaction audit trail</div>
+            <div class="auth-feature"><span class="feature-dot purple"></span> Account lockout protection</div>
+        </div>
+        <div class="auth-grid-bg"></div>
+    </div>
+
+    <!-- Right panel — form -->
+    <div class="auth-panel-right">
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success mb-auth">✓ @TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-error mb-auth">✗ @TempData["Error"]</div>
+        }
+        @RenderBody()
+    </div>
+</div>
+
+<script src="~/js/site.js"></script>
+</body>
+</html>

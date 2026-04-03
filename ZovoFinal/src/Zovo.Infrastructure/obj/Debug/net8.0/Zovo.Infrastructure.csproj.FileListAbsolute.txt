@@ -1,0 +1,17 @@
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\bin\Debug\net8.0\Zovo.Infrastructure.deps.json
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\bin\Debug\net8.0\Zovo.Infrastructure.runtimeconfig.json
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\bin\Debug\net8.0\Zovo.Infrastructure.dll
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\bin\Debug\net8.0\Zovo.Infrastructure.pdb
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\bin\Debug\net8.0\Zovo.Core.dll
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\bin\Debug\net8.0\Zovo.Core.pdb
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.AssemblyInfo.cs
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Inf.628FA886.Up2Date
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.dll
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\refint\Zovo.Infrastructure.dll
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.pdb
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\Zovo.Infrastructure.genruntimeconfig.cache
+C:\Users\aksha\Downloads\files\Zovo-Complete\ZovoFinal\src\Zovo.Infrastructure\obj\Debug\net8.0\ref\Zovo.Infrastructure.dll

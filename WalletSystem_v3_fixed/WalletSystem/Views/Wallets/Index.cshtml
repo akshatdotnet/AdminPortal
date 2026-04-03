@@ -1,0 +1,105 @@
+@{
+    ViewData["Title"] = "Wallets";
+    var filter = ViewBag.Filter as WalletFilterVM ?? new WalletFilterVM();
+    var paged  = ViewBag.Paged  as PagedResult<WalletListVM> ?? new PagedResult<WalletListVM>();
+}
+
+<div class="toolbar">
+    <form method="get" class="filter-form">
+        <div class="filter-row">
+            <input name="Search" value="@filter.Search" placeholder="Search owner name or email…" class="input-search" />
+            <select name="Status" class="input-select">
+                <option value="">All Statuses</option>
+                @foreach (var s in Enum.GetValues<WalletStatus>())
+                {
+                    <option value="@s" @@(filter.Status= =s ? "selected" : "" )>@s</option>
+                }
+            </select>
+            <input name="MinBalance" value="@filter.MinBalance" type="number" step="0.01" placeholder="Min $" class="input-number" />
+            <input name="MaxBalance" value="@filter.MaxBalance" type="number" step="0.01" placeholder="Max $" class="input-number" />
+            <select name="PageSize" class="input-select input-sm">
+                @foreach (var n in new[]{5,10,25,50})
+                {
+                    <option value="@n" @@(filter.PageSize= =n ? "selected" : "" )>@n / page</option>
+                }
+            </select>
+            <input type="hidden" name="SortBy"  value="@filter.SortBy" />
+            <input type="hidden" name="SortDir" value="@filter.SortDir" />
+            <button type="submit" class="btn-primary">Filter</button>
+            <a href="/Wallets" class="btn-ghost">Reset</a>
+        </div>
+    </form>
+</div>
+
+<div class="card">
+    <div class="table-meta">
+        Showing @((paged.Page-1)*paged.PageSize+1)–@Math.Min(paged.Page*paged.PageSize, paged.TotalCount)
+        of <strong>@paged.TotalCount</strong> wallets
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                @{
+                    string SortLink(string col) {
+                        var dir = filter.SortBy == col && filter.SortDir == "asc" ? "desc" : "asc";
+                        return $"/Wallets?Search={filter.Search}&Status={filter.Status}&MinBalance={filter.MinBalance}&MaxBalance={filter.MaxBalance}&PageSize={filter.PageSize}&SortBy={col}&SortDir={dir}";
+                    }
+                    string SortIcon(string col) => filter.SortBy == col ? (filter.SortDir == "asc" ? " ↑" : " ↓") : "";
+                }
+                <th>#</th>
+                <th><a href="@SortLink("OwnerName")">Owner @SortIcon("OwnerName")</a></th>
+                <th>Email</th>
+                <th><a href="@SortLink("Balance")">Balance @SortIcon("Balance")</a></th>
+                <th>Currency</th>
+                <th>Status</th>
+                <th>Transactions</th>
+                <th><a href="@SortLink("CreatedAt")">Created @SortIcon("CreatedAt")</a></th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var w in paged.Items)
+        {
+            <tr>
+                <td class="mono text-muted">#@w.Id</td>
+                <td><strong>@w.OwnerName</strong></td>
+                <td class="text-muted">@w.OwnerEmail</td>
+                <td class="amount @(w.Balance > 0 ? "positive" : "")">@w.Balance.ToString("C")</td>
+                <td class="mono">@w.Currency</td>
+                <td><span class="status-pill status-@w.Status.ToString().ToLower()">@w.Status</span></td>
+                <td class="text-center">@w.TransactionCount</td>
+                <td class="text-muted">@w.CreatedAt.ToString("MMM d, yyyy")</td>
+                <td>
+                    <div class="action-btns">
+                        <a href="/Wallets/Details/@w.Id" class="btn-xs">View</a>
+                        <a href="/Wallets/Deposit/@w.Id" class="btn-xs btn-green">Dep</a>
+                        <a href="/Wallets/Withdraw/@w.Id" class="btn-xs btn-ghost">Wdw</a>
+                        <a href="/Wallets/Transfer/@w.Id" class="btn-xs btn-ghost">Xfr</a>
+                        @if (w.Status == WalletStatus.Active)
+                        {
+                            <form method="post" action="/Wallets/Freeze/@w.Id" style="display:inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn-xs btn-danger">❄</button>
+                            </form>
+                        }
+                        else if (w.Status == WalletStatus.Frozen)
+                        {
+                            <form method="post" action="/Wallets/Unfreeze/@w.Id" style="display:inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn-xs btn-green">▶</button>
+                            </form>
+                        }
+                    </div>
+                </td>
+            </tr>
+        }
+        @if (!paged.Items.Any())
+        {
+            <tr><td colspan="9" class="empty-row">No wallets found.</td></tr>
+        }
+        </tbody>
+    </table>
+
+    @await Html.PartialAsync("_Pager", new PagerVM { Page = paged.Page, TotalPages = paged.TotalPages, BaseUrl = $"/Wallets?Search={filter.Search}&Status={filter.Status}&MinBalance={filter.MinBalance}&MaxBalance={filter.MaxBalance}&PageSize={filter.PageSize}&SortBy={filter.SortBy}&SortDir={filter.SortDir}" })
+</div>

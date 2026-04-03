@@ -1,0 +1,251 @@
+﻿@{
+    ViewData["Title"] = "Checkout";
+    Layout = "_ClientLayout";
+}
+
+<div class="container py-4">
+
+    <!-- STEPPER -->
+    <div class="checkout-steps mb-4">
+        <div class="step active" data-step="1">1 Cart</div>
+        <div class="step" data-step="2">2 Address</div>
+        <div class="step" data-step="3">3 Info</div>
+        <div class="step" data-step="4">4 Payment</div>
+    </div>
+
+    <div class="row">
+
+        <!-- LEFT -->
+        <div class="col-lg-8">
+
+            <!-- STEP 1: CART -->
+            <div class="checkout-step active" id="step-1">
+                <h4>Shopping Cart (1 item)</h4>
+
+                <div class="card mb-3">
+                    <div class="card-body d-flex gap-3">
+                        <img src="/images/sample-product.png" width="90" />
+                        <div class="flex-grow-1">
+                            <strong>Hindware Snowcrest Froid 24L</strong>
+                            <div>₹7,590 <del class="text-muted">₹9,490</del></div>
+                            <span class="text-success">You saved ₹1,900</span>
+                        </div>
+                        <select class="form-select w-auto">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary next-step">Continue</button>
+            </div>
+
+            <!-- STEP 2: ADDRESS -->
+            <div class="checkout-step" id="step-2">
+                <h4>Shipping Address</h4>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input class="form-control" placeholder="Full Name" />
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" placeholder="Mobile Number" />
+                    </div>
+                    <div class="col-12">
+                        <input class="form-control" placeholder="Address" />
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" placeholder="City" />
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" placeholder="Pincode" />
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <button class="btn btn-secondary prev-step">Back</button>
+                    <button class="btn btn-primary next-step">Continue</button>
+                </div>
+            </div>
+
+            <!-- STEP 3: INFO -->
+            <div class="checkout-step" id="step-3">
+                <h4>Additional Information</h4>
+
+                <div class="mb-3">
+                    <input class="form-control" placeholder="Email (optional)" />
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Remarks (optional)"></textarea>
+                </div>
+
+                <button class="btn btn-secondary prev-step">Back</button>
+                <button class="btn btn-primary next-step">Continue</button>
+            </div>
+
+            <!-- STEP 4: PAYMENT -->
+            <div class="checkout-step" id="step-4">
+                <h4>Payment</h4>
+
+                <div class="alert alert-warning">
+                    No payment gateway enabled (mock flow).
+                </div>
+
+                <form asp-action="PlaceOrder" method="post">
+                    <button class="btn btn-success w-100">
+                        Place Order
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- RIGHT : SUMMARY -->
+        <div class="col-lg-4">
+            <div class="card">
+                @* <div class="card-body">
+                    <h5>Order Summary</h5>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <span>Item total</span>
+                        <strong>₹7,590</strong>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>GST</span>
+                        <strong>₹1,366</strong>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <strong>Grand total</strong>
+                        <strong>₹9,135</strong>
+                    </div>
+                    <p class="text-success mt-2">
+                        You saved 24% (₹2,242)
+                    </p>
+                </div> *@
+                <div class="summary-line d-flex justify-content-between">
+    <span>Item total</span>
+    <span>₹<span id="itemTotal">7590</span></span>
+</div>
+
+<div class="summary-line d-flex justify-content-between text-success">
+    <span>Discount</span>
+    <span>-₹<span id="discount">0</span></span>
+</div>
+
+<div class="summary-line d-flex justify-content-between">
+    <span>GST (18%)</span>
+    <span>₹<span id="gst">0</span></span>
+</div>
+
+<div class="summary-line d-flex justify-content-between">
+    <span>Professional Tax (2%)</span>
+    <span>₹<span id="professionalTax">0</span></span>
+</div>
+
+<div class="summary-line d-flex justify-content-between">
+    <span>Delivery Fee</span>
+    <span>₹<span id="delivery">0</span></span>
+</div>
+
+<hr />
+
+<div class="summary-line d-flex justify-content-between fw-bold">
+    <span>Grand Total</span>
+    <span>₹<span id="grandTotal">0</span></span>
+</div>
+
+
+                <hr />
+                <h6>Apply Coupon</h6>
+
+                <div class="input-group mb-2">
+                    <input type="text" id="couponCode" class="form-control" placeholder="Enter coupon" />
+                    <button class="btn btn-outline-primary" id="applyCoupon">Apply</button>
+                </div>
+
+                <div id="couponMessage" class="small"></div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let currentStep = 1;
+
+        function showStep(step) {
+            $(".checkout-step").removeClass("active");
+            $("#step-" + step).addClass("active");
+
+            $(".step").removeClass("active");
+            $(".step[data-step='" + step + "']").addClass("active");
+        }
+
+        $(".next-step").click(function () {
+            if (currentStep < 4) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+
+        $(".prev-step").click(function () {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        });
+    </script>
+
+    <script>
+        let itemTotal = 7590;
+        let discount = 0;
+
+        function calculateTotals() {
+            $.post('/Checkout/CalculateTotals', {
+                itemTotal: itemTotal,
+                discount: discount
+            }, function (res) {
+                $("#discount").text(res.discount.toFixed(2));
+                $("#gst").text(res.gst.toFixed(2));
+                $("#professionalTax").text(res.professionalTax.toFixed(2));
+                $("#delivery").text(res.delivery.toFixed(2));
+                $("#grandTotal").text(res.grandTotal.toFixed(2));
+            });
+        }
+
+        $("#applyCoupon").click(function () {
+            let code = $("#couponCode").val();
+
+            $.post('/Checkout/ApplyCoupon', {
+                couponCode: code,
+                itemTotal: itemTotal
+            })
+            .done(function (res) {
+                discount = res.discount;
+                $("#couponMessage")
+                    .text("Coupon applied successfully!")
+                    .removeClass("text-danger")
+                    .addClass("text-success");
+
+                calculateTotals();
+            })
+            .fail(function (err) {
+                discount = 0;
+                $("#couponMessage")
+                    .text("Invalid coupon code")
+                    .removeClass("text-success")
+                    .addClass("text-danger");
+
+                calculateTotals();
+            });
+        });
+
+        // Initial calculation
+        calculateTotals();
+    </script>
+}
+
+

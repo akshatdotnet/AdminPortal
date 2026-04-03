@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "STHEnterprise.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/STHEnterprise.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/STHEnterprise.Core.dll": {}
+        }
+      },
+      "STHEnterprise.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/STHEnterprise.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/STHEnterprise.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "STHEnterprise.Core/1.0.0": {
+      "type": "project",
+      "path": "../STHEnterprise.Core/STHEnterprise.Core.csproj",
+      "msbuildProject": "../STHEnterprise.Core/STHEnterprise.Core.csproj"
+    },
+    "STHEnterprise.Shared/1.0.0": {
+      "type": "project",
+      "path": "../STHEnterprise.Shared/STHEnterprise.Shared.csproj",
+      "msbuildProject": "../STHEnterprise.Shared/STHEnterprise.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "STHEnterprise.Core >= 1.0.0",
+      "STHEnterprise.Shared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\aksha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj",
+      "projectName": "STHEnterprise.Mvc",
+      "projectPath": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj",
+      "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
+      "outputPath": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\aksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Core\\STHEnterprise.Core.csproj": {
+              "projectPath": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Core\\STHEnterprise.Core.csproj"
+            },
+            "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Shared\\STHEnterprise.Shared.csproj": {
+              "projectPath": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Shared\\STHEnterprise.Shared.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

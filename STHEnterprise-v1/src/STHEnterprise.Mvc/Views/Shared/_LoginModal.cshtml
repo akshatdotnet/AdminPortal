@@ -1,0 +1,27 @@
+﻿<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+            <h5 class="mb-3">Sign in</h5>
+
+            <input class="form-control mb-3"
+                   id="phone"
+                   placeholder="+91 Enter your phone number" />
+
+            <small>
+                By continuing, you agree to our
+                <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
+            </small>
+
+            <button class="btn btn-primary w-100 mt-3" onclick="sendOtp()">
+                Send OTP
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sendOtp() {
+        $.post('/account/login', { phone: $('#phone').val() })
+            .done(() => location.href = '/account');
+    }
+</script>

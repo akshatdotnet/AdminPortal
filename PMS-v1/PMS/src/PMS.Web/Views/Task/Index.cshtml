@@ -1,0 +1,211 @@
+﻿@model PMS.Web.ViewModels.Task.TaskIndexViewModel
+@using TaskStatus = PMS.Domain.Enums.TaskStatus
+@{
+    ViewData["Title"] = "Tasks";
+}
+
+<div class="container-fluid px-4">
+
+    @* {{!-- Header --}} *@
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="mb-1 fw-bold">
+                <i class="bi bi-list-task text-primary me-2"></i>Tasks
+            </h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Home" asp-action="Index">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active">Tasks</li>
+                </ol>
+            </nav>
+        </div>
+        <button class="btn btn-primary"
+                id="btnAddTask"
+                data-bs-toggle="modal"
+                data-bs-target="#taskModal">
+            <i class="bi bi-plus-circle me-1"></i> New Task
+        </button>
+    </div>
+
+    @* {{!-- Toast --}} *@
+    <div class="position-fixed top-0 end-0 p-3" style="z-index:9999">
+        <div id="toastNotification"
+             class="toast align-items-center border-0"
+             role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-semibold" id="toastMessage"></div>
+                <button type="button"
+                        class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    @* {{!-- Filter Bar --}} *@
+    <div class="card shadow-sm border-0 mb-3">
+        <div class="card-body py-3">
+            <div class="row g-2 align-items-center">
+
+                @* {{!-- Search --}} *@
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="text"
+                               id="searchInput"
+                               class="form-control border-start-0"
+                               placeholder="Search tasks..."
+                               value="@Model.Query.SearchTerm" />
+                    </div>
+                </div>
+
+                @* {{!-- Project Filter --}} *@
+                <div class="col-md-3">
+                    <select id="projectFilter" class="form-select">
+                        <option value="">All Projects</option>
+                        @foreach (var p in Model.Projects)
+                        {
+                            <option value="@p.Id"
+                                    selected="@(Model.FilterProjectId == p.Id)">
+                                @p.Name
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                @* {{!-- Status Filter --}} *@
+                <div class="col-md-2">
+                    <select id="statusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        @foreach (TaskStatus s in Enum.GetValues(typeof(TaskStatus)))
+                        {
+                            <option value="@s"
+                                    selected="@(Model.FilterStatus == s)">
+                                @s.ToString()
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                @* {{!-- Page Size --}} *@
+                <div class="col-md-2">
+                    <select id="pageSizeSelect" class="form-select">
+                        @foreach (var size in new[] { 5, 10, 25, 50 })
+                        {
+                            <option value="@size"
+                                    selected="@(Model.Query.PageSize == size)">
+                                @size per page
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                @* {{!-- Clear --}} *@
+                <div class="col-md-2 d-flex gap-2">
+                    <button class="btn btn-outline-secondary w-100"
+                            id="btnClearFilters">
+                        <i class="bi bi-x-circle me-1"></i>Clear
+                    </button>
+                </div>
+
+            </div>
+
+            @* {{!-- Status Summary Badges --}} *@
+            <div class="d-flex gap-2 mt-3 flex-wrap">
+                @{
+                    var statusCounts = Model.PagedResult.Items
+                    .GroupBy(t => t.Status)
+                    .ToDictionary(g => g.Key, g => g.Count());
+                }
+                <span class="badge bg-secondary">
+                    Total: @Model.PagedResult.TotalCount
+                </span>
+                <span class="badge bg-warning text-dark status-badge"
+                      data-status="Pending" style="cursor:pointer">
+                    Pending: @(statusCounts.GetValueOrDefault(TaskStatus.Pending, 0))
+                </span>
+                <span class="badge bg-info status-badge"
+                      data-status="InProgress" style="cursor:pointer">
+                    In Progress: @(statusCounts.GetValueOrDefault(TaskStatus.InProgress, 0))
+                </span>
+                <span class="badge bg-success status-badge"
+                      data-status="Completed" style="cursor:pointer">
+                    Completed: @(statusCounts.GetValueOrDefault(TaskStatus.Completed, 0))
+                </span>
+                <span class="badge bg-danger status-badge"
+                      data-status="Cancelled" style="cursor:pointer">
+                    Cancelled: @(statusCounts.GetValueOrDefault(TaskStatus.Cancelled, 0))
+                </span>
+            </div>
+        </div>
+    </div>
+
+    @* {{!-- Task List --}} *@
+    <div id="taskListContainer">
+        @await Html.PartialAsync("_TaskList", Model)
+    </div>
+
+</div>
+
+@* {{!-- Task Modal --}} *@
+<div class="modal fade" id="taskModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="taskModalLabel">
+                    <i class="bi bi-plus-circle me-2"></i>
+                    <span id="taskModalTitleText">New Task</span>
+                </h5>
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="taskModalBody">
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* {{!-- Delete Confirm Modal --}} *@
+<div class="modal fade" id="deleteTaskModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-trash me-2"></i>Confirm Delete
+                </h5>
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">
+                    Are you sure you want to delete task
+                    <strong id="deleteTaskTitle"></strong>?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cancel
+                </button>
+                <button type="button"
+                        class="btn btn-danger"
+                        id="btnConfirmDeleteTask">
+                    <i class="bi bi-trash me-1"></i>Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/task.js"></script>
+}

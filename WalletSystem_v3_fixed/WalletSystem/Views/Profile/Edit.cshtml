@@ -1,0 +1,115 @@
+@model WalletSystem.ViewModels.EditProfileVM
+@{ ViewData["Title"] = "Edit Profile"; }
+
+<div class="form-page">
+    <div class="form-card" style="max-width:640px">
+        <h2 class="form-heading">Edit Profile</h2>
+        <p class="text-muted" style="text-align:center;margin-bottom:28px">Update your personal information and avatar.</p>
+
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            <input asp-for="Id" type="hidden" />
+            <div asp-validation-summary="All" class="validation-summary"></div>
+
+            <!-- Avatar preview -->
+            <div class="avatar-preview-row">
+                <div class="avatar-preview-wrap">
+                    <div class="avatar-preview-img" id="avatarPreview">
+                        @if (!string.IsNullOrEmpty(Model.AvatarUrl))
+                        {
+                            <img src="@Model.AvatarUrl" id="avatarImg" style="width:100%;height:100%;object-fit:cover;border-radius:50%" />
+                        }
+                        else
+                        {
+                            <span id="avatarPlaceholder">◎</span>
+                        }
+                    </div>
+                </div>
+                <div style="flex:1">
+                    <div class="form-group">
+                        <label asp-for="AvatarUrl">Avatar URL</label>
+                        <input asp-for="AvatarUrl" class="form-input" id="avatarUrlInput"
+                               placeholder="https://example.com/avatar.jpg" />
+                        <span asp-validation-for="AvatarUrl" class="field-error"></span>
+                        <div style="font-size:11.5px;color:var(--text-muted);margin-top:4px">
+                            Paste any image URL. Recommended: 200×200px square.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-title">Personal Info</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="FullName"></label>
+                    <input asp-for="FullName" class="form-input" placeholder="Alice Johnson" />
+                    <span asp-validation-for="FullName" class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber"></label>
+                    <input asp-for="PhoneNumber" class="form-input" placeholder="555-0101" />
+                    <span asp-validation-for="PhoneNumber" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Bio">Bio</label>
+                <textarea asp-for="Bio" class="form-input form-textarea"
+                          placeholder="Tell us a little about yourself…" rows="3" maxlength="500"></textarea>
+                <div class="char-count"><span id="bioCount">@(Model.Bio?.Length ?? 0)</span>/500</div>
+                <span asp-validation-for="Bio" class="field-error"></span>
+            </div>
+
+            <div class="form-section-title">Location</div>
+            <div class="form-group">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-input" placeholder="123 Main Street" />
+                <span asp-validation-for="Address" class="field-error"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="City"></label>
+                    <input asp-for="City" class="form-input" placeholder="New York" />
+                    <span asp-validation-for="City" class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Country"></label>
+                    <input asp-for="Country" class="form-input" placeholder="United States" />
+                    <span asp-validation-for="Country" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DateOfBirth"></label>
+                <input asp-for="DateOfBirth" class="form-input" type="date"
+                       max="@DateTime.Today.AddYears(-13).ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="DateOfBirth" class="field-error"></span>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Save Changes</button>
+                <a href="/Profile" class="btn-ghost">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+// Live avatar preview
+document.getElementById('avatarUrlInput').addEventListener('input', function() {
+    const url = this.value.trim();
+    const preview = document.getElementById('avatarPreview');
+    if (url) {
+        preview.innerHTML = `<img src="${url}" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.innerHTML='<span>◎</span>'" />`;
+    } else {
+        preview.innerHTML = '<span>◎</span>';
+    }
+});
+
+// Bio char counter
+const bioArea = document.querySelector('[name="Bio"]');
+const bioCount = document.getElementById('bioCount');
+if (bioArea && bioCount) {
+    bioArea.addEventListener('input', () => bioCount.textContent = bioArea.value.length);
+}
+</script>

@@ -1,0 +1,76 @@
+@model WalletSystem.ViewModels.LoginVM
+@{
+    ViewData["Title"] = "Sign In";
+    Layout = "_AuthLayout";
+}
+
+<div class="auth-form-wrap">
+    <div class="auth-form-header">
+        <h2>Welcome back</h2>
+        <p class="text-muted">Sign in to your WalletOS account</p>
+    </div>
+
+    <form asp-action="Login" method="post" class="auth-form">
+        @Html.AntiForgeryToken()
+        <input asp-for="ReturnUrl" type="hidden" />
+
+        @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey(""))
+        {
+            <div class="auth-error-banner">
+                <span class="error-icon">⚠</span>
+                <span>@ViewData.ModelState[""]!.Errors.First().ErrorMessage</span>
+            </div>
+        }
+
+        <div class="form-group">
+            <label asp-for="Identifier">Username or Email</label>
+            <div class="input-icon-wrap">
+                <span class="input-icon">◎</span>
+                <input asp-for="Identifier" class="form-input with-icon" placeholder="alice or alice@example.com" autofocus autocomplete="username" />
+            </div>
+            <span asp-validation-for="Identifier" class="field-error"></span>
+        </div>
+
+        <div class="form-group">
+            <div class="label-row">
+                <label asp-for="Password">Password</label>
+                <a href="/Auth/ForgotPassword" class="forgot-link">Forgot password?</a>
+            </div>
+            <div class="input-icon-wrap">
+                <span class="input-icon">◉</span>
+                <input asp-for="Password" class="form-input with-icon" type="password" placeholder="••••••••" autocomplete="current-password" id="passwordInput" />
+                <button type="button" class="toggle-password" onclick="togglePassword()" title="Show/hide password">👁</button>
+            </div>
+            <span asp-validation-for="Password" class="field-error"></span>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input asp-for="RememberMe" type="checkbox" class="form-checkbox" id="rememberMe" />
+            <label for="rememberMe" class="checkbox-label">Keep me signed in for 30 days</label>
+        </div>
+
+        <button type="submit" class="btn-auth">
+            <span>Sign In</span>
+            <span class="btn-arrow">→</span>
+        </button>
+    </form>
+
+    <div class="auth-demo-box">
+        <div class="demo-title">Demo Credentials</div>
+        <div class="demo-row">
+            <span class="demo-badge admin">Admin</span>
+            <span class="demo-cred"><strong>alice</strong> / <strong>Password123!</strong></span>
+        </div>
+        <div class="demo-row">
+            <span class="demo-badge user">User</span>
+            <span class="demo-cred"><strong>bob</strong> / <strong>Password123!</strong></span>
+        </div>
+    </div>
+</div>
+
+<script>
+function togglePassword() {
+    const inp = document.getElementById('passwordInput');
+    inp.type = inp.type === 'password' ? 'text' : 'password';
+}
+</script>

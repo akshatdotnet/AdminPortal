@@ -1,0 +1,21 @@
+﻿📁 FOLDER STRUCTURE (Conceptual – Clean Architecture)
+FoodOrderingSystem
+│
+├── Core
+│   ├── Entities
+│   ├── Interfaces
+│   ├── States
+│   ├── Strategies
+│
+├── Infrastructure
+│   ├── Logging
+│   ├── Payments
+│   ├── Delivery
+│
+├── Application
+│   ├── Builders
+│   ├── Commands
+│   ├── Observers
+│   ├── Facade
+│
+└── Program.cs (Console UI)

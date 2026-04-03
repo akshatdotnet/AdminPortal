@@ -1,0 +1,43 @@
+﻿@page "/products"
+@layout STHEnterprise.Blazor.Layout.AdminLayout
+@inject STHEnterprise.Blazor.Services.ProductService ProductService
+
+<h3>Products</h3>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var p in products)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+                <td>@p.Stock</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+@code {
+
+    List<STHEnterprise.Blazor.Models.Product> products;
+
+    protected override void OnInitialized()
+    {
+        products = ProductService.GetProducts();
+    }
+
+}

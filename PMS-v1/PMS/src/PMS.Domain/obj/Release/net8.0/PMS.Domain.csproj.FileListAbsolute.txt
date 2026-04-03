@@ -1,0 +1,12 @@
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\bin\Release\net8.0\PMS.Domain.deps.json
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\bin\Release\net8.0\PMS.Domain.dll
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\bin\Release\net8.0\PMS.Domain.pdb
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.AssemblyInfoInputs.cache
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.AssemblyInfo.cs
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.csproj.CoreCompileInputs.cache
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.sourcelink.json
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.dll
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\refint\PMS.Domain.dll
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\PMS.Domain.pdb
+D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Domain\obj\Release\net8.0\ref\PMS.Domain.dll

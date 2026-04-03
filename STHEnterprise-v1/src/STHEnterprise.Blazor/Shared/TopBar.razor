@@ -1,0 +1,25 @@
+﻿@inject NavigationManager Nav
+@inject STHEnterprise.Blazor.Services.AuthService Auth
+
+<nav class="navbar navbar-light bg-light px-4">
+
+    <span class="navbar-brand">
+        Admin Dashboard
+    </span>
+
+    <button class="btn btn-danger"
+            @onclick="Logout">
+        Logout
+    </button>
+
+</nav>
+
+@code {
+
+    void Logout()
+    {
+        Auth.Logout();
+        Nav.NavigateTo("/login");
+    }
+
+}

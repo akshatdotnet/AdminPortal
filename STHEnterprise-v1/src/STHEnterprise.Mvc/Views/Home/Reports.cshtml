@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ReportViewModel>
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<h4>Reports</h4>
+
+<ul class="list-group mt-3">
+    @foreach (var r in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between">
+            <span>@r.Title</span>
+            <small>@r.CreatedOn.ToShortDateString()</small>
+        </li>
+    }
+</ul>

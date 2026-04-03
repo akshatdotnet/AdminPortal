@@ -1,0 +1,317 @@
+﻿/* ======================================================
+   THEME TOKENS (Single Source of Truth)
+====================================================== */
+
+:root {
+    /* Brand */
+    --primary: #6f42c1;
+    --primary-dark: #59339d;
+    --primary-light: rgba(111, 66, 193, 0.15);
+    /* Semantic */
+    --success: #198754;
+    --danger: #dc3545;
+    /* Surface */
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --surface-alt: #f1f3f5;
+    /* Text */
+    --text: #212529;
+    --text-muted: #6c757d;
+    /* Border */
+    --border: #dee2e6;
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    /* Transition */
+    --transition: 0.2s ease;
+}
+
+[data-theme="dark"] {
+    --bg: #0f0f10;
+    --surface: #1b1b1d;
+    --surface-alt: #242426;
+    --text: #f1f1f1;
+    --text-muted: #b0b0b0;
+    --border: #2a2a2a;
+}
+
+/* ======================================================
+   BASE
+====================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ======================================================
+   LAYOUT
+====================================================== */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ======================================================
+   SIDEBAR
+====================================================== */
+
+.sidebar {
+    width: 260px;
+    background: var(--primary);
+    color: #fff;
+    position: fixed;
+    inset: 0 auto 0 0;
+    height: 100vh;
+    transition: width var(--transition), left var(--transition);
+    z-index: 1000;
+}
+
+    .sidebar.collapsed {
+        width: 70px;
+    }
+
+/* Sidebar Header */
+.sidebar-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo-text {
+    font-size: 16px;
+}
+
+.logo-icon {
+    display: none;
+    font-size: 18px;
+}
+
+.sidebar.collapsed .logo-text {
+    display: none;
+}
+
+.sidebar.collapsed .logo-icon {
+    display: block;
+}
+
+/* Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .sidebar-menu li a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 20px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: var(--radius-sm);
+        transition: background var(--transition);
+    }
+
+        .sidebar-menu li a:hover,
+        .sidebar-menu li a.active {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+.sidebar.collapsed .menu-text {
+    display: none;
+}
+
+/* ======================================================
+   MAIN WRAPPER
+====================================================== */
+
+.main-wrapper {
+    margin-left: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left var(--transition);
+}
+
+.sidebar.collapsed + .main-wrapper {
+    margin-left: 70px;
+}
+
+/* ======================================================
+   TOPBAR
+====================================================== */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1100;
+}
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.content-area {
+    padding: 24px;
+    flex: 1;
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.footer {
+    background: var(--surface);
+    padding: 12px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* ======================================================
+   WHATSAPP BUTTON
+====================================================== */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #25d366;
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    z-index: 2000;
+}
+
+/* ======================================================
+   PROFILE DROPDOWN
+====================================================== */
+
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    text-decoration: none;
+    transition: background var(--transition);
+}
+
+    .profile-trigger:hover {
+        background: var(--primary-light);
+    }
+
+.profile-avatar {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+/* Dropdown */
+.profile-menu {
+    min-width: 200px;
+    border-radius: var(--radius-md);
+    padding: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+    .profile-menu .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+        font-weight: 500;
+        color: var(--text);
+        transition: background var(--transition), color var(--transition);
+    }
+
+        .profile-menu .dropdown-item i {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .profile-menu .dropdown-item:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+            .profile-menu .dropdown-item:hover i {
+                color: #fff;
+            }
+
+        .profile-menu .dropdown-item.text-danger:hover {
+            /*background: var(--danger);*/
+            background: var(--primary);
+        }
+
+/* ======================================================
+   MODAL (Dark / Light Safe)
+====================================================== */
+
+.modal-content {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+}
+
+.modal-backdrop.show {
+    opacity: 0.65;
+    background-color: #000;
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -260px;
+    }
+
+        .sidebar.show {
+            left: 0;
+        }
+
+        .sidebar.collapsed {
+            width: 260px; /* disable mini mode on mobile */
+        }
+
+    .main-wrapper {
+        margin-left: 0;
+    }
+}

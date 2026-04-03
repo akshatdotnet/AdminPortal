@@ -1,0 +1,547 @@
+﻿Ref : https://claude.ai/chat/17d274d0-f86b-4dc3-89a6-527537e21d72
+
+
+# Initial Setup
+
+PMS Project :
+Build in this order:
+STEP 1: Solution Structure + Clean Architecture Setup  
+STEP 2: Domain Layer (Entities, Enums)  
+STEP 3: Application Layer (DTOs, Interfaces, Services)  
+STEP 4: Infrastructure Layer (EF Core + Dapper setup)  
+STEP 5: Database + Migrations  
+STEP 6: Project Module (Full CRUD + Pagination + Search)  
+STEP 7: Task Module (Full CRUD + Assign + Filters)  
+STEP 8: Task Timer Tracking Feature  
+STEP 9: UI Implementation (Bootstrap + jQuery + Modal + Partial Views)  
+STEP 10: Logging + Exception Handling  
+STEP 11: Optimization + Final Refactoring
+================================================================
+🎉 Project Complete — Full Summary
+Step    What Was Built
+1.      Solution + Clean Architecture setup
+2.      Domain layer — Entities, Enums, BaseEntity
+3.      Application layer — DTOs, Services, Validators, AutoMapper
+4.      Infrastructure — EF Core, Dapper, Repositories, UoW
+5.      Database migrations + seeding
+6.      Project module — full CRUD + AJAX + Bootstrap UI
+7.      Task module — CRUD + filters + user assignment
+8.      Time tracking — start/stop timer + live display
+9.      UI polish — dashboard + layout + CSS + responsive
+10.     Logging + exception handling middleware
+11.     Optimization — caching + Dapper tuning + background jobs
+
+=================================================================
+
+UI (Web) → Application → Domain
+Infrastructure → Application → Domain
+
+📁 Solution Structure
+PMS.sln
+│
+├── src/
+│   ├── PMS.Domain/                  ← Core business entities, enums, interfaces
+│   │   ├── PMS.Domain.csproj
+│   │   ├── Entities/
+│   │   ├── Enums/
+│   │   └── Common/
+│   │
+│   ├── PMS.Application/             ← DTOs, service interfaces, business logic
+│   │   ├── PMS.Application.csproj
+│   │   ├── DTOs/
+│   │   ├── Interfaces/
+│   │   ├── Services/
+│   │   ├── Validators/
+│   │   └── Mappings/
+│   │
+│   ├── PMS.Infrastructure/          ← EF Core, Dapper, Repositories, UoW
+│   │   ├── PMS.Infrastructure.csproj
+│   │   ├── Data/
+│   │   ├── Repositories/
+│   │   ├── Migrations/
+│   │   └── DependencyInjection.cs
+│   │
+│   └── PMS.Web/                     ← Controllers, Views, Middleware
+│       ├── PMS.Web.csproj
+│       ├── Controllers/
+│       ├── Views/
+│       ├── Middleware/
+│       ├── wwwroot/
+│       └── Program.cs
+│
+└── tests/
+    └── PMS.Tests/
+        └── PMS.Tests.csproj
+		
+		
+Step-by-Step Commands
+
+# 1. Create solution
+mkdir PMS && cd PMS
+dotnet new sln -n PMS
+
+# 2. Create projects
+dotnet new classlib -n PMS.Domain        -o src/PMS.Domain        -f net8.0
+dotnet new classlib -n PMS.Application   -o src/PMS.Application   -f net8.0
+dotnet new classlib -n PMS.Infrastructure -o src/PMS.Infrastructure -f net8.0
+dotnet new mvc     -n PMS.Web            -o src/PMS.Web           -f net8.0
+dotnet new xunit   -n PMS.Tests          -o tests/PMS.Tests       -f net8.0
+
+# 3. Add projects to solution
+dotnet sln add src/PMS.Domain/PMS.Domain.csproj
+dotnet sln add src/PMS.Application/PMS.Application.csproj
+dotnet sln add src/PMS.Infrastructure/PMS.Infrastructure.csproj
+dotnet sln add src/PMS.Web/PMS.Web.csproj
+dotnet sln add tests/PMS.Tests/PMS.Tests.csproj
+
+# 4. Add project references (dependency flow)
+dotnet add src/PMS.Application/PMS.Application.csproj   reference src/PMS.Domain/PMS.Domain.csproj
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj reference src/PMS.Application/PMS.Application.csproj
+dotnet add src/PMS.Web/PMS.Web.csproj                   reference src/PMS.Application/PMS.Application.csproj
+dotnet add src/PMS.Web/PMS.Web.csproj                   reference src/PMS.Infrastructure/PMS.Infrastructure.csproj
+dotnet add tests/PMS.Tests/PMS.Tests.csproj             reference src/PMS.Application/PMS.Application.csproj
+
+# --- PMS.Domain (no external dependencies) ---
+# Clean — zero NuGet packages
+
+# --- PMS.Application ---
+dotnet add src/PMS.Application/PMS.Application.csproj package AutoMapper --version 13.0.1
+dotnet add src/PMS.Application/PMS.Application.csproj package FluentValidation --version 11.9.0
+dotnet add src/PMS.Application/PMS.Application.csproj package FluentValidation.DependencyInjectionExtensions --version 11.9.0
+dotnet add src/PMS.Application/PMS.Application.csproj package Microsoft.Extensions.DependencyInjection.Abstractions --version 8.0.0
+
+# --- PMS.Infrastructure ---
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj package Microsoft.EntityFrameworkCore --version 8.0.0
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.0
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj package Dapper --version 2.1.28
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj package Microsoft.Data.SqlClient --version 5.2.0
+dotnet add src/PMS.Infrastructure/PMS.Infrastructure.csproj package AutoMapper --version 13.0.1
+
+# --- PMS.Web ---
+dotnet add src/PMS.Web/PMS.Web.csproj package Serilog.AspNetCore --version 8.0.0
+dotnet add src/PMS.Web/PMS.Web.csproj package Serilog.Sinks.Console --version 5.0.1
+dotnet add src/PMS.Web/PMS.Web.csproj package Serilog.Sinks.File --version 5.0.0
+dotnet add src/PMS.Web/PMS.Web.csproj package AutoMapper --version 13.0.1
+dotnet add src/PMS.Web/PMS.Web.csproj package FluentValidation.AspNetCore --version 11.3.0
+
+---
+
+## Dependency Flow Diagram
+```
+┌─────────────────────────────────────────┐
+│              PMS.Web (MVC)              │
+│   Controllers │ Views │ Middleware      │
+└──────────┬──────────────────────────────┘
+           │ references
+┌──────────▼──────────────────────────────┐
+│          PMS.Application                │
+│   Services │ DTOs │ Interfaces          │
+└──────────┬──────────────────────────────┘
+           │ references
+┌──────────▼──────────────────────────────┐
+│           PMS.Domain                    │
+│   Entities │ Enums │ Common             │
+└─────────────────────────────────────────┘
+
+┌─────────────────────────────────────────┐
+│         PMS.Infrastructure              │
+│   EF Core │ Dapper │ Repositories       │
+└──────────┬──────────────────────────────┘
+           │ references
+    PMS.Application (interfaces only)
+
+
+
+
+
+
+## Entity Relationship Diagram
+```
+┌──────────────┐        ┌─────────────────┐        ┌──────────────────┐
+│    User      │        │   ProjectTask   │        │  TaskTimeLog     │
+│──────────────│        │─────────────────│        │──────────────────│
+│ Id(PK)      │◄───────│ AssignedUserId  │        │ Id(PK)          │
+│ FirstName    │   0..* │ Id(PK)         │◄───────│ TaskId(FK)      │
+│ LastName     │        │ Title           │   0..* │ StartTime        │
+│ Email        │        │ Description     │        │ EndTime(null=   │
+│ Phone        │        │ Status          │        │   running)       │
+│ IsActive     │        │ Priority        │        │ TotalHours       │
+│ IsDeleted    │        │ DueDate         │        │ Notes            │
+└──────────────┘        │ ProjectId(FK)  │        │ IsDeleted        │
+                        │ IsDeleted       │        └──────────────────┘
+                        └────────┬────────┘
+                                 │ *
+                        ┌────────▼────────┐
+                        │    Project      │
+                        │─────────────────│
+                        │ Id (PK)         │
+                        │ Name            │
+                        │ Description     │
+                        │ StartDate       │
+                        │ EndDate         │
+                        │ Status          │
+                        │ IsDeleted       │
+                        └─────────────────┘
+
+All entities inherit from BaseEntity:
+[ Id | CreatedAt | UpdatedAt | CreatedBy | UpdatedBy | IsDeleted | DeletedAt | DeletedBy ]
+
+
+
+
+## Application Layer Flow
+```
+Controller
+    │
+    ▼
+IProjectService ──► ProjectService
+                        │
+                        ├── IValidator<CreateProjectDto>(FluentValidation)
+                        ├── IUnitOfWork
+                        │       ├── IProjectRepository
+                        │       ├── ITaskRepository
+                        │       └── ITimeLogRepository
+                        └── IMapper(AutoMapper)
+                                │
+                                ▼
+                          ProjectDto  ◄── returned to Controller
+
+
+
+## Infrastructure Layer Architecture
+```
+┌─────────────────────────────────────────────────────────┐
+│                   UnitOfWork                            │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │           ApplicationDbContext (EF Core)         │   │
+│  │  + SaveChangesAsync  + SetAuditFields            │   │
+│  │  + GlobalQueryFilters (soft delete)              │   │
+│  └─────────────────────────────────────────────────┘   │
+│                                                         │
+│   ProjectRepository   TaskRepository   TimeLogRepo      │
+│   ┌──────────────┐   ┌─────────────┐  ┌────────────┐  │
+│   │ EF: GetById  │   │ EF: GetById │  │ EF: GetById│  │
+│   │     WithTasks│   │     Details │  │ GetActive  │  │
+│   │ Dapper: Paged│   │ Dapper:Paged│  │ GetByTask  │  │
+│   └──────────────┘   └─────────────┘  └────────────┘  │
+│                                                         │
+│  ┌──────────────────────────────────────────────────┐  │
+│  │          DapperContext                           │  │
+│  │  CreateConnection() → SqlConnection              │  │
+│  └──────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────┘
+
+Install required packages
+dotnet add package Microsoft.Extensions.Configuration
+dotnet add package Microsoft.Extensions.Configuration.Json
+dotnet add package Microsoft.Extensions.Configuration.FileExtensions
+dotnet add package Microsoft.Extensions.Configuration.EnvironmentVariables
+
+
+Run Migration Commands
+Open a terminal at the solution root (/PMS) and run:
+
+# Step 1 — Create the initial migration
+dotnet ef migrations add InitialCreate \
+  --project  src/PMS.Infrastructure \
+  --startup-project src/PMS.Web \
+  --output-dir Data/Migrations
+
+# Step 2 — Review what will be generated (dry run, no DB changes)
+dotnet ef migrations script \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web \
+  --output migration_preview.sql
+
+# Step 3 — Apply migration to database
+dotnet ef database update \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web
+
+
+Azure Data Studio and run
+-- 1. Verify all tables were created
+SELECT TABLE_NAME
+FROM   INFORMATION_SCHEMA.TABLES
+WHERE  TABLE_TYPE = 'BASE TABLE'
+ORDER  BY TABLE_NAME;
+-- Expected: Projects, Tasks, TaskTimeLogs, Users, __EFMigrationsHistory
+
+-- 2. Verify column structure for Tasks
+SELECT
+    COLUMN_NAME,
+    DATA_TYPE,
+    CHARACTER_MAXIMUM_LENGTH,
+    IS_NULLABLE,
+    COLUMN_DEFAULT
+FROM   INFORMATION_SCHEMA.COLUMNS
+WHERE  TABLE_NAME = 'Tasks'
+ORDER  BY ORDINAL_POSITION;
+
+-- 3. Verify foreign keys
+SELECT
+    fk.name                  AS FK_Name,
+    tp.name                  AS ParentTable,
+    cp.name                  AS ParentColumn,
+    tr.name                  AS ReferencedTable,
+    cr.name                  AS ReferencedColumn,
+    fk.delete_referential_action_desc AS OnDelete
+FROM   sys.foreign_keys       fk
+JOIN   sys.tables             tp ON tp.object_id = fk.parent_object_id
+JOIN   sys.tables             tr ON tr.object_id = fk.referenced_object_id
+JOIN   sys.foreign_key_columns fkc ON fkc.constraint_object_id = fk.object_id
+JOIN   sys.columns            cp  ON cp.object_id  = fkc.parent_object_id
+                                  AND cp.column_id = fkc.parent_column_id
+JOIN   sys.columns            cr  ON cr.object_id  = fkc.referenced_object_id
+                                 AND cr.column_id  = fkc.referenced_column_id
+ORDER  BY tp.name;
+
+-- 4. Verify indexes
+SELECT
+    i.name           AS IndexName,
+    t.name           AS TableName,
+    c.name           AS ColumnName,
+    i.is_unique      AS IsUnique
+FROM   sys.indexes      i
+JOIN   sys.tables       t  ON t.object_id = i.object_id
+JOIN   sys.index_columns ic ON ic.object_id = i.object_id
+                            AND ic.index_id  = i.index_id
+JOIN   sys.columns      c  ON c.object_id  = ic.object_id
+                            AND c.column_id = ic.column_id
+WHERE  i.type > 0
+  AND  t.name IN ('Projects','Tasks','TaskTimeLogs','Users')
+ORDER  BY t.name, i.name;
+
+-- 5. Verify seed data loaded
+SELECT 'Users'    AS [Table], COUNT(*) AS [Count] FROM Users    WHERE IsDeleted = 0
+UNION ALL
+SELECT 'Projects',            COUNT(*)             FROM Projects WHERE IsDeleted = 0
+UNION ALL
+SELECT 'Tasks',               COUNT(*)             FROM Tasks    WHERE IsDeleted = 0;
+```
+
+---
+
+## Expected Schema Summary
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Table: Projects                                                │
+│  PK: Id (int, identity)                                         │
+│  Columns: Name(150) | Description(1000) | StartDate | EndDate  │
+│           Status(20,string) | ...audit fields...               │
+│  Indexes: IX_Projects_Name | IX_Projects_Status                 │
+│           IX_Projects_IsDeleted                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  Table: Tasks                                                   │
+│  PK: Id  |  FK: ProjectId → Projects(Restrict)                  │
+│           FK: AssignedUserId → Users(SetNull)                   │
+│  Columns: Title(200) | Description(2000) | Status(20)          │
+│           Priority(20) | DueDate | ...audit fields...          │
+│  Indexes: IX_Tasks_ProjectId | IX_Tasks_Status                  │
+│           IX_Tasks_AssignedUserId | IX_Tasks_IsDeleted          │
+├─────────────────────────────────────────────────────────────────┤
+│  Table: TaskTimeLogs                                            │
+│  PK: Id  |  FK: TaskId → Tasks(Cascade)                         │
+│  Columns: StartTime | EndTime(null) | Notes(500)               │
+│           ...audit fields...                                    │
+│  Indexes: IX_TaskTimeLogs_TaskId                                │
+│           IX_TaskTimeLogs_TaskId_EndTime (composite)            │
+├─────────────────────────────────────────────────────────────────┤
+│  Table: Users                                                   │
+│  PK: Id                                                         │
+│  Columns: FirstName(100) | LastName(100) | Email(150,UNIQUE)   │
+│           Phone | IsActive | ...audit fields...                │
+└─────────────────────────────────────────────────────────────────┘
+
+Useful EF Core Commands Reference
+# Add a new migration after entity changes
+dotnet ef migrations add <MigrationName> \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web \
+  --output-dir Data/Migrations
+
+# Update database to latest migration
+dotnet ef database update \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web
+
+# Rollback to a specific migration
+dotnet ef database update <MigrationName> \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web
+
+# Remove last unapplied migration
+dotnet ef migrations remove \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web
+
+# Generate SQL script for all migrations
+dotnet ef migrations script \
+  --project src/PMS.Infrastructure \
+  --startup-project src/PMS.Web \
+  --output full_schema.sql \
+  --idempotent
+
+
+
+Database Verification Query
+
+-- View all time logs with task names
+SELECT
+    tl.Id,
+    t.Title          AS TaskTitle,
+    tl.StartTime     AT TIME ZONE 'UTC' AS StartUTC,
+    tl.EndTime       AT TIME ZONE 'UTC' AS EndUTC,
+    CASE
+        WHEN tl.EndTime IS NULL THEN 'Running'
+        ELSE CAST(
+            ROUND(DATEDIFF(SECOND, tl.StartTime, tl.EndTime) / 3600.0, 4)
+            AS VARCHAR) + 'h'
+    END              AS Duration,
+    tl.Notes,
+    tl.IsDeleted
+FROM TaskTimeLogs tl
+JOIN Tasks t ON t.Id = tl.TaskId
+WHERE tl.IsDeleted = 0
+ORDER BY tl.StartTime DESC;
+
+-- Total hours per task
+SELECT
+    t.Id,
+    t.Title,
+    COUNT(tl.Id)                                         AS Sessions,
+    ROUND(SUM(
+        DATEDIFF(SECOND, tl.StartTime, tl.EndTime)
+    ) / 3600.0, 2)                                       AS TotalHours
+FROM Tasks    t
+JOIN TaskTimeLogs tl ON tl.TaskId    = t.Id
+                     AND tl.EndTime  IS NOT NULL
+                     AND tl.IsDeleted = 0
+WHERE t.IsDeleted = 0
+GROUP BY t.Id, t.Title
+ORDER BY TotalHours DESC;
+```
+
+---
+
+## Full Feature Flow
+```
+User clicks "Start Timer"
+        │
+        ▼
+POST /TimeLog/Start
+  TimeLogService.StartTimerAsync()
+    ├── Check task exists
+    ├── Check no active timer (prevent double start)
+    ├── INSERT TaskTimeLog { StartTime = UtcNow, EndTime = null }
+    └── Return log.Id + StartTime (ISO 8601)
+        │
+        ▼
+timelog.js receives { success, startTime }
+  ├── startLiveTick(startTime)  → updates #liveTimerDisplay every 1s
+  ├── startLiveDurationTick()   → updates .live-duration in table
+  └── loadSummary()             → refreshes partial with "Running" state
+
+User clicks "Stop Timer"
+        │
+        ▼
+POST /TimeLog/Stop
+  TimeLogService.StopTimerAsync()
+    ├── Find active log (EndTime IS NULL)
+    ├── log.Stop() → EndTime = UtcNow (domain method)
+    └── Return FormattedDuration
+        │
+        ▼
+timelog.js receives { success, formattedDuration }
+  ├── stopLiveTick()   → clears interval
+  ├── showToast("Timer stopped. Duration: 1h 23m")
+  └── loadSummary()    → refreshes partial with completed log
+
+    
+
+    ## Log Output Examples
+
+After wiring everything up, here is what structured log output looks like:
+```
+# Console (development)
+[10:23:41 INF] a3f1b92c4e | HTTP GET /Project responded 200 in 23.4ms
+[10:23:45 INF] b7d2e01a3f | Project created. Id: 4, Name: New API Project
+[10:23:51 WRN] c9f3a12b4d | SLOW REQUEST — POST /Task/Create took 523ms
+[10:24:01 INF] d1e4b23c5a | Timer started. TaskId: 7, LogId: 12
+[10:24:18 INF] d1e4b23c5a | Timer stopped. TaskId: 7, Duration: 17s
+
+# Error log file (Logs/pms-errors-20250401.log)
+2025-04-01 10:25:03.421 [ERR] [e5f6a34b] Unhandled exception.
+  CorrelationId: e5f6a34b | GET /Project/Detail/999 | IP: ::1
+  PMS.Application.Exceptions.NotFoundException: Project with identifier '999' was not found.
+     at PMS.Application.Services.ProjectService.GetByIdAsync(Int32 id)
+     ...
+```
+
+---
+
+## Middleware Pipeline Order
+```
+Incoming Request
+       │
+       ▼
+┌─────────────────────────────┐
+│  CorrelationIdMiddleware    │  ← Assigns X-Correlation-Id
+│  Pushes to Serilog context  │
+└────────────┬────────────────┘
+             │
+             ▼
+┌─────────────────────────────┐
+│ PerformanceLoggingMiddleware│  ← Starts Stopwatch
+└────────────┬────────────────┘
+             │
+             ▼
+┌─────────────────────────────┐
+│ ExceptionHandlingMiddleware │  ← try { await _next(ctx) } catch
+└────────────┬────────────────┘
+             │
+             ▼
+┌─────────────────────────────┐
+│  UseHttpsRedirection        │
+│  UseStaticFiles             │
+│  UseSerilogRequestLogging   │
+│  UseRouting                 │
+│  UseAuthorization           │
+│  MapControllerRoute         │
+└────────────┬────────────────┘
+             │
+             ▼
+┌─────────────────────────────┐
+│     Controller Action       │
+│  → Service → Repository     │
+│  → DbContext / Dapper       │
+└─────────────────────────────┘
+             │
+   Exception thrown?
+       ├── YES → ExceptionHandlingMiddleware catches
+       │              → Logs + JSON/HTML response
+       └── NO  → PerformanceMiddleware logs elapsed
+                      → Response returned to client
+
+
+src/PMS.Application/
+├── Interfaces/
+│   └── Services/
+│       └── ICacheService.cs
+└── Services/
+    └── CacheService.cs
+
+src/PMS.Infrastructure/
+├── Repositories/
+│   ├── ProjectRepository.cs      ← optimized
+│   └── TaskRepository.cs         ← optimized
+└── BackgroundJobs/
+    └── CleanupBackgroundService.cs
+
+src/PMS.Web/
+├── Controllers/
+│   ├── ProjectController.cs      ← final hardening
+│   └── TaskController.cs         ← final hardening
+└── Extensions/
+    └── ServiceCollectionExtensions.cs

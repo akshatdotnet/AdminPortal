@@ -1,0 +1,35 @@
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.deps.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.AssemblyInfoInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.AssemblyInfo.cs
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.csproj.CoreCompileInputs.cache
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.sourcelink.json
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\refint\STHEnterprise.Core.dll
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.pdb
+D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\ref\STHEnterprise.Core.dll
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.deps.json
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.dll
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.pdb
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.AssemblyInfoInputs.cache
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.AssemblyInfo.cs
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.csproj.CoreCompileInputs.cache
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.dll
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\refint\STHEnterprise.Core.dll
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.pdb
+D:\Client_Project\STHEnterprise\src\STHEnterprise.Core\obj\Debug\net8.0\ref\STHEnterprise.Core.dll
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.deps.json
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.dll
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\bin\Debug\net8.0\STHEnterprise.Core.pdb
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.AssemblyInfoInputs.cache
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.AssemblyInfo.cs
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.csproj.CoreCompileInputs.cache
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.sourcelink.json
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.dll
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\refint\STHEnterprise.Core.dll
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\STHEnterprise.Core.pdb
+D:\Client_Project\AdminPortal\STHEnterprise-v1\src\STHEnterprise.Core\obj\Debug\net8.0\ref\STHEnterprise.Core.dll

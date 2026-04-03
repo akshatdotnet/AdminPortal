@@ -1,0 +1,96 @@
+@model PagedResult<OrderListItemDto>
+@{ ViewData["Title"] = "Orders"; ViewData["Nav"] = "Orders";
+   var search = ViewData["Search"] as string;
+   var status = ViewData["Status"] as string;
+   var payStatus = ViewData["PayStatus"] as string;
+   var sortBy = ViewData["SortBy"] as string ?? "newest"; }
+
+@if (TempData["Alert"] is string alert) {
+  var parts = alert.Split('|', 2);
+  <div class="alert alert-@parts[0]"><span>@parts[1]</span>
+  <button class="alert-dismiss" onclick="this.parentElement.remove()">✕</button></div>
+}
+
+<form id="filterForm" method="get" asp-action="Index">
+<div class="toolbar">
+  <div class="tb-find">
+    <svg class="s-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="filterSearch" name="search" value="@search" placeholder="Order #, customer…"/>
+  </div>
+  <select name="status" class="z-sel auto-filter">
+    <option value="">All status</option>
+    @foreach (var s in Enum.GetNames<OrderStatus>()) {
+      <option value="@s" selected="@(status==s?"selected":null)">@s</option>
+    }
+  </select>
+  <select name="payStatus" class="z-sel auto-filter">
+    <option value="">Payment: All</option>
+    @foreach (var s in Enum.GetNames<PaymentStatus>()) {
+      <option value="@s" selected="@(payStatus==s?"selected":null)">@s</option>
+    }
+  </select>
+  <select name="sortBy" class="z-sel auto-filter">
+    <option value="newest"      selected="@(sortBy=="newest"     ?"selected":null)">Newest first</option>
+    <option value="oldest"      selected="@(sortBy=="oldest"     ?"selected":null)">Oldest first</option>
+    <option value="amount_desc" selected="@(sortBy=="amount_desc"?"selected":null)">Amount ↓</option>
+    <option value="amount_asc"  selected="@(sortBy=="amount_asc" ?"selected":null)">Amount ↑</option>
+  </select>
+  <span class="tb-count">@Model.TotalCount order@(Model.TotalCount!=1?"s":"")</span>
+</div>
+</form>
+
+<div class="card">
+  @if (!Model.Items.Any()) {
+    <div class="empty-state"><div style="font-size:40px;margin-bottom:12px">🧾</div><h3>No orders found</h3><p>Try adjusting your filters.</p></div>
+  } else {
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Order</th><th>Customer</th><th>Amount</th><th>Status</th><th>Payment</th><th>Date</th><th></th></tr></thead>
+      <tbody>
+      @foreach (var o in Model.Items) {
+        <tr data-id="@o.Id">
+          <td><span style="font-family:var(--fm);font-size:12px;font-weight:600">@o.OrderNumber</span></td>
+          <td>
+            <div style="font-weight:500;font-size:13.5px">@o.CustomerName</div>
+            <div style="font-size:11.5px;color:var(--c-t3)">@o.CustomerEmail</div>
+          </td>
+          <td><span class="price">₹@o.TotalAmount.ToString("N0")</span></td>
+          <td><span class="badge bd-@o.Status.ToLower()">@o.Status</span></td>
+          <td><span class="badge bd-@o.PaymentStatus.ToLower()">@o.PaymentStatus</span></td>
+          <td style="color:var(--c-t3);font-size:12px">@o.CreatedAt.ToString("dd MMM yyyy")</td>
+          <td>
+            <div class="action-wrap">
+              <div class="dot-btn" data-dd>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+              </div>
+              <div class="dropdown">
+                <a class="dd-item" asp-action="Detail" asp-route-id="@o.Id">View Details</a>
+                <div class="dd-divider"></div>
+                @foreach (var s in new[]{"Confirmed","Processing","Shipped","Delivered"}) {
+                  <button class="dd-item" onclick="updateOrderStatus(@o.Id,'@s')">→ Mark @s</button>
+                }
+                <div class="dd-divider"></div>
+                <button class="dd-item danger" onclick="updateOrderStatus(@o.Id,'Cancelled')">✕ Cancel Order</button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+  @if (Model.TotalPages > 1) {
+    <div class="pager">
+      <span class="pager-info">@Model.TotalCount orders</span>
+      <div class="pager-btns">
+        <a class="pg-btn @(!Model.HasPreviousPage?"disabled":"")" asp-action="Index" asp-route-page="@(Model.Page-1)" asp-route-search="@search" asp-route-status="@status">‹</a>
+        @for (int i=1;i<=Model.TotalPages;i++) {
+          <a class="pg-btn @(i==Model.Page?"active":"")" asp-action="Index" asp-route-page="@i" asp-route-search="@search" asp-route-status="@status">@i</a>
+        }
+        <a class="pg-btn @(!Model.HasNextPage?"disabled":"")" asp-action="Index" asp-route-page="@(Model.Page+1)" asp-route-search="@search" asp-route-status="@status">›</a>
+      </div>
+    </div>
+  }
+  }
+</div>
+@Html.AntiForgeryToken()

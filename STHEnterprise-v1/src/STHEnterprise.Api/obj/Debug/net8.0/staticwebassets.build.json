@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "5iPE4OZiCVqf3+6TiWfhbfGTxCRG+l7CGiWg6riYWL4=",
+  "Source": "STHEnterprise.Api",
+  "BasePath": "_content/STHEnterprise.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

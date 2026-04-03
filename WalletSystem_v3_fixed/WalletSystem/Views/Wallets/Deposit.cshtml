@@ -1,0 +1,48 @@
+@* Deposit.cshtml *@
+@model WalletSystem.ViewModels.DepositVM
+@{ ViewData["Title"] = "Deposit Funds"; }
+
+<div class="form-page">
+    <div class="form-card operation-card deposit-card">
+        <div class="op-icon">↓</div>
+        <h2 class="form-heading">Deposit Funds</h2>
+        <div class="op-wallet-info">
+            <span>@Model.OwnerName</span>
+            <span class="op-balance">Balance: <strong>@Model.CurrentBalance.ToString("C")</strong></span>
+        </div>
+
+        <form asp-action="Deposit" method="post">
+            @Html.AntiForgeryToken()
+            <input asp-for="WalletId" type="hidden" />
+            <div asp-validation-summary="All" class="validation-summary"></div>
+
+            <div class="form-group">
+                <label asp-for="Amount">Amount (@Model.Currency)</label>
+                <div class="amount-input-wrap">
+                    <span class="currency-prefix">$</span>
+                    <input asp-for="Amount" class="form-input amount-input" type="number" step="0.01" min="0.01" placeholder="0.00" autofocus />
+                </div>
+                <span asp-validation-for="Amount" class="field-error"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Description (optional)</label>
+                <input asp-for="Description" class="form-input" placeholder="e.g. Bank transfer, Cash deposit…" />
+            </div>
+            <div class="amount-preview" id="preview">
+                New balance: <strong id="newBalance">@Model.CurrentBalance.ToString("C")</strong>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-primary btn-lg">Confirm Deposit</button>
+                <a href="/Wallets/Details/@Model.WalletId" class="btn-ghost">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+const current = @Model.CurrentBalance;
+document.querySelector('[name="Amount"]').addEventListener('input', function() {
+    const v = parseFloat(this.value) || 0;
+    document.getElementById('newBalance').textContent = '$' + (current + v).toFixed(2);
+});
+</script>

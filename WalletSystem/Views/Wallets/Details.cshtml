@@ -1,0 +1,139 @@
+@{
+    ViewData["Title"] = "Wallet Details";
+    var wallet    = ViewBag.Wallet    as Wallet;
+    var txnFilter = ViewBag.TxnFilter as TransactionFilterVM ?? new TransactionFilterVM();
+    var txnPaged  = ViewBag.TxnPaged  as PagedResult<TransactionListVM> ?? new PagedResult<TransactionListVM>();
+}
+
+<!-- Wallet Header -->
+<div class="wallet-detail-header">
+    <div class="wallet-balance-hero">
+        <div class="hero-label">Current Balance</div>
+        <div class="hero-amount">@wallet!.Balance.ToString("C")</div>
+        <div class="hero-sub">@wallet.Currency · Wallet #@wallet.Id</div>
+    </div>
+    <div class="wallet-owner-info">
+        <div class="owner-avatar">@wallet.User.FullName[0]</div>
+        <div>
+            <div class="owner-name">@wallet.User.FullName</div>
+            <div class="owner-meta mono">@@@wallet.User.Username</div>
+            <span class="status-pill status-@wallet.Status.ToString().ToLower()">@wallet.Status</span>
+        </div>
+    </div>
+    <div class="wallet-detail-actions">
+        <a href="/Wallets/Deposit/@wallet.Id"  class="btn-primary">+ Deposit</a>
+        <a href="/Wallets/Withdraw/@wallet.Id" class="btn-ghost">− Withdraw</a>
+        <a href="/Wallets/Transfer/@wallet.Id" class="btn-ghost">⇄ Transfer</a>
+        @if (wallet.Status == WalletStatus.Active)
+        {
+            <form method="post" action="/Wallets/Freeze/@wallet.Id" style="display:inline">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn-danger">❄ Freeze</button>
+            </form>
+        }
+        else if (wallet.Status == WalletStatus.Frozen)
+        {
+            <form method="post" action="/Wallets/Unfreeze/@wallet.Id" style="display:inline">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn-primary">▶ Unfreeze</button>
+            </form>
+        }
+    </div>
+</div>
+
+<!-- Transaction Filters -->
+<div class="section-header mt-xl">
+    <h2>Transaction History</h2>
+    <span class="text-muted">@txnPaged.TotalCount total</span>
+</div>
+
+<div class="card filter-card">
+    <form method="get">
+        <input type="hidden" name="id" value="@wallet.Id" />
+        <div class="filter-row flex-wrap">
+            <input name="Search" value="@txnFilter.Search" placeholder="Search description or ref#…" class="input-search" />
+            <select name="Type" class="input-select">
+                <option value="">All Types</option>
+                @foreach (var t in Enum.GetValues<TransactionType>())
+                {
+                    <option value="@t" @@(txnFilter.Type == t ? "selected" : "")>@t</option>
+                }
+            </select>
+            <select name="Status" class="input-select">
+                <option value="">All Statuses</option>
+                @foreach (var s in Enum.GetValues<TransactionStatus>())
+                {
+                    <option value="@s" @@(txnFilter.Status == s ? "selected" : "")>@s</option>
+                }
+            </select>
+            <input name="DateFrom" value="@txnFilter.DateFrom?.ToString("yyyy-MM-dd")" type="date" class="input-date" placeholder="From date" />
+            <input name="DateTo"   value="@txnFilter.DateTo?.ToString("yyyy-MM-dd")"   type="date" class="input-date" placeholder="To date" />
+            <input name="MinAmount" value="@txnFilter.MinAmount" type="number" step="0.01" placeholder="Min $" class="input-number" />
+            <input name="MaxAmount" value="@txnFilter.MaxAmount" type="number" step="0.01" placeholder="Max $" class="input-number" />
+            <select name="SortDir" class="input-select input-sm">
+                <option value="desc" @@(txnFilter.SortDir=="desc"?"selected":"")>Newest first</option>
+                <option value="asc"  @@(txnFilter.SortDir=="asc" ?"selected":"")>Oldest first</option>
+            </select>
+            <select name="PageSize" class="input-select input-sm">
+                @foreach (var n in new[]{10,25,50})
+                {
+                    <option value="@n" @@(txnFilter.PageSize==n?"selected":"")>@n / page</option>
+                }
+            </select>
+            <button type="submit" class="btn-primary">Apply</button>
+            <a href="/Wallets/Details/@wallet.Id" class="btn-ghost">Reset</a>
+        </div>
+    </form>
+</div>
+
+<div class="card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Ref #</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Before</th>
+                <th>After</th>
+                <th>Related To</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var t in txnPaged.Items)
+        {
+            var isCredit = t.Type is TransactionType.Deposit or TransactionType.Bonus or TransactionType.Refund
+                        || (t.Type == TransactionType.Transfer && t.BalanceAfter > t.BalanceBefore);
+            <tr>
+                <td><span class="mono text-muted small">@t.ReferenceNumber</span></td>
+                <td><span class="badge badge-@t.Type.ToString().ToLower()">@t.Type</span></td>
+                <td class="amount @(isCredit ? "positive" : "negative")">
+                    @(isCredit ? "+" : "−")@t.Amount.ToString("C")
+                </td>
+                <td class="mono text-muted">@t.BalanceBefore.ToString("C")</td>
+                <td class="mono"><strong>@t.BalanceAfter.ToString("C")</strong></td>
+                <td class="text-muted">@(t.RelatedOwnerName ?? "–")</td>
+                <td class="text-muted">@t.Description</td>
+                <td><span class="status-pill status-@t.Status.ToString().ToLower()">@t.Status</span></td>
+                <td class="text-muted small">@t.CreatedAt.ToString("MMM d, HH:mm")</td>
+            </tr>
+        }
+        @if (!txnPaged.Items.Any())
+        {
+            <tr><td colspan="9" class="empty-row">No transactions match the current filters.</td></tr>
+        }
+        </tbody>
+    </table>
+
+    @{
+        var baseUrl = $"/Wallets/Details/{wallet.Id}?Search={txnFilter.Search}&Type={txnFilter.Type}&Status={txnFilter.Status}&DateFrom={txnFilter.DateFrom:yyyy-MM-dd}&DateTo={txnFilter.DateTo:yyyy-MM-dd}&MinAmount={txnFilter.MinAmount}&MaxAmount={txnFilter.MaxAmount}&SortDir={txnFilter.SortDir}&PageSize={txnFilter.PageSize}";
+    }
+    @await Html.PartialAsync("_Pager", new PagerVM { Page = txnPaged.Page, TotalPages = txnPaged.TotalPages, BaseUrl = baseUrl })
+</div>
+
+<div class="mt-xl">
+    <a href="/Wallets" class="btn-ghost">← Back to Wallets</a>
+    <a href="/Users/Details/@wallet.UserId" class="btn-ghost">View User Profile</a>
+</div>

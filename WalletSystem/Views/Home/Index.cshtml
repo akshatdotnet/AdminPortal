@@ -1,0 +1,82 @@
+@model WalletSystem.ViewModels.DashboardVM
+@{ ViewData["Title"] = "Dashboard"; }
+
+<div class="stats-grid">
+    <div class="stat-card stat-blue">
+        <div class="stat-label">Total Users</div>
+        <div class="stat-value">@Model.TotalUsers</div>
+        <div class="stat-sub">registered accounts</div>
+    </div>
+    <div class="stat-card stat-green">
+        <div class="stat-label">Active Wallets</div>
+        <div class="stat-value">@Model.ActiveWallets</div>
+        <div class="stat-sub">operational wallets</div>
+    </div>
+    <div class="stat-card stat-gold">
+        <div class="stat-label">Total Balance</div>
+        <div class="stat-value">@Model.TotalBalance.ToString("C")</div>
+        <div class="stat-sub">across all wallets</div>
+    </div>
+    <div class="stat-card stat-purple">
+        <div class="stat-label">Today's Volume</div>
+        <div class="stat-value">@Model.TodayVolume.ToString("C")</div>
+        <div class="stat-sub">@Model.TodayTransactions transactions</div>
+    </div>
+</div>
+
+<div class="section-header mt-xl">
+    <h2>Recent Transactions</h2>
+    <a href="/Transactions" class="btn-link">View all →</a>
+</div>
+
+<div class="card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Reference</th>
+                <th>User</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var t in Model.RecentTransactions)
+        {
+            <tr>
+                <td><span class="mono">–</span></td>
+                <td>@t.OwnerName</td>
+                <td><span class="badge badge-@t.Type.ToString().ToLower()">@t.Type</span></td>
+                <td class="amount @(t.Type == TransactionType.Deposit || t.Type == TransactionType.Bonus || t.Type == TransactionType.Refund ? "positive" : "negative")">
+                    @(t.Type == TransactionType.Deposit || t.Type == TransactionType.Bonus || t.Type == TransactionType.Refund ? "+" : "-")@t.Amount.ToString("C")
+                </td>
+                <td><span class="status-pill status-@t.Status.ToString().ToLower()">@t.Status</span></td>
+                <td class="text-muted">@t.CreatedAt.ToString("MMM d, yyyy")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<div class="quick-actions mt-xl">
+    <h2>Quick Actions</h2>
+    <div class="action-grid">
+        <a href="/Users/Create" class="action-card">
+            <div class="action-icon">+</div>
+            <div class="action-label">New User</div>
+        </a>
+        <a href="/Wallets" class="action-card">
+            <div class="action-icon">◈</div>
+            <div class="action-label">Manage Wallets</div>
+        </a>
+        <a href="/Transactions" class="action-card">
+            <div class="action-icon">≡</div>
+            <div class="action-label">All Transactions</div>
+        </a>
+        <a href="/Users" class="action-card">
+            <div class="action-icon">◎</div>
+            <div class="action-label">User Directory</div>
+        </a>
+    </div>
+</div>

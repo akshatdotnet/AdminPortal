@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CustomerViewModel>
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h4>Customers</h4>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@c.Email</td>
+                <td>
+                    <span class="badge @(c.IsActive ? "bg-success" : "bg-danger")">
+                        @(c.IsActive ? "Active" : "Inactive")
+                    </span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

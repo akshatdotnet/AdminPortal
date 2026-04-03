@@ -1,0 +1,241 @@
+2026-04-02 00:12:08.214 [ERR] [3b357797bf4840e9] CRITICAL SLOW REQUEST — GET /Task/Index took 2427ms (threshold: 2000ms) | Status: 200
+2026-04-02 10:44:10.255 [ERR] [2cfc85ba6aea4a06] CRITICAL SLOW REQUEST — GET / took 3770ms (threshold: 2000ms) | Status: 200
+2026-04-02 10:46:27.977 [ERR] [0c6c251ecff84a63] CRITICAL SLOW REQUEST — GET /Task took 2773ms (threshold: 2000ms) | Status: 200
+2026-04-02 10:53:23.229 [ERR] [5955b96c746d4b54] CRITICAL SLOW REQUEST — GET /Task/Index took 2707ms (threshold: 2000ms) | Status: 200
+2026-04-02 11:07:44.388 [ERR] [f5f1e1054f5048e2] CRITICAL SLOW REQUEST — GET /Task/Detail/6 took 3624ms (threshold: 2000ms) | Status: 200
+2026-04-02 14:21:52.081 [ERR] [5028df69448c4682] CRITICAL SLOW REQUEST — GET / took 2353ms (threshold: 2000ms) | Status: 200
+2026-04-02 16:01:55.181 [ERR] [0941d4e478cd450c] CRITICAL SLOW REQUEST — GET / took 2403ms (threshold: 2000ms) | Status: 200
+2026-04-02 16:07:28.131 [ERR] [2776f2a7f3b047da] CRITICAL SLOW REQUEST — POST /TimeLog/Start took 2302ms (threshold: 2000ms) | Status: 200
+2026-04-02 18:21:06.350 [ERR] [] Failed executing DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE TABLE [Projects] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(150) NOT NULL,
+    [Description] nvarchar(1000) NULL,
+    [StartDate] datetime2 NOT NULL,
+    [EndDate] datetime2 NULL,
+    [Status] nvarchar(20) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    [DeletedAt] datetime2 NULL,
+    [DeletedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Projects] PRIMARY KEY ([Id])
+);
+2026-04-02 18:21:06.387 [ERR] [] An error occurred while seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'Projects' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at PMS.Infrastructure.Data.Seed.DatabaseSeeder.SeedAsync(ApplicationDbContext db, ILogger logger) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Infrastructure\Data\Seed\DatabaseSeeder.cs:line 20
+ClientConnectionId:8478ceee-6b78-4c69-a547-81399c3358c7
+Error Number:2714,State:6,Class:16
+2026-04-02 18:21:06.465 [FTL] [] PMS host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'Projects' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at PMS.Infrastructure.Data.Seed.DatabaseSeeder.SeedAsync(ApplicationDbContext db, ILogger logger) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Infrastructure\Data\Seed\DatabaseSeeder.cs:line 20
+   at Program.<Main>$(String[] args) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\Program.cs:line 131
+ClientConnectionId:8478ceee-6b78-4c69-a547-81399c3358c7
+Error Number:2714,State:6,Class:16
+2026-04-02 18:35:02.789 [ERR] [] An exception occurred in the database while saving changes for context type 'PMS.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Phase', table 'PMSDb_QA.dbo.Tasks'; column does not allow nulls. UPDATE fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:3520d0fe-ed6a-42e7-b2a1-30449b62b97c
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Phase', table 'PMSDb_QA.dbo.Tasks'; column does not allow nulls. UPDATE fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:3520d0fe-ed6a-42e7-b2a1-30449b62b97c
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-02 18:35:03.095 [ERR] [] An error occurred while seeding the database.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Phase', table 'PMSDb_QA.dbo.Tasks'; column does not allow nulls. UPDATE fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:3520d0fe-ed6a-42e7-b2a1-30449b62b97c
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PMS.Infrastructure.Data.ApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Infrastructure\Data\ApplicationDbContext.cs:line 43
+   at PMS.Infrastructure.Data.Seed.DatabaseSeeder.SeedAsync(ApplicationDbContext db, ILogger logger) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Infrastructure\Data\Seed\DatabaseSeeder.cs:line 335
+2026-04-02 18:35:03.317 [FTL] [] PMS host terminated unexpectedly
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Phase', table 'PMSDb_QA.dbo.Tasks'; column does not allow nulls. UPDATE fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:3520d0fe-ed6a-42e7-b2a1-30449b62b97c
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PMS.Infrastructure.Data.ApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Infrastructure\Data\ApplicationDbContext.cs:line 43
+   at PMS.Infrastructure.Data.Seed.DatabaseSeeder.SeedAsync(ApplicationDbContext db, ILogger logger) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Infrastructure\Data\Seed\DatabaseSeeder.cs:line 335
+   at Program.<Main>$(String[] args) in D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\Program.cs:line 131
+2026-04-02 19:14:23.330 [ERR] [494e7397820445b6] CRITICAL SLOW REQUEST — GET /Task/Index took 6566ms (threshold: 2000ms) | Status: 200
+2026-04-02 19:52:14.349 [ERR] [7dcc3205be24442b] CRITICAL SLOW REQUEST — GET /Task took 2121ms (threshold: 2000ms) | Status: 200
+2026-04-02 20:59:24.047 [ERR] [661893da4346481a] CRITICAL SLOW REQUEST — GET / took 178991ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:00:18.699 [ERR] [8e0ce83a6b904ef4] CRITICAL SLOW REQUEST — GET / took 25270ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:00:18.845 [ERR] [d7ac653090a84588] CRITICAL SLOW REQUEST — GET /Project took 13093ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:00:18.860 [ERR] [20e41b8ef830434e] CRITICAL SLOW REQUEST — GET /Project took 11301ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:01:20.763 [ERR] [67a95ea3a7f94fee] CRITICAL SLOW REQUEST — GET /Task took 26739ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:01:46.456 [ERR] [36839a4c579e42db] CRITICAL SLOW REQUEST — GET /Task/Detail/30 took 15552ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:01:46.473 [ERR] [a3284a6e4cb945c6] CRITICAL SLOW REQUEST — GET /Task/Detail/30 took 11692ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:01:46.679 [ERR] [6bea8ff3a8c44a8d] CRITICAL SLOW REQUEST — GET /Task took 26043ms (threshold: 2000ms) | Status: 200
+2026-04-02 21:15:17.495 [ERR] [b66b7f6ba33c4907] CRITICAL SLOW REQUEST — GET / took 5642ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:26:47.173 [ERR] [00a7907aa5dd4a04] CRITICAL SLOW REQUEST — GET / took 16205ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:45:06.279 [ERR] [88aa8f8386c6419a] CRITICAL SLOW REQUEST — GET /Task took 22561ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:46:07.673 [ERR] [cdae01d34c034d89] CRITICAL SLOW REQUEST — GET /Task took 30973ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:46:22.517 [ERR] [527c9b3e3fa94ef2] CRITICAL SLOW REQUEST — GET /Task/GetByProject/12 took 32039ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:48:02.739 [ERR] [fa7194ad093043db] CRITICAL SLOW REQUEST — GET /Task/GetByProject/12 took 39380ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:51:45.178 [ERR] [4d9f8980846e46a2] CRITICAL SLOW REQUEST — GET /Task took 8688ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:52:20.015 [ERR] [84c32a271c7f46c2] CRITICAL SLOW REQUEST — GET /Task took 4278ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:52:20.024 [ERR] [5ab775db15064d14] CRITICAL SLOW REQUEST — GET /Task took 2707ms (threshold: 2000ms) | Status: 200
+2026-04-02 22:52:20.031 [ERR] [a6b5892cf6d64268] CRITICAL SLOW REQUEST — GET /Task took 2926ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:02:00.620 [ERR] [b854ecff8d7f4b2b] CRITICAL SLOW REQUEST — GET / took 12384ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:02:00.672 [ERR] [85d75f5b50124c65] CRITICAL SLOW REQUEST — GET /Task/Detail/29 took 12438ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:02:00.756 [ERR] [be46b100a5d14639] CRITICAL SLOW REQUEST — GET /Task/Index took 12540ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:10:01.313 [ERR] [c26cdebe416a432f] CRITICAL SLOW REQUEST — GET / took 9905ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:11:44.465 [ERR] [03843a7c003044b6] CRITICAL SLOW REQUEST — GET /Task/GetByProject/12 took 23025ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:12:28.098 [ERR] [d3589601eefa4cf2] CRITICAL SLOW REQUEST — GET /Task/GetByProject/12 took 4144ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:18:05.438 [ERR] [750e5f14ab0449ef] CRITICAL SLOW REQUEST — GET /Project took 28503ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:18:21.732 [ERR] [87d3011769774947] CRITICAL SLOW REQUEST — GET /Project/Detail/12 took 12240ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:18:43.464 [ERR] [5c9968367f984cfe] CRITICAL SLOW REQUEST — GET /Task/GetByProject/12 took 21619ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:19:32.746 [ERR] [7cdcf7e9bb3542c7] CRITICAL SLOW REQUEST — GET /Project/Detail/12 took 4373ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:19:50.622 [ERR] [9fd646e6859b4c50] CRITICAL SLOW REQUEST — GET /Project took 2514ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:20:21.769 [ERR] [a518b93249f94568] CRITICAL SLOW REQUEST — GET / took 25129ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:20:43.280 [ERR] [5531bd2871bd4a0e] CRITICAL SLOW REQUEST — GET /Project took 2769ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:21:16.875 [ERR] [4af16e81ba024640] CRITICAL SLOW REQUEST — GET /Project/Detail/12 took 8573ms (threshold: 2000ms) | Status: 200
+2026-04-02 23:21:27.633 [ERR] [b59f2b79351643bf] CRITICAL SLOW REQUEST — GET /Task/GetByProject/12 took 10652ms (threshold: 2000ms) | Status: 200

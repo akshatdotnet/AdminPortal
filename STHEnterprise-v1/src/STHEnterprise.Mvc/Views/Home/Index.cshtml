@@ -1,0 +1,26 @@
+﻿@model DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h4 class="mb-4">Dashboard</h4>
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card p-3">Total Customers: <b>@Model.TotalCustomers</b></div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3">Active Customers: <b>@Model.ActiveCustomers</b></div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3">Revenue: ₹@Model.MonthlyRevenue</div>
+    </div>
+</div>
+
+<h6 class="mt-4">Recent Activities</h6>
+<ul>
+    @foreach (var item in Model.RecentActivities)
+    {
+        <li>@item</li>
+    }
+</ul>

@@ -1,0 +1,196 @@
+﻿@model PMS.Web.ViewModels.Project.ProjectIndexViewModel
+@{
+    var q = Model.Query;
+    var result = Model.PagedResult;
+
+    string SortIcon(string col)
+    {
+        if (q.SortBy?.ToLower() != col.ToLower()) return "bi-arrow-down-up text-muted";
+        return q.SortDesc ? "bi-sort-down" : "bi-sort-up";
+    }
+
+    string SortClass(string col) =>
+        q.SortBy?.ToLower() == col.ToLower() ? "text-primary fw-semibold" : "";
+}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-0">
+        @if (!result.Items.Any())
+        {
+            <div class="text-center py-5">
+                <i class="bi bi-folder-x display-4 text-muted"></i>
+                <p class="mt-3 text-muted fs-5">No projects found.</p>
+                <button class="btn btn-primary mt-2"
+                        id="btnAddProjectEmpty"
+                        data-bs-toggle="modal"
+                        data-bs-target="#projectModal">
+                    <i class="bi bi-plus-circle me-1"></i> Create your first project
+                </button>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" id="projectTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4 sortable @SortClass("name")"
+                                data-sort="name" style="cursor:pointer; width:25%">
+                                Name <i class="bi @SortIcon("name") ms-1 small"></i>
+                            </th>
+                            <th class="sortable @SortClass("status")"
+                                data-sort="status" style="cursor:pointer; width:12%">
+                                Status <i class="bi @SortIcon("status") ms-1 small"></i>
+                            </th>
+                            <th class="sortable @SortClass("startdate")"
+                                data-sort="startdate" style="cursor:pointer; width:12%">
+                                Start <i class="bi @SortIcon("startdate") ms-1 small"></i>
+                            </th>
+                            <th class="sortable @SortClass("enddate")"
+                                data-sort="enddate" style="cursor:pointer; width:12%">
+                                End <i class="bi @SortIcon("enddate") ms-1 small"></i>
+                            </th>
+                            <th style="width:18%">Progress</th>
+                            <th style="width:10%">Tasks</th>
+                            <th class="text-end pe-4" style="width:11%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var project in result.Items)
+                        {
+                            var statusClass = project.Status switch
+                            {
+                                PMS.Domain.Enums.ProjectStatus.Active => "badge bg-success",
+                                PMS.Domain.Enums.ProjectStatus.OnHold => "badge bg-warning text-dark",
+                                PMS.Domain.Enums.ProjectStatus.Completed => "badge bg-primary",
+                                PMS.Domain.Enums.ProjectStatus.Cancelled => "badge bg-danger",
+                                _ => "badge bg-secondary"
+                            };
+                            var progressClass = project.CompletionPercentage >= 100 ? "bg-success"
+                            : project.CompletionPercentage >= 50 ? "bg-info"
+                            : "bg-warning";
+                            <tr data-id="@project.Id">
+                                <td class="ps-4">
+                                    <a asp-action="Detail"
+                                       asp-route-id="@project.Id"
+                                       class="fw-semibold text-decoration-none text-dark">
+                                        @project.Name
+                                    </a>
+                                    @if (!string.IsNullOrEmpty(project.Description))
+                                    {
+                                        <div class="text-muted small text-truncate"
+                                             style="max-width:220px"
+                                             title="@project.Description">
+                                            @project.Description
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    <span class="@statusClass">@project.StatusDisplay</span>
+                                </td>
+                                <td class="text-muted small">
+                                    @project.StartDate.ToString("MMM dd, yyyy")
+                                </td>
+                                <td class="text-muted small">
+                                    @(project.EndDate.HasValue
+                                        ? project.EndDate.Value.ToString("MMM dd, yyyy")
+                                        : "—")
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="progress flex-grow-1"
+                                             style="height:7px; border-radius:4px">
+                                            <div class="progress-bar @progressClass"
+                                                 style="width:@project.CompletionPercentage%"
+                                                 role="progressbar"
+                                                 aria-valuenow="@project.CompletionPercentage"
+                                                 aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <span class="small text-muted" style="width:36px">
+                                            @project.CompletionPercentage%
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="badge bg-light text-dark border">
+                                        @project.CompletedTasks / @project.TotalTasks
+                                    </span>
+                                </td>
+                                <td class="text-end pe-4">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <a asp-action="Detail"
+                                           asp-route-id="@project.Id"
+                                           class="btn btn-outline-info"
+                                           title="View Details">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <button class="btn btn-outline-primary btn-edit-project"
+                                                data-id="@project.Id"
+                                                title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger btn-delete-project"
+                                                data-id="@project.Id"
+                                                data-name="@project.Name"
+                                                title="Delete">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @* { { !--Pagination--} } *@
+            @if (result.TotalPages > 1)
+            {
+                <div class="d-flex justify-content-between align-items-center px-4 py-3 border-top">
+                    <div class="text-muted small">
+                        Page <strong>@result.PageNumber</strong> of
+                        <strong>@result.TotalPages</strong>
+                        &nbsp;·&nbsp; @result.TotalCount total records
+                    </div>
+                    <nav>
+                        <ul class="pagination pagination-sm mb-0">
+                            <li class="page-item @(!result.HasPrevious ? "disabled" : "")">
+                                <a class="page-link page-btn"
+                                   data-page="@(result.PageNumber - 1)"
+                                   href="#">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            @for (int i = Math.Max(1, result.PageNumber - 2);
+                           i <= Math.Min(result.TotalPages, result.PageNumber + 2);
+                           i++)
+                            {
+                                <li class="page-item @(i == result.PageNumber ? "active" : "")">
+                                    <a class="page-link page-btn"
+                                       data-page="@i"
+                                       href="#">@i</a>
+                                </li>
+                            }
+
+                            <li class="page-item @(!result.HasNext ? "disabled" : "")">
+                                <a class="page-link page-btn"
+                                   data-page="@(result.PageNumber + 1)"
+                                   href="#">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@* {{!-- Hidden state a for JS --}} *@
+<input type="hidden" id="currentPage" value="@result.PageNumber" />
+<input type="hidden" id="currentSort" value="@q.SortBy" />
+<input type="hidden" id="currentDesc" value="@q.SortDesc.ToString().ToLower()" />
+<input type="hidden" id="totalCount" value="@result.TotalCount" />

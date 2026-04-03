@@ -1,0 +1,159 @@
+﻿@model ProfileViewModel
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12">
+
+            <div class="card shadow-sm profile-card">
+
+                <!-- HEADER -->
+                <div class="card-header profile-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-person-circle me-2"></i> My Profile
+                    </h5>
+                </div>
+
+                <!-- BODY -->
+                <div class="card-body">
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show">
+                            @TempData["Success"]
+                            <button class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            @TempData["Error"]
+                            <button class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <!-- PROFILE FORM -->
+                    <form asp-action="Profile" method="post" novalidate>
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label fw-semibold"></label>
+                            <input asp-for="FullName" class="form-control" />
+                            <span asp-validation-for="FullName" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label fw-semibold"></label>
+                            <input asp-for="Email" class="form-control" readonly />
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Mobile" class="form-label fw-semibold"></label>
+                            <input asp-for="Mobile" class="form-control" />
+                            <span asp-validation-for="Mobile" class="text-danger small"></span>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary-theme w-100">
+                            <i class="bi bi-check-circle me-1"></i>
+                            Update Profile
+                        </button>
+                    </form>
+
+                    <hr class="my-4" />
+
+                    <!-- CHANGE PASSWORD -->
+                    <button class="btn btn-outline-theme w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#changePasswordModal">
+                        <i class="bi bi-lock me-1"></i>
+                        Change Password
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- CHANGE PASSWORD MODAL -->
+<!-- ============================= -->
+<div class="modal fade"
+     id="changePasswordModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content profile-modal">
+
+            <form asp-action="ChangePassword" method="post">
+                @Html.AntiForgeryToken()
+
+                <!-- MODAL HEADER -->
+                <div class="modal-header profile-modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-shield-lock me-2"></i>
+                        Change Password
+                    </h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- MODAL BODY -->
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Current Password</label>
+                        <input type="password"
+                               name="CurrentPassword"
+                               class="form-control"
+                               required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">New Password</label>
+                        <input type="password"
+                               name="NewPassword"
+                               class="form-control"
+                               required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Confirm Password</label>
+                        <input type="password"
+                               name="ConfirmPassword"
+                               class="form-control"
+                               required />
+                    </div>
+
+                </div>
+
+                <!-- MODAL FOOTER -->
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="submit"
+                            class="btn btn-primary-theme">
+                        Update Password
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

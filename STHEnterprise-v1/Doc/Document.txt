@@ -1,0 +1,1875 @@
+﻿
+
+https://web.mydukaan.io/
+https://documenter.getpostman.com/view/25389466/2s9Yynk3f7#b04b7a53-1bd2-4ed6-a81f-865acbd93d6d
+
+
+
+==========================Requerment===========================================
+Freelance Works :
+Task-Wise Breakdown with Estimates
+	Task  -	Details	Time Estimate (Hours)
+	1. Requirement Analysis	Collecting business requirements, creating UML diagrams. - 12
+	2. Project Setup Setting up the .NET solution structure, configuring database. - 8
+	3. Authentication Module User registration, login/logout, JWT-based security implementation. - 16
+	4. Product Catalog CRUD operations for products, category-based filtering, and pagination.	- 20
+	5. Shopping Cart Add, update, and remove items; session management. - 16
+	6. Order Management	Checkout process, order status updates, order history for users. - 20
+	7. Payment Integration Integration with PayPal/Stripe APIs, error handling for payment failures. - 16
+	8. Admin Panel	Manage products, orders, and user details with secure access. - 24
+	9. Reports and Dashboard Sales trends, inventory status, and analytics for admin users.	- 20
+	10.Inventory Management Module. - 40 -
+	11.Third Party API Integration Module. - 40 -
+	12.Testing	Unit tests for APIs, integration testing for all modules.	- 16
+	13.Deployment	Hosting on Azure with CI/CD pipelines.	- 8
+	Total Estimate: 176 Hours (~4-5 weeks)	
+    
+    Timeline: Delivery by Feb 27, 2026
+    Budget: ~$8.5/hour average
+
+    
+=================================Task2==========================================
+
+Module :
+1.User Management  - Login & SignUp (Following Role :Admin,Manager,Partner,Client)
+2.Product & Category Listing
+3.Users (B2C & B2B) - Manage Order
+4.Inventory, Billing & Invoicing , Notification
+5.Stripe Payment Integration
+6.Third Party Facebook, Microsoft & Google Account Login.
+7.Forgot your password & Resend email confirmation feature in app.
+8.User Activity Log Feature add in the app.
+9.Reports & Analytics Dashboard
+10.Deploy On Azure Using CI/CD Pipeline.
+
+Blazor App:
+Admin Panel should include:
+Dashboard
+User Management
+Roles & Permissions
+Product CRUD
+Order Management
+Payment Integration
+Reports
+Analytics
+Audit Logs
+Notifications
+
+Enterprise E-Commerce System
+Architecture
+Blazor WebAssembly
+       ↓
+API Gateway
+       ↓
+Microservices
+       ↓
+SQL Server
+
+Modules :
+Product Management
+Order Management
+Customer Portal
+Admin Dashboard
+Payment Integration
+Notifications
+
+Microservices:
+Services:
+ApiGateway — Ocelot reverse proxy + JWT validation
+AuthService — Identity, JWT, refresh tokens
+UserService — User CRUD, roles, profiles
+NotificationService — Email + in-app notifications
+AuditService — Audit trail + activity tracking
+SharedKernel — Contracts, events, base classes
+
+Each service gets its own DB, communicates via RabbitMQ events + HTTP through the gateway.
+
+=================================================================================
+Daily Task Points :
+	1. App User Management Module - SendOTP, VerifyOTP, Register, Login, ChangePassword, ForgotPassword
+    2. User Management Module - CRUD REST API, Pagination, Sorting, Filtering, Proper error handling
+
+    BackendAPI:
+    Identity          // Handles authentication and authorization
+    ProductAPI        // Product catalog management    
+    OrderAPI          // Order management
+    ShoppingCartAPI   // Shopping cart operations
+    CouponAPI         // Manages discount coupons
+    PaymentAPI        // Payment records, gateways
+    Email             // Sends emails and notifications    
+    
+
+
+=================================================================================
+MangoRestaurantSolution
+│
+├── FrontEnd
+│   └── Mango.Web                     // Web frontend (MVC/Blazor/SPA)
+│
+├── Gateway
+│   └── Mango.GatewaySolution        // API Gateway for routing to microservices (e.g., Ocelot/YARP)
+│
+├── Integration
+│   └── Mango.MessageBus             // Shared integration via message bus (e.g., RabbitMQ/Azure Service Bus)
+│
+├── Payments
+│   └── PaymentProcessor             // Handles payment processing logic
+│
+├── Services                             // Domain-specific microservices
+│   ├── Mango.Services.CouponAPI         // Manages discount coupons
+│   ├── Mango.Services.Email             // Sends emails and notifications
+│   ├── Mango.Services.Identity          // Handles authentication and authorization
+│   ├── Mango.Services.OrderAPI          // Order management
+│   ├── Mango.Services.PaymentAPI        // Payment records, gateways
+│   ├── Mango.Services.ProductAPI        // Product catalog management
+│   ├── Mango.Services.ShoppingCartAPI   // Shopping cart operations
+
+=========================================================================================
+PROJECT ARCHITECTURE OVERVIEW
+Architecture Style:
+Clean Architecture
+Layered (API → Application → Domain → Infrastructure)
+JWT + Role-Based Authorization
+Stripe Payment Gateway
+Azure Deployment with CI/CD
+Logging + Audit Trail
+Scalable (future microservices ready)
+
+🟢 Module 1: Requirement & Solution Architecture
+Owner: Tech Lead / Architect
+Scope:
+Requirement validation
+Use case documentation
+UML (Sequence, Class, ER Diagram)
+Database schema design
+API contract design (Swagger-first approach)
+Security & Role Matrix definition
+Deliverables:
+HLD (High-Level Design)
+LLD (Low-Level Design)
+DB Design Script
+Role & Permission Matrix
+Estimate: 12–16 hrs
+
+🟢 Module 2: Project Setup & Infrastructure
+Owner: Senior Backend Developer / DevOps
+Scope:
+.NET 8 Web API Setup
+Clean Architecture Folder Structure
+EF Core + SQL Server Setup
+Global Exception Handling Middleware
+Fluent Validation Setup
+Swagger with JWT Security
+Serilog Logging
+AutoMapper Configuration
+Redis (Optional)
+Deliverables:
+Working Base API
+Health Check Endpoint
+Logging Setup
+Standardized API Response Model
+Estimate: 10–12 hrs
+
+🟢 Module 3: User Management & Authentication
+Owner: Backend Developer 1
+Features:
+Registration
+Login / Logout
+JWT Token generation
+Role-based Access (Admin, Manager, Channel Partner, Client)
+Forgot Password
+Email Confirmation
+Resend Confirmation
+Social Login:
+Google
+Microsoft
+Facebook
+User Activity Log (Audit Trail)
+Best Practices:
+Identity Framework
+Password Hashing (BCrypt)
+Refresh Tokens
+Claims-based Authorization
+Secure Email via SMTP/SendGrid
+Estimate: 25–30 hrs
+
+🟢 Module 4: Product & Category Management
+Owner: Backend Developer 2
+Features:
+CRUD Products
+Category-based filtering
+Pagination
+Sorting
+Soft Delete
+Image Upload (Azure Blob optional)
+Deliverables:
+Product APIs
+Category APIs
+DTO validation
+Estimate: 20 hrs
+
+🟢 Module 5: Cart & Order Management
+Owner: Backend Developer 2
+Features:
+Add to Cart
+Update Cart
+Remove from Cart
+Checkout
+Order Creation
+Order Status Tracking
+Order History (B2B & B2C)
+Best Practices:
+Transaction Handling
+Idempotency for order creation
+Optimistic Concurrency
+Estimate: 24 hrs
+
+🟢 Module 6: Inventory, Billing & Invoicing
+Owner: Backend Developer 3
+Features
+Stock Management
+Low Stock Alerts
+Invoice Generation (PDF)
+Billing Calculation (Tax, Discount)
+Inventory Adjustment on Order
+Best Practices:
+ACID Transactions
+Inventory Locking Strategy
+Audit History
+Estimate: 35–40 hrs
+
+🟢 Module 7: Payment Integration
+Owner: Payment Specialist Developer
+Payment Gateway:
+Stripe Integration
+Features:
+Payment Intent API
+Webhook Handling
+Payment Success/Failure Handling
+Refund API
+Secure Webhook Validation
+Best Practices:
+Do NOT trust client payment status
+Webhook-driven order confirmation
+Idempotency Keys
+Store Payment Logs
+Estimate: 16–20 hrs
+
+🟢 Module 8: Admin Panel & Role Management
+Owner: Full Stack Developer
+Features:
+Manage Users
+Manage Products
+Manage Orders
+Inventory Control
+Role-based Access
+Dashboard Overview
+Estimate: 20–24 hrs
+
+🟢 Module 9: Reports & Analytics Dashboard
+Owner: Backend + Frontend Developer
+Features:
+Sales Trends
+Revenue Chart
+Inventory Report
+User Activity Logs
+Export CSV/Excel
+Best Practices:
+Stored Procedures for performance
+Cached dashboard APIs
+Pagination for large datasets
+Estimate: 20 hrs
+
+🟢 Module 10: Third-Party API Integration
+Owner: Integration Developer
+Scope:
+External Vendor APIs
+Retry Policy (Polly)
+Timeout Handling
+Logging
+Circuit Breaker Pattern
+Best Practices:
+Interface-based integration
+API Client Factory
+Response Mapping Layer
+Estimate: 30–40 hrs
+
+🟢 Module 11: Testing & QA
+Owner: QA + Developer
+Scope:
+Unit Testing (xUnit)
+Mocking (Moq)
+Integration Testing
+API Testing (Postman Collection)
+Load Testing (Optional)
+Target:
+Minimum 70% Code Coverage
+Estimate: 16–20 hrs
+
+🟢 Module 12: DevOps & Azure Deployment
+Owner: DevOps Engineer
+Scope:
+Azure App Service
+Azure SQL
+CI/CD Pipeline
+Environment Configuration
+Production Logging
+SSL & Security Setup
+DevOps Tools:
+Microsoft Azure
+GitHub Actions / Azure DevOps
+Estimate: 10–12 hrs
+
+📊 TEAM DISTRIBUTION MODEL
+| Role            | Modules             | Estimated Hours |
+| --------------- | ------------------- | --------------- |
+| Architect       | Module 1            | 16              |
+| Backend Dev 1   | Auth + User         | 30              |
+| Backend Dev 2   | Product + Order     | 44              |
+| Backend Dev 3   | Inventory + Billing | 40              |
+| Payment Dev     | Stripe              | 20              |
+| Integration Dev | 3rd Party APIs      | 40              |
+| Full Stack Dev  | Admin + Dashboard   | 24              |
+| QA              | Testing             | 20              |
+| DevOps          | Deployment          | 12              |
+
+Phase 1 (Week 1)
+Architecture + Setup + User Module
+Phase 2 (Week 2)
+Product + Cart + Order
+Phase 3 (Week 3)
+Inventory + Payment + Integration
+Phase 4 (Week 4)
+Admin + Reports + Testing
+Final 3–4 Days
+Deployment + UAT + Bug Fixing
+
+=================================Docker & Kubernetes=====================================
+
+create a RESTful ASP.NET Core Web API and run it in a Docker container using the .NET CLI.
+=>
+1. Create a RESTful Web API project
+dotnet new webapi -n MyApi
+cd MyApi
+dotnet run
+https://localhost:5001/swagger
+
+2. Add Docker support (Dockerfile)
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+COPY *.csproj ./
+RUN dotnet restore
+
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/out .
+
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "MyApi.dll"]
+
+
+3. Configure Kestrel for Docker (important)
+Edit Program.cs and ensure this line exists:
+app.Urls.Add("http://0.0.0.0:8080");
+Or via environment variable (recommended for containers):
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
+
+4. Build Docker image
+docker build -t myapi:latest .
+
+5. Run the container
+docker run -d -p 8080:8080 --name myapi-container myapi:latest
+
+http://localhost:8080/swagger
+
+6. (Optional) Docker Compose
+docker-compose.yml
+version: '3.9'
+services:
+  api:
+    image: myapi:latest
+    build: .
+    ports:
+      - "8080:8080"
+
+Run : docker compose up --build
+
+7. Useful Docker commands
+docker ps
+docker logs myapi-container
+docker stop myapi-container
+docker rm myapi-container
+
+
+HTTPS inside Docker
+=> Option A (Recommended): HTTPS with a real certificate (or dev cert)
+1. Create / obtain a certificate
+🔹 For local development (self-signed)
+dotnet dev-certs https -ep ./https/aspnetapp.pfx -p MyStrongPassword
+dotnet dev-certs https --trust
+This creates:
+https/aspnetapp.pfx
+
+2. Update Program.cs
+var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080); // HTTP
+    options.ListenAnyIP(8443, listenOptions =>
+    {
+        listenOptions.UseHttps(
+            Environment.GetEnvironmentVariable("ASPNETCORE_Kestrel__Certificates__Default__Path"),
+            Environment.GetEnvironmentVariable("ASPNETCORE_Kestrel__Certificates__Default__Password")
+        );
+    });
+});
+
+var app = builder.Build();
+app.MapControllers();
+app.Run();
+
+3. Dockerfile (no cert baked in 🚫)
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+COPY *.csproj ./
+RUN dotnet restore
+COPY . .
+RUN dotnet publish -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/out .
+
+EXPOSE 8080
+EXPOSE 8443
+
+ENTRYPOINT ["dotnet", "MyApi.dll"]
+
+4. Run container with HTTPS cert mounted
+docker run -d \
+  -p 8080:8080 \
+  -p 8443:8443 \
+  -v $(pwd)/https:/https:ro \
+  -e ASPNETCORE_URLS="https://+:8443;http://+:8080" \
+  -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx \
+  -e ASPNETCORE_Kestrel__Certificates__Default__Password=MyStrongPassword \
+  --name myapi \
+  myapi:latest
+
+https://localhost:8443/swagger
+
+Option B: Docker Compose (cleaner)
+version: '3.9'
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    volumes:
+      - ./https:/https:ro
+    environment:
+      ASPNETCORE_URLS: "https://+:8443;http://+:8080"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+      ASPNETCORE_Kestrel__Certificates__Default__Password: MyStrongPassword
+
+      docker compose up --build
+
+Multi-environment configs (Dev/Prod)
+=>
+1. Environments 101 (ASP.NET Core)
+ASP.NET Core uses:
+ASPNETCORE_ENVIRONMENT
+Common values:
+Development
+Staging
+Production
+Default (if not set): Production
+
+2. Configuration files layout
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+appsettings.json (shared defaults)
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+appsettings.Development.json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug"
+    }
+  },
+  "ConnectionStrings": {
+    "Default": "Server=localhost;Database=DevDb;"
+  }
+}
+
+appsettings.Production.json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "Default": "Server=prod-db;Database=ProdDb;"
+  }
+}
+
+ASP.NET Core automatically loads:
+appsettings.json
+appsettings.{Environment}.json
+
+3. Program.cs (environment-aware behavior)
+var builder = WebApplication.CreateBuilder(args);
+
+// access environment
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddSwaggerGen();
+}
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.MapControllers();
+app.Run();
+
+4. Environment variables override JSON (important)
+Priority order (highest → lowest):
+Environment variables
+appsettings.{Environment}.json
+appsettings.json
+Example override:
+-e ConnectionStrings__Default="Server=prod;Database=OverrideDb;"
+
+(double underscore = nested key)
+5. Docker: Dev vs Prod
+🔹 Development container
+docker run -it \
+  -p 8080:8080 \
+  -p 8443:8443 \
+  -e ASPNETCORE_ENVIRONMENT=Development \
+  myapi:latest
+
+  Result:
+Swagger enabled
+Debug logging
+Dev config loaded
+
+🔹 Production container
+docker run -d \
+  -p 8080:8080 \
+  -p 8443:8443 \
+  -e ASPNETCORE_ENVIRONMENT=Production \
+  myapi:latest
+
+  Result:
+No Swagger
+Prod config
+Higher logging threshold
+
+6. Docker Compose (Dev / Prod profiles)
+version: '3.9'
+services:
+  api:
+    image: myapi:latest
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT}
+
+      Run Dev:ASPNETCORE_ENVIRONMENT=Development docker compose up
+
+      Run Prod:ASPNETCORE_ENVIRONMENT=Production docker compose up
+
+      7. Strongly-typed config (recommended)
+      Settings class
+      public class MySettings
+        {
+            public string FeatureFlag { get; set; }
+        }
+
+appsettings.json
+{
+  "MySettings": {
+    "FeatureFlag": "on"
+  }
+}
+
+Program.cs
+builder.Services.Configure<MySettings>(
+    builder.Configuration.GetSection("MySettings"));
+
+    Usage
+    public class TestController : ControllerBase
+{
+    private readonly MySettings _settings;
+
+    public TestController(IOptions<MySettings> options)
+    {
+        _settings = options.Value;
+    }
+}
+
+8. Secrets (don’t commit them 🔐)
+| Environment | Recommended           |
+| ----------- | --------------------- |
+| Local Dev   | `dotnet user-secrets` |
+| Docker      | Environment variables |
+| Kubernetes  | Secrets               |
+| Azure       | Key Vault             |
+| AWS         | Secrets Manager       |
+
+TL;DR (Best Practice)
+
+✅ ASPNETCORE_ENVIRONMENT controls behavior
+✅ Separate appsettings.{env}.json
+✅ Env vars override everything
+✅ No secrets in source control
+✅ Swagger only in Dev
+
+
+
+Health checks
+=>
+1. Add Health Checks to ASP.NET Core
+Install package (if not already there)
+dotnet add package Microsoft.Extensions.Diagnostics.HealthChecks
+(For DB checks later we’ll add extras.)
+
+Program.cs – basic setup
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHealthChecks();
+
+var app = builder.Build();
+
+app.MapHealthChecks("/health");
+
+app.MapControllers();
+app.Run();
+
+GET /health
+
+2. JSON health response (better for Docker / K8s)
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using System.Text.Json;
+
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    ResponseWriter = async (context, report) =>
+    {
+        context.Response.ContentType = "application/json";
+
+        var result = JsonSerializer.Serialize(new
+        {
+            status = report.Status.ToString(),
+            checks = report.Entries.Select(e => new
+            {
+                name = e.Key,
+                status = e.Value.Status.ToString(),
+                description = e.Value.Description
+            })
+        });
+
+        await context.Response.WriteAsync(result);
+    }
+});
+
+3. Add real checks (DB, external services)
+Example: SQL Server
+dotnet add package AspNetCore.HealthChecks.SqlServer
+
+builder.Services.AddHealthChecks()
+    .AddSqlServer(
+        builder.Configuration.GetConnectionString("Default"),
+        name: "sqlserver");
+
+        Example: HTTP dependency
+        dotnet add package AspNetCore.HealthChecks.Uris
+
+        builder.Services.AddHealthChecks()
+    .AddUrlGroup(
+        new Uri("https://api.github.com"),
+        name: "github-api");
+
+4. Liveness vs Readiness (important distinction)
+Liveness → “Is the app running?”
+Readiness → “Can it handle traffic?”
+builder.Services.AddHealthChecks()
+    .AddCheck("self", () => HealthCheckResult.Healthy(), tags: new[] { "live" })
+    .AddSqlServer(
+        builder.Configuration.GetConnectionString("Default"),
+        name: "sql",
+        tags: new[] { "ready" });
+
+
+        app.MapHealthChecks("/health/live", new HealthCheckOptions
+        {
+            Predicate = check => check.Tags.Contains("live")
+        });
+
+        app.MapHealthChecks("/health/ready", new HealthCheckOptions
+        {
+            Predicate = check => check.Tags.Contains("ready")
+        });
+
+5. Docker HEALTHCHECK 🐳
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD curl -f http://localhost:8080/health || exit 1
+
+  docker ps
+6. Docker Compose health check
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+7. Kubernetes-ready (FYI)
+livenessProbe:
+  httpGet:
+    path: /health/live
+    port: 8080
+readinessProbe:
+  httpGet:
+    path: /health/ready
+    port: 8080
+
+
+    8. Production tips ⭐
+
+✔ Keep health endpoints unauthenticated
+✔ Avoid heavy DB queries
+✔ Timeouts matter
+✔ Separate live vs ready
+✔ Don’t leak sensitive error details
+
+TL;DR
+/health → overall status
+/health/live → app running
+/health/ready → dependencies OK
+Docker & K8s understand these automatically
+
+Deploy to Azure / AWS / GCP / Kubernetes
+=>
+ASP.NET Core Web API
+Docker image already works locally
+App exposes 8080
+Health checks at /health
+
+1️⃣ Azure (easiest path)
+Option A: Azure App Service (Container) ⭐ (most common)
+Login & create resources
+az login
+az group create --name my-rg --location eastus
+az appservice plan create \
+  --name my-plan \
+  --resource-group my-rg \
+  --is-linux \
+  --sku B1
+
+  Create Web App from Docker image
+  az webapp create \
+  --resource-group my-rg \
+  --plan my-plan \
+  --name myapi-prod \
+  --deployment-container-image-name mydockerhub/myapi:latest
+
+  Set environment variables
+  az webapp config appsettings set \
+  --resource-group my-rg \
+  --name myapi-prod \
+  --settings \
+  ASPNETCORE_ENVIRONMENT=Production
+
+Option B: Azure Kubernetes Service (AKS)
+Use Kubernetes steps below + Azure registry (ACR).
+2️⃣ AWS
+Option A: ECS Fargate (no servers) ⭐
+Push image to ECR
+aws ecr create-repository --repository-name myapi
+
+Login & push:
+aws ecr get-login-password | docker login --username AWS --password-stdin <account>.dkr.ecr.<region>.amazonaws.com
+docker tag myapi:latest <ecr-url>/myapi:latest
+docker push <ecr-url>/myapi:latest
+
+ECS setup
+Create Task Definition
+Container port: 808
+Health check:
+CMD-SHELL curl -f http://localhost:8080/health || exit 1
+
+Load balancer
+Application Load Balancer (ALB)
+HTTPS via ACM certificate
+✅ Highly scalable
+✅ No VM management
+
+Option B: Elastic Beanstalk (simplest AWS)
+eb init
+eb create myapi-env
+
+3️⃣ Google Cloud Platform (GCP)
+Option A: Cloud Run ⭐ (fantastic for APIs)
+gcloud auth login
+gcloud config set project my-project
+Build & deploy:
+gcloud run deploy myapi \
+  --source . \
+  --region us-central1 \
+  --platform managed \
+  --allow-unauthenticated \
+  --port 8080
+
+4️⃣ Kubernetes (AKS / EKS / GKE / on-prem)
+Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapi
+  template:
+    metadata:
+      labels:
+        app: myapi
+    spec:
+      containers:
+      - name: myapi
+        image: myrepo/myapi:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 8080
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8080
+
+Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapi
+spec:
+  type: ClusterIP
+  selector:
+    app: myapi
+  ports:
+  - port: 80
+    targetPort: 8080
+
+Ingress (HTTPS)
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapi-ingress
+spec:
+  rules:
+  - host: myapi.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myapi
+            port:
+              number: 80
+
+TLS handled by:
+NGINX Ingress + Cert-Manager
+Cloud LB (AKS/EKS/GKE)
+
+5️⃣ Which one should you choose?
+| Platform          | Best for                   |
+| ----------------- | -------------------------- |
+| Azure App Service | Fastest production setup   |
+| AWS ECS Fargate   | AWS-native, scalable       |
+| GCP Cloud Run     | Serverless APIs            |
+| Kubernetes        | Full control & portability |
+
+
+=================================CLI Command=====================================
+
+
+dotnet sln list
+dotnet sln STHEnterprise.sln list
+
+src\STHEnterprise.Shared\STHEnterprise.Shared.csproj
+
+dotnet sln remove src\STHEnterprise.Shared\STHEnterprise.Shared.csproj
+dotnet sln add src\STHEnterprise.Shared\STHEnterprise.Shared.csproj
+
+dotnet build STHEnterprise.sln
+
+dotnet new sln -n STHEnterprise
+dotnet sln add **/*.csproj
+dotnet sln add/remove
+
+dotnet new sln -n STHEnterprise
+dotnet sln add **/*.csproj
+
+
+type nul > .dockerignore
+
+CD C:\TEMP
+mkdir Entities
+type nul > User.cs
+
+dotnet --list-sdks
+dotnet --list-runtimes
+
+dotnet clean
+dotnet restore
+
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add MigrationName
+dotnet ef database update
+dotnet ef migrations remove
+dotnet ef migrations list
+dotnet ef migrations script
+dotnet ef migrations script FromMigration ToMigration
+dotnet ef database drop
+dotnet ef migrations add MigrationName --startup-project ../StartupProject
+dotnet ef database update --environment Development
+dotnet tool install --global dotnet-ef
+
+
+
+
+OVERALL FLOW (Real-world)
+Build & publish .NET app
+=> 🔹 1️⃣ Go to project folder => cd /d "D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise"
+🔹 2️⃣ Restore NuGet packages => dotnet restore
+🔹 3️⃣ Build project (Release mode) => dotnet build -c Release
+🔹 4️⃣ Publish project (creates deployable output) => dotnet publish -c Release -o publish
+publish\
+  ├── STHEnterprise.Api.dll
+  ├── appsettings.json
+  ├── wwwroot
+  ├── *.deps.json
+  └── *.runtimeconfig.json
+
+  dir publish
+  dotnet publish -c Release -o publish --no-restore
+
+Create Dockerfile
+
+Build Docker image
+Create & run container
+
+Create Dockerfile
+src\STHEnterprise.Api\Dockerfile
+
+# -----------------------------
+# 1️⃣ Base runtime image
+# -----------------------------
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+# -----------------------------
+# 2️⃣ Copy published output
+# -----------------------------
+COPY publish/ .
+
+# -----------------------------
+# 3️⃣ Expose port
+# -----------------------------
+EXPOSE 8080
+
+# -----------------------------
+# 4️⃣ Run application
+# -----------------------------
+ENTRYPOINT ["dotnet", "STHEnterprise.Api.dll"]
+
+| Line              | Purpose                           |
+| ----------------- | --------------------------------- |
+| `FROM aspnet:8.0` | Lightweight runtime image         |
+| `WORKDIR /app`    | Container working directory       |
+| `COPY publish/ .` | Copy published app into container |
+| `EXPOSE 8080`     | App listens on port 8080          |
+| `ENTRYPOINT`      | Starts your .NET app              |
+
+dir publish
+
+STHEnterprise.Api.dll
+appsettings.json
+wwwroot
+
+docker build -t sthenterprise-api .
+
+docker run -d -p 5001:8080 --name sthenterprise-api sthenterprise-api
+
+http://localhost:5001/swagger
+
+
+
+Build Docker image
+Run container in Docker Desktop
+Verify API/MVC inside container
+
+dotnet --version
+dotnet restore
+dotnet build -c Release
+
+dotnet publish src\STHEnterprise.Api\STHEnterprise.Api.csproj -c Release -o out
+
+cd src\STHEnterprise.Api
+(
+echo bin/
+echo obj/
+echo .vs/
+echo .git/
+echo node_modules/
+echo Dockerfile
+) > .dockerignore
+
+
+(
+echo FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+echo WORKDIR /src
+echo COPY *.sln .
+echo COPY src/STHEnterprise.Api/*.csproj src/STHEnterprise.Api/
+echo COPY src/STHEnterprise.Application/*.csproj src/STHEnterprise.Application/
+echo COPY src/STHEnterprise.Core/*.csproj src/STHEnterprise.Core/
+echo COPY src/STHEnterprise.Infrastructure/*.csproj src/STHEnterprise.Infrastructure/
+echo COPY src/STHEnterprise.Shared/*.csproj src/STHEnterprise.Shared/
+echo RUN dotnet restore
+echo COPY src/ ./src/
+echo WORKDIR /src/STHEnterprise.Api
+echo RUN dotnet publish -c Release -o /app/publish
+echo FROM mcr.microsoft.com/dotnet/aspnet:9.0
+echo WORKDIR /app
+echo COPY --from=build /app/publish .
+echo EXPOSE 8080
+echo ENTRYPOINT ["dotnet","STHEnterprise.Api.dll"]
+) > Dockerfile
+
+cd /d "D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\STHEnterprise"
+
+docker system prune -af
+docker builder prune -af
+
+docker build -t /src/tests/WebAPI -f src\webapi\Dockerfile .
+
+
+
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["tests/WebAPI/WebAPI.csproj", "tests/WebAPI/"]
+RUN dotnet restore "./tests/WebAPI/WebAPI.csproj"
+COPY . .
+WORKDIR "/src/tests/WebAPI"
+RUN dotnet build "./WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+
+docker build -t sthenterprise-api -f src\STHEnterprise.Api\Dockerfile .
+docker run -d -p 5001:8080 --name sthenterprise-api sthenterprise-api
+docker ps
+
+http://localhost:5001/swagger
+
+docker version
+
+docker run -d -p 5002:8080 sthenterprise-api
+
+docker stop sthenterprise-api
+docker rm sthenterprise-api
+
+
+
+
+
+
+
+=================================================================================
+
+🐳 Prerequisites
+✔ Docker Desktop installed & running
+✔ .NET SDK version matching project (e.g. .NET 8)
+✔ Solution builds successfully without Docker first
+dotnet build
+
+
+1️⃣ Dockerfile for API
+📍 src/STHEnterprise.Api/Dockerfile
+
+# ---------- Build Stage ----------
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY ["src/STHEnterprise.Api/STHEnterprise.Api.csproj", "src/STHEnterprise.Api/"]
+COPY ["src/STHEnterprise.Application/STHEnterprise.Application.csproj", "src/STHEnterprise.Application/"]
+COPY ["src/STHEnterprise.Core/STHEnterprise.Core.csproj", "src/STHEnterprise.Core/"]
+COPY ["src/STHEnterprise.Infrastructure/STHEnterprise.Infrastructure.csproj", "src/STHEnterprise.Infrastructure/"]
+COPY ["src/STHEnterprise.Shared/STHEnterprise.Shared.csproj", "src/STHEnterprise.Shared/"]
+
+RUN dotnet restore "src/STHEnterprise.Api/STHEnterprise.Api.csproj"
+
+COPY . .
+WORKDIR "/src/src/STHEnterprise.Api"
+RUN dotnet publish -c Release -o /app/publish
+
+# ---------- Runtime Stage ----------
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/publish .
+
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "STHEnterprise.Api.dll"]
+
+2️⃣ Dockerfile for MVC
+📍 src/STHEnterprise.Mvc/Dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY ["src/STHEnterprise.Mvc/STHEnterprise.Mvc.csproj", "src/STHEnterprise.Mvc/"]
+COPY ["src/STHEnterprise.Application/STHEnterprise.Application.csproj", "src/STHEnterprise.Application/"]
+COPY ["src/STHEnterprise.Core/STHEnterprise.Core.csproj", "src/STHEnterprise.Core/"]
+COPY ["src/STHEnterprise.Infrastructure/STHEnterprise.Infrastructure.csproj", "src/STHEnterprise.Infrastructure/"]
+COPY ["src/STHEnterprise.Shared/STHEnterprise.Shared.csproj", "src/STHEnterprise.Shared/"]
+
+RUN dotnet restore "src/STHEnterprise.Mvc/STHEnterprise.Mvc.csproj"
+
+COPY . .
+WORKDIR "/src/src/STHEnterprise.Mvc"
+RUN dotnet publish -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/publish .
+
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "STHEnterprise.Mvc.dll"]
+
+📄 Step 2: Create docker-compose.yml (Run Both Together)
+📍 Root folder (same level as .sln)
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/STHEnterprise.Api/Dockerfile
+    container_name: sthenterprise-api
+    ports:
+      - "5001:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+
+  mvc:
+    build:
+      context: .
+      dockerfile: src/STHEnterprise.Mvc/Dockerfile
+    container_name: sthenterprise-mvc
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+      - api
+
+⚙️ Step 3: API → MVC Communication (Important)
+Inside MVC appsettings.json:
+{
+  "ApiSettings": {
+    "BaseUrl": "http://api:8080"
+  }
+}
+
+👉 api = docker service name (internal DNS)
+
+🚀 Step 4: Build & Run Containers
+From solution root:
+docker compose build
+docker compose up
+Or
+docker-compose up --build
+
+🌐 Step 5: Access Applications
+| App | URL                                                            |
+| --- | -------------------------------------------------------------- |
+| MVC | [http://localhost:5000](http://localhost:5000)                 |
+| API | [http://localhost:5001/swagger](http://localhost:5001/swagger) |
+
+🧪 Step 6: Verify Containers
+docker ps
+
+Logs:
+docker logs sthenterprise-api
+docker logs sthenterprise-mvc
+
+🛑 Stop Containers
+docker compose down
+
+Enterprise Best Practices
+
+✔ Multi-stage Docker build
+✔ Clean Architecture respected
+✔ API isolated
+✔ MVC isolated
+✔ docker-compose orchestration
+✔ Ready for Kubernetes later
+
+=================================Task1===========================================
+
+Admin-Portal :
+Client-Portal :
+
+Home Page
+  ↓
+Category Listing
+  ↓
+Product Listing
+  ↓
+Add to Cart
+  ↓
+Login via OTP
+  ↓
+Checkout & Payment
+  ↓
+Order Confirmation
+
+CLEAN ARCHITECTURE – API FIRST
+STHEnterprise
+│
+├── src
+│   ├── STHEnterprise.Api              ← Presentation Layer (HTTP)
+│   ├── STHEnterprise.Application      ← Use cases / Business logic
+│   ├── STHEnterprise.Domain           ← Core business models
+│   ├── STHEnterprise.Infrastructure   ← DB, external services
+│
+├── tests
+│   ├── STHEnterprise.UnitTests
+│   └── STHEnterprise.IntegrationTests
+│
+└── STHEnterprise.sln
+
+
+1️⃣ DOMAIN LAYER (Pure Business)
+STHEnterprise.Domain
+│
+├── Entities
+│   ├── User.cs
+│   ├── Product.cs
+│   ├── Category.cs
+│   ├── Cart.cs
+│   ├── CartItem.cs
+│   ├── Order.cs
+│   └── Address.cs
+│
+├── ValueObjects
+│   ├── Money.cs
+│   ├── PhoneNumber.cs
+│
+├── Enums
+│   ├── OrderStatus.cs
+│   ├── PaymentStatus.cs
+│
+├── Interfaces
+│   ├── ICartRepository.cs
+│   ├── IOrderRepository.cs
+│   ├── IUserRepository.cs
+│
+└── Common
+    ├── BaseEntity.cs
+    └── DomainException.cs
+
+2️⃣ APPLICATION LAYER (Use Cases)
+STHEnterprise.Application
+│
+├── DTOs
+│   ├── Cart
+│   │   ├── CartDto.cs
+│   │   └── CartItemDto.cs
+│   ├── Account
+│   │   ├── LoginRequestDto.cs
+│   │   └── AccountDto.cs
+│   └── Order
+│       └── OrderDto.cs
+│
+├── Interfaces
+│   ├── Services
+│   │   ├── ICartService.cs
+│   │   ├── IAccountService.cs
+│   │   └── ICheckoutService.cs
+│   └── Infrastructure
+│       ├── IUnitOfWork.cs
+│       └── ITokenService.cs
+│
+├── Features
+│   ├── Cart
+│   │   ├── GetCart
+│   │   ├── AddToCart
+│   │   └── UpdateQuantity
+│   ├── Account
+│   │   ├── Login
+│   │   └── GetOrders
+│   └── Checkout
+│       ├── AddressStep
+│       ├── PaymentStep
+│       └── ConfirmOrder
+│
+├── Validators
+│   ├── LoginValidator.cs
+│   └── CheckoutValidator.cs
+│
+└── Common
+    ├── Result.cs
+    └── Pagination.cs
+   
+
+3️⃣ INFRASTRUCTURE LAYER (External World)
+STHEnterprise.Infrastructure
+│
+├── Persistence
+│   ├── DbContext
+│   │   └── AppDbContext.cs
+│   ├── Configurations
+│   │   ├── ProductConfig.cs
+│   │   └── OrderConfig.cs
+│   └── Migrations
+│
+├── Repositories
+│   ├── CartRepository.cs
+│   ├── OrderRepository.cs
+│   └── UserRepository.cs
+│
+├── Identity
+│   ├── JwtTokenService.cs
+│   └── PasswordHasher.cs
+│
+├── Payments
+│   ├── RazorpayService.cs
+│   └── StripeService.cs
+│
+├── Caching
+│   └── RedisCacheService.cs
+│
+└── DependencyInjection.cs
+
+
+4️⃣ API LAYER (Presentation)
+STHEnterprise.Api
+│
+├── Controllers
+│   ├── AuthController.cs
+│   ├── CartController.cs
+│   ├── CategoryController.cs
+│   ├── CheckoutController.cs
+│   └── OrderController.cs
+│
+├── Middlewares
+│   ├── ExceptionMiddleware.cs
+│   └── RequestLoggingMiddleware.cs
+│
+├── Filters
+│   └── ApiValidationFilter.cs
+│
+├── Models
+│   ├── ApiResponse.cs
+│   └── PagedResponse.cs
+│
+├── Program.cs
+└── appsettings.json
+
+5️⃣ DEPENDENCY FLOW (IMPORTANT)
+API
+ ↓
+Application
+ ↓
+Domain
+ ↑
+Infrastructure
+
+==================================================================================
+Architecture Design :	
+Monolith - A single, all-in-one factory where every department (e.g., assembly, packaging) 
+works under one roof.
+EcommerceSolution
+│
+├── Ecommerce
+│   ├── API               // Controllers and request handling
+│   ├── Application       // Business logic and services
+│   ├── Domain            // Core business models and rules
+│   ├── Infrastructure    // Data access and external integrations
+│   ├── Persistence       // Database context and migrations
+│   ├── Shared            // Shared utilities, constants, DTOs
+│   └── Program.cs
+│   └── Startup.cs
+├── Tests                 // Unit and integration tests
+
+Modular Monolith - A factory with separate departments under one roof, each working independently 
+but still part of one building.
+EcommerceSolution
+│
+├── Modules
+│   ├── ProductModule        // Module for managing products
+│   ├── OrderModule          // Module for handling orders
+│   ├── CustomerModule       // Module for customer management
+│   ├── InventoryModule      // Module for managing inventory
+│   ├── PaymentModule        // Module for payment processing
+│
+├── Shared                   // Shared libraries for DTOs, utilities, and common logic
+│
+├── Ecommerce.Api            // Main API project that brings all modules together
+│
+├── Ecommerce.Web            // ASP.NET Core MVC/Web project for the frontend
+│
+├── Ecommerce.Data           // Data access layer
+│
+└── Ecommerce.Tests          // Unit and integration tests
+
+Microservices -	A distributed set of specialized factories, each handling a specific task, located in 
+different locations.
+MangoRestaurantSolution
+│
+├── FrontEnd
+│   └── Mango.Web                     // Web frontend (MVC/Blazor/SPA)
+│
+├── Gateway
+│   └── Mango.GatewaySolution        // API Gateway for routing to microservices (e.g., Ocelot/YARP)
+│
+├── Integration
+│   └── Mango.MessageBus             // Shared integration via message bus (e.g., RabbitMQ/Azure Service Bus)
+│
+├── Payments
+│   └── PaymentProcessor             // Handles payment processing logic
+│
+├── Services                             // Domain-specific microservices
+│   ├── Mango.Services.CouponAPI         // Manages discount coupons
+│   ├── Mango.Services.Email             // Sends emails and notifications
+│   ├── Mango.Services.Identity          // Handles authentication and authorization
+│   ├── Mango.Services.OrderAPI          // Order management
+│   ├── Mango.Services.PaymentAPI        // Payment records, gateways
+│   ├── Mango.Services.ProductAPI        // Product catalog management
+│   ├── Mango.Services.ShoppingCartAPI   // Shopping cart operations
+
+
+==================================================================================
+
+==================================SQL SCRIPT====================================
+
+/* ============================
+   DATABASE
+============================ */
+
+IF DB_ID('UserRossDB') IS NOT NULL
+    DROP DATABASE UserRossDB;
+
+CREATE DATABASE UserRossDB;
+GO
+USE UserRossDB;
+GO
+
+/* ============================
+   USER MASTER
+============================ */
+CREATE TABLE [User] (
+    Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    UserName VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) NOT NULL UNIQUE,
+    MobileNumber VARCHAR(15) NOT NULL UNIQUE,
+    UserType INT NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+);
+
+/* ============================
+   USER CREDENTIAL
+============================ */
+CREATE TABLE UserCredential (
+    UserId UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    PasswordHash VARCHAR(500) NOT NULL,
+    MpinHash VARCHAR(200) NULL,
+    FailedLoginAttempts INT NOT NULL DEFAULT 0,
+    LockoutEnd DATETIME2 NULL,
+    PasswordLastChangedAt DATETIME2 NOT NULL,
+
+    CONSTRAINT FK_UserCredential_User FOREIGN KEY (UserId)
+        REFERENCES [User](Id)
+);
+
+/* ============================
+   USER ACTIVITY LOG
+============================ */
+CREATE TABLE UserActivityLog (
+    Id UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+    UserId UNIQUEIDENTIFIER NOT NULL,
+
+    ActivityType VARCHAR(50) NOT NULL,
+    EntityName VARCHAR(100) NULL,
+    EntityId UNIQUEIDENTIFIER NULL,
+    Description VARCHAR(500) NULL,
+
+    Channel VARCHAR(20) NOT NULL,
+    Device VARCHAR(100) NULL,
+    IpAddress VARCHAR(45) NULL,
+
+    CorrelationId UNIQUEIDENTIFIER NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+
+    CONSTRAINT PK_UserActivityLog PRIMARY KEY CLUSTERED (Id),
+    CONSTRAINT FK_UserActivityLog_User FOREIGN KEY (UserId)
+        REFERENCES [User](Id)
+);
+
+/* ============================
+   INDEXES
+============================ */
+CREATE NONCLUSTERED INDEX IX_UserActivityLog_UserId_CreatedAt
+ON UserActivityLog (UserId, CreatedAt DESC);
+
+CREATE NONCLUSTERED INDEX IX_UserActivityLog_ActivityType
+ON UserActivityLog (ActivityType);
+
+/* ============================
+   MOCK DATA
+============================ */
+DECLARE @User1 UNIQUEIDENTIFIER = NEWID();
+DECLARE @User2 UNIQUEIDENTIFIER = NEWID();
+
+INSERT INTO [User] (Id, UserName, Email, MobileNumber, UserType)
+VALUES
+(@User1, 'rahul.kumar', 'rahul@test.com', '9999999999', 1),
+(@User2, 'techcorp.admin', 'admin@techcorp.com', '8888888888', 2);
+
+INSERT INTO UserCredential
+(UserId, PasswordHash, MpinHash, PasswordLastChangedAt)
+VALUES
+(@User1, 'HASHED_PASSWORD_1', 'HASHED_MPIN_1', SYSUTCDATETIME()),
+(@User2, 'HASHED_PASSWORD_2', NULL, SYSUTCDATETIME());
+
+INSERT INTO UserActivityLog
+(UserId, ActivityType, EntityName, Description, Channel, Device, IpAddress)
+VALUES
+(@User1, 'LOGIN', NULL, 'User logged in successfully', 'WEB', 'Chrome', '103.21.45.10'),
+(@User1, 'VIEW', 'Dashboard', 'Viewed dashboard', 'WEB', 'Chrome', '103.21.45.10'),
+(@User1, 'LOGOUT', NULL, 'User logged out', 'WEB', 'Chrome', '103.21.45.10'),
+
+(@User2, 'LOGIN', NULL, 'Admin logged in', 'MOBILE', 'Android', '49.32.18.90'),
+(@User2, 'CREATE', 'User', 'Created new B2C user', 'MOBILE', 'Android', '49.32.18.90');
+=============================================================================================
+
+📁 PROJECT STRUCTURE
+UserRoss.Auth.Api
+│
+├── Controllers
+│   └── AuthController.cs
+│
+├── Data
+│   └── AppDbContext.cs
+│
+├── Entities
+│   ├── User.cs
+│   ├── UserCredential.cs
+│   ├── UserRefreshToken.cs
+│
+├── DTOs
+│   ├── LoginRequest.cs
+│   ├── LoginMpinRequest.cs
+│   ├── AuthResponse.cs
+│   ├── RefreshTokenRequest.cs
+│   ├── ResetPasswordRequest.cs
+│
+├── Services
+│   ├── IAuthService.cs
+│   └── AuthService.cs
+│
+├── Helpers
+│   ├── JwtTokenHelper.cs
+│   └── PasswordHasher.cs
+│
+├── Program.cs
+└── appsettings.json
+
+
+🧱 ENTITIES
+public class User
+{
+    public Guid Id { get; set; }
+    public string UserName { get; set; } = null!;
+    public string Email { get; set; } = null!;
+    public bool IsActive { get; set; } = true;
+}
+
+
+public class UserCredential
+{
+    public Guid UserId { get; set; }
+    public string PasswordHash { get; set; } = null!;
+    public string? MpinHash { get; set; }
+    public int FailedLoginAttempts { get; set; }
+    public DateTime? LockoutEnd { get; set; }
+    public DateTime PasswordLastChangedAt { get; set; }
+
+    public User User { get; set; } = null!;
+}
+
+
+public class UserRefreshToken
+{
+    public Guid Id { get; set; }
+    public Guid UserId { get; set; }
+    public string TokenHash { get; set; } = null!;
+    public DateTime ExpiresAt { get; set; }
+    public bool IsRevoked { get; set; }
+
+    public User User { get; set; } = null!;
+}
+
+🗄️ DB CONTEXT
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    public DbSet<User> Users => Set<User>();
+    public DbSet<UserCredential> UserCredentials => Set<UserCredential>();
+    public DbSet<UserRefreshToken> UserRefreshTokens => Set<UserRefreshToken>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<UserCredential>()
+            .HasKey(x => x.UserId);
+    }
+}
+
+📦 DTOs
+public record LoginRequest(string Email, string Password);
+
+public record LoginMpinRequest(string Email, string Mpin);
+
+public record RefreshTokenRequest(string RefreshToken);
+
+public record ResetPasswordRequest(string Email, string NewPassword);
+
+public record AuthResponse(string AccessToken, string RefreshToken);
+
+
+🔐 HELPERS
+
+public static class PasswordHasher
+{
+    public static string Hash(string value)
+        => BCrypt.Net.BCrypt.HashPassword(value);
+
+    public static bool Verify(string value, string hash)
+        => BCrypt.Net.BCrypt.Verify(value, hash);
+}
+
+
+public class JwtTokenHelper
+{
+    private readonly IConfiguration _config;
+
+    public JwtTokenHelper(IConfiguration config)
+    {
+        _config = config;
+    }
+
+    public string GenerateToken(Guid userId)
+    {
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, userId.ToString())
+        };
+
+        var key = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(_config["Jwt:Key"]!)
+        );
+
+        var token = new JwtSecurityToken(
+            issuer: _config["Jwt:Issuer"],
+            audience: _config["Jwt:Audience"],
+            claims: claims,
+            expires: DateTime.UtcNow.AddMinutes(30),
+            signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}
+
+🧠 SERVICE LAYER
+public interface IAuthService
+{
+    Task<AuthResponse> LoginAsync(LoginRequest request);
+    Task<AuthResponse> LoginMpinAsync(LoginMpinRequest request);
+    Task<AuthResponse> RefreshTokenAsync(string refreshToken);
+    Task LogoutAsync(Guid userId);
+    Task ResetPasswordAsync(ResetPasswordRequest request);
+}
+
+AuthService.cs
+public class AuthService : IAuthService
+{
+    private readonly AppDbContext _db;
+    private readonly JwtTokenHelper _jwt;
+
+    public AuthService(AppDbContext db, JwtTokenHelper jwt)
+    {
+        _db = db;
+        _jwt = jwt;
+    }
+
+    public async Task<AuthResponse> LoginAsync(LoginRequest request)
+    {
+        var user = await _db.Users.FirstOrDefaultAsync(x => x.Email == request.Email);
+        var cred = await _db.UserCredentials.FindAsync(user!.Id);
+
+        if (!PasswordHasher.Verify(request.Password, cred!.PasswordHash))
+            throw new UnauthorizedAccessException();
+
+        return await GenerateAuthResponse(user.Id);
+    }
+
+    public async Task<AuthResponse> LoginMpinAsync(LoginMpinRequest request)
+    {
+        var user = await _db.Users.FirstAsync(x => x.Email == request.Email);
+        var cred = await _db.UserCredentials.FindAsync(user.Id);
+
+        if (!PasswordHasher.Verify(request.Mpin, cred!.MpinHash!))
+            throw new UnauthorizedAccessException();
+
+        return await GenerateAuthResponse(user.Id);
+    }
+
+    public async Task<AuthResponse> RefreshTokenAsync(string refreshToken)
+    {
+        var tokenHash = PasswordHasher.Hash(refreshToken);
+        var stored = await _db.UserRefreshTokens
+            .FirstAsync(x => x.TokenHash == tokenHash && !x.IsRevoked);
+
+        stored.IsRevoked = true;
+        return await GenerateAuthResponse(stored.UserId);
+    }
+
+    public async Task LogoutAsync(Guid userId)
+    {
+        var tokens = await _db.UserRefreshTokens
+            .Where(x => x.UserId == userId && !x.IsRevoked)
+            .ToListAsync();
+
+        tokens.ForEach(t => t.IsRevoked = true);
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task ResetPasswordAsync(ResetPasswordRequest request)
+    {
+        var user = await _db.Users.FirstAsync(x => x.Email == request.Email);
+        var cred = await _db.UserCredentials.FindAsync(user.Id);
+
+        cred!.PasswordHash = PasswordHasher.Hash(request.NewPassword);
+        cred.PasswordLastChangedAt = DateTime.UtcNow;
+
+        await _db.SaveChangesAsync();
+    }
+
+    private async Task<AuthResponse> GenerateAuthResponse(Guid userId)
+    {
+        var accessToken = _jwt.GenerateToken(userId);
+        var refreshToken = Guid.NewGuid().ToString();
+
+        _db.UserRefreshTokens.Add(new UserRefreshToken
+        {
+            Id = Guid.NewGuid(),
+            UserId = userId,
+            TokenHash = PasswordHasher.Hash(refreshToken),
+            ExpiresAt = DateTime.UtcNow.AddDays(7)
+        });
+
+        await _db.SaveChangesAsync();
+        return new AuthResponse(accessToken, refreshToken);
+    }
+}
+
+🌐 CONTROLLER
+AuthController.cs
+[ApiController]
+[Route("api/v1/auth")]
+public class AuthController : ControllerBase
+{
+    private readonly IAuthService _auth;
+
+    public AuthController(IAuthService auth)
+    {
+        _auth = auth;
+    }
+
+    [HttpPost("login")]
+    public Task<AuthResponse> Login(LoginRequest request)
+        => _auth.LoginAsync(request);
+
+    [HttpPost("login-mpin")]
+    public Task<AuthResponse> LoginMpin(LoginMpinRequest request)
+        => _auth.LoginMpinAsync(request);
+
+    [HttpPost("refresh-token")]
+    public Task<AuthResponse> Refresh(RefreshTokenRequest request)
+        => _auth.RefreshTokenAsync(request.RefreshToken);
+
+    [Authorize]
+    [HttpPost("logout")]
+    public Task Logout()
+        => _auth.LogoutAsync(Guid.Parse(User.Identity!.Name!));
+
+    [HttpPost("reset-password")]
+    public Task ResetPassword(ResetPasswordRequest request)
+        => _auth.ResetPasswordAsync(request);
+}
+
+⚙️ Program.cs (Important)
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Db")));
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddSingleton<JwtTokenHelper>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer();
+
+builder.Services.AddAuthorization();
+
+
+=============================================================================================
+
+

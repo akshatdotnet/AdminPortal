@@ -1,0 +1,48 @@
+﻿@{
+    var title = ViewData["Title"]?.ToString() ?? "Dashboard";
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+
+<header class="pms-topbar">
+    <!-- Mobile sidebar toggle -->
+    <button class="btn btn-sm btn-outline-secondary d-lg-none me-3"
+            id="mobileSidebarToggle">
+        <i class="bi bi-list fs-5"></i>
+    </button>
+
+    <!-- Page Title + Breadcrumb -->
+    <div class="topbar-title">
+        <h6 class="mb-0 fw-semibold">@title</h6>
+    </div>
+
+    <!-- Right side actions -->
+    <div class="topbar-actions ms-auto d-flex align-items-center gap-2">
+
+        <!-- Search shortcut -->
+        <div class="topbar-search d-none d-md-flex">
+            <div class="input-group input-group-sm">
+                <span class="input-group-text bg-light border-end-0">
+                    <i class="bi bi-search text-muted"></i>
+                </span>
+                <input type="text"
+                       class="form-control bg-light border-start-0"
+                       placeholder="Quick search..."
+                       id="globalSearch"
+                       style="width:200px" />
+            </div>
+        </div>
+
+        <!-- Health indicator -->
+        <span class="badge bg-success-subtle text-success border border-success-subtle
+                     px-2 py-1 d-none d-sm-inline-flex align-items-center gap-1"
+              id="healthBadge">
+            <i class="bi bi-circle-fill" style="font-size:0.5rem"></i>
+            Online
+        </span>
+
+        <!-- Current date -->
+        <span class="text-muted small d-none d-md-inline">
+            @DateTime.Now.ToString("MMM dd, yyyy")
+        </span>
+    </div>
+</header>

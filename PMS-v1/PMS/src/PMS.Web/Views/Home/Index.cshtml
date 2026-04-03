@@ -1,0 +1,326 @@
+﻿@model PMS.Web.ViewModels.Dashboard.DashboardViewModel
+@using TaskStatus = PMS.Domain.Enums.TaskStatus
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid px-4 pb-4">
+
+    <!-- Welcome Banner -->
+    <div class="dashboard-banner mb-4">
+        <div>
+            <h4 class="fw-bold mb-1">
+                Good @(DateTime.Now.Hour < 12 ? "Morning" :
+                DateTime.Now.Hour < 17 ? "Afternoon" : "Evening") 👋
+            </h4>
+            <p class="text-muted mb-0">
+                Here's what's happening with your projects today.
+            </p>
+        </div>
+        <div class="d-flex gap-2">
+            <a asp-controller="Project" asp-action="Index"
+               class="btn btn-primary">
+                <i class="bi bi-folder2-open me-1"></i>All Projects
+            </a>
+            <a asp-controller="Task" asp-action="Index"
+               class="btn btn-outline-secondary">
+                <i class="bi bi-list-task me-1"></i>All Tasks
+            </a>
+        </div>
+    </div>
+
+    <!-- ── KPI Stat Cards ────────────────────────────────────────────── -->
+    <div class="row g-3 mb-4">
+
+        <!-- Total Projects -->
+        <div class="col-6 col-md-3">
+            <div class="stat-card stat-card--blue">
+                <div class="stat-card__icon">
+                    <i class="bi bi-folder2-open"></i>
+                </div>
+                <div class="stat-card__body">
+                    <div class="stat-card__value">@Model.TotalProjects</div>
+                    <div class="stat-card__label">Total Projects</div>
+                    <div class="stat-card__sub">
+                        <i class="bi bi-arrow-up-short text-success"></i>
+                        @Model.ActiveProjects Active
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Tasks -->
+        <div class="col-6 col-md-3">
+            <div class="stat-card stat-card--purple">
+                <div class="stat-card__icon">
+                    <i class="bi bi-list-check"></i>
+                </div>
+                <div class="stat-card__body">
+                    <div class="stat-card__value">@Model.TotalTasks</div>
+                    <div class="stat-card__label">Total Tasks</div>
+                    <div class="stat-card__sub">
+                        @Model.TaskCompletionRate% Complete
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="col-6 col-md-3">
+            <div class="stat-card stat-card--teal">
+                <div class="stat-card__icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <div class="stat-card__body">
+                    <div class="stat-card__value">@Model.InProgressTasks</div>
+                    <div class="stat-card__label">In Progress</div>
+                    <div class="stat-card__sub">
+                        @Model.PendingTasks Pending
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overdue / Hours -->
+        <div class="col-6 col-md-3">
+            <div class="stat-card @(Model.OverdueTasks > 0 ? "stat-card--red" : "stat-card--green")">
+                <div class="stat-card__icon">
+                    <i class="bi bi-@(Model.OverdueTasks > 0 ? "exclamation-triangle" : "clock-history")"></i>
+                </div>
+                <div class="stat-card__body">
+                    <div class="stat-card__value">
+                        @(Model.OverdueTasks > 0
+                            ? Model.OverdueTasks.ToString()
+                            : Model.TotalHoursLogged.ToString("F1") + "h")
+                    </div>
+                    <div class="stat-card__label">
+                        @(Model.OverdueTasks > 0 ? "Overdue Tasks" : "Hours Logged")
+                    </div>
+                    <div class="stat-card__sub">
+                        @(Model.OverdueTasks > 0 ? "Need attention" : "Across all tasks")
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ── Completion Progress Bar ───────────────────────────────────── -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-semibold">Overall Task Completion</span>
+                <span class="text-muted small">
+                    @Model.CompletedTasks of @Model.TotalTasks tasks
+                </span>
+            </div>
+            <div class="progress mb-3" style="height:12px; border-radius:6px">
+                @{
+                    var progressColor = Model.TaskCompletionRate >= 75 ? "bg-success"
+                    : Model.TaskCompletionRate >= 40 ? "bg-info"
+                    : "bg-warning";
+                }
+                <div class="progress-bar @progressColor progress-bar-striped
+                            progress-bar-animated"
+                     style="width:@Model.TaskCompletionRate%"
+                     role="progressbar">
+                </div>
+            </div>
+            <div class="row g-2 text-center">
+                <div class="col-3">
+                    <div class="fw-bold text-warning">@Model.PendingTasks</div>
+                    <div class="text-muted small">Pending</div>
+                </div>
+                <div class="col-3">
+                    <div class="fw-bold text-info">@Model.InProgressTasks</div>
+                    <div class="text-muted small">In Progress</div>
+                </div>
+                <div class="col-3">
+                    <div class="fw-bold text-success">@Model.CompletedTasks</div>
+                    <div class="text-muted small">Completed</div>
+                </div>
+                <div class="col-3">
+                    <div class="fw-bold text-danger">@Model.OverdueTasks</div>
+                    <div class="text-muted small">Overdue</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Two-column content ────────────────────────────────────────── -->
+    <div class="row g-4">
+
+        <!-- Recent Projects -->
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-white border-bottom d-flex
+                            justify-content-between align-items-center py-3">
+                    <h6 class="mb-0 fw-semibold">
+                        <i class="bi bi-folder-symlink me-2 text-primary"></i>
+                        Recent Projects
+                    </h6>
+                    <a asp-controller="Project" asp-action="Index"
+                       class="btn btn-sm btn-outline-primary">
+                        View All
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    @if (!Model.RecentProjects.Any())
+                    {
+                        <div class="text-center py-5 text-muted">
+                            <i class="bi bi-folder-x display-5 mb-3 d-block"></i>
+                            No projects yet.
+                        </div>
+                    }
+                    else
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var project in Model.RecentProjects)
+                            {
+                                var dotColor = project.Status switch
+                                {
+                                    PMS.Domain.Enums.ProjectStatus.Active => "bg-success",
+                                    PMS.Domain.Enums.ProjectStatus.OnHold => "bg-warning",
+                                    PMS.Domain.Enums.ProjectStatus.Completed => "bg-primary",
+                                    PMS.Domain.Enums.ProjectStatus.Cancelled => "bg-danger",
+                                    _ => "bg-secondary"
+                                };
+                                <li class="list-group-item list-group-item-action px-4 py-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span class="status-dot @dotColor"></span>
+                                        <div class="flex-grow-1 min-width-0">
+                                            <a asp-controller="Project"
+                                               asp-action="Detail"
+                                               asp-route-id="@project.Id"
+                                               class="fw-semibold text-dark
+                                                      text-decoration-none
+                                                      d-block text-truncate">
+                                                @project.Name
+                                            </a>
+                                            <div class="progress mt-1"
+                                                 style="height:4px">
+                                                <div class="progress-bar bg-primary"
+                                                     style="width:@project.CompletionPercentage%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end flex-shrink-0">
+                                            <div class="small fw-bold">
+                                                @project.CompletionPercentage%
+                                            </div>
+                                            <div class="text-muted small">
+                                                @project.CompletedTasks/@project.TotalTasks
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Tasks + Overdue -->
+        <div class="col-lg-6">
+
+            <!-- Overdue Alert -->
+            @if (Model.OverdueTaskList.Any())
+            {
+                <div class="card border-0 border-start border-danger
+                            border-4 shadow-sm mb-4 bg-danger-subtle">
+                    <div class="card-body py-3">
+                        <h6 class="fw-semibold text-danger mb-2">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                            @Model.OverdueTasks Overdue
+                            Task@(Model.OverdueTasks != 1 ? "s" : "")
+                        </h6>
+                        <ul class="list-unstyled mb-0">
+                            @foreach (var task in Model.OverdueTaskList)
+                            {
+                                <li class="d-flex align-items-center
+                                           justify-content-between py-1">
+                                    <a asp-controller="Task"
+                                       asp-action="Detail"
+                                       asp-route-id="@task.Id"
+                                       class="text-danger text-decoration-none
+                                              small fw-semibold text-truncate"
+                                       style="max-width:200px">
+                                        @task.Title
+                                    </a>
+                                    <span class="text-muted small flex-shrink-0 ms-2">
+                                        @task.DueDate!.Value.ToString("MMM dd")
+                                    </span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+
+            <!-- Recent Tasks -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-bottom d-flex
+                            justify-content-between align-items-center py-3">
+                    <h6 class="mb-0 fw-semibold">
+                        <i class="bi bi-clock-history me-2 text-warning"></i>
+                        Recent Tasks
+                    </h6>
+                    <a asp-controller="Task" asp-action="Index"
+                       class="btn btn-sm btn-outline-primary">
+                        View All
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    @if (!Model.RecentTasks.Any())
+                    {
+                        <div class="text-center py-5 text-muted">
+                            <i class="bi bi-inbox display-5 mb-3 d-block"></i>
+                            No tasks yet.
+                        </div>
+                    }
+                    else
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var task in Model.RecentTasks)
+                            {
+                                var badgeClass = task.Status switch
+                                {
+                                    TaskStatus.Pending => "bg-warning text-dark",
+                                    TaskStatus.InProgress => "bg-info",
+                                    TaskStatus.Completed => "bg-success",
+                                    TaskStatus.Cancelled => "bg-danger",
+                                    _ => "bg-secondary"
+                                };
+                                <li class="list-group-item list-group-item-action px-4 py-3">
+                                    <div class="d-flex align-items-center
+                                                justify-content-between gap-2">
+                                        <div class="min-width-0">
+                                            <a asp-controller="Task"
+                                               asp-action="Detail"
+                                               asp-route-id="@task.Id"
+                                               class="fw-semibold text-dark
+                                                      text-decoration-none
+                                                      d-block text-truncate"
+                                               style="max-width:220px">
+                                                @task.Title
+                                            </a>
+                                            <div class="text-muted small">
+                                                <i class="bi bi-folder2 me-1"></i>
+                                                @task.ProjectName
+                                            </div>
+                                        </div>
+                                        <span class="badge @badgeClass flex-shrink-0">
+                                            @task.StatusDisplay
+                                        </span>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

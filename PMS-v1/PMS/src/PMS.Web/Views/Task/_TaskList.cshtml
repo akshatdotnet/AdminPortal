@@ -1,0 +1,288 @@
+﻿@model PMS.Web.ViewModels.Task.TaskIndexViewModel
+@using TaskStatus = PMS.Domain.Enums.TaskStatus
+@using TaskPriority = PMS.Domain.Enums.TaskPriority
+@{
+    var q = Model.Query;
+    var result = Model.PagedResult;
+
+    string SortIcon(string col) =>
+        q.SortBy?.ToLower() != col.ToLower()
+            ? "bi-arrow-down-up text-muted"
+            : (q.SortDesc ? "bi-sort-down" : "bi-sort-up");
+
+    string SortClass(string col) =>
+        q.SortBy?.ToLower() == col.ToLower() ? "text-primary fw-semibold" : "";
+
+    string StatusBadge(TaskStatus s) => s switch
+    {
+        TaskStatus.Pending => "badge bg-warning text-dark",
+        TaskStatus.InProgress => "badge bg-info",
+        TaskStatus.Completed => "badge bg-success",
+        TaskStatus.OnHold => "badge bg-secondary",
+        TaskStatus.Cancelled => "badge bg-danger",
+        _ => "badge bg-light text-dark"
+    };
+
+    string PriorityBadge(TaskPriority p) => p switch
+    {
+        TaskPriority.Critical => "badge bg-danger",
+        TaskPriority.High => "badge bg-warning text-dark",
+        TaskPriority.Medium => "badge bg-info",
+        TaskPriority.Low => "badge bg-secondary",
+        _ => "badge bg-light text-dark"
+    };
+
+    string PriorityIcon(TaskPriority p) => p switch
+    {
+        TaskPriority.Critical => "bi-exclamation-triangle-fill",
+        TaskPriority.High => "bi-arrow-up-circle-fill",
+        TaskPriority.Medium => "bi-dash-circle",
+        TaskPriority.Low => "bi-arrow-down-circle",
+        _ => "bi-dash"
+    };
+}
+
+@* {{!-- Hidden state for JS --}} *@
+<input type="hidden" id="currentPage" value="@result.PageNumber" />
+<input type="hidden" id="currentSort" value="@q.SortBy" />
+<input type="hidden" id="currentSortDesc" value="@q.SortDesc.ToString().ToLower()" />
+<input type="hidden" id="currentProjectId" value="@Model.FilterProjectId" />
+<input type="hidden" id="currentStatus" value="@Model.FilterStatus" />
+<input type="hidden" id="totalTaskCount" value="@result.TotalCount" />
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-0">
+        @if (!result.Items.Any())
+        {
+            <div class="text-center py-5">
+                <i class="bi bi-inbox display-4 text-muted"></i>
+                <p class="mt-3 text-muted fs-5">No tasks found.</p>
+                <button class="btn btn-primary mt-2"
+                        id="btnAddTaskEmpty"
+                        data-bs-toggle="modal"
+                        data-bs-target="#taskModal">
+                    <i class="bi bi-plus-circle me-1"></i>Create your first task
+                </button>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" id="taskTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4 sortable @SortClass("title")"
+                                data-sort="title" style="cursor:pointer; width:28%">
+                                Title <i class="bi @SortIcon("title") ms-1 small"></i>
+                            </th>
+                            <th style="width:12%">Project</th>
+                            <th class="sortable @SortClass("status")"
+                                data-sort="status" style="cursor:pointer; width:11%">
+                                Status <i class="bi @SortIcon("status") ms-1 small"></i>
+                            </th>
+                            <th class="sortable @SortClass("priority")"
+                                data-sort="priority" style="cursor:pointer; width:10%">
+                                Priority <i class="bi @SortIcon("priority") ms-1 small"></i>
+                            </th>
+                            <th style="width:14%">Assigned To</th>
+                            <th class="sortable @SortClass("duedate")"
+                                data-sort="duedate" style="cursor:pointer; width:11%">
+                                Due Date <i class="bi @SortIcon("duedate") ms-1 small"></i>
+                            </th>
+                            <th style="width:9%">Hours</th>
+                            <th class="text-end pe-4" style="width:5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var task in result.Items)
+                        {
+                            var isDue = task.DueDate.HasValue
+                            && task.DueDate.Value.Date < DateTime.Today
+                            && task.Status != TaskStatus.Completed
+                            && task.Status != TaskStatus.Cancelled;
+
+                            <tr data-id="@task.Id" data-project-id="@task.ProjectId">
+                                <td class="ps-4">
+                                    <div class="d-flex align-items-start gap-2">
+                                        @if (task.HasActiveTimer)
+                                        {
+                                            <span class="badge bg-danger mt-1"
+                                                  title="Timer running"
+                                                  style="font-size:0.6rem">
+                                                ● LIVE
+                                            </span>
+                                        }
+                                        <div>
+                                            <a asp-action="Detail"
+                                               asp-route-id="@task.Id"
+                                               class="fw-semibold text-decoration-none text-dark">
+                                                @task.Title
+                                            </a>
+                                            @if (!string.IsNullOrEmpty(task.Description))
+                                            {
+                                                <div class="text-muted small text-truncate"
+                                                     style="max-width:200px"
+                                                     title="@task.Description">
+                                                    @task.Description
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a asp-controller="Project"
+                                       asp-action="Detail"
+                                       asp-route-id="@task.ProjectId"
+                                       class="text-decoration-none small text-muted">
+                                        <i class="bi bi-folder2 me-1"></i>@task.ProjectName
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="@StatusBadge(task.Status) status-pill"
+                                          data-task-id="@task.Id"
+                                          style="cursor:pointer"
+                                          title="Click to change status">
+                                        @task.StatusDisplay
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="@PriorityBadge(task.Priority)">
+                                        <i class="bi @PriorityIcon(task.Priority) me-1"></i>
+                                        @task.PriorityDisplay
+                                    </span>
+                                </td>
+                                <td>
+                                    @if (task.AssignedUserId.HasValue)
+                                    {
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="rounded-circle bg-primary text-white
+                                                        d-flex align-items-center
+                                                        justify-content-center"
+                                                 style="width:28px;height:28px;font-size:0.7rem;flex-shrink:0">
+                                                @task.AssignedUserName?.Substring(0, 1).ToUpper()
+                                            </div>
+                                            <span class="small">@task.AssignedUserName</span>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted small">Unassigned</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (task.DueDate.HasValue)
+                                    {
+                                        <span class="small @(isDue ? "text-danger fw-semibold" : "text-muted")">
+                                            @if (isDue)
+                                            {
+                                                <i class="bi bi-exclamation-circle me-1"></i>
+                                            }
+                                            @task.DueDate.Value.ToString("MMM dd, yyyy")
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted small">—</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (task.TotalHoursLogged > 0)
+                                    {
+                                        <span class="badge bg-light text-dark border small">
+                                            <i class="bi bi-clock me-1"></i>
+                                            @task.TotalHoursLogged.ToString("F1")h
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted small">—</span>
+                                    }
+                                </td>
+                                <td class="text-end pe-4">
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                                                type="button"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                            <i class="bi bi-three-dots-vertical"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                                            <li>
+                                                <a class="dropdown-item"
+                                                   asp-action="Detail"
+                                                   asp-route-id="@task.Id">
+                                                    <i class="bi bi-eye me-2 text-info"></i>View
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <button class="dropdown-item btn-edit-task"
+                                                        data-id="@task.Id">
+                                                    <i class="bi bi-pencil me-2 text-primary"></i>Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                   asp-action="Detail"
+                                                   asp-route-id="@task.Id"
+                                                   asp-fragment="timelog">
+                                                    <i class="bi bi-clock-history me-2 text-warning"></i>
+                                                    Time Logs
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider" /></li>
+                                            <li>
+                                                <button class="dropdown-item text-danger btn-delete-task"
+                                                        data-id="@task.Id"
+                                                        data-title="@task.Title">
+                                                    <i class="bi bi-trash me-2"></i>Delete
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @* { { !--Pagination--} } *@
+            @if (result.TotalPages > 1)
+            {
+                <div class="d-flex justify-content-between align-items-center
+                            px-4 py-3 border-top">
+                    <div class="text-muted small">
+                        Page <strong>@result.PageNumber</strong>
+                        of <strong>@result.TotalPages</strong>
+                        &nbsp;·&nbsp;@result.TotalCount total records
+                    </div>
+                    <nav>
+                        <ul class="pagination pagination-sm mb-0">
+                            <li class="page-item @(!result.HasPrevious ? "disabled" : "")">
+                                <a class="page-link task-page-btn"
+                                   data-page="@(result.PageNumber - 1)" href="#">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+                            @for (int i = Math.Max(1, result.PageNumber - 2);
+                           i <= Math.Min(result.TotalPages, result.PageNumber + 2);
+                           i++)
+                            {
+                                <li class="page-item @(i == result.PageNumber ? "active" : "")">
+                                    <a class="page-link task-page-btn"
+                                       data-page="@i" href="#">@i</a>
+                                </li>
+                            }
+                            <li class="page-item @(!result.HasNext ? "disabled" : "")">
+                                <a class="page-link task-page-btn"
+                                   data-page="@(result.PageNumber + 1)" href="#">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            }
+        }
+    </div>
+</div>

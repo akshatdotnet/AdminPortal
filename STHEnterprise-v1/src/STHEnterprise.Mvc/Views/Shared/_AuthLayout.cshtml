@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - STHEnterprise</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Shared Theme Variables (same colors as admin) -->
+    <link rel="stylesheet" href="~/css/admin-layout.css" />
+
+    <!-- Auth-specific styles -->
+    <style>
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            padding: 16px;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--surface);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .auth-title {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+    </style>
+
+    <!-- 🌗 Theme bootstrap (persisted) -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || "light";
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div class="auth-wrapper">
+        @RenderBody()
+    </div>
+
+    <!-- ✅ jQuery FIRST (required for validation) -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Validation (depends on jQuery) -->
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- ✅ Page-level scripts -->
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+
+
+
+@* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - STHEnterprise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/auth.css" />
+</head>
+
+<body>
+    <main class="auth-wrapper">
+        @RenderBody()
+    </main>
+
+    <!-- ✅ jQuery FIRST -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- ✅ Bootstrap -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ Validation (depends on jQuery) -->
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- ✅ Page-level scripts -->
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+ *@
+
+@* <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - STHEnterprise</title>
+
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="~/css/admin-layout.css" />
+
+    <style>
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--surface);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+
+<body>
+    @RenderBody()
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ✅ FIX: allow page-level scripts -->
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
+ *@

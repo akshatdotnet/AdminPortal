@@ -1,0 +1,67 @@
+﻿@model PMS.Application.DTOs.TimeLog.TaskTimeLogDto
+@{
+    int rowNum = ViewBag.RowNum ?? 1;
+}
+
+<tr data-log-id="@Model.Id"
+    class="@(Model.IsRunning ? "table-danger" : "")">
+    <td class="ps-3 text-muted small">@rowNum</td>
+    <td class="small">
+        <div class="fw-semibold">
+            @Model.StartTime.ToLocalTime().ToString("MMM dd, yyyy")
+        </div>
+        <div class="text-muted">
+            @Model.StartTime.ToLocalTime().ToString("hh:mm:ss tt")
+        </div>
+    </td>
+    <td class="small">
+        @if (Model.IsRunning)
+        {
+            <span class="badge bg-danger">
+                <i class="bi bi-record-circle me-1"></i>Running
+            </span>
+        }
+        else
+        {
+            <div class="fw-semibold">
+                @Model.EndTime!.Value.ToLocalTime().ToString("MMM dd, yyyy")
+            </div>
+            <div class="text-muted">
+                @Model.EndTime.Value.ToLocalTime().ToString("hh:mm:ss tt")
+            </div>
+        }
+    </td>
+    <td>
+        @if (Model.IsRunning)
+        {
+            <span class="text-danger fw-semibold live-duration"
+                  data-start="@Model.StartTime.ToString("o")">
+                Calculating...
+            </span>
+        }
+        else
+        {
+            <span class="badge bg-light text-dark border fw-semibold">
+                <i class="bi bi-clock me-1"></i>@Model.FormattedDuration
+            </span>
+        }
+    </td>
+    <td class="small text-muted">
+        @(string.IsNullOrEmpty(Model.Notes) ? "—" : Model.Notes)
+    </td>
+    <td class="text-end pe-3">
+        @if (!Model.IsRunning)
+        {
+            <button class="btn btn-sm btn-outline-danger btn-delete-log"
+                    data-log-id="@Model.Id"
+                    data-task-id="@Model.TaskId"
+                    title="Delete this log">
+                <i class="bi bi-trash"></i>
+            </button>
+        }
+        else
+        {
+            <span class="text-muted small">—</span>
+        }
+    </td>
+</tr>

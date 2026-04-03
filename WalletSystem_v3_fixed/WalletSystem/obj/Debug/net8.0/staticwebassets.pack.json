@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Client_Project\\AdminPortal\\WalletSystem_v3_fixed\\WalletSystem\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WalletSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WalletSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WalletSystem.props",
+      "PackagePath": "build\\WalletSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WalletSystem.props",
+      "PackagePath": "buildMultiTargeting\\WalletSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WalletSystem.props",
+      "PackagePath": "buildTransitive\\WalletSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

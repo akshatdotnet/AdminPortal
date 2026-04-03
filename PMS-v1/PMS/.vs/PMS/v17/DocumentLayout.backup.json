@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\views\\task\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\views\\task\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\views\\task\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\views\\task\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\viewmodels\\task\\taskindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\viewmodels\\task\\taskindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EC96183-900B-4219-B152-9BC00E3DD3A8}|src\\PMS.Application\\PMS.Application.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.application\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EC96183-900B-4219-B152-9BC00E3DD3A8}|src\\PMS.Application\\PMS.Application.csproj|solutionrelative:src\\pms.application\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|docs{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\docs\\IntialSetup.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|docs{8CCFE139-8F09-4EB7-89DF-4D763E4D8F35}|solutionrelative:docs\\IntialSetup.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5396194E-53D8-4CA6-86DA-F6294D8279E8}|src\\PMS.Domain\\PMS.Domain.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.domain\\entities\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5396194E-53D8-4CA6-86DA-F6294D8279E8}|src\\PMS.Domain\\PMS.Domain.csproj|solutionrelative:src\\pms.domain\\entities\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EC96183-900B-4219-B152-9BC00E3DD3A8}|src\\PMS.Application\\PMS.Application.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.application\\dtos\\task\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EC96183-900B-4219-B152-9BC00E3DD3A8}|src\\PMS.Application\\PMS.Application.csproj|solutionrelative:src\\pms.application\\dtos\\task\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{468146E5-D272-47D4-851F-57DE4301158F}|src\\PMS.Infrastructure\\PMS.Infrastructure.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.infrastructure\\data\\seed\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{468146E5-D272-47D4-851F-57DE4301158F}|src\\PMS.Infrastructure\\PMS.Infrastructure.csproj|solutionrelative:src\\pms.infrastructure\\data\\seed\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|d:\\client_project\\adminportal\\pms-v1\\pms\\src\\pms.web\\logs\\pms-errors-20260402.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B2EF5121-75A7-4999-87F3-6DC2C1E7E806}|src\\PMS.Web\\PMS.Web.csproj|solutionrelative:src\\pms.web\\logs\\pms-errors-20260402.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "RelativeToolTip": "src\\PMS.Web\\Views\\Task\\Detail.cshtml",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-03T11:10:13.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Views\\Task\\Index.cshtml",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Views\\Task\\Index.cshtml",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Views\\Task\\Index.cshtml",
+              "RelativeToolTip": "src\\PMS.Web\\Views\\Task\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-03T11:09:58.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskIndexViewModel.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\ViewModels\\Task\\TaskIndexViewModel.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\ViewModels\\Task\\TaskIndexViewModel.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\ViewModels\\Task\\TaskIndexViewModel.cs",
+              "RelativeToolTip": "src\\PMS.Web\\ViewModels\\Task\\TaskIndexViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T11:09:32.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Application\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Application\\Services\\ProjectService.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Application\\Services\\ProjectService.cs",
+              "RelativeToolTip": "src\\PMS.Application\\Services\\ProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T11:05:10.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "src\\PMS.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T11:04:43.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IntialSetup.txt",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\docs\\IntialSetup.txt",
+              "RelativeDocumentMoniker": "docs\\IntialSetup.txt",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\docs\\IntialSetup.txt*",
+              "RelativeToolTip": "docs\\IntialSetup.txt*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-03T11:02:41.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProjectTask.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Domain\\Entities\\ProjectTask.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Domain\\Entities\\ProjectTask.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Domain\\Entities\\ProjectTask.cs",
+              "RelativeToolTip": "src\\PMS.Domain\\Entities\\ProjectTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T10:16:53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DatabaseSeeder.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Infrastructure\\Data\\Seed\\DatabaseSeeder.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Infrastructure\\Data\\Seed\\DatabaseSeeder.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Infrastructure\\Data\\Seed\\DatabaseSeeder.cs",
+              "RelativeToolTip": "src\\PMS.Infrastructure\\Data\\Seed\\DatabaseSeeder.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAG8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T10:10:45.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Controllers\\ProjectController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "src\\PMS.Web\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T09:59:32.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Controllers\\TaskController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "src\\PMS.Web\\Controllers\\TaskController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAH8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T17:13:09.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateTaskDto.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Application\\DTOs\\Task\\CreateTaskDto.cs",
+              "RelativeDocumentMoniker": "src\\PMS.Application\\DTOs\\Task\\CreateTaskDto.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Application\\DTOs\\Task\\CreateTaskDto.cs",
+              "RelativeToolTip": "src\\PMS.Application\\DTOs\\Task\\CreateTaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T10:12:30.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "pms-errors-20260402.log",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Logs\\pms-errors-20260402.log",
+              "RelativeDocumentMoniker": "src\\PMS.Web\\Logs\\pms-errors-20260402.log",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\PMS-v1\\PMS\\src\\PMS.Web\\Logs\\pms-errors-20260402.log",
+              "RelativeToolTip": "src\\PMS.Web\\Logs\\pms-errors-20260402.log",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-03T09:59:46.209Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
