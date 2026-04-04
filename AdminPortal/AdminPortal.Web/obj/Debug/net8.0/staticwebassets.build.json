@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fuSPVacNS7Sd6jZq7i1UO5zxooxhZoL/akbXShhhUio=",
+  "Hash": "k+1mXfSwezy84gxpSqhysy37qJyhwJwz4RCSpdkm78M=",
   "Source": "AdminPortal.Web",
   "BasePath": "_content/AdminPortal.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "AdminPortal.Web\\wwwroot",
       "Source": "AdminPortal.Web",
-      "ContentRoot": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
       "BasePath": "_content/AdminPortal.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
+      "Identity": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
       "SourceId": "AdminPortal.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
       "BasePath": "_content/AdminPortal.Web",
       "RelativePath": "css/admin#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\css\\admin.css"
     },
     {
-      "Identity": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
+      "Identity": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
       "SourceId": "AdminPortal.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
       "BasePath": "_content/AdminPortal.Web",
       "RelativePath": "css/auth#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\css\\auth.css"
     },
     {
-      "Identity": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
+      "Identity": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
       "SourceId": "AdminPortal.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
+      "ContentRoot": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\",
       "BasePath": "_content/AdminPortal.Web",
       "RelativePath": "js/admin#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -83,7 +83,7 @@
   "Endpoints": [
     {
       "Route": "css/admin.css",
-      "AssetFile": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -120,7 +120,7 @@
     },
     {
       "Route": "css/admin.exngu8pqls.css",
-      "AssetFile": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -165,7 +165,7 @@
     },
     {
       "Route": "css/auth.91s3s6mr8y.css",
-      "AssetFile": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -210,7 +210,7 @@
     },
     {
       "Route": "css/auth.css",
-      "AssetFile": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -247,7 +247,7 @@
     },
     {
       "Route": "js/admin.dxeb27pex1.js",
-      "AssetFile": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -292,7 +292,7 @@
     },
     {
       "Route": "js/admin.js",
-      "AssetFile": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
+      "AssetFile": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {

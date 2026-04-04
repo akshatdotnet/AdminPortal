@@ -29,3 +29,19 @@ D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminP
 D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\refint\AdminPortal.Application.dll
 D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.pdb
 D:\Vaishnav Engineering\Code\.NET 8 LTS\DotNetAssignment_Task\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\ref\AdminPortal.Application.dll
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.deps.json
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.dll
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Application.pdb
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Domain.dll
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\bin\Debug\net8.0\AdminPortal.Domain.pdb
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.csproj.AssemblyReference.cache
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.AssemblyInfoInputs.cache
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.AssemblyInfo.cs
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.csproj.CoreCompileInputs.cache
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.sourcelink.json
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPor.997AD7B4.Up2Date
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.dll
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\refint\AdminPortal.Application.dll
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\AdminPortal.Application.pdb
+D:\Client_Project\AdminPortal\AdminPortal\AdminPortal.Application\obj\Debug\net8.0\ref\AdminPortal.Application.dll

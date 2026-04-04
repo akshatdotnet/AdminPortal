@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|solutionrelative:src\\sthenterprise.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|solutionrelative:src\\sthenterprise.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.api\\data\\customerstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|solutionrelative:src\\sthenterprise.api\\data\\customerstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.api\\data\\inmemoryuserstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|solutionrelative:src\\sthenterprise.api\\data\\inmemoryuserstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|solutionrelative:src\\sthenterprise.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|solutionrelative:src\\sthenterprise.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|solutionrelative:src\\sthenterprise.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{0ABC66E4-1212-4695-88A9-891CBF4D9366}|src\\STHEnterprise.Api\\STHEnterprise.Api.csproj|solutionrelative:src\\sthenterprise.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|solutionrelative:src\\sthenterprise.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.mvc\\services\\storemockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|solutionrelative:src\\sthenterprise.mvc\\services\\storemockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.mvc\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|solutionrelative:src\\sthenterprise.mvc\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|d:\\client_project\\adminportal\\sthenterprise-v1\\src\\sthenterprise.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{013C62D3-C736-44A6-94FA-685982E05174}|src\\STHEnterprise.Mvc\\STHEnterprise.Mvc.csproj|solutionrelative:src\\sthenterprise.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE01A8AD-F4BA-43E5-BAFE-DDE492F47602}|Solution Items{EE01A8AD-F4BA-43E5-BAFE-DDE492F47602}|D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\Doc\\Document.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -71,58 +87,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
-              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:57:47.876Z",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\appsettings.Development.json",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\appsettings.Development.json",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T15:55:21.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HealthController.cs",
-              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
-              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
-              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
-              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\appsettings.json",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\appsettings.json",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:57:43.965Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T15:55:15.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
-              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
+              "Title": "CustomerStore.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Data\\CustomerStore.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Data\\CustomerStore.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Data\\CustomerStore.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\Data\\CustomerStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:57:40.062Z",
+              "WhenOpened": "2026-04-04T15:55:07.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CheckoutController.cs",
-              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
-              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
-              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
-              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
+              "Title": "InMemoryUserStore.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Data\\InMemoryUserStore.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Data\\InMemoryUserStore.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Data\\InMemoryUserStore.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\Data\\InMemoryUserStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:57:30.289Z",
+              "WhenOpened": "2026-04-04T15:55:04.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\CategoryController.cs",
@@ -130,12 +146,11 @@
               "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:57:20.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T07:57:20.764Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "CartController.cs",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\CartController.cs",
@@ -143,12 +158,85 @@
               "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\CartController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:57:11.485Z",
+              "WhenOpened": "2026-04-01T07:57:11.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAswB4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T17:58:47.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HealthController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\HealthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T07:57:43.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\appsettings.json",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\appsettings.json",
+              "RelativeToolTip": "src\\STHEnterprise.Mvc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T17:55:58.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T07:57:30.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T07:57:40.062Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T07:57:47.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Api\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Api\\Controllers\\AccountController.cs",
@@ -156,25 +244,11 @@
               "RelativeToolTip": "src\\STHEnterprise.Api\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAFsBAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:56:57.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T07:56:57.548Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "src\\STHEnterprise.Mvc\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswCYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T17:58:47.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "SessionExtensions.cs",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Extensions\\SessionExtensions.cs",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\Extensions\\SessionExtensions.cs",
@@ -186,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "StoreMockData.cs",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Services\\StoreMockData.cs",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\Services\\StoreMockData.cs",
@@ -198,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "CartService.cs",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\Services\\CartService.cs",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\Services\\CartService.cs",
@@ -210,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\appsettings.Development.json",
@@ -222,19 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\STHEnterprise.Mvc\\appsettings.json",
-              "ToolTip": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Mvc\\appsettings.json",
-              "RelativeToolTip": "src\\STHEnterprise.Mvc\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-21T17:55:58.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Document.txt",
               "DocumentMoniker": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\Doc\\Document.txt",
               "RelativeDocumentMoniker": "Doc\\Document.txt",

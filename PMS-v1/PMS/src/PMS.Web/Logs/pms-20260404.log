@@ -1,0 +1,1260 @@
+2026-04-04 19:52:34.772 [DBG] [] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:52:34.887 [DBG] [] [VAISHNAV] Created DbConnection. (114ms).
+2026-04-04 19:52:34.912 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.641 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.662 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteNonQuery'.
+2026-04-04 19:52:36.680 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteNonQuery' (18ms).
+2026-04-04 19:52:36.693 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteNonQuery' (36ms).
+2026-04-04 19:52:36.712 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT 1
+2026-04-04 19:52:36.777 [INF] [] [VAISHNAV] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT 1
+2026-04-04 19:52:36.787 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.798 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (6ms).
+2026-04-04 19:52:36.807 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteScalar'.
+2026-04-04 19:52:36.810 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteScalar' (2ms).
+2026-04-04 19:52:36.813 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteScalar' (5ms).
+2026-04-04 19:52:36.815 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.817 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.820 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-04 19:52:36.848 [INF] [] [VAISHNAV] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-04 19:52:36.853 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.856 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (2ms).
+2026-04-04 19:52:36.859 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.861 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.863 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteNonQuery'.
+2026-04-04 19:52:36.864 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2026-04-04 19:52:36.865 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2026-04-04 19:52:36.867 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT 1
+2026-04-04 19:52:36.869 [INF] [] [VAISHNAV] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT 1
+2026-04-04 19:52:36.872 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.873 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (1ms).
+2026-04-04 19:52:36.874 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteScalar'.
+2026-04-04 19:52:36.878 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteScalar' (3ms).
+2026-04-04 19:52:36.879 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteScalar' (4ms).
+2026-04-04 19:52:36.880 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.882 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.883 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-04 19:52:36.885 [INF] [] [VAISHNAV] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-04 19:52:36.889 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.897 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (8ms).
+2026-04-04 19:52:36.933 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.943 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:36.952 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:52:36.962 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteReader' (10ms).
+2026-04-04 19:52:36.973 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (21ms).
+2026-04-04 19:52:36.983 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-04-04 19:52:37.008 [INF] [] [VAISHNAV] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-04-04 19:52:37.040 [DBG] [] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.060 [DBG] [] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 33ms reading results.
+2026-04-04 19:52:37.079 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.090 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (10ms).
+2026-04-04 19:52:37.125 [INF] [] [VAISHNAV] No migrations were applied. The database is already up to date.
+2026-04-04 19:52:37.344 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.349 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.352 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:52:37.354 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteReader' (1ms).
+2026-04-04 19:52:37.356 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:52:37.357 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-04-04 19:52:37.366 [INF] [] [VAISHNAV] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-04-04 19:52:37.419 [DBG] [] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.432 [DBG] [] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 22ms reading results.
+2026-04-04 19:52:37.445 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.463 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (17ms).
+2026-04-04 19:52:37.482 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.495 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (13ms).
+2026-04-04 19:52:37.510 [INF] [] [VAISHNAV] PMS application started successfully on Development
+2026-04-04 19:52:37.558 [INF] [] [VAISHNAV] User profile is available. Using 'C:\Users\aksha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-04 19:52:37.615 [INF] [] [VAISHNAV] Checking for pending database migrations...
+2026-04-04 19:52:37.669 [DBG] [] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:52:37.676 [DBG] [] [VAISHNAV] Created DbConnection. (6ms).
+2026-04-04 19:52:37.682 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.691 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.694 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteNonQuery'.
+2026-04-04 19:52:37.696 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteNonQuery' (2ms).
+2026-04-04 19:52:37.704 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteNonQuery' (10ms).
+2026-04-04 19:52:37.709 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT 1
+2026-04-04 19:52:37.722 [INF] [] [VAISHNAV] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT 1
+2026-04-04 19:52:37.746 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.765 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (18ms).
+2026-04-04 19:52:37.785 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteScalar'.
+2026-04-04 19:52:37.799 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteScalar' (13ms).
+2026-04-04 19:52:37.814 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteScalar' (29ms).
+2026-04-04 19:52:37.831 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.847 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.863 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-04 19:52:37.894 [INF] [] [VAISHNAV] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-04 19:52:37.913 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.929 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (16ms).
+2026-04-04 19:52:37.956 [DBG] [] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.971 [DBG] [] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:37.983 [DBG] [] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:52:37.997 [DBG] [] [VAISHNAV] Created DbCommand for 'ExecuteReader' (13ms).
+2026-04-04 19:52:38.013 [DBG] [] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (29ms).
+2026-04-04 19:52:38.029 [DBG] [] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-04-04 19:52:38.045 [INF] [] [VAISHNAV] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-04-04 19:52:38.058 [DBG] [] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:38.067 [DBG] [] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 9ms reading results.
+2026-04-04 19:52:38.076 [DBG] [] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:38.079 [DBG] [] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (3ms).
+2026-04-04 19:52:38.088 [INF] [] [VAISHNAV] No pending migrations found.
+2026-04-04 19:52:38.090 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:38.092 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (1ms).
+2026-04-04 19:52:38.194 [INF] [] [VAISHNAV] Now listening on: http://localhost:5257
+2026-04-04 19:52:38.202 [INF] [] [VAISHNAV] Application started. Press Ctrl+C to shut down.
+2026-04-04 19:52:38.211 [INF] [] [VAISHNAV] Hosting environment: Development
+2026-04-04 19:52:38.220 [INF] [] [VAISHNAV] Content root path: D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web
+2026-04-04 19:52:49.333 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/ - null null
+2026-04-04 19:52:49.355 [DBG] [a783e7cddf6d4330] [VAISHNAV] Request GET / [CorrelationId: a783e7cddf6d4330]
+2026-04-04 19:52:49.365 [WRN] [a783e7cddf6d4330] [VAISHNAV] Failed to determine the https port for redirect.
+2026-04-04 19:52:49.412 [INF] [a783e7cddf6d4330] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:52:49.442 [INF] [a783e7cddf6d4330] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:52:49.479 [INF] [a783e7cddf6d4330] [VAISHNAV] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller PMS.Web.Controllers.HomeController (PMS.Web).
+2026-04-04 19:52:49.803 [INF] [a783e7cddf6d4330] [VAISHNAV] Fetching paged projects. Page: 1, Size: 50, Search: null
+2026-04-04 19:52:50.377 [INF] [a783e7cddf6d4330] [VAISHNAV] Fetching paged projects. Page: 1, Size: 5, Search: null
+2026-04-04 19:52:50.523 [INF] [a783e7cddf6d4330] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:52:50.731 [INF] [a783e7cddf6d4330] [VAISHNAV] Executed ViewResult - view Index executed in 208.5688ms.
+2026-04-04 19:52:50.739 [INF] [a783e7cddf6d4330] [VAISHNAV] Executed action PMS.Web.Controllers.HomeController.Index (PMS.Web) in 1252.3441ms
+2026-04-04 19:52:50.744 [INF] [a783e7cddf6d4330] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:52:50.756 [INF] [a783e7cddf6d4330] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:52:50.781 [WRN] [a783e7cddf6d4330] [VAISHNAV] HTTP GET / responded 200 in 1388.5544ms
+2026-04-04 19:52:50.791 [WRN] [a783e7cddf6d4330] [VAISHNAV] SLOW REQUEST — GET / took 1429ms (threshold: 500ms)
+2026-04-04 19:52:50.801 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/ - 200 null text/html; charset=utf-8 1472.2544ms
+2026-04-04 19:52:55.970 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task - null null
+2026-04-04 19:52:55.992 [DBG] [4c990ed054d349e6] [VAISHNAV] Request GET /Task [CorrelationId: 4c990ed054d349e6]
+2026-04-04 19:52:56.017 [INF] [4c990ed054d349e6] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:52:56.028 [INF] [4c990ed054d349e6] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:52:56.093 [INF] [4c990ed054d349e6] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:52:56.321 [DBG] [4c990ed054d349e6] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:52:56.325 [DBG] [4c990ed054d349e6] [VAISHNAV] Created DbConnection. (3ms).
+2026-04-04 19:52:56.329 [DBG] [4c990ed054d349e6] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.335 [DBG] [4c990ed054d349e6] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.340 [DBG] [4c990ed054d349e6] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:52:56.344 [DBG] [4c990ed054d349e6] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:52:56.351 [DBG] [4c990ed054d349e6] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (10ms).
+2026-04-04 19:52:56.355 [DBG] [4c990ed054d349e6] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:52:56.368 [INF] [4c990ed054d349e6] [VAISHNAV] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:52:56.569 [DBG] [4c990ed054d349e6] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.574 [DBG] [4c990ed054d349e6] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 194ms reading results.
+2026-04-04 19:52:56.579 [DBG] [4c990ed054d349e6] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.583 [DBG] [4c990ed054d349e6] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (3ms).
+2026-04-04 19:52:56.604 [DBG] [4c990ed054d349e6] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.609 [DBG] [4c990ed054d349e6] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.616 [DBG] [4c990ed054d349e6] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:52:56.620 [DBG] [4c990ed054d349e6] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:52:56.624 [DBG] [4c990ed054d349e6] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (8ms).
+2026-04-04 19:52:56.633 [DBG] [4c990ed054d349e6] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:52:56.643 [INF] [4c990ed054d349e6] [VAISHNAV] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:52:56.704 [DBG] [4c990ed054d349e6] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.709 [DBG] [4c990ed054d349e6] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 54ms reading results.
+2026-04-04 19:52:56.715 [DBG] [4c990ed054d349e6] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.719 [DBG] [4c990ed054d349e6] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (4ms).
+2026-04-04 19:52:56.727 [INF] [4c990ed054d349e6] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:52:56.825 [INF] [4c990ed054d349e6] [VAISHNAV] Executed ViewResult - view Index executed in 99.0491ms.
+2026-04-04 19:52:56.836 [INF] [4c990ed054d349e6] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 722.2728ms
+2026-04-04 19:52:56.853 [INF] [4c990ed054d349e6] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:52:56.861 [INF] [4c990ed054d349e6] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:52:56.875 [INF] [4c990ed054d349e6] [VAISHNAV] HTTP GET /Task responded 200 in 865.6631ms
+2026-04-04 19:52:56.897 [WRN] [4c990ed054d349e6] [VAISHNAV] SLOW REQUEST — GET /Task took 887ms (threshold: 500ms)
+2026-04-04 19:52:56.917 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:52:56.930 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (12ms).
+2026-04-04 19:52:56.944 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task - 200 null text/html; charset=utf-8 974.3693ms
+2026-04-04 19:53:01.442 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/Detail/30 - null null
+2026-04-04 19:53:01.469 [DBG] [1fbea9e0b6364114] [VAISHNAV] Request GET /Task/Detail/30 [CorrelationId: 1fbea9e0b6364114]
+2026-04-04 19:53:01.490 [INF] [1fbea9e0b6364114] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:53:01.503 [INF] [1fbea9e0b6364114] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Detail (PMS.Web)'
+2026-04-04 19:53:01.533 [INF] [1fbea9e0b6364114] [VAISHNAV] Route matched with {action = "Detail", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(Int32) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:53:01.593 [DBG] [1fbea9e0b6364114] [VAISHNAV] Cache MISS: tasks:30
+2026-04-04 19:53:01.942 [DBG] [1fbea9e0b6364114] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:53:01.946 [DBG] [1fbea9e0b6364114] [VAISHNAV] Created DbConnection. (3ms).
+2026-04-04 19:53:01.951 [DBG] [1fbea9e0b6364114] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:01.955 [DBG] [1fbea9e0b6364114] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:01.962 [DBG] [1fbea9e0b6364114] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:01.965 [DBG] [1fbea9e0b6364114] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:53:01.972 [DBG] [1fbea9e0b6364114] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (10ms).
+2026-04-04 19:53:01.981 [DBG] [1fbea9e0b6364114] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[EndDate], [t0].[IsDeleted], [t0].[Name], [t0].[StartDate], [t0].[Status], [t0].[UpdatedAt], [t0].[UpdatedBy], [t1].[Id], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Email], [t1].[FirstName], [t1].[IsActive], [t1].[IsDeleted], [t1].[LastName], [t1].[Phone], [t1].[Role], [t1].[UpdatedAt], [t1].[UpdatedBy]
+FROM [Tasks] AS [t]
+INNER JOIN (
+    SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+ORDER BY [t].[Id], [t0].[Id], [t1].[Id]
+2026-04-04 19:53:02.005 [INF] [1fbea9e0b6364114] [VAISHNAV] Executed DbCommand (27ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[EndDate], [t0].[IsDeleted], [t0].[Name], [t0].[StartDate], [t0].[Status], [t0].[UpdatedAt], [t0].[UpdatedBy], [t1].[Id], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Email], [t1].[FirstName], [t1].[IsActive], [t1].[IsDeleted], [t1].[LastName], [t1].[Phone], [t1].[Role], [t1].[UpdatedAt], [t1].[UpdatedBy]
+FROM [Tasks] AS [t]
+INNER JOIN (
+    SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+ORDER BY [t].[Id], [t0].[Id], [t1].[Id]
+2026-04-04 19:53:02.048 [DBG] [1fbea9e0b6364114] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:02.052 [DBG] [1fbea9e0b6364114] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:53:02.058 [DBG] [1fbea9e0b6364114] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (10ms).
+2026-04-04 19:53:02.063 [DBG] [1fbea9e0b6364114] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t3].[Id], [t3].[CreatedAt], [t3].[CreatedBy], [t3].[DeletedAt], [t3].[DeletedBy], [t3].[EndTime], [t3].[IsDeleted], [t3].[Notes], [t3].[StartTime], [t3].[TaskId], [t3].[UpdatedAt], [t3].[UpdatedBy], [t3].[UserId], [t2].[Id], [t2].[Id0], [t2].[Id1]
+FROM (
+    SELECT TOP(1) [t].[Id], [t0].[Id] AS [Id0], [t1].[Id] AS [Id1]
+    FROM [Tasks] AS [t]
+    INNER JOIN (
+        SELECT [p].[Id]
+        FROM [Projects] AS [p]
+        WHERE [p].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+    LEFT JOIN (
+        SELECT [u].[Id]
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+) AS [t2]
+INNER JOIN (
+    SELECT [t4].[Id], [t4].[CreatedAt], [t4].[CreatedBy], [t4].[DeletedAt], [t4].[DeletedBy], [t4].[EndTime], [t4].[IsDeleted], [t4].[Notes], [t4].[StartTime], [t4].[TaskId], [t4].[UpdatedAt], [t4].[UpdatedBy], [t4].[UserId]
+    FROM [TaskTimeLogs] AS [t4]
+    WHERE [t4].[IsDeleted] = CAST(0 AS bit) AND [t4].[IsDeleted] = CAST(0 AS bit)
+) AS [t3] ON [t2].[Id] = [t3].[TaskId]
+ORDER BY [t2].[Id], [t2].[Id0], [t2].[Id1], [t3].[StartTime] DESC
+2026-04-04 19:53:02.087 [INF] [1fbea9e0b6364114] [VAISHNAV] Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t3].[Id], [t3].[CreatedAt], [t3].[CreatedBy], [t3].[DeletedAt], [t3].[DeletedBy], [t3].[EndTime], [t3].[IsDeleted], [t3].[Notes], [t3].[StartTime], [t3].[TaskId], [t3].[UpdatedAt], [t3].[UpdatedBy], [t3].[UserId], [t2].[Id], [t2].[Id0], [t2].[Id1]
+FROM (
+    SELECT TOP(1) [t].[Id], [t0].[Id] AS [Id0], [t1].[Id] AS [Id1]
+    FROM [Tasks] AS [t]
+    INNER JOIN (
+        SELECT [p].[Id]
+        FROM [Projects] AS [p]
+        WHERE [p].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+    LEFT JOIN (
+        SELECT [u].[Id]
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+) AS [t2]
+INNER JOIN (
+    SELECT [t4].[Id], [t4].[CreatedAt], [t4].[CreatedBy], [t4].[DeletedAt], [t4].[DeletedBy], [t4].[EndTime], [t4].[IsDeleted], [t4].[Notes], [t4].[StartTime], [t4].[TaskId], [t4].[UpdatedAt], [t4].[UpdatedBy], [t4].[UserId]
+    FROM [TaskTimeLogs] AS [t4]
+    WHERE [t4].[IsDeleted] = CAST(0 AS bit) AND [t4].[IsDeleted] = CAST(0 AS bit)
+) AS [t3] ON [t2].[Id] = [t3].[TaskId]
+ORDER BY [t2].[Id], [t2].[Id0], [t2].[Id1], [t3].[StartTime] DESC
+2026-04-04 19:53:02.109 [DBG] [1fbea9e0b6364114] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.119 [DBG] [1fbea9e0b6364114] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 102ms reading results.
+2026-04-04 19:53:02.132 [DBG] [1fbea9e0b6364114] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.140 [DBG] [1fbea9e0b6364114] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 45ms reading results.
+2026-04-04 19:53:02.154 [DBG] [1fbea9e0b6364114] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.165 [DBG] [1fbea9e0b6364114] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (11ms).
+2026-04-04 19:53:02.196 [INF] [1fbea9e0b6364114] [VAISHNAV] Executing ViewResult, running view Detail.
+2026-04-04 19:53:02.246 [INF] [1fbea9e0b6364114] [VAISHNAV] Executed ViewResult - view Detail executed in 51.9923ms.
+2026-04-04 19:53:02.255 [INF] [1fbea9e0b6364114] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Detail (PMS.Web) in 708.6392ms
+2026-04-04 19:53:02.271 [INF] [1fbea9e0b6364114] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Detail (PMS.Web)'
+2026-04-04 19:53:02.282 [INF] [1fbea9e0b6364114] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:53:02.292 [INF] [1fbea9e0b6364114] [VAISHNAV] HTTP GET /Task/Detail/30 responded 200 in 805.0316ms
+2026-04-04 19:53:02.310 [WRN] [1fbea9e0b6364114] [VAISHNAV] SLOW REQUEST — GET /Task/Detail/30 took 823ms (threshold: 500ms)
+2026-04-04 19:53:02.327 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.337 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (9ms).
+2026-04-04 19:53:02.355 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/Detail/30 - 200 null text/html; charset=utf-8 913.0856ms
+2026-04-04 19:53:02.401 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/TimeLog/Summary?taskId=30 - null null
+2026-04-04 19:53:02.409 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Request GET /TimeLog/Summary [CorrelationId: d7cf7c43fa1d4e1a]
+2026-04-04 19:53:02.413 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:53:02.415 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TimeLogController.Summary (PMS.Web)'
+2026-04-04 19:53:02.426 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Route matched with {action = "Summary", controller = "TimeLog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Summary(Int32) on controller PMS.Web.Controllers.TimeLogController (PMS.Web).
+2026-04-04 19:53:02.444 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:53:02.446 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Created DbConnection. (1ms).
+2026-04-04 19:53:02.449 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.452 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.455 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:02.458 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Created DbCommand for 'ExecuteReader' (2ms).
+2026-04-04 19:53:02.460 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (5ms).
+2026-04-04 19:53:02.464 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[EndDate], [t0].[IsDeleted], [t0].[Name], [t0].[StartDate], [t0].[Status], [t0].[UpdatedAt], [t0].[UpdatedBy], [t1].[Id], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Email], [t1].[FirstName], [t1].[IsActive], [t1].[IsDeleted], [t1].[LastName], [t1].[Phone], [t1].[Role], [t1].[UpdatedAt], [t1].[UpdatedBy]
+FROM [Tasks] AS [t]
+INNER JOIN (
+    SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+ORDER BY [t].[Id], [t0].[Id], [t1].[Id]
+2026-04-04 19:53:02.477 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[EndDate], [t0].[IsDeleted], [t0].[Name], [t0].[StartDate], [t0].[Status], [t0].[UpdatedAt], [t0].[UpdatedBy], [t1].[Id], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Email], [t1].[FirstName], [t1].[IsActive], [t1].[IsDeleted], [t1].[LastName], [t1].[Phone], [t1].[Role], [t1].[UpdatedAt], [t1].[UpdatedBy]
+FROM [Tasks] AS [t]
+INNER JOIN (
+    SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+ORDER BY [t].[Id], [t0].[Id], [t1].[Id]
+2026-04-04 19:53:02.487 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:02.491 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:53:02.503 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (16ms).
+2026-04-04 19:53:02.509 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t3].[Id], [t3].[CreatedAt], [t3].[CreatedBy], [t3].[DeletedAt], [t3].[DeletedBy], [t3].[EndTime], [t3].[IsDeleted], [t3].[Notes], [t3].[StartTime], [t3].[TaskId], [t3].[UpdatedAt], [t3].[UpdatedBy], [t3].[UserId], [t2].[Id], [t2].[Id0], [t2].[Id1]
+FROM (
+    SELECT TOP(1) [t].[Id], [t0].[Id] AS [Id0], [t1].[Id] AS [Id1]
+    FROM [Tasks] AS [t]
+    INNER JOIN (
+        SELECT [p].[Id]
+        FROM [Projects] AS [p]
+        WHERE [p].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+    LEFT JOIN (
+        SELECT [u].[Id]
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+) AS [t2]
+INNER JOIN (
+    SELECT [t4].[Id], [t4].[CreatedAt], [t4].[CreatedBy], [t4].[DeletedAt], [t4].[DeletedBy], [t4].[EndTime], [t4].[IsDeleted], [t4].[Notes], [t4].[StartTime], [t4].[TaskId], [t4].[UpdatedAt], [t4].[UpdatedBy], [t4].[UserId]
+    FROM [TaskTimeLogs] AS [t4]
+    WHERE [t4].[IsDeleted] = CAST(0 AS bit) AND [t4].[IsDeleted] = CAST(0 AS bit)
+) AS [t3] ON [t2].[Id] = [t3].[TaskId]
+ORDER BY [t2].[Id], [t2].[Id0], [t2].[Id1], [t3].[StartTime] DESC
+2026-04-04 19:53:02.520 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t3].[Id], [t3].[CreatedAt], [t3].[CreatedBy], [t3].[DeletedAt], [t3].[DeletedBy], [t3].[EndTime], [t3].[IsDeleted], [t3].[Notes], [t3].[StartTime], [t3].[TaskId], [t3].[UpdatedAt], [t3].[UpdatedBy], [t3].[UserId], [t2].[Id], [t2].[Id0], [t2].[Id1]
+FROM (
+    SELECT TOP(1) [t].[Id], [t0].[Id] AS [Id0], [t1].[Id] AS [Id1]
+    FROM [Tasks] AS [t]
+    INNER JOIN (
+        SELECT [p].[Id]
+        FROM [Projects] AS [p]
+        WHERE [p].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+    LEFT JOIN (
+        SELECT [u].[Id]
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+) AS [t2]
+INNER JOIN (
+    SELECT [t4].[Id], [t4].[CreatedAt], [t4].[CreatedBy], [t4].[DeletedAt], [t4].[DeletedBy], [t4].[EndTime], [t4].[IsDeleted], [t4].[Notes], [t4].[StartTime], [t4].[TaskId], [t4].[UpdatedAt], [t4].[UpdatedBy], [t4].[UserId]
+    FROM [TaskTimeLogs] AS [t4]
+    WHERE [t4].[IsDeleted] = CAST(0 AS bit) AND [t4].[IsDeleted] = CAST(0 AS bit)
+) AS [t3] ON [t2].[Id] = [t3].[TaskId]
+ORDER BY [t2].[Id], [t2].[Id0], [t2].[Id1], [t3].[StartTime] DESC
+2026-04-04 19:53:02.536 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.542 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 54ms reading results.
+2026-04-04 19:53:02.547 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.552 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 16ms reading results.
+2026-04-04 19:53:02.569 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.576 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (6ms).
+2026-04-04 19:53:02.626 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.631 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.636 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:02.639 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:53:02.648 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:53:02.652 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Executing DbCommand [Parameters=[@__taskId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t].[Id], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[EndTime], [t].[IsDeleted], [t].[Notes], [t].[StartTime], [t].[TaskId], [t].[UpdatedAt], [t].[UpdatedBy], [t].[UserId], [t0].[Id], [t0].[AssignedUserId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[DueDate], [t0].[IsDeleted], [t0].[Phase], [t0].[Priority], [t0].[ProjectId], [t0].[Status], [t0].[Title], [t0].[UpdatedAt], [t0].[UpdatedBy]
+FROM [TaskTimeLogs] AS [t]
+INNER JOIN (
+    SELECT [t1].[Id], [t1].[AssignedUserId], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Description], [t1].[DueDate], [t1].[IsDeleted], [t1].[Phase], [t1].[Priority], [t1].[ProjectId], [t1].[Status], [t1].[Title], [t1].[UpdatedAt], [t1].[UpdatedBy]
+    FROM [Tasks] AS [t1]
+    WHERE [t1].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[TaskId] = [t0].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[TaskId] = @__taskId_0 AND [t].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [t].[StartTime] DESC
+2026-04-04 19:53:02.669 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed DbCommand (17ms) [Parameters=[@__taskId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t].[Id], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[EndTime], [t].[IsDeleted], [t].[Notes], [t].[StartTime], [t].[TaskId], [t].[UpdatedAt], [t].[UpdatedBy], [t].[UserId], [t0].[Id], [t0].[AssignedUserId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[DueDate], [t0].[IsDeleted], [t0].[Phase], [t0].[Priority], [t0].[ProjectId], [t0].[Status], [t0].[Title], [t0].[UpdatedAt], [t0].[UpdatedBy]
+FROM [TaskTimeLogs] AS [t]
+INNER JOIN (
+    SELECT [t1].[Id], [t1].[AssignedUserId], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Description], [t1].[DueDate], [t1].[IsDeleted], [t1].[Phase], [t1].[Priority], [t1].[ProjectId], [t1].[Status], [t1].[Title], [t1].[UpdatedAt], [t1].[UpdatedBy]
+    FROM [Tasks] AS [t1]
+    WHERE [t1].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[TaskId] = [t0].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[TaskId] = @__taskId_0 AND [t].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [t].[StartTime] DESC
+2026-04-04 19:53:02.795 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.800 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 116ms reading results.
+2026-04-04 19:53:02.805 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.812 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (6ms).
+2026-04-04 19:53:02.841 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.847 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.852 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:02.858 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Created DbCommand for 'ExecuteReader' (6ms).
+2026-04-04 19:53:02.864 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:53:02.868 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Executing DbCommand [Parameters=[@__taskId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[EndTime], [t].[IsDeleted], [t].[Notes], [t].[StartTime], [t].[TaskId], [t].[UpdatedAt], [t].[UpdatedBy], [t].[UserId]
+FROM [TaskTimeLogs] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[TaskId] = @__taskId_0 AND [t].[IsDeleted] = CAST(0 AS bit) AND [t].[EndTime] IS NULL
+2026-04-04 19:53:02.886 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed DbCommand (17ms) [Parameters=[@__taskId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[EndTime], [t].[IsDeleted], [t].[Notes], [t].[StartTime], [t].[TaskId], [t].[UpdatedAt], [t].[UpdatedBy], [t].[UserId]
+FROM [TaskTimeLogs] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[TaskId] = @__taskId_0 AND [t].[IsDeleted] = CAST(0 AS bit) AND [t].[EndTime] IS NULL
+2026-04-04 19:53:02.911 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.918 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 8ms reading results.
+2026-04-04 19:53:02.933 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:02.945 [DBG] [d7cf7c43fa1d4e1a] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (11ms).
+2026-04-04 19:53:02.980 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executing PartialViewResult, running view _TimeLogSummary.
+2026-04-04 19:53:03.013 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed PartialViewResult - view _TimeLogSummary executed in 33.9489ms.
+2026-04-04 19:53:03.021 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed action PMS.Web.Controllers.TimeLogController.Summary (PMS.Web) in 590.4422ms
+2026-04-04 19:53:03.033 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TimeLogController.Summary (PMS.Web)'
+2026-04-04 19:53:03.044 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:53:03.050 [INF] [d7cf7c43fa1d4e1a] [VAISHNAV] HTTP GET /TimeLog/Summary responded 200 in 637.5034ms
+2026-04-04 19:53:03.065 [WRN] [d7cf7c43fa1d4e1a] [VAISHNAV] SLOW REQUEST — GET /TimeLog/Summary took 652ms (threshold: 500ms)
+2026-04-04 19:53:03.079 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:03.086 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (7ms).
+2026-04-04 19:53:03.099 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/TimeLog/Summary?taskId=30 - 200 null text/html; charset=utf-8 697.7829ms
+2026-04-04 19:53:09.956 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/GetForm?id=30 - null null
+2026-04-04 19:53:09.980 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Request GET /Task/GetForm [CorrelationId: 6ba744b2b3ee46d9]
+2026-04-04 19:53:10.004 [INF] [6ba744b2b3ee46d9] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:53:10.010 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.GetForm (PMS.Web)'
+2026-04-04 19:53:10.042 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Route matched with {action = "GetForm", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetForm(System.Nullable`1[System.Int32], System.Nullable`1[System.Int32]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:53:10.078 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:53:10.086 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Created DbConnection. (7ms).
+2026-04-04 19:53:10.097 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.110 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.120 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:10.132 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Created DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:53:10.141 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (21ms).
+2026-04-04 19:53:10.156 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:53:10.176 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:53:10.200 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.216 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 18ms reading results.
+2026-04-04 19:53:10.230 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.240 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (9ms).
+2026-04-04 19:53:10.258 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.270 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.282 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:10.299 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Created DbCommand for 'ExecuteReader' (16ms).
+2026-04-04 19:53:10.308 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (25ms).
+2026-04-04 19:53:10.326 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:53:10.353 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:53:10.372 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.385 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 14ms reading results.
+2026-04-04 19:53:10.399 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.412 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (13ms).
+2026-04-04 19:53:10.526 [DBG] [6ba744b2b3ee46d9] [VAISHNAV] Cache HIT: tasks:30
+2026-04-04 19:53:10.534 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executing PartialViewResult, running view _TaskForm.
+2026-04-04 19:53:10.594 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executed PartialViewResult - view _TaskForm executed in 61.0597ms.
+2026-04-04 19:53:10.599 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.GetForm (PMS.Web) in 542.5025ms
+2026-04-04 19:53:10.604 [INF] [6ba744b2b3ee46d9] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.GetForm (PMS.Web)'
+2026-04-04 19:53:10.610 [INF] [6ba744b2b3ee46d9] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:53:10.613 [INF] [6ba744b2b3ee46d9] [VAISHNAV] HTTP GET /Task/GetForm responded 200 in 616.4984ms
+2026-04-04 19:53:10.620 [WRN] [6ba744b2b3ee46d9] [VAISHNAV] SLOW REQUEST — GET /Task/GetForm took 623ms (threshold: 500ms)
+2026-04-04 19:53:10.628 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:10.631 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (3ms).
+2026-04-04 19:53:10.635 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/GetForm?id=30 - 200 null text/html; charset=utf-8 678.7344ms
+2026-04-04 19:53:26.221 [INF] [] [VAISHNAV] Request starting HTTP/1.1 POST http://localhost:5257/Task/Update - application/x-www-form-urlencoded; charset=UTF-8 366
+2026-04-04 19:53:26.239 [DBG] [cec6550096a24913] [VAISHNAV] Request POST /Task/Update [CorrelationId: cec6550096a24913]
+2026-04-04 19:53:26.253 [INF] [cec6550096a24913] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Update (PMS.Web)'
+2026-04-04 19:53:26.293 [INF] [cec6550096a24913] [VAISHNAV] Route matched with {action = "Update", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(PMS.Application.DTOs.Task.UpdateTaskDto) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:53:26.471 [DBG] [cec6550096a24913] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:53:26.475 [DBG] [cec6550096a24913] [VAISHNAV] Created DbConnection. (3ms).
+2026-04-04 19:53:26.478 [DBG] [cec6550096a24913] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.483 [DBG] [cec6550096a24913] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.488 [DBG] [cec6550096a24913] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:26.492 [DBG] [cec6550096a24913] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:53:26.499 [DBG] [cec6550096a24913] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:53:26.505 [DBG] [cec6550096a24913] [VAISHNAV] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy]
+FROM [Tasks] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__p_0
+2026-04-04 19:53:26.515 [INF] [cec6550096a24913] [VAISHNAV] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy]
+FROM [Tasks] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__p_0
+2026-04-04 19:53:26.528 [DBG] [cec6550096a24913] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.535 [DBG] [cec6550096a24913] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 7ms reading results.
+2026-04-04 19:53:26.550 [DBG] [cec6550096a24913] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.560 [DBG] [cec6550096a24913] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (10ms).
+2026-04-04 19:53:26.790 [DBG] [cec6550096a24913] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.795 [DBG] [cec6550096a24913] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.804 [DBG] [cec6550096a24913] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:26.809 [DBG] [cec6550096a24913] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:53:26.827 [DBG] [cec6550096a24913] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (23ms).
+2026-04-04 19:53:26.833 [DBG] [cec6550096a24913] [VAISHNAV] Executing DbCommand [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 2000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 20), @p9='?' (DbType = Int32), @p10='?' (Size = 20), @p11='?' (Size = 200), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tasks] SET [AssignedUserId] = @p0, [CreatedBy] = @p1, [DeletedAt] = @p2, [DeletedBy] = @p3, [Description] = @p4, [DueDate] = @p5, [IsDeleted] = @p6, [Phase] = @p7, [Priority] = @p8, [ProjectId] = @p9, [Status] = @p10, [Title] = @p11, [UpdatedAt] = @p12, [UpdatedBy] = @p13
+OUTPUT 1
+WHERE [Id] = @p14;
+2026-04-04 19:53:26.858 [INF] [cec6550096a24913] [VAISHNAV] Executed DbCommand (25ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 2000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 20), @p9='?' (DbType = Int32), @p10='?' (Size = 20), @p11='?' (Size = 200), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tasks] SET [AssignedUserId] = @p0, [CreatedBy] = @p1, [DeletedAt] = @p2, [DeletedBy] = @p3, [Description] = @p4, [DueDate] = @p5, [IsDeleted] = @p6, [Phase] = @p7, [Priority] = @p8, [ProjectId] = @p9, [Status] = @p10, [Title] = @p11, [UpdatedAt] = @p12, [UpdatedBy] = @p13
+OUTPUT 1
+WHERE [Id] = @p14;
+2026-04-04 19:53:26.890 [DBG] [cec6550096a24913] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.897 [DBG] [cec6550096a24913] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 20ms reading results.
+2026-04-04 19:53:26.913 [DBG] [cec6550096a24913] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.925 [DBG] [cec6550096a24913] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (11ms).
+2026-04-04 19:53:26.972 [INF] [cec6550096a24913] [VAISHNAV] Task updated. Id:30
+2026-04-04 19:53:26.983 [DBG] [cec6550096a24913] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:26.998 [DBG] [cec6550096a24913] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.023 [DBG] [cec6550096a24913] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:27.027 [DBG] [cec6550096a24913] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:53:27.035 [DBG] [cec6550096a24913] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:53:27.040 [DBG] [cec6550096a24913] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[EndDate], [t0].[IsDeleted], [t0].[Name], [t0].[StartDate], [t0].[Status], [t0].[UpdatedAt], [t0].[UpdatedBy], [t1].[Id], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Email], [t1].[FirstName], [t1].[IsActive], [t1].[IsDeleted], [t1].[LastName], [t1].[Phone], [t1].[Role], [t1].[UpdatedAt], [t1].[UpdatedBy]
+FROM [Tasks] AS [t]
+INNER JOIN (
+    SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+ORDER BY [t].[Id], [t0].[Id], [t1].[Id]
+2026-04-04 19:53:27.049 [INF] [cec6550096a24913] [VAISHNAV] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [t].[Id], [t].[AssignedUserId], [t].[CreatedAt], [t].[CreatedBy], [t].[DeletedAt], [t].[DeletedBy], [t].[Description], [t].[DueDate], [t].[IsDeleted], [t].[Phase], [t].[Priority], [t].[ProjectId], [t].[Status], [t].[Title], [t].[UpdatedAt], [t].[UpdatedBy], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[EndDate], [t0].[IsDeleted], [t0].[Name], [t0].[StartDate], [t0].[Status], [t0].[UpdatedAt], [t0].[UpdatedBy], [t1].[Id], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Email], [t1].[FirstName], [t1].[IsActive], [t1].[IsDeleted], [t1].[LastName], [t1].[Phone], [t1].[Role], [t1].[UpdatedAt], [t1].[UpdatedBy]
+FROM [Tasks] AS [t]
+INNER JOIN (
+    SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+ORDER BY [t].[Id], [t0].[Id], [t1].[Id]
+2026-04-04 19:53:27.064 [DBG] [cec6550096a24913] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:27.068 [DBG] [cec6550096a24913] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:53:27.079 [DBG] [cec6550096a24913] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (14ms).
+2026-04-04 19:53:27.084 [DBG] [cec6550096a24913] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t3].[Id], [t3].[CreatedAt], [t3].[CreatedBy], [t3].[DeletedAt], [t3].[DeletedBy], [t3].[EndTime], [t3].[IsDeleted], [t3].[Notes], [t3].[StartTime], [t3].[TaskId], [t3].[UpdatedAt], [t3].[UpdatedBy], [t3].[UserId], [t2].[Id], [t2].[Id0], [t2].[Id1]
+FROM (
+    SELECT TOP(1) [t].[Id], [t0].[Id] AS [Id0], [t1].[Id] AS [Id1]
+    FROM [Tasks] AS [t]
+    INNER JOIN (
+        SELECT [p].[Id]
+        FROM [Projects] AS [p]
+        WHERE [p].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+    LEFT JOIN (
+        SELECT [u].[Id]
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+) AS [t2]
+INNER JOIN (
+    SELECT [t4].[Id], [t4].[CreatedAt], [t4].[CreatedBy], [t4].[DeletedAt], [t4].[DeletedBy], [t4].[EndTime], [t4].[IsDeleted], [t4].[Notes], [t4].[StartTime], [t4].[TaskId], [t4].[UpdatedAt], [t4].[UpdatedBy], [t4].[UserId]
+    FROM [TaskTimeLogs] AS [t4]
+    WHERE [t4].[IsDeleted] = CAST(0 AS bit) AND [t4].[IsDeleted] = CAST(0 AS bit)
+) AS [t3] ON [t2].[Id] = [t3].[TaskId]
+ORDER BY [t2].[Id], [t2].[Id0], [t2].[Id1], [t3].[StartTime] DESC
+2026-04-04 19:53:27.095 [INF] [cec6550096a24913] [VAISHNAV] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t3].[Id], [t3].[CreatedAt], [t3].[CreatedBy], [t3].[DeletedAt], [t3].[DeletedBy], [t3].[EndTime], [t3].[IsDeleted], [t3].[Notes], [t3].[StartTime], [t3].[TaskId], [t3].[UpdatedAt], [t3].[UpdatedBy], [t3].[UserId], [t2].[Id], [t2].[Id0], [t2].[Id1]
+FROM (
+    SELECT TOP(1) [t].[Id], [t0].[Id] AS [Id0], [t1].[Id] AS [Id1]
+    FROM [Tasks] AS [t]
+    INNER JOIN (
+        SELECT [p].[Id]
+        FROM [Projects] AS [p]
+        WHERE [p].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t0] ON [t].[ProjectId] = [t0].[Id]
+    LEFT JOIN (
+        SELECT [u].[Id]
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit)
+    ) AS [t1] ON [t].[AssignedUserId] = [t1].[Id]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[Id] = @__id_0
+) AS [t2]
+INNER JOIN (
+    SELECT [t4].[Id], [t4].[CreatedAt], [t4].[CreatedBy], [t4].[DeletedAt], [t4].[DeletedBy], [t4].[EndTime], [t4].[IsDeleted], [t4].[Notes], [t4].[StartTime], [t4].[TaskId], [t4].[UpdatedAt], [t4].[UpdatedBy], [t4].[UserId]
+    FROM [TaskTimeLogs] AS [t4]
+    WHERE [t4].[IsDeleted] = CAST(0 AS bit) AND [t4].[IsDeleted] = CAST(0 AS bit)
+) AS [t3] ON [t2].[Id] = [t3].[TaskId]
+ORDER BY [t2].[Id], [t2].[Id0], [t2].[Id1], [t3].[StartTime] DESC
+2026-04-04 19:53:27.110 [DBG] [cec6550096a24913] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.115 [DBG] [cec6550096a24913] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 50ms reading results.
+2026-04-04 19:53:27.135 [DBG] [cec6550096a24913] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.144 [DBG] [cec6550096a24913] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 33ms reading results.
+2026-04-04 19:53:27.157 [DBG] [cec6550096a24913] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.168 [DBG] [cec6550096a24913] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (10ms).
+2026-04-04 19:53:27.181 [INF] [cec6550096a24913] [VAISHNAV] Executing JsonResult, writing value of type '<>f__AnonymousType3`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-04 19:53:27.259 [INF] [cec6550096a24913] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Update (PMS.Web) in 948.6299ms
+2026-04-04 19:53:27.267 [INF] [cec6550096a24913] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Update (PMS.Web)'
+2026-04-04 19:53:27.275 [WRN] [cec6550096a24913] [VAISHNAV] HTTP POST /Task/Update responded 200 in 1021.8260ms
+2026-04-04 19:53:27.290 [WRN] [cec6550096a24913] [VAISHNAV] SLOW REQUEST — POST /Task/Update took 1037ms (threshold: 500ms)
+2026-04-04 19:53:27.303 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.311 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (8ms).
+2026-04-04 19:53:27.324 [INF] [] [VAISHNAV] Request finished HTTP/1.1 POST http://localhost:5257/Task/Update - 200 null application/json; charset=utf-8 1103.1363ms
+2026-04-04 19:53:27.346 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/Index?page=1&pageSize=10&search=&sortBy=&sortDesc=false&projectId=&statusFilter= - null null
+2026-04-04 19:53:27.366 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Request GET /Task/Index [CorrelationId: 8822c42e6e4d4e10]
+2026-04-04 19:53:27.382 [INF] [8822c42e6e4d4e10] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:53:27.393 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:53:27.407 [INF] [8822c42e6e4d4e10] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:53:27.451 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:53:27.459 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Created DbConnection. (7ms).
+2026-04-04 19:53:27.470 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.481 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.495 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:27.507 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Created DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:53:27.516 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (20ms).
+2026-04-04 19:53:27.531 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:53:27.549 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:53:27.575 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.591 [DBG] [8822c42e6e4d4e10] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 17ms reading results.
+2026-04-04 19:53:27.606 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.621 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (15ms).
+2026-04-04 19:53:27.640 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.656 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.667 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:27.685 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Created DbCommand for 'ExecuteReader' (18ms).
+2026-04-04 19:53:27.699 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (31ms).
+2026-04-04 19:53:27.714 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:53:27.726 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:53:27.739 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.744 [DBG] [8822c42e6e4d4e10] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 5ms reading results.
+2026-04-04 19:53:27.749 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.761 [DBG] [8822c42e6e4d4e10] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (11ms).
+2026-04-04 19:53:27.771 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executing PartialViewResult, running view _TaskList.
+2026-04-04 19:53:27.779 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executed PartialViewResult - view _TaskList executed in 8.0151ms.
+2026-04-04 19:53:27.786 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 358.3684ms
+2026-04-04 19:53:27.791 [INF] [8822c42e6e4d4e10] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:53:27.795 [INF] [8822c42e6e4d4e10] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:53:27.801 [INF] [8822c42e6e4d4e10] [VAISHNAV] HTTP GET /Task/Index responded 200 in 419.0081ms
+2026-04-04 19:53:27.808 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:27.817 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (9ms).
+2026-04-04 19:53:27.826 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/Index?page=1&pageSize=10&search=&sortBy=&sortDesc=false&projectId=&statusFilter= - 200 null text/html; charset=utf-8 479.9987ms
+2026-04-04 19:53:33.640 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task - null null
+2026-04-04 19:53:33.659 [DBG] [32a5898527ee4dce] [VAISHNAV] Request GET /Task [CorrelationId: 32a5898527ee4dce]
+2026-04-04 19:53:33.676 [INF] [32a5898527ee4dce] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:53:33.688 [INF] [32a5898527ee4dce] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:53:33.695 [INF] [32a5898527ee4dce] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:53:33.734 [DBG] [32a5898527ee4dce] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:53:33.742 [DBG] [32a5898527ee4dce] [VAISHNAV] Created DbConnection. (7ms).
+2026-04-04 19:53:33.753 [DBG] [32a5898527ee4dce] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:33.767 [DBG] [32a5898527ee4dce] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:33.776 [DBG] [32a5898527ee4dce] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:33.790 [DBG] [32a5898527ee4dce] [VAISHNAV] Created DbCommand for 'ExecuteReader' (13ms).
+2026-04-04 19:53:33.808 [DBG] [32a5898527ee4dce] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (31ms).
+2026-04-04 19:53:33.825 [DBG] [32a5898527ee4dce] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:53:33.848 [INF] [32a5898527ee4dce] [VAISHNAV] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:53:33.873 [DBG] [32a5898527ee4dce] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:33.893 [DBG] [32a5898527ee4dce] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 20ms reading results.
+2026-04-04 19:53:33.915 [DBG] [32a5898527ee4dce] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:33.926 [DBG] [32a5898527ee4dce] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (11ms).
+2026-04-04 19:53:33.944 [DBG] [32a5898527ee4dce] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:33.960 [DBG] [32a5898527ee4dce] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:33.973 [DBG] [32a5898527ee4dce] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:53:33.978 [DBG] [32a5898527ee4dce] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:53:33.988 [DBG] [32a5898527ee4dce] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (14ms).
+2026-04-04 19:53:33.993 [DBG] [32a5898527ee4dce] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:53:34.005 [INF] [32a5898527ee4dce] [VAISHNAV] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:53:34.021 [DBG] [32a5898527ee4dce] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:34.026 [DBG] [32a5898527ee4dce] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 6ms reading results.
+2026-04-04 19:53:34.037 [DBG] [32a5898527ee4dce] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:34.042 [DBG] [32a5898527ee4dce] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (4ms).
+2026-04-04 19:53:34.051 [INF] [32a5898527ee4dce] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:53:34.060 [INF] [32a5898527ee4dce] [VAISHNAV] Executed ViewResult - view Index executed in 9.4252ms.
+2026-04-04 19:53:34.068 [INF] [32a5898527ee4dce] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 355.2875ms
+2026-04-04 19:53:34.073 [INF] [32a5898527ee4dce] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:53:34.077 [INF] [32a5898527ee4dce] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:53:34.080 [INF] [32a5898527ee4dce] [VAISHNAV] HTTP GET /Task responded 200 in 403.6121ms
+2026-04-04 19:53:34.088 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:53:34.091 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (3ms).
+2026-04-04 19:53:34.097 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task - 200 null text/html; charset=utf-8 457.4647ms
+2026-04-04 19:53:36.447 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/ - null null
+2026-04-04 19:53:36.464 [DBG] [aa9063d3d08c4bd8] [VAISHNAV] Request GET / [CorrelationId: aa9063d3d08c4bd8]
+2026-04-04 19:53:36.480 [INF] [aa9063d3d08c4bd8] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:53:36.491 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:53:36.499 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller PMS.Web.Controllers.HomeController (PMS.Web).
+2026-04-04 19:53:36.528 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Fetching paged projects. Page: 1, Size: 50, Search: null
+2026-04-04 19:53:36.554 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Fetching paged projects. Page: 1, Size: 5, Search: null
+2026-04-04 19:53:36.582 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:53:36.597 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Executed ViewResult - view Index executed in 14.9495ms.
+2026-04-04 19:53:36.612 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Executed action PMS.Web.Controllers.HomeController.Index (PMS.Web) in 89.7942ms
+2026-04-04 19:53:36.623 [INF] [aa9063d3d08c4bd8] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:53:36.637 [INF] [aa9063d3d08c4bd8] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:53:36.644 [INF] [aa9063d3d08c4bd8] [VAISHNAV] HTTP GET / responded 200 in 163.8110ms
+2026-04-04 19:53:36.663 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/ - 200 null text/html; charset=utf-8 216.1413ms
+2026-04-04 19:54:02.290 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Project - null null
+2026-04-04 19:54:02.296 [DBG] [332beb656c234b75] [VAISHNAV] Request GET /Project [CorrelationId: 332beb656c234b75]
+2026-04-04 19:54:02.301 [INF] [332beb656c234b75] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:54:02.305 [INF] [332beb656c234b75] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.ProjectController.Index (PMS.Web)'
+2026-04-04 19:54:02.315 [INF] [332beb656c234b75] [VAISHNAV] Route matched with {action = "Index", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean) on controller PMS.Web.Controllers.ProjectController (PMS.Web).
+2026-04-04 19:54:02.327 [INF] [332beb656c234b75] [VAISHNAV] Fetching paged projects. Page: 1, Size: 10, Search: null
+2026-04-04 19:54:02.338 [INF] [332beb656c234b75] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:54:02.373 [INF] [332beb656c234b75] [VAISHNAV] Executed ViewResult - view Index executed in 36.7022ms.
+2026-04-04 19:54:02.376 [INF] [332beb656c234b75] [VAISHNAV] Executed action PMS.Web.Controllers.ProjectController.Index (PMS.Web) in 52.374ms
+2026-04-04 19:54:02.379 [INF] [332beb656c234b75] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.ProjectController.Index (PMS.Web)'
+2026-04-04 19:54:02.384 [INF] [332beb656c234b75] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:54:02.386 [INF] [332beb656c234b75] [VAISHNAV] HTTP GET /Project responded 200 in 85.7619ms
+2026-04-04 19:54:02.392 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Project - 200 null text/html; charset=utf-8 101.8003ms
+2026-04-04 19:54:08.185 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Project/Detail/12 - null null
+2026-04-04 19:54:08.192 [DBG] [5940cc5a80a14a07] [VAISHNAV] Request GET /Project/Detail/12 [CorrelationId: 5940cc5a80a14a07]
+2026-04-04 19:54:08.195 [INF] [5940cc5a80a14a07] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:54:08.197 [INF] [5940cc5a80a14a07] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.ProjectController.Detail (PMS.Web)'
+2026-04-04 19:54:08.206 [INF] [5940cc5a80a14a07] [VAISHNAV] Route matched with {action = "Detail", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(Int32) on controller PMS.Web.Controllers.ProjectController (PMS.Web).
+2026-04-04 19:54:08.275 [DBG] [5940cc5a80a14a07] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:54:08.278 [DBG] [5940cc5a80a14a07] [VAISHNAV] Created DbConnection. (2ms).
+2026-04-04 19:54:08.281 [DBG] [5940cc5a80a14a07] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.284 [DBG] [5940cc5a80a14a07] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.286 [DBG] [5940cc5a80a14a07] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:08.289 [DBG] [5940cc5a80a14a07] [VAISHNAV] Created DbCommand for 'ExecuteReader' (2ms).
+2026-04-04 19:54:08.292 [DBG] [5940cc5a80a14a07] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (5ms).
+2026-04-04 19:54:08.301 [DBG] [5940cc5a80a14a07] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+ORDER BY [p].[Id]
+2026-04-04 19:54:08.310 [INF] [5940cc5a80a14a07] [VAISHNAV] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+ORDER BY [p].[Id]
+2026-04-04 19:54:08.327 [DBG] [5940cc5a80a14a07] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:08.332 [DBG] [5940cc5a80a14a07] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:54:08.341 [DBG] [5940cc5a80a14a07] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (13ms).
+2026-04-04 19:54:08.347 [DBG] [5940cc5a80a14a07] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t0].[Id], [t0].[AssignedUserId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[DueDate], [t0].[IsDeleted], [t0].[Phase], [t0].[Priority], [t0].[ProjectId], [t0].[Status], [t0].[Title], [t0].[UpdatedAt], [t0].[UpdatedBy], [t].[Id]
+FROM (
+    SELECT TOP(1) [p].[Id]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+) AS [t]
+INNER JOIN (
+    SELECT [t1].[Id], [t1].[AssignedUserId], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Description], [t1].[DueDate], [t1].[IsDeleted], [t1].[Phase], [t1].[Priority], [t1].[ProjectId], [t1].[Status], [t1].[Title], [t1].[UpdatedAt], [t1].[UpdatedBy]
+    FROM [Tasks] AS [t1]
+    WHERE [t1].[IsDeleted] = CAST(0 AS bit) AND [t1].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[Id] = [t0].[ProjectId]
+ORDER BY [t].[Id], [t0].[CreatedAt] DESC
+2026-04-04 19:54:08.359 [INF] [5940cc5a80a14a07] [VAISHNAV] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t0].[Id], [t0].[AssignedUserId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[DueDate], [t0].[IsDeleted], [t0].[Phase], [t0].[Priority], [t0].[ProjectId], [t0].[Status], [t0].[Title], [t0].[UpdatedAt], [t0].[UpdatedBy], [t].[Id]
+FROM (
+    SELECT TOP(1) [p].[Id]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+) AS [t]
+INNER JOIN (
+    SELECT [t1].[Id], [t1].[AssignedUserId], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Description], [t1].[DueDate], [t1].[IsDeleted], [t1].[Phase], [t1].[Priority], [t1].[ProjectId], [t1].[Status], [t1].[Title], [t1].[UpdatedAt], [t1].[UpdatedBy]
+    FROM [Tasks] AS [t1]
+    WHERE [t1].[IsDeleted] = CAST(0 AS bit) AND [t1].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[Id] = [t0].[ProjectId]
+ORDER BY [t].[Id], [t0].[CreatedAt] DESC
+2026-04-04 19:54:08.383 [DBG] [5940cc5a80a14a07] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.389 [DBG] [5940cc5a80a14a07] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 64ms reading results.
+2026-04-04 19:54:08.396 [DBG] [5940cc5a80a14a07] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.404 [DBG] [5940cc5a80a14a07] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 22ms reading results.
+2026-04-04 19:54:08.411 [DBG] [5940cc5a80a14a07] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.419 [DBG] [5940cc5a80a14a07] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (8ms).
+2026-04-04 19:54:08.434 [INF] [5940cc5a80a14a07] [VAISHNAV] Executing ViewResult, running view Detail.
+2026-04-04 19:54:08.455 [INF] [5940cc5a80a14a07] [VAISHNAV] Executed ViewResult - view Detail executed in 22.8399ms.
+2026-04-04 19:54:08.460 [INF] [5940cc5a80a14a07] [VAISHNAV] Executed action PMS.Web.Controllers.ProjectController.Detail (PMS.Web) in 249.3305ms
+2026-04-04 19:54:08.466 [INF] [5940cc5a80a14a07] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.ProjectController.Detail (PMS.Web)'
+2026-04-04 19:54:08.469 [INF] [5940cc5a80a14a07] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:54:08.472 [INF] [5940cc5a80a14a07] [VAISHNAV] HTTP GET /Project/Detail/12 responded 200 in 277.1766ms
+2026-04-04 19:54:08.480 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.482 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (2ms).
+2026-04-04 19:54:08.485 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Project/Detail/12 - 200 null text/html; charset=utf-8 299.8567ms
+2026-04-04 19:54:08.499 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/GetByProject/12 - null null
+2026-04-04 19:54:08.504 [DBG] [90e92dceba3d4cae] [VAISHNAV] Request GET /Task/GetByProject/12 [CorrelationId: 90e92dceba3d4cae]
+2026-04-04 19:54:08.507 [INF] [90e92dceba3d4cae] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:54:08.508 [INF] [90e92dceba3d4cae] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.GetByProject (PMS.Web)'
+2026-04-04 19:54:08.517 [INF] [90e92dceba3d4cae] [VAISHNAV] Route matched with {action = "GetByProject", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByProject(Int32) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:54:08.526 [DBG] [90e92dceba3d4cae] [VAISHNAV] Cache MISS: tasks:project:0
+2026-04-04 19:54:08.562 [DBG] [90e92dceba3d4cae] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:54:08.567 [DBG] [90e92dceba3d4cae] [VAISHNAV] Created DbConnection. (5ms).
+2026-04-04 19:54:08.572 [DBG] [90e92dceba3d4cae] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.577 [DBG] [90e92dceba3d4cae] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.586 [DBG] [90e92dceba3d4cae] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:08.591 [DBG] [90e92dceba3d4cae] [VAISHNAV] Created DbCommand for 'ExecuteReader' (5ms).
+2026-04-04 19:54:08.597 [DBG] [90e92dceba3d4cae] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:54:08.604 [DBG] [90e92dceba3d4cae] [VAISHNAV] Executing DbCommand [Parameters=[@__projectId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[Priority], [t].[DueDate], [t].[ProjectId], [t].[AssignedUserId], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Email], [t0].[FirstName], [t0].[IsActive], [t0].[IsDeleted], [t0].[LastName], [t0].[Phone], [t0].[Role], [t0].[UpdatedAt], [t0].[UpdatedBy], [t].[CreatedAt], [t].[IsDeleted]
+FROM [Tasks] AS [t]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[AssignedUserId] = [t0].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[ProjectId] = @__projectId_0
+ORDER BY [t].[CreatedAt] DESC
+2026-04-04 19:54:08.621 [INF] [90e92dceba3d4cae] [VAISHNAV] Executed DbCommand (17ms) [Parameters=[@__projectId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[Priority], [t].[DueDate], [t].[ProjectId], [t].[AssignedUserId], [t0].[Id], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Email], [t0].[FirstName], [t0].[IsActive], [t0].[IsDeleted], [t0].[LastName], [t0].[Phone], [t0].[Role], [t0].[UpdatedAt], [t0].[UpdatedBy], [t].[CreatedAt], [t].[IsDeleted]
+FROM [Tasks] AS [t]
+LEFT JOIN (
+    SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[AssignedUserId] = [t0].[Id]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[ProjectId] = @__projectId_0
+ORDER BY [t].[CreatedAt] DESC
+2026-04-04 19:54:08.629 [DBG] [90e92dceba3d4cae] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.637 [DBG] [90e92dceba3d4cae] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 7ms reading results.
+2026-04-04 19:54:08.641 [DBG] [90e92dceba3d4cae] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.644 [DBG] [90e92dceba3d4cae] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (2ms).
+2026-04-04 19:54:08.656 [INF] [90e92dceba3d4cae] [VAISHNAV] Executing PartialViewResult, running view _TaskRow.
+2026-04-04 19:54:08.678 [INF] [90e92dceba3d4cae] [VAISHNAV] Executed PartialViewResult - view _TaskRow executed in 22.4726ms.
+2026-04-04 19:54:08.685 [INF] [90e92dceba3d4cae] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.GetByProject (PMS.Web) in 161.8337ms
+2026-04-04 19:54:08.687 [INF] [90e92dceba3d4cae] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.GetByProject (PMS.Web)'
+2026-04-04 19:54:08.691 [INF] [90e92dceba3d4cae] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:54:08.693 [INF] [90e92dceba3d4cae] [VAISHNAV] HTTP GET /Task/GetByProject/12 responded 200 in 186.6845ms
+2026-04-04 19:54:08.697 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:08.703 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (5ms).
+2026-04-04 19:54:08.709 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/GetByProject/12 - 200 null text/html; charset=utf-8 209.5666ms
+2026-04-04 19:54:14.561 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task?projectId=@0 - null null
+2026-04-04 19:54:14.581 [DBG] [7b444d8e98354f2a] [VAISHNAV] Request GET /Task [CorrelationId: 7b444d8e98354f2a]
+2026-04-04 19:54:14.589 [INF] [7b444d8e98354f2a] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:54:14.595 [INF] [7b444d8e98354f2a] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:54:14.604 [INF] [7b444d8e98354f2a] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:54:14.668 [INF] [7b444d8e98354f2a] [VAISHNAV] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String[], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-04 19:54:14.697 [INF] [7b444d8e98354f2a] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 85.4784ms
+2026-04-04 19:54:14.702 [INF] [7b444d8e98354f2a] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:54:14.705 [INF] [7b444d8e98354f2a] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:54:14.707 [INF] [7b444d8e98354f2a] [VAISHNAV] HTTP GET /Task responded 400 in 118.2254ms
+2026-04-04 19:54:14.712 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task?projectId=@0 - 400 null application/json; charset=utf-8 151.5195ms
+2026-04-04 19:54:28.110 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task?projectId=12 - null null
+2026-04-04 19:54:28.118 [DBG] [5a6ede4b5f234759] [VAISHNAV] Request GET /Task [CorrelationId: 5a6ede4b5f234759]
+2026-04-04 19:54:28.128 [INF] [5a6ede4b5f234759] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:54:28.132 [INF] [5a6ede4b5f234759] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:54:28.136 [INF] [5a6ede4b5f234759] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:54:28.162 [DBG] [5a6ede4b5f234759] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:54:28.165 [DBG] [5a6ede4b5f234759] [VAISHNAV] Created DbConnection. (3ms).
+2026-04-04 19:54:28.171 [DBG] [5a6ede4b5f234759] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.176 [DBG] [5a6ede4b5f234759] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.182 [DBG] [5a6ede4b5f234759] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:28.190 [DBG] [5a6ede4b5f234759] [VAISHNAV] Created DbCommand for 'ExecuteReader' (7ms).
+2026-04-04 19:54:28.195 [DBG] [5a6ede4b5f234759] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (12ms).
+2026-04-04 19:54:28.199 [DBG] [5a6ede4b5f234759] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:54:28.210 [INF] [5a6ede4b5f234759] [VAISHNAV] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:54:28.224 [DBG] [5a6ede4b5f234759] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.229 [DBG] [5a6ede4b5f234759] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 5ms reading results.
+2026-04-04 19:54:28.238 [DBG] [5a6ede4b5f234759] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.244 [DBG] [5a6ede4b5f234759] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (5ms).
+2026-04-04 19:54:28.253 [DBG] [5a6ede4b5f234759] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.259 [DBG] [5a6ede4b5f234759] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.263 [DBG] [5a6ede4b5f234759] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:28.268 [DBG] [5a6ede4b5f234759] [VAISHNAV] Created DbCommand for 'ExecuteReader' (5ms).
+2026-04-04 19:54:28.276 [DBG] [5a6ede4b5f234759] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (13ms).
+2026-04-04 19:54:28.281 [DBG] [5a6ede4b5f234759] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:54:28.287 [INF] [5a6ede4b5f234759] [VAISHNAV] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:54:28.300 [DBG] [5a6ede4b5f234759] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.310 [DBG] [5a6ede4b5f234759] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 10ms reading results.
+2026-04-04 19:54:28.316 [DBG] [5a6ede4b5f234759] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.322 [DBG] [5a6ede4b5f234759] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (5ms).
+2026-04-04 19:54:28.326 [INF] [5a6ede4b5f234759] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:54:28.331 [INF] [5a6ede4b5f234759] [VAISHNAV] Executed ViewResult - view Index executed in 5.0686ms.
+2026-04-04 19:54:28.333 [INF] [5a6ede4b5f234759] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 183.0412ms
+2026-04-04 19:54:28.339 [INF] [5a6ede4b5f234759] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:54:28.342 [INF] [5a6ede4b5f234759] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:54:28.344 [INF] [5a6ede4b5f234759] [VAISHNAV] HTTP GET /Task responded 200 in 216.4468ms
+2026-04-04 19:54:28.348 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:28.351 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (2ms).
+2026-04-04 19:54:28.358 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task?projectId=12 - 200 null text/html; charset=utf-8 247.778ms
+2026-04-04 19:54:31.832 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/GetForm?projectId=12 - null null
+2026-04-04 19:54:31.844 [DBG] [10a88b0439374d28] [VAISHNAV] Request GET /Task/GetForm [CorrelationId: 10a88b0439374d28]
+2026-04-04 19:54:31.855 [INF] [10a88b0439374d28] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:54:31.860 [INF] [10a88b0439374d28] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.GetForm (PMS.Web)'
+2026-04-04 19:54:31.868 [INF] [10a88b0439374d28] [VAISHNAV] Route matched with {action = "GetForm", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetForm(System.Nullable`1[System.Int32], System.Nullable`1[System.Int32]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:54:31.881 [DBG] [10a88b0439374d28] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:54:31.886 [DBG] [10a88b0439374d28] [VAISHNAV] Created DbConnection. (4ms).
+2026-04-04 19:54:31.892 [DBG] [10a88b0439374d28] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:31.900 [DBG] [10a88b0439374d28] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:31.914 [DBG] [10a88b0439374d28] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:31.924 [DBG] [10a88b0439374d28] [VAISHNAV] Created DbCommand for 'ExecuteReader' (9ms).
+2026-04-04 19:54:31.930 [DBG] [10a88b0439374d28] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (16ms).
+2026-04-04 19:54:31.935 [DBG] [10a88b0439374d28] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:54:31.949 [INF] [10a88b0439374d28] [VAISHNAV] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:54:31.961 [DBG] [10a88b0439374d28] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:31.967 [DBG] [10a88b0439374d28] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 5ms reading results.
+2026-04-04 19:54:31.975 [DBG] [10a88b0439374d28] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:31.982 [DBG] [10a88b0439374d28] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (6ms).
+2026-04-04 19:54:31.992 [DBG] [10a88b0439374d28] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:31.996 [DBG] [10a88b0439374d28] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:32.002 [DBG] [10a88b0439374d28] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:54:32.006 [DBG] [10a88b0439374d28] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:54:32.012 [DBG] [10a88b0439374d28] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (9ms).
+2026-04-04 19:54:32.018 [DBG] [10a88b0439374d28] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:54:32.028 [INF] [10a88b0439374d28] [VAISHNAV] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:54:32.038 [DBG] [10a88b0439374d28] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:32.045 [DBG] [10a88b0439374d28] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 7ms reading results.
+2026-04-04 19:54:32.054 [DBG] [10a88b0439374d28] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:32.059 [DBG] [10a88b0439374d28] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (4ms).
+2026-04-04 19:54:32.064 [INF] [10a88b0439374d28] [VAISHNAV] Executing PartialViewResult, running view _TaskForm.
+2026-04-04 19:54:32.076 [INF] [10a88b0439374d28] [VAISHNAV] Executed PartialViewResult - view _TaskForm executed in 12.1884ms.
+2026-04-04 19:54:32.081 [INF] [10a88b0439374d28] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.GetForm (PMS.Web) in 203.059ms
+2026-04-04 19:54:32.085 [INF] [10a88b0439374d28] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.GetForm (PMS.Web)'
+2026-04-04 19:54:32.093 [INF] [10a88b0439374d28] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:54:32.095 [INF] [10a88b0439374d28] [VAISHNAV] HTTP GET /Task/GetForm responded 200 in 240.7207ms
+2026-04-04 19:54:32.100 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:54:32.107 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (6ms).
+2026-04-04 19:54:32.110 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/GetForm?projectId=12 - 200 null text/html; charset=utf-8 277.819ms
+2026-04-04 19:55:00.591 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/Index?page=3&pageSize=10&search=&sortBy=&sortDesc=false&projectId=12&statusFilter= - null null
+2026-04-04 19:55:00.602 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Request GET /Task/Index [CorrelationId: 9cb3a4b950d14ded]
+2026-04-04 19:55:00.611 [INF] [9cb3a4b950d14ded] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:00.615 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:55:00.619 [INF] [9cb3a4b950d14ded] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:55:00.638 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:55:00.641 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Created DbConnection. (3ms).
+2026-04-04 19:55:00.646 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.653 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.658 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:55:00.662 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:55:00.671 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (12ms).
+2026-04-04 19:55:00.677 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:55:00.683 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:55:00.693 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.703 [DBG] [9cb3a4b950d14ded] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 9ms reading results.
+2026-04-04 19:55:00.710 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.718 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (7ms).
+2026-04-04 19:55:00.725 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.728 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.737 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:55:00.740 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:55:00.749 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (11ms).
+2026-04-04 19:55:00.755 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:55:00.761 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:55:00.773 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.782 [DBG] [9cb3a4b950d14ded] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 9ms reading results.
+2026-04-04 19:55:00.789 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.796 [DBG] [9cb3a4b950d14ded] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (7ms).
+2026-04-04 19:55:00.803 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executing PartialViewResult, running view _TaskList.
+2026-04-04 19:55:00.814 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executed PartialViewResult - view _TaskList executed in 11.0222ms.
+2026-04-04 19:55:00.819 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 192.1101ms
+2026-04-04 19:55:00.824 [INF] [9cb3a4b950d14ded] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:55:00.831 [INF] [9cb3a4b950d14ded] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:00.835 [INF] [9cb3a4b950d14ded] [VAISHNAV] HTTP GET /Task/Index responded 200 in 224.2514ms
+2026-04-04 19:55:00.839 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:00.844 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (4ms).
+2026-04-04 19:55:00.847 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/Index?page=3&pageSize=10&search=&sortBy=&sortDesc=false&projectId=12&statusFilter= - 200 null text/html; charset=utf-8 256.2608ms
+2026-04-04 19:55:03.547 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Project - null null
+2026-04-04 19:55:03.569 [DBG] [c86b5851ff754c86] [VAISHNAV] Request GET /Project [CorrelationId: c86b5851ff754c86]
+2026-04-04 19:55:03.585 [INF] [c86b5851ff754c86] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:03.596 [INF] [c86b5851ff754c86] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.ProjectController.Index (PMS.Web)'
+2026-04-04 19:55:03.607 [INF] [c86b5851ff754c86] [VAISHNAV] Route matched with {action = "Index", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean) on controller PMS.Web.Controllers.ProjectController (PMS.Web).
+2026-04-04 19:55:03.622 [INF] [c86b5851ff754c86] [VAISHNAV] Fetching paged projects. Page: 1, Size: 10, Search: null
+2026-04-04 19:55:03.636 [INF] [c86b5851ff754c86] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:55:03.646 [INF] [c86b5851ff754c86] [VAISHNAV] Executed ViewResult - view Index executed in 9.4707ms.
+2026-04-04 19:55:03.653 [INF] [c86b5851ff754c86] [VAISHNAV] Executed action PMS.Web.Controllers.ProjectController.Index (PMS.Web) in 32.0624ms
+2026-04-04 19:55:03.658 [INF] [c86b5851ff754c86] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.ProjectController.Index (PMS.Web)'
+2026-04-04 19:55:03.660 [INF] [c86b5851ff754c86] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:03.669 [INF] [c86b5851ff754c86] [VAISHNAV] HTTP GET /Project responded 200 in 84.8166ms
+2026-04-04 19:55:03.674 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Project - 200 null text/html; charset=utf-8 127.5801ms
+2026-04-04 19:55:05.832 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Project/Detail/12 - null null
+2026-04-04 19:55:05.839 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Request GET /Project/Detail/12 [CorrelationId: b8c0ca6eafe04e2e]
+2026-04-04 19:55:05.849 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:05.853 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.ProjectController.Detail (PMS.Web)'
+2026-04-04 19:55:05.861 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Route matched with {action = "Detail", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(Int32) on controller PMS.Web.Controllers.ProjectController (PMS.Web).
+2026-04-04 19:55:05.871 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:55:05.878 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Created DbConnection. (7ms).
+2026-04-04 19:55:05.882 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:05.886 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:05.892 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:55:05.896 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Created DbCommand for 'ExecuteReader' (4ms).
+2026-04-04 19:55:05.900 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (7ms).
+2026-04-04 19:55:05.904 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+ORDER BY [p].[Id]
+2026-04-04 19:55:05.918 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+ORDER BY [p].[Id]
+2026-04-04 19:55:05.929 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:55:05.932 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:55:05.942 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (12ms).
+2026-04-04 19:55:05.947 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t0].[Id], [t0].[AssignedUserId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[DueDate], [t0].[IsDeleted], [t0].[Phase], [t0].[Priority], [t0].[ProjectId], [t0].[Status], [t0].[Title], [t0].[UpdatedAt], [t0].[UpdatedBy], [t].[Id]
+FROM (
+    SELECT TOP(1) [p].[Id]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+) AS [t]
+INNER JOIN (
+    SELECT [t1].[Id], [t1].[AssignedUserId], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Description], [t1].[DueDate], [t1].[IsDeleted], [t1].[Phase], [t1].[Priority], [t1].[ProjectId], [t1].[Status], [t1].[Title], [t1].[UpdatedAt], [t1].[UpdatedBy]
+    FROM [Tasks] AS [t1]
+    WHERE [t1].[IsDeleted] = CAST(0 AS bit) AND [t1].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[Id] = [t0].[ProjectId]
+ORDER BY [t].[Id], [t0].[CreatedAt] DESC
+2026-04-04 19:55:05.961 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [t0].[Id], [t0].[AssignedUserId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DeletedAt], [t0].[DeletedBy], [t0].[Description], [t0].[DueDate], [t0].[IsDeleted], [t0].[Phase], [t0].[Priority], [t0].[ProjectId], [t0].[Status], [t0].[Title], [t0].[UpdatedAt], [t0].[UpdatedBy], [t].[Id]
+FROM (
+    SELECT TOP(1) [p].[Id]
+    FROM [Projects] AS [p]
+    WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__id_0
+) AS [t]
+INNER JOIN (
+    SELECT [t1].[Id], [t1].[AssignedUserId], [t1].[CreatedAt], [t1].[CreatedBy], [t1].[DeletedAt], [t1].[DeletedBy], [t1].[Description], [t1].[DueDate], [t1].[IsDeleted], [t1].[Phase], [t1].[Priority], [t1].[ProjectId], [t1].[Status], [t1].[Title], [t1].[UpdatedAt], [t1].[UpdatedBy]
+    FROM [Tasks] AS [t1]
+    WHERE [t1].[IsDeleted] = CAST(0 AS bit) AND [t1].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [t].[Id] = [t0].[ProjectId]
+ORDER BY [t].[Id], [t0].[CreatedAt] DESC
+2026-04-04 19:55:05.977 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:05.983 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 53ms reading results.
+2026-04-04 19:55:05.994 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:06.002 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 25ms reading results.
+2026-04-04 19:55:06.009 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:06.014 [DBG] [b8c0ca6eafe04e2e] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (5ms).
+2026-04-04 19:55:06.020 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executing ViewResult, running view Detail.
+2026-04-04 19:55:06.030 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executed ViewResult - view Detail executed in 10.2046ms.
+2026-04-04 19:55:06.035 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executed action PMS.Web.Controllers.ProjectController.Detail (PMS.Web) in 166.009ms
+2026-04-04 19:55:06.043 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.ProjectController.Detail (PMS.Web)'
+2026-04-04 19:55:06.047 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:06.050 [INF] [b8c0ca6eafe04e2e] [VAISHNAV] HTTP GET /Project/Detail/12 responded 200 in 202.5450ms
+2026-04-04 19:55:06.054 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:06.061 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (7ms).
+2026-04-04 19:55:06.065 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Project/Detail/12 - 200 null text/html; charset=utf-8 233.1029ms
+2026-04-04 19:55:06.087 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/GetByProject/12 - null null
+2026-04-04 19:55:06.093 [DBG] [316a9c31965349aa] [VAISHNAV] Request GET /Task/GetByProject/12 [CorrelationId: 316a9c31965349aa]
+2026-04-04 19:55:06.097 [INF] [316a9c31965349aa] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:06.099 [INF] [316a9c31965349aa] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.GetByProject (PMS.Web)'
+2026-04-04 19:55:06.102 [INF] [316a9c31965349aa] [VAISHNAV] Route matched with {action = "GetByProject", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByProject(Int32) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:55:06.109 [DBG] [316a9c31965349aa] [VAISHNAV] Cache HIT: tasks:project:0
+2026-04-04 19:55:06.114 [INF] [316a9c31965349aa] [VAISHNAV] Executing PartialViewResult, running view _TaskRow.
+2026-04-04 19:55:06.119 [INF] [316a9c31965349aa] [VAISHNAV] Executed PartialViewResult - view _TaskRow executed in 5.0935ms.
+2026-04-04 19:55:06.125 [INF] [316a9c31965349aa] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.GetByProject (PMS.Web) in 19.2214ms
+2026-04-04 19:55:06.129 [INF] [316a9c31965349aa] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.GetByProject (PMS.Web)'
+2026-04-04 19:55:06.132 [INF] [316a9c31965349aa] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:06.136 [INF] [316a9c31965349aa] [VAISHNAV] HTTP GET /Task/GetByProject/12 responded 200 in 39.0196ms
+2026-04-04 19:55:06.144 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/GetByProject/12 - 200 null text/html; charset=utf-8 57.0229ms
+2026-04-04 19:55:08.620 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Project - null null
+2026-04-04 19:55:08.627 [DBG] [700ceecc110f4873] [VAISHNAV] Request GET /Project [CorrelationId: 700ceecc110f4873]
+2026-04-04 19:55:08.635 [INF] [700ceecc110f4873] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:08.639 [INF] [700ceecc110f4873] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.ProjectController.Index (PMS.Web)'
+2026-04-04 19:55:08.644 [INF] [700ceecc110f4873] [VAISHNAV] Route matched with {action = "Index", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean) on controller PMS.Web.Controllers.ProjectController (PMS.Web).
+2026-04-04 19:55:08.650 [INF] [700ceecc110f4873] [VAISHNAV] Fetching paged projects. Page: 1, Size: 10, Search: null
+2026-04-04 19:55:08.655 [INF] [700ceecc110f4873] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:55:08.662 [INF] [700ceecc110f4873] [VAISHNAV] Executed ViewResult - view Index executed in 7.6439ms.
+2026-04-04 19:55:08.665 [INF] [700ceecc110f4873] [VAISHNAV] Executed action PMS.Web.Controllers.ProjectController.Index (PMS.Web) in 15.6158ms
+2026-04-04 19:55:08.667 [INF] [700ceecc110f4873] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.ProjectController.Index (PMS.Web)'
+2026-04-04 19:55:08.671 [INF] [700ceecc110f4873] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:08.673 [INF] [700ceecc110f4873] [VAISHNAV] HTTP GET /Project responded 200 in 37.6556ms
+2026-04-04 19:55:08.680 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Project - 200 null text/html; charset=utf-8 60.2667ms
+2026-04-04 19:55:11.509 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/ - null null
+2026-04-04 19:55:11.519 [DBG] [e9fc58d8bfca4aff] [VAISHNAV] Request GET / [CorrelationId: e9fc58d8bfca4aff]
+2026-04-04 19:55:11.525 [INF] [e9fc58d8bfca4aff] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:11.529 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:55:11.536 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller PMS.Web.Controllers.HomeController (PMS.Web).
+2026-04-04 19:55:11.545 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Fetching paged projects. Page: 1, Size: 50, Search: null
+2026-04-04 19:55:11.556 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Fetching paged projects. Page: 1, Size: 5, Search: null
+2026-04-04 19:55:11.570 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:55:11.577 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Executed ViewResult - view Index executed in 7.088ms.
+2026-04-04 19:55:11.584 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Executed action PMS.Web.Controllers.HomeController.Index (PMS.Web) in 39.966ms
+2026-04-04 19:55:11.591 [INF] [e9fc58d8bfca4aff] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:55:11.595 [INF] [e9fc58d8bfca4aff] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:11.599 [INF] [e9fc58d8bfca4aff] [VAISHNAV] HTTP GET / responded 200 in 73.8963ms
+2026-04-04 19:55:11.611 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/ - 200 null text/html; charset=utf-8 101.9265ms
+2026-04-04 19:55:17.222 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Task/Index - null null
+2026-04-04 19:55:17.230 [DBG] [48ae4c7969794717] [VAISHNAV] Request GET /Task/Index [CorrelationId: 48ae4c7969794717]
+2026-04-04 19:55:17.237 [INF] [48ae4c7969794717] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:17.241 [INF] [48ae4c7969794717] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:55:17.246 [INF] [48ae4c7969794717] [VAISHNAV] Route matched with {action = "Index", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32, System.String, System.String, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[PMS.Domain.Enums.TaskStatus]) on controller PMS.Web.Controllers.TaskController (PMS.Web).
+2026-04-04 19:55:17.267 [DBG] [48ae4c7969794717] [VAISHNAV] Creating DbConnection.
+2026-04-04 19:55:17.272 [DBG] [48ae4c7969794717] [VAISHNAV] Created DbConnection. (4ms).
+2026-04-04 19:55:17.275 [DBG] [48ae4c7969794717] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.280 [DBG] [48ae4c7969794717] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.286 [DBG] [48ae4c7969794717] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:55:17.290 [DBG] [48ae4c7969794717] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:55:17.294 [DBG] [48ae4c7969794717] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (7ms).
+2026-04-04 19:55:17.302 [DBG] [48ae4c7969794717] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:55:17.308 [INF] [48ae4c7969794717] [VAISHNAV] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [p].[Id], [p].[CreatedAt], [p].[CreatedBy], [p].[DeletedAt], [p].[DeletedBy], [p].[Description], [p].[EndDate], [p].[IsDeleted], [p].[Name], [p].[StartDate], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Projects] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Status] = N'Active'
+2026-04-04 19:55:17.318 [DBG] [48ae4c7969794717] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.323 [DBG] [48ae4c7969794717] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 5ms reading results.
+2026-04-04 19:55:17.331 [DBG] [48ae4c7969794717] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.336 [DBG] [48ae4c7969794717] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (4ms).
+2026-04-04 19:55:17.341 [DBG] [48ae4c7969794717] [VAISHNAV] Opening connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.346 [DBG] [48ae4c7969794717] [VAISHNAV] Opened connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.354 [DBG] [48ae4c7969794717] [VAISHNAV] Creating DbCommand for 'ExecuteReader'.
+2026-04-04 19:55:17.357 [DBG] [48ae4c7969794717] [VAISHNAV] Created DbCommand for 'ExecuteReader' (3ms).
+2026-04-04 19:55:17.360 [DBG] [48ae4c7969794717] [VAISHNAV] Initialized DbCommand for 'ExecuteReader' (6ms).
+2026-04-04 19:55:17.364 [DBG] [48ae4c7969794717] [VAISHNAV] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:55:17.372 [INF] [48ae4c7969794717] [VAISHNAV] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[IsDeleted], [u].[LastName], [u].[Phone], [u].[Role], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[IsActive] = CAST(1 AS bit) AND [u].[IsDeleted] = CAST(0 AS bit)
+2026-04-04 19:55:17.380 [DBG] [48ae4c7969794717] [VAISHNAV] Closing data reader to 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.389 [DBG] [48ae4c7969794717] [VAISHNAV] A data reader for 'PMSDb_QA' on server '(localdb)\mssqllocaldb' is being disposed after spending 9ms reading results.
+2026-04-04 19:55:17.395 [DBG] [48ae4c7969794717] [VAISHNAV] Closing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.401 [DBG] [48ae4c7969794717] [VAISHNAV] Closed connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb' (6ms).
+2026-04-04 19:55:17.406 [INF] [48ae4c7969794717] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:55:17.411 [INF] [48ae4c7969794717] [VAISHNAV] Executed ViewResult - view Index executed in 4.8928ms.
+2026-04-04 19:55:17.413 [INF] [48ae4c7969794717] [VAISHNAV] Executed action PMS.Web.Controllers.TaskController.Index (PMS.Web) in 155.6404ms
+2026-04-04 19:55:17.420 [INF] [48ae4c7969794717] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.TaskController.Index (PMS.Web)'
+2026-04-04 19:55:17.423 [INF] [48ae4c7969794717] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:17.425 [INF] [48ae4c7969794717] [VAISHNAV] HTTP GET /Task/Index responded 200 in 187.6672ms
+2026-04-04 19:55:17.429 [DBG] [] [VAISHNAV] Disposing connection to database 'PMSDb_QA' on server '(localdb)\mssqllocaldb'.
+2026-04-04 19:55:17.432 [DBG] [] [VAISHNAV] Disposed connection to database '' on server '' (2ms).
+2026-04-04 19:55:17.440 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Task/Index - 200 null text/html; charset=utf-8 217.6507ms
+2026-04-04 19:55:23.543 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/Project/GetForm - null null
+2026-04-04 19:55:23.547 [DBG] [842e5862050642f7] [VAISHNAV] Request GET /Project/GetForm [CorrelationId: 842e5862050642f7]
+2026-04-04 19:55:23.551 [INF] [842e5862050642f7] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:23.554 [INF] [842e5862050642f7] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.ProjectController.GetForm (PMS.Web)'
+2026-04-04 19:55:23.564 [INF] [842e5862050642f7] [VAISHNAV] Route matched with {action = "GetForm", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetForm(System.Nullable`1[System.Int32]) on controller PMS.Web.Controllers.ProjectController (PMS.Web).
+2026-04-04 19:55:23.577 [INF] [842e5862050642f7] [VAISHNAV] Executing PartialViewResult, running view _ProjectForm.
+2026-04-04 19:55:23.602 [INF] [842e5862050642f7] [VAISHNAV] Executed PartialViewResult - view _ProjectForm executed in 26.933ms.
+2026-04-04 19:55:23.606 [INF] [842e5862050642f7] [VAISHNAV] Executed action PMS.Web.Controllers.ProjectController.GetForm (PMS.Web) in 33.6071ms
+2026-04-04 19:55:23.610 [INF] [842e5862050642f7] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.ProjectController.GetForm (PMS.Web)'
+2026-04-04 19:55:23.617 [INF] [842e5862050642f7] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:23.621 [INF] [842e5862050642f7] [VAISHNAV] HTTP GET /Project/GetForm responded 200 in 70.0821ms
+2026-04-04 19:55:23.625 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/Project/GetForm - 200 null text/html; charset=utf-8 82.9902ms
+2026-04-04 19:55:27.328 [INF] [] [VAISHNAV] Request starting HTTP/1.1 GET http://localhost:5257/ - null null
+2026-04-04 19:55:27.333 [DBG] [b1105555cd154e53] [VAISHNAV] Request GET / [CorrelationId: b1105555cd154e53]
+2026-04-04 19:55:27.336 [INF] [b1105555cd154e53] [VAISHNAV] No cached response available for this request.
+2026-04-04 19:55:27.338 [INF] [b1105555cd154e53] [VAISHNAV] Executing endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:55:27.343 [INF] [b1105555cd154e53] [VAISHNAV] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller PMS.Web.Controllers.HomeController (PMS.Web).
+2026-04-04 19:55:27.351 [INF] [b1105555cd154e53] [VAISHNAV] Fetching paged projects. Page: 1, Size: 50, Search: null
+2026-04-04 19:55:27.362 [INF] [b1105555cd154e53] [VAISHNAV] Fetching paged projects. Page: 1, Size: 5, Search: null
+2026-04-04 19:55:27.373 [INF] [b1105555cd154e53] [VAISHNAV] Executing ViewResult, running view Index.
+2026-04-04 19:55:27.379 [INF] [b1105555cd154e53] [VAISHNAV] Executed ViewResult - view Index executed in 5.652ms.
+2026-04-04 19:55:27.386 [INF] [b1105555cd154e53] [VAISHNAV] Executed action PMS.Web.Controllers.HomeController.Index (PMS.Web) in 35.5197ms
+2026-04-04 19:55:27.391 [INF] [b1105555cd154e53] [VAISHNAV] Executed endpoint 'PMS.Web.Controllers.HomeController.Index (PMS.Web)'
+2026-04-04 19:55:27.393 [INF] [b1105555cd154e53] [VAISHNAV] The response could not be cached for this request.
+2026-04-04 19:55:27.398 [INF] [b1105555cd154e53] [VAISHNAV] HTTP GET / responded 200 in 61.9087ms
+2026-04-04 19:55:27.403 [INF] [] [VAISHNAV] Request finished HTTP/1.1 GET http://localhost:5257/ - 200 null text/html; charset=utf-8 74.9965ms

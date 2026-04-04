@@ -1,215 +1,215 @@
 {
   "Files": [
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\obj\\Debug\\net9.0\\scopedcss\\bundle\\STHEnterprise.Blazor.styles.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\obj\\Debug\\net9.0\\scopedcss\\bundle\\STHEnterprise.Blazor.styles.css",
       "PackagePath": "staticwebassets\\STHEnterprise.Blazor.styles.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\css\\app.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\css\\site.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\favicon.png",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\icon-192.png",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\index.html",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\js\\site.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\STHEnterprise\\src\\STHEnterprise.Blazor\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\Client_Project\\AdminPortal\\STHEnterprise-v1\\src\\STHEnterprise.Blazor\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

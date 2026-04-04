@@ -194,11 +194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj",
       "projectName": "AdminPortal.Infrastructure",
-      "projectPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj",
+      "projectPath": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Infrastructure\\AdminPortal.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
-      "outputPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Infrastructure\\obj\\",
+      "outputPath": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -219,11 +219,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Application\\AdminPortal.Application.csproj": {
-              "projectPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Application\\AdminPortal.Application.csproj"
+            "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Application\\AdminPortal.Application.csproj": {
+              "projectPath": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Application\\AdminPortal.Application.csproj"
             },
-            "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj": {
-              "projectPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj"
+            "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj": {
+              "projectPath": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj"
             }
           }
         }

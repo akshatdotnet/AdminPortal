@@ -103,4 +103,3 @@ D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\obj\Debug\net8.0\refint\PMS
 D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\obj\Debug\net8.0\PMS.Web.pdb
 D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\obj\Debug\net8.0\PMS.Web.genruntimeconfig.cache
 D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\obj\Debug\net8.0\ref\PMS.Web.dll
-D:\Client_Project\AdminPortal\PMS-v1\PMS\src\PMS.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

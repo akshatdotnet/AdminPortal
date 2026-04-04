@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj": {}
+    "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj": {
+    "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj",
+        "projectUniqueName": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj",
         "projectName": "AdminPortal.Domain",
-        "projectPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj",
+        "projectPath": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\AdminPortal.Domain.csproj",
         "packagesPath": "C:\\Users\\aksha\\.nuget\\packages\\",
-        "outputPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Domain\\obj\\",
+        "outputPath": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

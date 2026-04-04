@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
+      "Id": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\css\\auth.css",
       "PackagePath": "staticwebassets\\css\\auth.css"
     },
     {
-      "Id": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\DotNetAssignment_Task\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
+      "Id": "D:\\Client_Project\\AdminPortal\\AdminPortal\\AdminPortal.Web\\wwwroot\\js\\admin.js",
       "PackagePath": "staticwebassets\\js\\admin.js"
     },
     {
